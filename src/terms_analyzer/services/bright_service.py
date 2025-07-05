@@ -37,12 +37,16 @@ class BrightDataService:
         self.endpoint = f"wss://{self.auth}@brd.superproxy.io:9222"
         self.storage = StorageManager(base_dir="bright_storage")
         
+        # Browser connection management
+        self.browser = None
+        self.playwright = None
+        
         if not PLAYWRIGHT_AVAILABLE:
             raise ImportError("Playwright is required for Bright Data service. Install with: pip install playwright")
     
-    async def scrape_page(self, url: str, wait_for_selector: Optional[str] = None) -> Dict:
+    async def _scrape_page_with_browser(self, url: str, wait_for_selector: Optional[str] = None) -> Dict:
         """
-        Scrape a single page using Bright Data Browser API
+        Scrape a single page using existing browser connection
         
         Args:
             url: Target URL to scrape
@@ -51,69 +55,86 @@ class BrightDataService:
         Returns:
             dict: Contains page content, title, and metadata
         """
-        async with async_playwright() as playwright:
-            try:
-                print(f"🌐 Connecting to Bright Data browser for: {url}")
-                
-                # Connect to Bright Data browser
-                browser = await playwright.chromium.connect_over_cdp(self.endpoint)
-                page = await browser.new_page()
-                
-                # Block unnecessary resources to save bandwidth
-                await page.route("**/*.{png,jpg,jpeg,gif,svg,css,font,woff,woff2}", 
-                                lambda route: route.abort())
-                
-                # Set user agent to appear more natural
-                await page.set_extra_http_headers({
-                    'Accept-Language': 'en-US,en;q=0.9',
-                    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
-                })
-                
-                print(f"📄 Navigating to page...")
-                
-                # Navigate to page with extended timeout
-                response = await page.goto(url, 
-                                         wait_until="domcontentloaded",
-                                         timeout=120000)
-                
-                # Wait for specific content if needed
-                if wait_for_selector:
-                    try:
-                        await page.wait_for_selector(wait_for_selector, timeout=30000)
-                    except Exception as e:
-                        print(f"⚠️  Warning: Could not find selector '{wait_for_selector}': {str(e)}")
-                
-                # Extract page data
-                title = await page.title()
-                content = await page.content()
-                
-                # Get page metadata
-                metadata = {
-                    "url": url,
-                    "title": title,
-                    "status": response.status if response else None,
-                    "scraped_at": datetime.now().isoformat(),
-                    "content_length": len(content),
-                    "scraper": "bright_data"
-                }
-                
-                await browser.close()
-                
-                print(f"✅ Successfully scraped {len(content):,} characters")
-                
-                return {
-                    "success": True,
-                    "content": content,
-                    "metadata": metadata
-                }
-                
-            except Exception as e:
-                print(f"❌ Scraping failed: {str(e)}")
+        try:
+            # Create new page (reuse browser connection)
+            page = await self.browser.new_page()
+            
+            # Block unnecessary resources to save bandwidth
+            await page.route("**/*.{png,jpg,jpeg,gif,svg,css,font,woff,woff2}", 
+                            lambda route: route.abort())
+            
+            print(f"📄 Navigating to page...")
+            
+            # Navigate to page with optimized timeout
+            response = await page.goto(url, 
+                                     wait_until="domcontentloaded",
+                                     timeout=30000)
+            
+            # Wait for specific content if needed
+            if wait_for_selector:
+                try:
+                    await page.wait_for_selector(wait_for_selector, timeout=10000)
+                except Exception as e:
+                    print(f"⚠️  Warning: Could not find selector '{wait_for_selector}': {str(e)}")
+            
+            # Extract page data
+            title = await page.title()
+            content = await page.content()
+            
+            # Get page metadata
+            metadata = {
+                "url": url,
+                "title": title,
+                "status": response.status if response else None,
+                "scraped_at": datetime.now().isoformat(),
+                "content_length": len(content),
+                "scraper": "bright_data"
+            }
+            
+            # Close only the page, not the browser
+            await page.close()
+            
+            print(f"✅ Successfully scraped {len(content):,} characters")
+            
+            return {
+                "success": True,
+                "content": content,
+                "metadata": metadata
+            }
+            
+        except Exception as e:
+            error_msg = str(e)
+            print(f"❌ Scraping failed: {error_msg}")
+            
+            # Check if it's a rate limiting error
+            if "cooldown" in error_msg.lower() or "limit reached" in error_msg.lower():
+                print("⚠️  Rate limit detected - will need longer delays")
                 return {
                     "success": False,
-                    "error": str(e),
-                    "url": url
+                    "error": error_msg,
+                    "url": url,
+                    "rate_limited": True
                 }
+            
+            return {
+                "success": False,
+                "error": error_msg,
+                "url": url
+            }
+    
+    async def scrape_page(self, url: str, wait_for_selector: Optional[str] = None) -> Dict:
+        """
+        Scrape a single page using Bright Data Browser API (legacy method)
+        
+        Args:
+            url: Target URL to scrape
+            wait_for_selector: Optional CSS selector to wait for
+            
+        Returns:
+            dict: Contains page content, title, and metadata
+        """
+        await self._ensure_browser_connection()
+        return await self._scrape_page_with_browser(url, wait_for_selector)
     
     def extract_text_content(self, html_content: str) -> str:
         """Extract clean text content from HTML"""
@@ -185,6 +206,14 @@ class BrightDataService:
         
         return True
     
+    async def _ensure_browser_connection(self):
+        """Ensure browser connection is established and reuse it"""
+        if self.browser is None or self.playwright is None:
+            self.playwright = await async_playwright().start()
+            print(f"🌐 Connecting to Bright Data browser...")
+            self.browser = await self.playwright.chromium.connect_over_cdp(self.endpoint)
+            print(f"✅ Browser connected successfully")
+    
     async def scrape_terms_for_app(self, app_name: str, known_terms_url: Optional[str] = None) -> Optional[Dict]:
         """
         Scrape terms and conditions for a specific app
@@ -203,31 +232,36 @@ class BrightDataService:
         if known_terms_url:
             urls_to_try.append(known_terms_url)
         else:
-            # Generate common terms URLs for the app
-            app_domain = self._guess_app_domain(app_name)
-            if app_domain:
-                common_terms_paths = [
-                    f"https://{app_domain}/terms",
-                    f"https://{app_domain}/terms-of-service",
-                    f"https://{app_domain}/legal/terms",
-                    f"https://{app_domain}/legal/terms-of-service",
-                    f"https://{app_domain}/privacy",
-                    f"https://{app_domain}/legal/privacy",
-                ]
-                urls_to_try.extend(common_terms_paths)
-                
-                # Also try to find links from main page
-                try:
-                    found_links = await self.find_terms_links(f"https://{app_domain}")
-                    urls_to_try.extend(found_links[:3])  # Add top 3 found links
-                except Exception as e:
-                    print(f"⚠️  Could not search main page: {str(e)}")
+            # Check for specific known URLs first
+            specific_urls = self._get_specific_terms_urls(app_name)
+            if specific_urls:
+                urls_to_try.extend(specific_urls)
+            else:
+                # Generate common terms URLs for the app (prioritize direct URLs)
+                app_domain = self._guess_app_domain(app_name)
+                if app_domain:
+                    # Most common terms URLs first
+                    common_terms_paths = [
+                        f"https://{app_domain}/terms",
+                        f"https://{app_domain}/terms-of-service",
+                        f"https://{app_domain}/legal/terms",
+                        f"https://{app_domain}/legal/terms-of-service",
+                        f"https://{app_domain}/privacy",
+                        f"https://{app_domain}/legal/privacy",
+                    ]
+                    urls_to_try.extend(common_terms_paths)
+                    
+                    # Skip link discovery for now - it's too slow
+                    # If direct URLs fail, we can add this back as a fallback
         
-        # Try each URL until we find terms
+        # Ensure browser connection
+        await self._ensure_browser_connection()
+        
+        # Try each URL until we find terms (reuse browser connection)
         for i, url in enumerate(urls_to_try, 1):
             print(f"📄 Trying URL {i}/{len(urls_to_try)}: {url}")
             
-            result = await self.scrape_page(url)
+            result = await self._scrape_page_with_browser(url)
             
             if result["success"]:
                 text_content = self.extract_text_content(result["content"])
@@ -249,8 +283,8 @@ class BrightDataService:
             else:
                 print(f"❌ Failed to load: {result.get('error', 'Unknown error')}")
             
-            # Small delay between requests
-            await asyncio.sleep(2)
+            # Longer delay to avoid rate limiting and cooldowns
+            await asyncio.sleep(5)
         
         print(f"❌ Could not find terms and conditions for {app_name}")
         return None
@@ -299,6 +333,67 @@ class BrightDataService:
         
         return None
     
+    def _get_specific_terms_urls(self, app_name: str) -> List[str]:
+        """Get specific known terms URLs for popular apps"""
+        app_lower = app_name.lower().replace(" ", "").replace("-", "")
+        
+        # Known specific URLs for popular apps
+        specific_urls = {
+            # Google services all use the same terms URL
+            "googleplayservices": ["https://policies.google.com/terms"],
+            "youtube": ["https://policies.google.com/terms"],
+            "googlemaps": ["https://policies.google.com/terms"],
+            "googlechrome": ["https://www.google.com/chrome/terms/", "https://policies.google.com/terms"],
+            "gmail": ["https://policies.google.com/terms"],
+            "google": ["https://policies.google.com/terms"],
+            "googlephotos": ["https://policies.google.com/terms"],
+            "googledrive": ["https://policies.google.com/terms"],
+            "googlesearch": ["https://policies.google.com/terms"],
+            "googlecalendar": ["https://policies.google.com/terms"],
+            "googlemeet": ["https://policies.google.com/terms"],
+            "googlemessages": ["https://policies.google.com/terms"],
+            "googlepay": ["https://policies.google.com/terms"],
+            "googleassistant": ["https://policies.google.com/terms"],
+            "googletranslate": ["https://policies.google.com/terms"],
+            "googlekeep": ["https://policies.google.com/terms"],
+            "googledocs": ["https://policies.google.com/terms"],
+            "googlesheets": ["https://policies.google.com/terms"],
+            "googleslides": ["https://policies.google.com/terms"],
+            "youtubemusic": ["https://policies.google.com/terms"],
+            "gboard": ["https://policies.google.com/terms"],
+            "androidwebview": ["https://policies.google.com/terms"],
+            "androidsystemwebview": ["https://policies.google.com/terms"],
+            "androidaccessibilitysuite": ["https://policies.google.com/terms"],
+            "speechservicesbygoogle": ["https://policies.google.com/terms"],
+            "googleone": ["https://policies.google.com/terms"],
+            "googlelens": ["https://policies.google.com/terms"],
+            "googletv": ["https://policies.google.com/terms"],
+            "googlemapsgo": ["https://policies.google.com/terms"],
+            "filesbygoogle": ["https://policies.google.com/terms"],
+            
+            # Other major services
+            "tiktok": ["https://www.tiktok.com/legal/terms-of-service"],
+            "instagram": ["https://help.instagram.com/581066165581870"],
+            "facebook": ["https://www.facebook.com/terms.php"],
+            "whatsapp": ["https://www.whatsapp.com/legal/terms-of-service"],
+            "twitter": ["https://twitter.com/en/tos"],
+            "x": ["https://x.com/en/tos"],
+            "netflix": ["https://help.netflix.com/legal/termsofuse"],
+            "spotify": ["https://www.spotify.com/us/legal/end-user-agreement/"],
+            "amazon": ["https://www.amazon.com/gp/help/customer/display.html?nodeId=508088"],
+            "apple": ["https://www.apple.com/legal/internet-services/terms/site.html"],
+            "microsoft": ["https://www.microsoft.com/en-us/servicesagreement/"],
+            "discord": ["https://discord.com/terms"],
+            "reddit": ["https://www.redditinc.com/policies/user-agreement"],
+            "snapchat": ["https://snap.com/en-US/terms"],
+            "telegram": ["https://telegram.org/tos"],
+            "zoom": ["https://explore.zoom.us/en/terms/"],
+            "linkedin": ["https://www.linkedin.com/legal/user-agreement"],
+            "pinterest": ["https://policy.pinterest.com/en/terms-of-service"]
+        }
+        
+        return specific_urls.get(app_lower, [])
+    
     def _looks_like_terms_content(self, text: str) -> bool:
         """Check if text content looks like terms and conditions"""
         if len(text) < 500:  # Too short to be real terms
@@ -329,6 +424,9 @@ class BrightDataService:
         Returns:
             Path to saved file or None if failed
         """
+        # Close existing browser connection to reset rate limits
+        await self.close()
+        
         terms_data = await self.scrape_terms_for_app(app_name, known_url)
         
         if not terms_data:
@@ -346,5 +444,10 @@ class BrightDataService:
         return saved_path
     
     async def close(self):
-        """Cleanup method (Playwright handles cleanup automatically)"""
-        pass
+        """Cleanup method - close browser and playwright"""
+        if self.browser:
+            await self.browser.close()
+            self.browser = None
+        if self.playwright:
+            await self.playwright.stop()
+            self.playwright = None

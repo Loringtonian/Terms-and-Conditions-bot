@@ -1,0 +1,89 @@
+Bright Data Bulk Scraping Report
+Generated: 2025-07-05T15:07:38.848932
+
+Total apps: 100
+Successful: 21
+Failed: 79
+Success rate: 21.0%
+Total time: 19.4 minutes
+
+Failed apps:
+- Google Photos
+- Google Drive
+- Google (Search)
+- Google Calendar
+- Google Meet
+- Google Messages
+- Google Pay
+- Google Assistant
+- Google Translate
+- Google Keep
+- Google Docs
+- Google Sheets
+- Google Slides
+- YouTube Music
+- Gboard
+- Android System WebView
+- Android Accessibility Suite
+- Speech Services by Google
+- Messenger
+- WhatsApp Messenger
+- WhatsApp Business
+- Threads
+- Telegram
+- LinkedIn
+- Microsoft Teams
+- Microsoft Word
+- Microsoft Excel
+- Microsoft PowerPoint
+- Microsoft OneDrive
+- Microsoft Outlook
+- Dropbox
+- PayPal
+- Amazon Shopping
+- eBay
+- SHEIN
+- DoorDash
+- Uber
+- Disney+
+- Max
+- Prime Video
+- CapCut
+- Canva
+- Picsart
+- SHAREit
+- MX Player
+- Truecaller
+- Google One
+- Google Lens
+- Tinder
+- Hinge
+- Duolingo
+- Kindle
+- Google TV
+- Crunchyroll
+- Roblox
+- Fortnite
+- Free Fire
+- Candy Crush Saga
+- Subway Surfers
+- Temple Run 2
+- Clash of Clans
+- Clash Royale
+- 8 Ball Pool
+- Hill Climb Racing
+- Pokémon GO
+- Royal Match
+- Last War: Survival
+- Block Blast
+- IceBlock
+- Kingshot
+- Coin Master
+- Whiteout Survival
+- Paramount+
+- Waze
+- Google Maps Go
+- Files by Google
+- Genshin Impact
+- Uber Eats
+- WeChat

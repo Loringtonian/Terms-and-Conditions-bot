@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Frontend-Backend Connection Test</title>
+</head>
+<body>
+    <h1>Testing Frontend-Backend Connection</h1>
+    <div id="results"></div>
+
+    <script>
+        async function testConnection() {
+            const resultsDiv = document.getElementById('results');
+            
+            try {
+                console.log('Testing connection to backend...');
+                const response = await fetch('http://localhost:5001/services');
+                console.log('Response:', response);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                console.log('Data received:', data);
+                
+                resultsDiv.innerHTML = `
+                    <h2>✅ Connection Successful!</h2>
+                    <p>Status: ${response.status}</p>
+                    <p>Services found: ${data.services?.length || 0}</p>
+                    <h3>Services:</h3>
+                    <ul>
+                        ${data.services?.map(service => `<li>${service.displayName} (${service.category})</li>`).join('') || ''}
+                    </ul>
+                `;
+            } catch (error) {
+                console.error('Connection failed:', error);
+                resultsDiv.innerHTML = `
+                    <h2>❌ Connection Failed</h2>
+                    <p>Error: ${error.message}</p>
+                    <p>Check browser console for details</p>
+                `;
+            }
+        }
+
+        // Test immediately when page loads
+        testConnection();
+    </script>
+</body>
+</html>

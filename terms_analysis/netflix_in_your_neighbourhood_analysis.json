@@ -4,46 +4,131 @@
   "overall_score": 7.5,
   "privacy_concerns": [
     {
-      "clause": "Collection of geolocation data",
+      "clause": "Collection of geolocation data and device identifiers",
       "severity": "medium",
-      "explanation": "The terms specify that geolocation data, such as IP address or GPS coordinates, may be collected. While this is common for location-based services, it could be considered intrusive if users are not fully aware of the extent of this data collection.",
-      "quote": "Geolocation data (such as IP address or GPS coordinates)"
+      "explanation": "The app collects geolocation data and device identifiers, which may be invasive for users concerned about location tracking. While this data is used to enhance the user experience, it is not clear if users can fully opt out of such collection.",
+      "quote": "Identifiers (such as IP address, identifiers from the devices you use to connect, characteristics about the networks you use when you connect to our Experience) and Geolocation data (such as IP address or GPS coordinates)."
     },
     {
-      "clause": "Broad sharing within Netflix family of companies",
-      "severity": "medium",
-      "explanation": "User data may be shared across the Netflix family of companies for various purposes, including content development and customer support. This broad sharing could raise concerns about how data is used and protected across multiple entities.",
-      "quote": "We might share your information among the Netflix family of companies... for data processing and storage, providing customer support, content development, and for other purposes."
-    },
-    {
-      "clause": "Name and likeness usage",
+      "clause": "Broad rights to share data within Netflix family and third parties",
       "severity": "high",
-      "explanation": "By interacting with the Experience, users grant Netflix a perpetual, worldwide, and irrevocable license to use their likeness, name, and other personal attributes for promotional purposes without compensation. This clause could be seen as overly broad and potentially exploitative.",
-      "quote": "By interacting with this Experience, you grant... the irrevocable, perpetual, worldwide, non-exclusive right to record, depict, and/or portray you... in connection with the development, production, distribution, exploitation, advertising, promotion and publicity of this Experience."
+      "explanation": "The terms allow Netflix to share user data with its affiliates and third-party 'Experience Providers' for various purposes. While some safeguards are mentioned, the scope of sharing is broad and could lead to privacy risks.",
+      "quote": "We may disclose your information for certain purposes and to third parties, as described below: The Netflix family of companies... Experience Providers to perform services on our behalf."
     },
     {
       "clause": "Use of cookies and tracking technologies",
       "severity": "medium",
-      "explanation": "The terms state that cookies, pixel tags, and web beacons are used for various purposes, including tracking user interactions. While users can manage cookies through browser settings, the inability to fully control tracking on mobile devices may limit user autonomy.",
+      "explanation": "The app uses cookies, pixel tags, and web beacons to collect user data for analytics and internal operations. While users can control cookies through browser settings, the terms suggest limited control over tracking technologies on mobile devices.",
       "quote": "This information is collected using technologies such as cookies, pixel tags, and web beacons."
     },
     {
-      "clause": "Third-party integrations and data sharing",
-      "severity": "medium",
-      "explanation": "The Experience integrates with third-party platforms (e.g., social media plugins) and uses Google Analytics for data processing. While these practices are disclosed, they rely on third-party privacy policies, which may not align with user expectations.",
-      "quote": "Social plugins and social applications are operated by the social network themselves and are subject to their terms of use and privacy policies."
+      "clause": "Irrevocable rights to user likeness and content",
+      "severity": "high",
+      "explanation": "By interacting with the Experience, users grant Netflix a perpetual, worldwide, non-exclusive right to use their likeness, voice, and actions for promotional purposes without compensation. This clause is overly broad and may not align with user expectations.",
+      "quote": "By interacting with this Experience, you grant the Netflix entity... the irrevocable, perpetual, worldwide, non-exclusive right to record, depict, and/or portray you."
     }
   ],
-  "summary": "The Netflix in Your Neighbourhood terms and privacy policy are generally clear and provide reasonable transparency about data collection and usage. However, concerns arise from broad data-sharing practices, the use of user likeness for promotional purposes, and reliance on third-party services. Users should carefully review these terms, particularly clauses related to personal data and consent.",
+  "summary": "Netflix in Your Neighbourhood's terms are generally user-friendly and provide clear explanations of data collection and usage. However, concerns arise from broad data-sharing practices, the collection of geolocation data, and the irrevocable rights granted to Netflix over user likeness. Users should review these terms carefully, especially regarding privacy and data-sharing implications.",
   "red_flags": [
-    "Broad rights to use user likeness without compensation",
-    "Extensive data sharing within the Netflix family of companies",
+    "Broad rights to share data with third parties and affiliates",
+    "Irrevocable, perpetual rights to user likeness and content",
     "Limited control over tracking technologies on mobile devices"
   ],
-  "user_friendliness_score": 7.0,
+  "user_friendliness_score": 8.0,
   "data_collection_score": 6.5,
   "legal_complexity_score": 7.0,
   "terms_version": null,
   "terms_url": "https://www.netflixinyourneighbourhood.ca/privacy/",
-  "analysis_date": "2025-07-05"
+  "analysis_date": "2025-07-05",
+  "deep_analysis": {
+    "1": {
+      "unclear_terms": [
+        {
+          "term": "Netflix family of companies",
+          "explanation": "This refers to Netflix and any other companies that Netflix owns, controls, or is affiliated with. These could include subsidiaries, parent companies, or other related entities.",
+          "user_impact": "Your personal data could be shared with a wide range of companies under the Netflix umbrella, potentially including entities in different countries with varying privacy laws.",
+          "questions_to_ask": [
+            "Which specific companies are included in the 'Netflix family of companies'?",
+            "Are these companies located in countries with strong privacy protections?",
+            "What specific data is being shared with these companies?"
+          ]
+        },
+        {
+          "term": "Experience Providers",
+          "explanation": "These are third-party companies, contractors, or agents that Netflix hires to perform services on its behalf, such as infrastructure support, customer service, or analytics.",
+          "user_impact": "Your data could be shared with external companies that Netflix works with, which increases the risk of your data being exposed to more entities and potentially used in ways you might not expect.",
+          "questions_to_ask": [
+            "Who are these 'Experience Providers'?",
+            "What safeguards are in place to ensure these third parties protect my data?",
+            "What happens to my data if Netflix stops working with these providers?"
+          ]
+        },
+        {
+          "term": "Reasonable administrative, logical, physical and managerial measures",
+          "explanation": "This phrase refers to the steps Netflix takes to protect your data, such as encryption, access controls, and policies to prevent unauthorized access or misuse.",
+          "user_impact": "While Netflix claims to safeguard your data, the term 'reasonable' is vague and does not guarantee absolute protection. It also does not specify what happens if these measures fail.",
+          "questions_to_ask": [
+            "What specific security measures are in place to protect my data?",
+            "What happens if there is a data breach or unauthorized access?",
+            "Will I be notified if my data is compromised?"
+          ]
+        }
+      ],
+      "practical_meaning": "Netflix reserves the right to share your personal data with a broad range of entities, including its own affiliates and external third-party service providers. While Netflix claims to use safeguards, the scope of data sharing is extensive and could involve entities in different jurisdictions with varying privacy standards. This means your data could be used for purposes beyond what you might expect, such as targeted advertising, analytics, or other business operations.",
+      "user_action_needed": "Users should review Netflix's privacy policy in detail to understand what data is being collected, how it is being shared, and with whom. Consider adjusting your privacy settings on Netflix to limit data sharing where possible. If privacy is a major concern, you may want to reconsider using services that involve such broad data sharing.",
+      "severity_justification": "This issue is flagged as high severity because it involves the potential for widespread sharing of personal data with numerous entities, including third parties. This increases the risk of data misuse, breaches, or exposure to weaker privacy protections in other jurisdictions. Users may not fully understand the implications of this broad data sharing, which could lead to unintended consequences for their privacy.",
+      "extended_context": ".... Social plugins and social applications are operated by the social network themselves and are subject to their terms of use and privacy policies.\n\nWe use reasonable administrative, logical, physical and managerial measures to safeguard your information against loss, theft and unauthorized access, use and modification. We may retain information as required or permitted by applicable laws and regulations, including to fulfill the purposes described in these Terms.\n\n### Disclosure of Information\n\nWe may disclose your information for certain purposes and to third parties, as described below:\n\n*   The Netflix family of companies: We might share your information among the Netflix family of companies ([http://netflix.com/corporateinfo](http://netflix.com/corporateinfo)) as needed for data processing and storage, providing customer support, content development, and for other purposes described in the Use of Information Section of this document.\n*   We might use other companies, agents or contractors (\"Experience Providers\") to perform services on our behalf or to help us to provide this Experience to you. For example, we may use Experience Providers to provide infrastructure...",
+      "online_research": {
+        "search_query": "\"Netflix\" Netflix family of companies Experience Providers Reasonable administrative, logical, physical and managerial measures terms conditions privacy policy explanation",
+        "top_result_url": null,
+        "top_result_title": null,
+        "summary": null
+      }
+    },
+    "3": {
+      "unclear_terms": [
+        {
+          "term": "Irrevocable, perpetual, worldwide, non-exclusive right",
+          "explanation": "This means that once you agree to this clause, Netflix can use your likeness (your image, voice, actions, etc.) forever, anywhere in the world, and you cannot take back this permission. 'Non-exclusive' means Netflix can share these rights with others, such as partners or advertisers.",
+          "user_impact": "You lose control over how Netflix uses your likeness and cannot revoke this permission later. Netflix can use your image, voice, or actions in promotional materials or other content indefinitely, even if you stop using their services.",
+          "questions_to_ask": [
+            "What specific interactions with the Experience trigger this clause?",
+            "Can I opt out of granting these rights while still using the Experience?",
+            "What safeguards are in place to ensure my likeness is not used in ways I find objectionable?",
+            "Does this clause apply to minors or other vulnerable users?"
+          ]
+        },
+        {
+          "term": "Simulated likeness",
+          "explanation": "This refers to the use of a digitally created or altered version of your image, voice, or actions. For example, Netflix could create a digital avatar or modify your likeness for their purposes.",
+          "user_impact": "Netflix could create or alter representations of you without your further consent, potentially in ways you might not agree with or expect.",
+          "questions_to_ask": [
+            "What limits are there on how Netflix can simulate or alter my likeness?",
+            "Can I review or approve simulated versions of my likeness before they are used?",
+            "What happens if I disagree with how my likeness is portrayed?"
+          ]
+        },
+        {
+          "term": "Grant to others the right",
+          "explanation": "This means Netflix can give other companies or individuals permission to use your likeness, voice, or actions for their own purposes, such as advertising or promotional campaigns.",
+          "user_impact": "Your likeness could be used by third parties you have no direct relationship with, and you may not have control over how they use it.",
+          "questions_to_ask": [
+            "Who are the 'others' Netflix might grant these rights to?",
+            "Will Netflix notify me if my likeness is shared with third parties?",
+            "Can I limit or restrict how third parties use my likeness?"
+          ]
+        }
+      ],
+      "practical_meaning": "By interacting with certain Netflix Experiences (e.g., participating in interactive content, submitting user-generated content, or engaging in promotional activities), you are giving Netflix and its partners the right to use your likeness (image, voice, actions, etc.) indefinitely and globally for promotional or other purposes. This includes the ability to alter or simulate your likeness and share these rights with others. You will not be compensated for this use, and you cannot revoke this permission later.",
+      "user_action_needed": "Users should carefully consider whether they are comfortable granting these rights before interacting with any Netflix Experiences that might trigger this clause. If unsure, users should contact Netflix to clarify what constitutes 'interacting with the Experience' and whether there are opt-out options. Users should also review their privacy settings and avoid participating in Experiences that require granting such rights if they are not comfortable with the implications.",
+      "severity_justification": "This clause is flagged as high severity because it significantly impacts user privacy and control over their personal likeness. The rights granted to Netflix are irrevocable and perpetual, meaning users lose control over how their likeness is used forever. Additionally, the clause is overly broad, allowing Netflix to share these rights with third parties and use simulated likenesses, which could lead to unexpected or objectionable uses. The lack of compensation and inability to revoke these rights further exacerbates the concern.",
+      "extended_context": "...ke requests, or if you have any other question regarding our privacy practices, please contact our Data Protection Officer/Privacy Office at [experience@netflix.com](mailto:experience@netflix.com). We respond to all requests we receive from individuals wishing to exercise their data protection rights in accordance with applicable data protection laws.\n\nYou have the right to complain to a data protection authority about our collection and use of your personal information.\n\n### Name and Likeness\n\nBy interacting with this Experience, you grant the Netflix entity that provides you with access to this Experience (Netflix, Inc. or Netflix International B.V.), its affiliates and respective successors and assigns and anyone authorized by any of them (collectively, “Netflix”), the irrevocable, perpetual, worldwide, non-exclusive right to record, depict, and/or portray you and use, and grant to others the right, but not the obligation, to record, depict, and/or portray you and use, your actual or simulated likeness, name, photograph, voice, actions, etc. in connection with the development, production, distribution, exploitation, advertising, promotion and pu...",
+      "online_research": {
+        "search_query": "\"Netflix\" Irrevocable, perpetual, worldwide, non-exclusive right Simulated likeness Grant to others the right terms conditions privacy policy explanation",
+        "top_result_url": null,
+        "top_result_title": null,
+        "summary": null
+      }
+    }
+  }
 }

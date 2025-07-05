@@ -131,6 +131,26 @@ class AnalysisService:
             if save_results:
                 self._save_analysis_results(analysis)
             
+            # Automatically perform deep analysis if high severity concerns found
+            deep_analysis_results = await self.deep_analysis_service.auto_deep_analysis_if_needed(
+                app_name=app_name,
+                full_terms_text=content,
+                analysis_result=analysis
+            )
+            
+            if deep_analysis_results:
+                print(f"🔬 Deep analysis completed for {len(deep_analysis_results['concerns_analyzed'])} high severity concerns")
+                
+                # Add deep analysis data to the main analysis result
+                analysis_dict = analysis.dict()
+                analysis_dict['deep_analysis'] = self._format_deep_analysis_for_frontend(
+                    analysis.privacy_concerns, 
+                    deep_analysis_results['concerns_analyzed']
+                )
+                
+                # Re-save with deep analysis included
+                self._save_analysis_dict(analysis_dict)
+            
             return analysis
             
         except Exception as e:
@@ -153,6 +173,53 @@ class AnalysisService:
         print(f"💾 Analysis saved to: {filepath}")
         print(f"📁 Results directory: terms_analysis/")
         return filepath
+    
+    def _save_analysis_dict(self, analysis_dict: Dict[str, Any]) -> Path:
+        """Save analysis dictionary (with deep analysis) to disk."""
+        safe_name = analysis_dict['app_name'].lower().replace(' ', '_').replace('(', '').replace(')', '')
+        filename = f"{safe_name}_analysis.json"
+        filepath = self.results_dir / filename
+        
+        with open(filepath, 'w', encoding='utf-8') as f:
+            json.dump(analysis_dict, f, indent=2, ensure_ascii=False)
+        
+        return filepath
+    
+    def _format_deep_analysis_for_frontend(self, privacy_concerns: List, deep_analysis_concerns: List) -> Dict[int, Dict[str, Any]]:
+        """Format deep analysis results for frontend consumption."""
+        formatted_deep_analysis = {}
+        
+        # Map deep analysis results to their corresponding privacy concern indices
+        for deep_concern in deep_analysis_concerns:
+            original_concern = deep_concern['original_concern']
+            
+            # Find the index of this concern in the privacy_concerns list
+            concern_index = None
+            for i, concern in enumerate(privacy_concerns):
+                if (concern.clause == original_concern['clause'] and 
+                    concern.severity == original_concern['severity']):
+                    concern_index = i
+                    break
+            
+            if concern_index is not None:
+                clarity_analysis = deep_concern.get('clarity_analysis', {})
+                online_research = deep_concern.get('online_research', {})
+                
+                formatted_deep_analysis[concern_index] = {
+                    'unclear_terms': clarity_analysis.get('unclear_terms', []),
+                    'practical_meaning': clarity_analysis.get('practical_meaning', ''),
+                    'user_action_needed': clarity_analysis.get('user_action_needed', ''),
+                    'severity_justification': clarity_analysis.get('severity_justification', ''),
+                    'extended_context': deep_concern.get('extended_context', ''),
+                    'online_research': {
+                        'search_query': online_research.get('search_query', ''),
+                        'top_result_url': online_research.get('top_result_url'),
+                        'top_result_title': online_research.get('top_result_title'),
+                        'summary': online_research.get('summary')
+                    } if online_research else None
+                }
+        
+        return formatted_deep_analysis
     
     async def analyze_multiple_apps(self, app_names: List[str], delay_seconds: int = 2) -> Dict[str, Optional[TCAnalysis]]:
         """Analyze multiple apps with rate limiting.

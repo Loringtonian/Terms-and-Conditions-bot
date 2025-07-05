@@ -6,7 +6,9 @@
       "Bash(mkdir:*)",
       "Bash(rm:*)",
       "Bash(ls:*)",
-      "Bash(mv:*)"
+      "Bash(mv:*)",
+      "WebFetch(domain:docs.brightdata.com)",
+      "Bash(pip install:*)"
     ],
     "deny": []
   }

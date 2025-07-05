@@ -1,0 +1,221 @@
+Tavily DeepResearch
+
+Implementing Tavily API for Terms and Conditions Analyzer App
+
+Building a Terms & Conditions Review App with Tavily's Crawler API
+Project Overview: We want to create a Python/Flask application that gathers the Terms & Conditions (T&C) of popular products and uses an AI agent to review them for fairness, rights users give up, and comparisons to other services. We'll use Tavily’s web crawler/scraper API to fetch these T&C pages from the web, then analyze them (possibly with LangChain + an LLM). The content is public (no private data), so we can scrape freely. Below is a practical step-by-step guide.
+1. Setting Up Tavily API Access
+Get an API Key: Sign up on Tavily’s platform to obtain a free API key (they offer 1,000 free API credits per month with no credit card required
+docs.tavily.com
+). All Tavily API calls use this key via a Bearer token. Install the Tavily SDK: Tavily provides a Python SDK (tavily-python) for easy integration. Install it in your environment:
+bash
+Copy
+Edit
+pip install tavily-python
+This SDK wraps Tavily’s REST endpoints for search, extraction, etc. After installing, import and initialize the client in your Python code:
+python
+Copy
+Edit
+from tavily import TavilyClient
+tavily_client = TavilyClient(api_key="tvly-YOUR_API_KEY")
+Tavily’s Python SDK lets you leverage their web search and scraping in just a few lines of code
+docs.tavily.com
+. For example, you can perform a web search or extract page content directly:
+python
+Copy
+Edit
+# Example: Searching the web (returns JSON with answer + results)
+response = tavily_client.search("Who is Leo Messi?")
+print(response)  # contains answer, results with URLs/snippets:contentReference[oaicite:2]{index=2}
+
+# Example: Extracting content from a URL 
+response = tavily_client.extract("https://en.wikipedia.org/wiki/Lionel_Messi")
+print(response)  # contains extracted text in response["results"]:contentReference[oaicite:3]{index=3}
+The Tavily API simplifies the heavy lifting of web scraping for us. It handles fetching page HTML, removing boilerplate, and returning clean text. In fact, Tavily is built for AI agents: it performs searching, scraping, filtering and content extraction all in one API call
+docs.tavily.com
+. This is perfect for our use case, where we need to retrieve lengthy T&C documents and feed them to an AI for analysis.
+2. Retrieving Terms & Conditions Pages with Tavily
+The core of our app is getting the full text of Terms & Conditions from various websites. We’ll use Tavily’s Extract endpoint primarily for this.
+Direct Extraction (known URL): If we already know the exact URL of a service’s T&C page, we can call tavily_client.extract() with that URL. Tavily will return the page content as JSON. The extracted text will be in response["results"][0]["raw_content"]
+docs.tavily.com
+. For example:
+python
+Copy
+Edit
+url = "https://www.example.com/terms-of-service"  # known T&C URL
+resp = tavily_client.extract(urls=[url])
+terms_text = resp["results"][0]["raw_content"]  # full text of the Terms page:contentReference[oaicite:6]{index=6}
+Here we pass a list of URLs (even if one URL) to extract. Tavily can handle up to 20 URLs in one call
+github.com
+, which is useful if we ever want to batch-fetch multiple pages (e.g. fetching a Privacy Policy alongside Terms). By default, include_images is false (we only need text). Error handling: The response may include a "failed_results" list for any URLs that couldn’t be fetched
+github.com
+. Our code should check this and handle failures (e.g. retry or inform the user that the page couldn’t be retrieved).
+Finding the T&C URL (unknown cases): Often, users will ask about a service we haven’t stored yet. We need to discover the correct Terms URL dynamically. There are a couple of ways:
+Tavily Search: Use the search endpoint with a query like "ServiceName terms and conditions official". Tavily’s Search API returns a JSON with an "answer" (if the query is a question) and a list of "results" (each result has a title, URL, and snippet)
+docs.tavily.com
+. We can parse these results to find the likely official T&C page. For example:
+python
+Copy
+Edit
+query = f"{service_name} terms of service {service_name}.com"
+resp = tavily_client.search(query)
+for res in resp["results"]:
+    url = res["url"]
+    if "terms" in url.lower():
+        terms_url = url
+        break
+The above looks for a result URL containing "terms". We also ensure the domain matches the official site (to avoid third-party articles). Once we identify a candidate URL, we call extract on it to get the full text. Tip: Tavily’s search is designed for AI use and can retrieve and rank relevant content from up to 20 sites in one call
+docs.tavily.com
+. For our case, a basic search should suffice to find the T&C page quickly. If needed, we could use an advanced search or add context (e.g., specifying the site).
+Tavily Map (site crawler): Tavily offers a Map endpoint that crawls a website and returns a list of URLs (a “sitemap”) from a base URL
+docs.tavily.com
+. We can use this if we know the service’s homepage. For example, mapping https://www.example.com might return URLs including /terms or /legal/terms. We could do:
+python
+Copy
+Edit
+resp = tavily_client.map("https://www.example.com", max_depth=1, limit=50)
+urls = resp["results"]  # list of discovered URLs:contentReference[oaicite:12]{index=12}
+terms_url = next((u for u in urls if "terms" in u.lower()), None)
+If terms_url is found, then call extract(terms_url). The max_depth=1 and a reasonable limit focus on immediate links from the homepage (many sites link their T&C in the footer). This approach is useful when search results are noisy or the site’s domain is known. Map is also efficient since it doesn’t download full content of all pages, just discovers links.
+Tavily Crawl (intelligent crawler): Tavily’s Crawl endpoint goes further by traversing a site and extracting content with guidance. It supports natural language instructions to find specific content
+docs.tavily.com
+. For instance, one could do:
+python
+Copy
+Edit
+resp = tavily_client.crawl("https://www.example.com", 
+                           instructions="Find the Terms of Service page", 
+                           max_depth=2, limit=10)
+This might directly return the Terms page content in resp["results"]. However, note that Tavily Crawl is in open beta (invite-only) as of now
+docs.tavily.com
+. If you have access, this is a powerful one-call solution. Otherwise, the search+extract or map+extract methods above will achieve the result.
+Caching in a Database: Once we’ve fetched the Terms text, store it in a database for future use. You can have a table like terms_documents(service_name, url, content, last_fetched):
+Use a lightweight DB for local development (SQLite is easy to use with Flask). For production, a cloud database or PostgreSQL can be used.
+On a user query, check the DB first. If we already have up-to-date content for that service, use it instead of calling the API again (saving credits and time). For example, if last_fetched is within 30 days, use the cached version.
+If not in DB or stale, fetch via Tavily and then insert/update the DB. This way, popular services’ T&C are mostly served from the cache, and Tavily is only hit for new or updated pages.
+(Later, you could add a background task to periodically refresh certain documents, so analyses stay current.)
+3. Analyzing the Terms with an AI Agent (LangChain + LLM)
+With the raw Terms & Conditions text in hand, the next step is to have an AI analyze it. The analysis should highlight key points and fairness concerns, and ideally compare with other services’ terms. Here’s how to implement the "agent" part:
+Choosing an LLM: For a first version, you can use a pre-trained large language model (LLM) via API (e.g. OpenAI GPT-4/GPT-3.5) or a local model. Given the length and legalese of T&C documents, a powerful model like GPT-4 (with a large context window) is ideal. If using OpenAI, integrate their API key and use LangChain’s OpenAI wrapper for convenience. For example:
+python
+Copy
+Edit
+from langchain.llms import OpenAI
+llm = OpenAI(openai_api_key=OPENAI_API_KEY, model_name="gpt-4")
+You may also consider local models (like Llama 2) if privacy/cost is a concern, but those might require more prompt engineering and possibly chunking the text.
+Preparing the prompt: We need to instruct the model to review the terms text and produce a helpful summary focusing on fairness and rights. A good strategy is to create a prompt template that does something like:
+"You are a legal assistant. Summarize the following Terms and Conditions and highlight:
+Any clauses where the user gives up rights (for example, mandatory arbitration or no class-action).
+How these terms compare to typical ones in the same industry – are they more user-friendly or more restrictive?
+Any unusually fair or unfair terms you notice.
+\nText: {terms_text}\n\nAnalysis:"
+Since the T&C text can be extremely long, consider summarizing in stages if needed. LangChain can help by splitting the text into chunks (using CharacterTextSplitter) and summarizing each chunk, then combining those summaries for a final analysis. Another approach is to use LangChain’s load_summarize_chain with a map-reduce chain, which is designed for summarizing long documents in parts.
+Using LangChain for orchestration: LangChain isn’t strictly required, but it can simplify the pipeline:
+You can wrap the Tavily calls in LangChain tools (they actually provide tools like TavilySearch and TavilyCrawl in their integration
+python.langchain.com
+). This means you could create an agent that, if needed, autonomously searches for additional info. For example, an advanced agent could decide to fetch another service’s terms for comparison on the fly using a Tavily tool. This is an optional enhancement for later, but LangChain makes it possible.
+More straightforwardly, you can use LangChain just to manage the LLM call with a nice prompt template and possibly some chained steps (like summary -> analysis).
+Comparing to other services: To address the “compare to others” aspect, you have a few options:
+Rely on the LLM’s general knowledge. A model like GPT-4 has likely seen many Terms of Service and can make general comparisons (e.g. “These terms require arbitration, similar to many tech companies, but unlike some others they also forbid class-action entirely, which is more restrictive than average.”). This requires a well-crafted prompt but no extra data.
+Provide the model with reference points. For instance, you might have pre-summarized key points from a few big-name T&Cs (like Google, Apple, etc.) and store those. You could then feed those summaries into the prompt as context. Example: “For reference, Company X’s terms (in same industry) have ABC. Now analyze Company Y’s terms below.” This helps the model make concrete comparisons. However, be mindful of token limits.
+Alternatively, if implementing a multi-step agent, the agent could fetch another service’s terms via Tavily and compare. This is complex and might be overkill initially. It might be easier to stick to one service at a time and include general comparisons.
+Producing the output: The final analysis could be structured (bullet points or sections) for readability. The AI’s response can be post-processed or just returned as-is if the prompt ensures a clear format. For example, you can ask the AI to output sections like “Summary of Terms, Notable Restrictions, Fairness Comparison” for clarity.
+LangChain Example: Here’s a pseudo-code of using LangChain to get the analysis:
+python
+Copy
+Edit
+from langchain.chains import LLMChain
+from langchain.prompts import PromptTemplate
+
+prompt_template = PromptTemplate(
+    input_variables=["terms_text"],
+    template="Analyze the following Terms & Conditions for fairness and key points...\n{terms_text}\n\nAnalysis:"
+)
+chain = LLMChain(llm=llm, prompt=prompt_template)
+
+analysis = chain.run(terms_text=terms_text)
+print(analysis)
+This will return a comprehensive analysis which you can then display to the user.
+4. Integrating with Flask for a Web App
+Now that we have data retrieval and analysis components, we wrap them in a Flask web application. Initially, you can run this locally and later deploy it as a web app. Flask App Structure:
+Create a simple form or endpoint where a user can input the name of a product/service they are interested in.
+When the form is submitted (or API endpoint is hit), trigger a function that:
+Identifies the service: e.g., normalize the name to a key used in your DB. (If the user enters "Netflix", your system knows the official site is netflix.com. You might maintain a mapping of common services to their official domain or T&C URL to speed this up.)
+Database check: Look up if we have terms_text for "Netflix" in our database. If yes (and it's recent), load that.
+Fetch if needed: If not in DB, use the Tavily methods discussed in Section 2 to find and extract the T&C:
+Possibly try a direct known URL or use search/map to get the URL, then extract.
+Handle errors (if the page isn’t found or extraction fails, return an error message to the user like "Could not retrieve that service's terms.").
+Save the new terms text (and the URL and timestamp) to the database.
+Analyze the terms: Pass the text to the LLM agent chain (from Section 3). This might take a few seconds if the terms are long and the model is large. Show a loading indicator to the user while the analysis runs.
+Present results: Display the AI’s analysis in a readable format (HTML template). You could include:
+A summary paragraph.
+Bullet points of key clauses (e.g., “You waive the right to sue – the company forces arbitration”).
+A comparative statement (e.g., “This is fairly standard compared to other social media services” or “This is more strict than many others which allow opting out of arbitration”).
+Possibly a link to view the full text of the Terms (since we have it, maybe show it in a collapsible section for transparency).
+Flask Endpoint Example:
+python
+Copy
+Edit
+from flask import Flask, request, render_template
+app = Flask(__name__)
+
+@app.route('/analyze', methods=['POST'])
+def analyze_terms():
+    service = request.form.get('service_name')
+    # 1. Check DB for service
+    record = db.lookup(service)
+    if record and not stale(record.last_fetched):
+        terms_text = record.content
+    else:
+        terms_text = fetch_terms_via_tavily(service)  # use logic from Section 2
+        db.save(service, terms_text)
+    # 2. Analyze using LLM
+    analysis = analyze_terms_text(terms_text)  # use LangChain chain or similar
+    return render_template('result.html', service=service, analysis=analysis)
+The fetch_terms_via_tavily() would contain the search/extract logic, and analyze_terms_text() wraps the LLM call. This separation keeps the code organized. Running Locally: During development, you can run Flask on localhost and test with different service names. Since Tavily and OpenAI (or whichever LLM) require API keys, keep those in a config (environment variables or a .env file). For example, set TAVILY_API_KEY and OPENAI_API_KEY in your environment, and have your app read those on startup. Avoid hardcoding keys in code, especially before deploying publicly. Scaling to a Web App: When you move to deploy (e.g., on a cloud platform or Heroku), you’ll want to consider:
+Concurrency & Rate Limits: Tavily’s free tier allows some number of requests per minute (check Tavily docs for rate limits). Ensure your app handles this (perhaps queue requests or cache aggressively to minimize calls). With a database caching terms, most requests won’t hit Tavily every time, which helps.
+Latency: Both web scraping and LLM analysis can be time-consuming. Optimize where possible:
+Use basic extraction (Tavily’s default) which is fast and cost-efficient (5 URL extractions = 1 credit)
+docs.tavily.com
+.
+Possibly perform the LLM analysis asynchronously if using a very large model, so the web UI doesn't block entirely (Flask by itself is synchronous, but you could use background jobs or websockets for updates).
+Cost management: Monitor your Tavily credit usage. 1,000 credits cover a lot of pages (basic extract is 0.2 credit per page)
+docs.tavily.com
+, but if your app grows popular you might need to upgrade or pay-as-you-go
+docs.tavily.com
+. Similarly, track LLM API usage.
+LangChain Agents (optional): In a future iteration, you might implement a more autonomous agent that can answer free-form questions about terms. For example, a user might ask "Does Service X allow my data to be deleted?" and your agent could use Tavily search or extract as tools to find the relevant clause and then answer. LangChain would shine in such a scenario by chaining search queries and the LLM reasoning. Tavily’s APIs are well-suited for this since they can provide real-time factual content to the agent. This is beyond the initial scope but good to keep in mind.
+5. Summary and Next Steps
+By combining Tavily’s crawler & scraper capabilities with an LLM, we have a blueprint for an application that can retrieve any service’s Terms & Conditions and explain them to users in plain language. We covered how to set up Tavily in Python (with an API key and client), how to fetch T&C pages either directly or via search/crawl (even for services we don’t have pre-stored), and how to use an AI agent (via LangChain) to analyze the content for fairness and comparisons. This approach ensures that if a user asks about a service we haven’t seen before, our app can go out and get the terms on-the-fly
+github.com
+github.com
+, then immediately provide an analysis. Initially, you can run this locally for testing, and later deploy it as a Flask web app for others to use. With this guide, you can start implementing the system:
+Start small: maybe hard-code one or two URLs to test extraction and analysis.
+Then integrate search: allow any service name input and verify the pipeline (fetch -> analyze).
+Finally, polish the Flask UI and database integration for a smooth user experience.
+Good luck with your project, and enjoy leveraging Tavily for smarter web data extraction! The combination of Tavily’s API and LangChain/LLMs should greatly accelerate building your T&C review assistant
+docs.tavily.com
+docs.tavily.com
+. Sources:
+Tavily Documentation – API Quickstart & Reference
+docs.tavily.com
+docs.tavily.com
+docs.tavily.com
+ (installation and basic usage of Tavily Python SDK)
+Tavily Docs – Search and Extract Endpoints
+docs.tavily.com
+docs.tavily.com
+ (response structure for search results and extracted content)
+Tavily Docs – Crawl and Map Endpoints
+docs.tavily.com
+docs.tavily.com
+docs.tavily.com
+ (site traversal capabilities and usage notes)
+Tavily GitHub – tavily-python examples
+github.com
+github.com
+ (multiple URL extraction, error handling, and credit info)
+Tavily About – Search Engine for AI Agents
+docs.tavily.com
+docs.tavily.com
+ (overview of Tavily’s purpose and features)

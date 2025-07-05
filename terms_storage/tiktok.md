@@ -1,7 +1,10 @@
-TikTok Terms and Conditions
-Source: https://www.tiktok.com/legal/page/us/terms-of-service/en
-Retrieved via Tavily
-==================================================
+# TikTok - Terms and Conditions
+
+- **Version**: N/A
+- **Source URL**: https://www.tiktok.com/legal/page/us/terms-of-service/en
+- **Retrieved At**: 2025-07-05T16:03:32.510836
+
+---
 
 Terms of Service | TikTok
 
@@ -382,3 +385,4 @@ You can reach us at: [https://www.tiktok.com/legal/report/feedback](https://www.
 [Children's Privacy Policy](https://www.tiktok.com/legal/privacy-policy-for-younger-users?lang=en)
 
 © 2025 TikTok
+

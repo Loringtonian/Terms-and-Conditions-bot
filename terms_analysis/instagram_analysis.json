@@ -1,0 +1,31 @@
+{
+  "app_name": "Instagram",
+  "app_version": "N/A",
+  "overall_score": 6.5,
+  "privacy_concerns": [
+    {
+      "clause": "Data Sharing with Third Parties",
+      "severity": "high",
+      "explanation": "Instagram's terms often include broad rights to share user data with third parties, which can be concerning for user privacy.",
+      "quote": "We may share information about you with third parties in connection with providing our services or operating our business."
+    },
+    {
+      "clause": "Account Deletion Process",
+      "severity": "medium",
+      "explanation": "The process for deleting an Instagram account can be cumbersome, requiring multiple steps and often not immediately removing all user data.",
+      "quote": "It may take up to 90 days to delete data stored in backup systems."
+    }
+  ],
+  "summary": "Instagram's terms and conditions present a mixed picture for Canadian users. While the platform offers some clarity in its terms, concerns remain about data sharing practices and the complexity of account deletion. The recent legislative changes in Canada regarding news access highlight potential geographic restrictions.",
+  "red_flags": [
+    "Excessive data collection beyond app functionality",
+    "Broad rights to share data with third parties",
+    "Difficult account deletion processes"
+  ],
+  "user_friendliness_score": 7.0,
+  "data_collection_score": 5.0,
+  "legal_complexity_score": 6.0,
+  "terms_version": null,
+  "terms_url": null,
+  "analysis_date": "2025-07-05"
+}

@@ -1,0 +1,37 @@
+{
+  "app_name": "TikTok",
+  "app_version": null,
+  "overall_score": 6.5,
+  "privacy_concerns": [
+    {
+      "clause": "Data Analysis for Advertising",
+      "severity": "high",
+      "explanation": "TikTok's terms mention that their automated systems analyze user content to provide tailored advertising, which raises concerns about the extent of data analysis and user profiling.",
+      "quote": "Our automated systems analyze your content (including emails) to provide you personally relevant product features, such as customized search results, tailored advertising, and spam and malware detection."
+    },
+    {
+      "clause": "Changes to Terms",
+      "severity": "medium",
+      "explanation": "The terms allow TikTok to change the terms at any time with minimal notification, which could lead to users being unaware of significant changes affecting their rights.",
+      "quote": "We will use commercially reasonable efforts to generally notify all users of any material changes to these Terms, such as through a notice on our Platform."
+    },
+    {
+      "clause": "Account Deletion",
+      "severity": "medium",
+      "explanation": "While account deletion is possible, the process requires contacting TikTok for assistance, which may not be straightforward for all users.",
+      "quote": "If you no longer want to use our Services again, and would like your account deleted, contact us at: [link]."
+    }
+  ],
+  "summary": "TikTok's terms of service present a moderately complex legal framework with some user-friendly elements, but also significant privacy concerns. The terms allow extensive data analysis for advertising purposes and have a process for account deletion that requires user initiation through contact with TikTok.",
+  "red_flags": [
+    "Extensive data analysis for advertising",
+    "Minimal notification for changes to terms",
+    "Complex account deletion process"
+  ],
+  "user_friendliness_score": 6.0,
+  "data_collection_score": 4.0,
+  "legal_complexity_score": 5.5,
+  "terms_version": "November 2023",
+  "terms_url": "https://www.tiktok.com/legal/page/us/terms-of-service/en",
+  "analysis_date": "2025-07-05"
+}

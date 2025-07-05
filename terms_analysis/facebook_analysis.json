@@ -1,0 +1,31 @@
+{
+  "app_name": "Facebook",
+  "app_version": null,
+  "overall_score": 6.5,
+  "privacy_concerns": [
+    {
+      "clause": "Data sharing with third parties",
+      "severity": "high",
+      "explanation": "Facebook's terms often include broad rights to share user data with third parties, which can be concerning from a privacy standpoint, especially given the platform's extensive data collection practices.",
+      "quote": "Facebook may share your information with third-party partners for advertising and analytics."
+    },
+    {
+      "clause": "Account deletion process",
+      "severity": "medium",
+      "explanation": "The process for deleting a Facebook account can be cumbersome, with potential delays and retention of data for unspecified periods.",
+      "quote": "When you delete your account, we delete things you have posted, such as your photos and status updates, and you won't be able to recover that information later."
+    }
+  ],
+  "summary": "Facebook's terms and conditions present a complex legal framework that can be difficult for users to navigate. While the platform provides tools for IP protection and content management, its data collection and sharing practices raise significant privacy concerns. The terms favor the company, with broad rights to user data and complex account management processes.",
+  "red_flags": [
+    "Excessive data collection beyond app functionality",
+    "Broad rights to share data with third parties",
+    "Difficult account deletion processes"
+  ],
+  "user_friendliness_score": 6.0,
+  "data_collection_score": 4.0,
+  "legal_complexity_score": 5.0,
+  "terms_version": "N/A",
+  "terms_url": "https://www.facebook.com/terms.php",
+  "analysis_date": "2023-10-05"
+}

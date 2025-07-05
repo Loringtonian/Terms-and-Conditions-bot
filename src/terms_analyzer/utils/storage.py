@@ -7,7 +7,7 @@ from datetime import datetime
 class StorageManager:
     """Manages storage of terms and conditions as markdown files."""
     
-    def __init__(self, base_dir: str = "data/terms"):
+    def __init__(self, base_dir: str = "terms_storage"):
         """Initialize the storage manager.
         
         Args:

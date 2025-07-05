@@ -2,7 +2,8 @@ import os
 import httpx
 from typing import List, Dict, Optional
 from pydantic import BaseModel, HttpUrl
-from ..models.analysis import TCAnalysis
+# from ..models.analysis import TCAnalysis
+from ..utils.storage import StorageManager
 
 class TavilySearchResult(BaseModel):
     """Model for Tavily search results"""
@@ -24,6 +25,7 @@ class TavilyService:
         self.base_url = base_url.rstrip('/')
         self.api_key = api_key or os.getenv("TAVILY_API_KEY")
         self.client = httpx.AsyncClient(timeout=30.0)
+        self.storage = StorageManager()
         
     async def search_terms_and_conditions(self, app_name: str) -> List[Dict]:
         """Search for terms and conditions for a given app.
@@ -106,11 +108,12 @@ class TavilyService:
             print(f"Error extracting content from {url}: {str(e)}")
             return None
     
-    async def find_terms_for_app(self, app_name: str) -> Optional[Dict]:
+    async def find_terms_for_app(self, app_name: str, save_to_storage: bool = True) -> Optional[Dict]:
         """Find and extract terms and conditions for an app.
         
         Args:
             app_name: Name of the application
+            save_to_storage: Whether to save the terms to storage as markdown
             
         Returns:
             Dictionary with terms text and metadata, or None if not found
@@ -130,12 +133,24 @@ class TavilyService:
             
             content = await self.extract_terms_text(url)
             if content and len(content) > 500:  # Lowered threshold for testing
-                return {
+                terms_data = {
                     "app_name": app_name,
                     "terms_url": url,
                     "terms_text": content,
                     "source": "tavily"
                 }
+                
+                # Save to storage if requested
+                if save_to_storage:
+                    saved_path = self.storage.save_terms(
+                        app_name=app_name,
+                        content=content,
+                        source_url=url
+                    )
+                    terms_data["saved_path"] = str(saved_path)
+                    print(f"Saved terms to: {saved_path}")
+                
+                return terms_data
                 
         print("No suitable terms and conditions found")
         return None

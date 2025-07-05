@@ -1,0 +1,49 @@
+{
+  "app_name": "Netflix in Your Neighbourhood",
+  "app_version": null,
+  "overall_score": 7.5,
+  "privacy_concerns": [
+    {
+      "clause": "Collection of geolocation data",
+      "severity": "medium",
+      "explanation": "The terms specify that geolocation data, such as IP address or GPS coordinates, may be collected. While this is common for location-based services, it could be considered intrusive if users are not fully aware of the extent of this data collection.",
+      "quote": "Geolocation data (such as IP address or GPS coordinates)"
+    },
+    {
+      "clause": "Broad sharing within Netflix family of companies",
+      "severity": "medium",
+      "explanation": "User data may be shared across the Netflix family of companies for various purposes, including content development and customer support. This broad sharing could raise concerns about how data is used and protected across multiple entities.",
+      "quote": "We might share your information among the Netflix family of companies... for data processing and storage, providing customer support, content development, and for other purposes."
+    },
+    {
+      "clause": "Name and likeness usage",
+      "severity": "high",
+      "explanation": "By interacting with the Experience, users grant Netflix a perpetual, worldwide, and irrevocable license to use their likeness, name, and other personal attributes for promotional purposes without compensation. This clause could be seen as overly broad and potentially exploitative.",
+      "quote": "By interacting with this Experience, you grant... the irrevocable, perpetual, worldwide, non-exclusive right to record, depict, and/or portray you... in connection with the development, production, distribution, exploitation, advertising, promotion and publicity of this Experience."
+    },
+    {
+      "clause": "Use of cookies and tracking technologies",
+      "severity": "medium",
+      "explanation": "The terms state that cookies, pixel tags, and web beacons are used for various purposes, including tracking user interactions. While users can manage cookies through browser settings, the inability to fully control tracking on mobile devices may limit user autonomy.",
+      "quote": "This information is collected using technologies such as cookies, pixel tags, and web beacons."
+    },
+    {
+      "clause": "Third-party integrations and data sharing",
+      "severity": "medium",
+      "explanation": "The Experience integrates with third-party platforms (e.g., social media plugins) and uses Google Analytics for data processing. While these practices are disclosed, they rely on third-party privacy policies, which may not align with user expectations.",
+      "quote": "Social plugins and social applications are operated by the social network themselves and are subject to their terms of use and privacy policies."
+    }
+  ],
+  "summary": "The Netflix in Your Neighbourhood terms and privacy policy are generally clear and provide reasonable transparency about data collection and usage. However, concerns arise from broad data-sharing practices, the use of user likeness for promotional purposes, and reliance on third-party services. Users should carefully review these terms, particularly clauses related to personal data and consent.",
+  "red_flags": [
+    "Broad rights to use user likeness without compensation",
+    "Extensive data sharing within the Netflix family of companies",
+    "Limited control over tracking technologies on mobile devices"
+  ],
+  "user_friendliness_score": 7.0,
+  "data_collection_score": 6.5,
+  "legal_complexity_score": 7.0,
+  "terms_version": null,
+  "terms_url": "https://www.netflixinyourneighbourhood.ca/privacy/",
+  "analysis_date": "2025-07-05"
+}

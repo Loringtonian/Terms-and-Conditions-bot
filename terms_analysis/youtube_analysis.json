@@ -1,0 +1,37 @@
+{
+  "app_name": "YouTube",
+  "app_version": null,
+  "overall_score": 7.5,
+  "privacy_concerns": [
+    {
+      "clause": "Your Information",
+      "severity": "medium",
+      "explanation": "The terms reference the YouTube Privacy Policy and Data Processing Terms, which outline data collection practices, but the extent of data collection and sharing with affiliates within Alphabet Inc. raises potential privacy concerns. Users may not fully understand the scope of data usage.",
+      "quote": "Our Privacy Policy explains how we treat your personal data and protect your privacy when you use the Service."
+    },
+    {
+      "clause": "Permissions and Restrictions",
+      "severity": "medium",
+      "explanation": "The terms prohibit automated data collection and harvesting of personal information, but they do not explicitly limit YouTube's own data collection practices, which could include extensive tracking and profiling.",
+      "quote": "You are not allowed to: collect or harvest any information that might identify a person (for example, usernames or faces), unless permitted by that person."
+    },
+    {
+      "clause": "Develop, Improve and Update the Service",
+      "severity": "medium",
+      "explanation": "YouTube reserves the right to make changes to the service, including discontinuing features, without user consent. While reasonable notice is promised, this could negatively impact user experience or data access.",
+      "quote": "We may make modifications or changes (to all or part of the Service) such as adding or removing features and functionalities, offering new digital content or services or discontinuing old ones."
+    }
+  ],
+  "summary": "YouTube's terms are generally comprehensive and provide clear guidelines for usage, but they include broad permissions for data collection and service changes. Privacy concerns stem from the potential extent of data sharing within Alphabet Inc. and the lack of explicit user control over data usage.",
+  "red_flags": [
+    "Broad rights to collect and share user data within Alphabet Inc.",
+    "Potentially unclear scope of data collection practices for Canadian users.",
+    "YouTube's ability to unilaterally modify or discontinue services."
+  ],
+  "user_friendliness_score": 7.0,
+  "data_collection_score": 6.0,
+  "legal_complexity_score": 6.5,
+  "terms_version": "December 15, 2023",
+  "terms_url": "https://kids.youtube.com/t/terms",
+  "analysis_date": "2025-07-05"
+}

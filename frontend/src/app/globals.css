@@ -1,0 +1,296 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --foreground-rgb: 26, 32, 44;
+    --background-start-rgb: 250, 250, 252;
+    --background-end-rgb: 255, 255, 255;
+    --primary: 30, 58, 138;
+    --primary-light: 59, 130, 246;
+    --secondary: 79, 70, 229;
+    --accent: 99, 102, 241;
+    --success: 16, 185, 129;
+    --warning: 245, 158, 11;
+    --danger: 239, 68, 68;
+    --muted: 203, 213, 225;
+    --border: 226, 232, 240;
+    --card: 255, 255, 255;
+    --card-foreground: 15, 23, 42;
+  }
+
+  .dark {
+    --foreground-rgb: 237, 242, 247;
+    --background-start-rgb: 26, 32, 44;
+    --background-end-rgb: 23, 25, 35;
+    --primary: 96, 165, 250;
+    --primary-light: 59, 130, 246;
+    --secondary: 129, 140, 248;
+    --accent: 139, 92, 246;
+    --success: 52, 211, 153;
+    --warning: 251, 191, 36;
+    --danger: 248, 113, 113;
+    --muted: 71, 85, 105;
+    --border: 45, 55, 72;
+    --card: 30, 41, 59;
+    --card-foreground: 226, 232, 240;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-medium tracking-tight;
+  }
+
+  .font-serif {
+    font-family: 'Crimson Pro', Georgia, serif;
+  }
+
+  .font-sans {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted/20 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted/40 rounded-full hover:bg-muted/60 transition-colors;
+  }
+}
+
+/* Legal document styling */
+.legal-document {
+  @apply max-w-4xl mx-auto px-4 py-8 text-foreground/90 leading-relaxed;
+}
+
+.legal-document h2 {
+  @apply text-2xl font-bold mt-8 mb-4 text-primary border-b border-muted pb-2;
+}
+
+.legal-document h3 {
+  @apply text-xl font-semibold mt-6 mb-3 text-foreground;
+}
+
+.legal-document p, .legal-document ul, .legal-document ol {
+  @apply mb-4 text-foreground/90;
+}
+
+.legal-document ul, .legal-document ol {
+  @apply pl-6;
+}
+
+.legal-document li {
+  @apply mb-2;
+}
+
+/* Legal notice styling */
+.legal-notice {
+  @apply border-l-4 border-primary bg-card/50 p-4 my-6 rounded-r-lg;
+}
+
+.legal-notice-title {
+  @apply font-bold text-primary mb-2 flex items-center gap-2;
+}
+
+/* Legal badge */
+.legal-badge {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20;
+}
+
+/* Document status */
+.document-status {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+}
+
+.document-status.pending {
+  @apply bg-warning/10 text-warning border border-warning/20;
+}
+
+.document-status.approved {
+  @apply bg-success/10 text-success border border-success/20;
+}
+
+.document-status.review {
+  @apply bg-accent/10 text-accent border border-accent/20;
+}
+
+/* Signature line */
+.signature-line {
+  @apply border-t border-muted mt-12 pt-6 flex justify-between items-center;
+}
+
+/* Legal footer */
+.legal-footer {
+  @apply text-sm text-muted-foreground mt-12 pt-6 border-t border-muted/50;
+}
+
+/* Document version */
+.document-version {
+  @apply text-xs text-muted-foreground mt-2;
+}
+
+/* Highlight box */
+.highlight-box {
+  @apply bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-400 dark:border-amber-500 p-4 my-6 rounded-r-lg;
+}
+
+/* Legal table */
+.legal-table {
+  @apply min-w-full border-collapse my-6;
+}
+
+.legal-table th {
+  @apply bg-muted/30 px-4 py-3 text-left text-sm font-medium text-foreground/80 border-b border-muted;
+}
+
+.legal-table td {
+  @apply px-4 py-3 text-sm border-b border-muted/50;
+}
+
+.legal-table tr:last-child td {
+  @apply border-b-0;
+}
+
+/* Document watermark */
+.document-watermark {
+  @apply fixed inset-0 pointer-events-none opacity-5 flex items-center justify-center z-0;
+  font-size: 30vw;
+  font-weight: 900;
+  letter-spacing: 0.5rem;
+  color: var(--primary);
+  transform: rotate(-15deg);
+  user-select: none;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+  --primary: #1a1a1a;
+  --primary-foreground: #ffffff;
+  --muted: #f5f5f5;
+  --muted-foreground: #737373;
+  --border: #e5e5e5;
+  --input: #e5e5e5;
+  --ring: #a3a3a3;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #f5f5f5;
+  --primary: #ffffff;
+  --primary-foreground: #1a1a1a;
+  --muted: #262626;
+  --muted-foreground: #a3a3a3;
+  --border: #262626;
+  --input: #262626;
+  --ring: #525252;
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background text-foreground font-sans antialiased;
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-serif font-medium tracking-tight;
+}
+
+h1 {
+  @apply text-4xl md:text-5xl lg:text-6xl;
+}
+
+h2 {
+  @apply text-3xl md:text-4xl;
+}
+
+h3 {
+  @apply text-2xl md:text-3xl;
+}
+
+p {
+  @apply leading-relaxed text-gray-700 dark:text-gray-300;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  @apply w-2 h-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400 dark:bg-gray-600;
+}
+
+/* Legal document styling */
+.legal-document {
+  @apply max-w-4xl mx-auto p-6 bg-white dark:bg-gray-900 rounded-xl shadow-legal border border-gray-200 dark:border-gray-800;
+}
+
+.legal-document h1,
+.legal-document h2,
+.legal-document h3,
+.legal-document h4,
+.legal-document h5,
+.legal-document h6 {
+  @apply mt-6 mb-4 text-gray-900 dark:text-white;
+}
+
+.legal-document p {
+  @apply my-4;
+}
+
+.legal-document ul,
+.legal-document ol {
+  @apply my-4 pl-6 space-y-2;
+}
+
+.legal-document li {
+  @apply pl-2;
+}
+
+/* Analysis result badges */
+.badge {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+}
+
+.badge-good {
+  @apply bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400;
+}
+
+.badge-warning {
+  @apply bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400;
+}
+
+.badge-bad {
+  @apply bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400;
+}

@@ -1,0 +1,50 @@
+{
+  "app_name": "Weeks Off",
+  "app_version": null,
+  "overall_score": 6.5,
+  "privacy_concerns": [
+    {
+      "clause": "Collection of Personal Information",
+      "severity": "medium",
+      "explanation": "The terms specify the collection of personal data, including name, email address, IP address, location data, and site usage preferences. While some of this data is necessary for functionality, the scope of data collection could be seen as excessive for a property booking service.",
+      "quote": "We may collect personal information such as: Name, E-mail address, IP address, Location data, Site usage preferences, Other information voluntarily provided by the user."
+    },
+    {
+      "clause": "Use of Personal Information",
+      "severity": "medium",
+      "explanation": "The terms allow for the use of personal data for promotional communications and newsletters, which may not align with user expectations unless explicitly consented to. There is no mention of granular consent for these uses.",
+      "quote": "Information collected may be used to: Send newsletters or promotional communications."
+    },
+    {
+      "clause": "Sharing Personal Information",
+      "severity": "low",
+      "explanation": "The terms state that personal information will not be shared with third parties without consent, except when required by law or to protect rights. This is a standard practice but lacks detail on how 'protection of rights' is defined.",
+      "quote": "We will not share your personal information with third parties without your consent, unless required by law or to protect our rights."
+    },
+    {
+      "clause": "Cookies and Tracking Technologies",
+      "severity": "medium",
+      "explanation": "The use of cookies and tracking technologies is mentioned but lacks detailed information about the types of cookies used, their purposes, and how users can manage their preferences.",
+      "quote": "We use cookies and similar technologies to: Analyze usage trends, Track user preferences, Manage sessions and connection preference."
+    },
+    {
+      "clause": "Changes to the Privacy Policy",
+      "severity": "medium",
+      "explanation": "The terms allow for updates to the privacy policy without prior notice, which could lead to significant changes without user awareness.",
+      "quote": "We reserve the right to update or modify our privacy policy. Any changes will be posted on this page with the revision date."
+    }
+  ],
+  "summary": "The terms and conditions for Weeks Off are relatively standard but raise concerns about the scope of data collection and the lack of granular consent for promotional communications. The privacy policy is clear in some areas but could benefit from more transparency regarding cookies and tracking technologies.",
+  "red_flags": [
+    "Broad data collection beyond essential functionality",
+    "Lack of granular consent for promotional communications",
+    "Unclear cookie and tracking practices",
+    "Changes to privacy policy without prior user notification"
+  ],
+  "user_friendliness_score": 7.0,
+  "data_collection_score": 6.0,
+  "legal_complexity_score": 7.0,
+  "terms_version": null,
+  "terms_url": "https://www.weeks-off.com/en/legal",
+  "analysis_date": "2025-07-05"
+}

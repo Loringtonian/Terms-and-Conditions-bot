@@ -27,18 +27,61 @@ export default function TermsViewerModal({
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    if (isOpen && !isPastedTerms) {
-      fetchTerms();
-    } else if (isOpen && isPastedTerms && pastedTermsText) {
+    if (isOpen && !isPastedTerms && serviceId) {
+      // Small delay to prevent rapid successive calls
+      const timeoutId = setTimeout(() => {
+        fetchTerms();
+      }, 100);
+      return () => clearTimeout(timeoutId);
+    } else if (!isOpen) {
+      // Reset state when modal closes
+      setTermsText('');
+      setError(null);
+    }
+  }, [isOpen, serviceId, isPastedTerms]);
+
+  // Separate effect for pasted terms to avoid conflicts
+  useEffect(() => {
+    if (isOpen && isPastedTerms && pastedTermsText) {
       setTermsText(pastedTermsText);
     }
-  }, [isOpen, serviceId, isPastedTerms, pastedTermsText]);
+  }, [isOpen, isPastedTerms, pastedTermsText]);
+
+  // Handle escape key
+  useEffect(() => {
+    const handleEscape = (event: KeyboardEvent) => {
+      console.log('Key pressed:', event.key, 'Modal open:', isOpen);
+      if (event.key === 'Escape' && isOpen) {
+        console.log('Closing modal via escape key');
+        event.preventDefault();
+        event.stopPropagation();
+        onClose();
+      }
+    };
+
+    if (isOpen) {
+      console.log('Adding escape key listener');
+      document.addEventListener('keydown', handleEscape, true); // Use capture phase
+      // Prevent body scroll when modal is open
+      document.body.style.overflow = 'hidden';
+    }
+
+    return () => {
+      console.log('Removing escape key listener');
+      document.removeEventListener('keydown', handleEscape, true);
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen, onClose]);
 
   const fetchTerms = async () => {
+    // Prevent multiple simultaneous requests
+    if (isLoading) return;
+    
     setIsLoading(true);
     setError(null);
     
     try {
+      console.log(`Fetching terms for service: ${serviceId}`);
       const response = await fetch(`http://localhost:5001/terms/${serviceId}`, {
         mode: 'cors',
         credentials: 'include'
@@ -50,9 +93,14 @@ export default function TermsViewerModal({
       
       const data = await response.json();
       setTermsText(data.terms_text || '');
+      console.log(`Successfully loaded terms for ${serviceId}`);
     } catch (err) {
       console.error('Error fetching terms:', err);
-      setError('Failed to load terms and conditions text');
+      if (err instanceof Error && err.message.includes('404')) {
+        setError('Original terms document not available for this service. This service has analysis but the source terms document was not saved.');
+      } else {
+        setError('Failed to load terms and conditions text');
+      }
     } finally {
       setIsLoading(false);
     }
@@ -109,9 +157,26 @@ export default function TermsViewerModal({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-      <div className="bg-white rounded-2xl shadow-xl w-full max-w-4xl max-h-[90vh] flex flex-col">
-        <div className="p-6 border-b border-slate-200 flex justify-between items-center flex-shrink-0">
+    <div 
+      className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50"
+      onClick={(e) => {
+        // Close modal when clicking backdrop
+        if (e.target === e.currentTarget) {
+          onClose();
+        }
+      }}
+    >
+      <div className="bg-white rounded-2xl shadow-xl w-full max-w-4xl max-h-[90vh] flex flex-col relative">
+        {/* Fixed close button that stays visible */}
+        <button 
+          onClick={onClose}
+          className="absolute top-4 right-4 z-10 p-2 rounded-full bg-white/90 backdrop-blur-sm text-slate-400 hover:text-slate-700 hover:bg-white transition-all duration-200 shadow-lg"
+          aria-label="Close modal"
+        >
+          <X className="h-5 w-5" />
+        </button>
+
+        <div className="p-6 border-b border-slate-200 flex-shrink-0 pr-16">
           <div className="flex items-center">
             <FileText className="h-6 w-6 text-slate-600 mr-3" />
             <div>
@@ -125,12 +190,6 @@ export default function TermsViewerModal({
               )}
             </div>
           </div>
-          <button 
-            onClick={onClose}
-            className="text-slate-400 hover:text-slate-700 transition-colors"
-          >
-            <X className="h-6 w-6" />
-          </button>
         </div>
         
         <div className="flex-1 overflow-hidden">

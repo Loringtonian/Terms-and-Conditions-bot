@@ -68,6 +68,11 @@ export default function Home() {
     pastedTermsText: ''
   });
   const [pastedTermsText, setPastedTermsText] = useState('');
+  const [topBottomServices, setTopBottomServices] = useState<{
+    top_services: any[];
+    bottom_services: any[];
+    total_analyzed: number;
+  } | null>(null);
 
   // Fetch services on component mount
   useEffect(() => {
@@ -95,7 +100,25 @@ export default function Home() {
     };
 
     fetchServices();
+    fetchTopBottomServices();
   }, []);
+
+  // Fetch top and bottom services
+  const fetchTopBottomServices = async () => {
+    try {
+      const response = await fetch('http://localhost:5001/api/top-bottom-services', {
+        mode: 'cors',
+        credentials: 'include'
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        setTopBottomServices(data);
+      }
+    } catch (error) {
+      console.error('Error fetching top/bottom services:', error);
+    }
+  };
 
   // Filter services based on search query
   useEffect(() => {
@@ -634,17 +657,19 @@ export default function Home() {
                               </div>
                               
                               <div className="ml-4 flex flex-col space-y-2">
-                                {/* View in Terms button */}
-                                <button
-                                  onClick={() => handleShowTermsWithClause({ 
-                                    clause: flag, 
-                                    quote: matchedConcern?.quote || flag 
-                                  })}
-                                  className="px-3 py-1 bg-red-600 text-white text-xs font-medium rounded-lg hover:bg-red-700 transition-colors duration-200 flex items-center"
-                                >
-                                  <FileText className="h-3 w-3 mr-1" />
-                                  View in Terms
-                                </button>
+                                {/* View in Terms button - only show if service has terms */}
+                                {selectedService?.hasTerms && (
+                                  <button
+                                    onClick={() => handleShowTermsWithClause({ 
+                                      clause: flag, 
+                                      quote: matchedConcern?.quote || flag 
+                                    })}
+                                    className="px-3 py-1 bg-red-600 text-white text-xs font-medium rounded-lg hover:bg-red-700 transition-colors duration-200 flex items-center"
+                                  >
+                                    <FileText className="h-3 w-3 mr-1" />
+                                    View in Terms
+                                  </button>
+                                )}
                                 
                                 {/* Learn More button if matched concern has deep analysis */}
                                 {matchedConcern && matchedConcern.clarity_analysis && (
@@ -668,9 +693,20 @@ export default function Home() {
                 {/* Concerns */}
                 {analysisData.concerns && analysisData.concerns.length > 0 && (
                   <div className="mb-8">
-                    <h3 className="text-lg font-medium text-slate-900 mb-4">Key Concerns</h3>
+                    <h3 className="text-lg font-medium text-slate-900 mb-4">Additional Concerns</h3>
                     <div className="space-y-4">
-                      {analysisData.concerns.map((concern: any, index: number) => {
+                      {analysisData.concerns
+                        .filter((concern: any) => {
+                          // Filter out high-risk concerns that are already shown as red flags
+                          if (concern.severity === 'high' && analysisData.red_flags) {
+                            return !analysisData.red_flags.some((flag: string) => 
+                              flag.toLowerCase().includes(concern.clause.toLowerCase().split(' ').slice(0, 3).join(' ')) ||
+                              concern.clause.toLowerCase().includes(flag.toLowerCase().split(' ').slice(0, 3).join(' '))
+                            );
+                          }
+                          return true; // Show all medium and low risk concerns
+                        })
+                        .map((concern: any, index: number) => {
                         const severityDisplay = getSeverityDisplay(concern.severity);
                         const isHighRisk = concern.severity === 'high';
                         
@@ -698,14 +734,16 @@ export default function Home() {
                               </div>
                               
                               <div className="ml-4 flex flex-col space-y-2">
-                                {/* View in Terms button for all concerns */}
-                                <button
-                                  onClick={() => handleShowTermsWithClause(concern)}
-                                  className="px-3 py-1 bg-slate-600 text-white text-xs font-medium rounded-lg hover:bg-slate-700 transition-colors duration-200 flex items-center"
-                                >
-                                  <FileText className="h-3 w-3 mr-1" />
-                                  View in Terms
-                                </button>
+                                {/* View in Terms button for all concerns - only show if service has terms */}
+                                {selectedService?.hasTerms && (
+                                  <button
+                                    onClick={() => handleShowTermsWithClause(concern)}
+                                    className="px-3 py-1 bg-slate-600 text-white text-xs font-medium rounded-lg hover:bg-slate-700 transition-colors duration-200 flex items-center"
+                                  >
+                                    <FileText className="h-3 w-3 mr-1" />
+                                    View in Terms
+                                  </button>
+                                )}
                                 
                                 {/* Learn More button for high risk items with deep analysis */}
                                 {isHighRisk && concern.clarity_analysis && (
@@ -744,7 +782,8 @@ export default function Home() {
 
         {/* Default state - no search */}
         {!showResults && !selectedService && !isLoading && (
-          <div className="w-full max-w-4xl">
+          <div className="w-full max-w-4xl space-y-8">
+            {/* Ready to Analyze Card */}
             <div className="bg-white/70 backdrop-blur-xl rounded-2xl border border-slate-200/50 shadow-xl overflow-hidden">
               <div className="px-8 py-6 border-b border-slate-200/50 bg-slate-50/50">
                 <h3 className="text-xl font-light text-slate-900">
@@ -762,6 +801,123 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
+            {/* Best vs Worst Services Comparison */}
+            {topBottomServices && (
+              <div className="bg-white/70 backdrop-blur-xl rounded-2xl border border-slate-200/50 shadow-xl overflow-hidden">
+                <div className="px-8 py-6 border-b border-slate-200/50 bg-slate-50/50">
+                  <h3 className="text-xl font-light text-slate-900">
+                    Best vs Worst Privacy Practices
+                  </h3>
+                  <p className="mt-1 text-sm text-slate-500">
+                    Compare the top and bottom rated services from our analysis of {topBottomServices.total_analyzed} apps
+                  </p>
+                </div>
+                <div className="p-8">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    {/* Worst Services (Left) */}
+                    <div className="space-y-4">
+                      <div className="flex items-center mb-4">
+                        <div className="flex items-center space-x-2">
+                          <span className="text-2xl">🚨</span>
+                          <h4 className="text-lg font-semibold text-red-600">Highest Risk</h4>
+                        </div>
+                      </div>
+                      <div className="space-y-3">
+                        {topBottomServices.bottom_services.map((service: any, index: number) => (
+                          <div
+                            key={service.id}
+                            onClick={() => handleServiceClick({
+                              id: service.id,
+                              name: service.displayName,
+                              displayName: service.displayName,
+                              category: service.category,
+                              icon: service.icon,
+                              riskLevel: service.risk_level,
+                              lastAnalyzed: new Date().toISOString(),
+                              hasAnalysis: true,
+                              hasTerms: true
+                            })}
+                            className="cursor-pointer p-4 bg-red-50 border-2 border-red-200 rounded-xl hover:border-red-300 hover:shadow-md transition-all duration-300 group"
+                          >
+                            <div className="flex items-center justify-between">
+                              <div className="flex items-center space-x-3">
+                                <div className="text-2xl">{service.icon}</div>
+                                <div>
+                                  <h5 className="font-medium text-slate-900 group-hover:text-red-700">
+                                    {service.displayName}
+                                  </h5>
+                                  <p className="text-sm text-slate-500">{service.category}</p>
+                                </div>
+                              </div>
+                              <div className="text-right">
+                                <div className="text-2xl font-bold text-red-600">
+                                  {service.overall_score.toFixed(1)}/10
+                                </div>
+                                <div className="flex items-center space-x-1 text-xs text-red-600">
+                                  <span>🛑</span>
+                                  <span className="font-medium">{service.red_flags_count} flags</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Best Services (Right) */}
+                    <div className="space-y-4">
+                      <div className="flex items-center mb-4">
+                        <div className="flex items-center space-x-2">
+                          <span className="text-2xl">✅</span>
+                          <h4 className="text-lg font-semibold text-green-600">Best Practices</h4>
+                        </div>
+                      </div>
+                      <div className="space-y-3">
+                        {topBottomServices.top_services.map((service: any, index: number) => (
+                          <div
+                            key={service.id}
+                            onClick={() => handleServiceClick({
+                              id: service.id,
+                              name: service.displayName,
+                              displayName: service.displayName,
+                              category: service.category,
+                              icon: service.icon,
+                              riskLevel: service.risk_level,
+                              lastAnalyzed: new Date().toISOString(),
+                              hasAnalysis: true,
+                              hasTerms: true
+                            })}
+                            className="cursor-pointer p-4 bg-green-50 border-2 border-green-200 rounded-xl hover:border-green-300 hover:shadow-md transition-all duration-300 group"
+                          >
+                            <div className="flex items-center justify-between">
+                              <div className="flex items-center space-x-3">
+                                <div className="text-2xl">{service.icon}</div>
+                                <div>
+                                  <h5 className="font-medium text-slate-900 group-hover:text-green-700">
+                                    {service.displayName}
+                                  </h5>
+                                  <p className="text-sm text-slate-500">{service.category}</p>
+                                </div>
+                              </div>
+                              <div className="text-right">
+                                <div className="text-2xl font-bold text-green-600">
+                                  {service.overall_score.toFixed(1)}/10
+                                </div>
+                                <div className="flex items-center space-x-1 text-xs text-green-600">
+                                  <span>✅</span>
+                                  <span className="font-medium">{service.red_flags_count} flags</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         )}
       </main>

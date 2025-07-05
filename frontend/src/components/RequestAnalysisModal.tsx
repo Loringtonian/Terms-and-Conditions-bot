@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { X, Loader2, Search } from 'lucide-react';
 
 interface RequestAnalysisModalProps {
@@ -19,6 +19,27 @@ export default function RequestAnalysisModal({
   const [serviceName, setServiceName] = useState('');
   const [knownUrl, setKnownUrl] = useState('');
   const [error, setError] = useState<string | null>(null);
+
+  // Handle escape key
+  useEffect(() => {
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape' && isOpen && !isProcessing) {
+        event.preventDefault();
+        event.stopPropagation();
+        onClose();
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('keydown', handleEscape, true);
+      document.body.style.overflow = 'hidden';
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleEscape, true);
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen, onClose, isProcessing]);
 
   if (!isOpen) return null;
 

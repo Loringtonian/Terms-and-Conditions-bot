@@ -328,7 +328,7 @@ def get_services():
                 
                 # Check if we have the markdown file for this service
                 markdown_file = storage_dir / f"{service_name}.md"
-                has_terms = markdown_file.exists()
+                has_terms = markdown_file.exists() and markdown_file.stat().st_size > 100  # Must exist and have some content
                 
                 # Determine category and icon based on service name
                 category, icon = get_service_category_and_icon(service_name)
@@ -453,7 +453,7 @@ def get_terms(service_id):
         terms_file = storage_dir / f'{service_id}.md'
         
         if not terms_file.exists():
-            return jsonify({"error": "Terms not found"}), 404
+            return jsonify({"error": f"Terms file not found for service '{service_id}'. This service has analysis but no original terms document."}), 404
         
         with open(terms_file, 'r', encoding='utf-8') as f:
             terms_text = f.read()
@@ -464,6 +464,85 @@ def get_terms(service_id):
         })
     except Exception as e:
         return jsonify({"error": f"Error getting terms: {str(e)}"}), 500
+
+@app.route('/api/top-bottom-services', methods=['GET'])
+def get_top_bottom_services():
+    """
+    Get the top 3 and bottom 3 rated services based on overall scores.
+    
+    Returns: {"top_services": [...], "bottom_services": [...]}
+    """
+    try:
+        # Get the project root directory
+        project_root = Path(__file__).parent.parent.parent.parent
+        analysis_dir = project_root / 'terms_analysis'
+        
+        if not analysis_dir.exists():
+            return jsonify({"error": "Analysis directory not found"}), 404
+        
+        services_with_scores = []
+        
+        # Get all analysis files
+        for analysis_file in analysis_dir.glob('*.json'):
+            # Skip deep analysis files
+            if analysis_file.name.endswith('_deep_analysis.json'):
+                continue
+                
+            try:
+                with open(analysis_file, 'r') as f:
+                    analysis_data = json.load(f)
+                
+                service_name = analysis_file.stem.replace('_analysis', '')
+                overall_score = analysis_data.get('overall_score', 0)
+                app_name = analysis_data.get('app_name', service_name.replace('_', ' ').title())
+                
+                # Get category and icon
+                category, icon = get_service_category_and_icon(service_name)
+                
+                # Determine risk level based on score
+                if overall_score >= 7:
+                    risk_level = 'low'
+                    risk_color = 'text-green-600'
+                elif overall_score >= 5:
+                    risk_level = 'medium'
+                    risk_color = 'text-yellow-600'
+                else:
+                    risk_level = 'high'
+                    risk_color = 'text-red-600'
+                
+                services_with_scores.append({
+                    'id': service_name,
+                    'displayName': app_name,
+                    'category': category,
+                    'icon': icon,
+                    'overall_score': overall_score,
+                    'risk_level': risk_level,
+                    'risk_color': risk_color,
+                    'user_friendliness_score': analysis_data.get('user_friendliness_score'),
+                    'data_collection_score': analysis_data.get('data_collection_score'),
+                    'legal_complexity_score': analysis_data.get('legal_complexity_score'),
+                    'red_flags_count': len(analysis_data.get('red_flags', []))
+                })
+                
+            except Exception as e:
+                print(f"Error processing {analysis_file}: {e}")
+                continue
+        
+        # Sort by overall score
+        services_with_scores.sort(key=lambda x: x['overall_score'])
+        
+        # Get bottom 3 (worst) and top 3 (best)
+        bottom_services = services_with_scores[:3]
+        top_services = services_with_scores[-3:][::-1]  # Reverse to show highest first
+        
+        return jsonify({
+            "top_services": top_services,
+            "bottom_services": bottom_services,
+            "total_analyzed": len(services_with_scores)
+        })
+        
+    except Exception as e:
+        return jsonify({"error": f"Error getting top/bottom services: {str(e)}"}), 500
 
 @app.route('/validate-all-terms', methods=['GET'])
 def validate_all_terms():

@@ -2,7 +2,7 @@
 
 - **Version**: N/A
 - **Source URL**: https://pubgmobile.com/terms
-- **Retrieved At**: 2025-07-05T19:01:17.933054
+- **Retrieved At**: 2025-07-05T21:21:12.430579
 
 ---
 

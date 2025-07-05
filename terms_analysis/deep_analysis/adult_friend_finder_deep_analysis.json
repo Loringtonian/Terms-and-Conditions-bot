@@ -1,0 +1,62 @@
+{
+  "app_name": "adult friend finder",
+  "total_high_severity_concerns": 1,
+  "analysis_timestamp": "2025-07-05",
+  "concerns_analyzed": [
+    {
+      "original_concern": {
+        "clause": "Broad license to user content",
+        "severity": "high",
+        "explanation": "Users grant the company an irrevocable, perpetual, non-exclusive, fully-paid, worldwide license to use, copy, and distribute any content posted on the site. This clause gives the company extensive rights over user-generated content without clear limitations.",
+        "quote": "By posting information or content to any public area of the site, you automatically grant... an irrevocable, perpetual, non-exclusive, fully-paid, worldwide license to use, copy, perform, display and distribute such information and content..."
+      },
+      "extended_context": "...ice. The Service contains the copyrighted material, trademarks, and other proprietary information of 1058641 Ontario Inc. and its licensors. In addition, other users may post copyrighted information, which has copyright protection whether or not it is identified as copyrighted. Except for that information which is in the public domain or for which you have been given permission, you will not copy, modify, publish, transmit, distribute, perform, display, or sell any such proprietary information. By posting information or content to any public area of the site, you automatically grant, and you represent and warrant that you have the right to grant, to 1058641 Ontario Inc. an irrevocable, perpetual, non-exclusive, fully-paid, worldwide license to use, copy, perform, display and distribute such information and content and to prepare derivative works of, or incorporate into other works, such information and content, and to grant and authorize sublicenses of the foregoing.\n\nThis Agreement is entered into in Waterloo, Ontario Canada.\n\nBy accessing this website, you and 1058641 Ontario Inc. agree that all matters relating to access to, or use of, this website shall be governed by the Province of Ontario and the laws of Canada, wit...",
+      "clarity_analysis": {
+        "unclear_terms": [
+          {
+            "term": "irrevocable, perpetual, non-exclusive, fully-paid, worldwide license",
+            "explanation": "This means that once you post content on the site, the company has the right to use it forever (perpetual), you cannot take back this permission (irrevocable), they can share these rights with others (non-exclusive), they don't owe you any payment for using your content (fully-paid), and they can use it anywhere in the world (worldwide).",
+            "user_impact": "The company can use, copy, distribute, and even modify your content in any way they want, forever, without needing to ask for your permission again or pay you. You lose control over how your content is used once it's posted.",
+            "questions_to_ask": [
+              "What specific types of content does this apply to (e.g., photos, messages, videos)?",
+              "Can the company use my content for advertising or commercial purposes without notifying me?",
+              "What happens if I delete my account or content? Does the company still retain these rights?",
+              "Can the company sublicense my content to third parties, and for what purposes?"
+            ]
+          },
+          {
+            "term": "to prepare derivative works of, or incorporate into other works",
+            "explanation": "This means the company can modify your content or combine it with other content to create new material. For example, they could take your photo and edit it or use it in a promotional video.",
+            "user_impact": "Your content could be altered or repurposed in ways you might not expect or approve of, and you have no control over how it’s used.",
+            "questions_to_ask": [
+              "What kinds of derivative works might the company create using my content?",
+              "Will I be notified if my content is modified or used in this way?",
+              "Can I opt out of having my content used in derivative works?"
+            ]
+          },
+          {
+            "term": "to grant and authorize sublicenses of the foregoing",
+            "explanation": "This means the company can give other people or companies permission to use your content, and those third parties can use it in ways similar to how the company can.",
+            "user_impact": "Your content could end up being used by third parties you don’t know or trust, and you have no control over who those parties are or how they use your content.",
+            "questions_to_ask": [
+              "Who are these third parties that might receive sublicenses to my content?",
+              "What safeguards are in place to ensure my content isn’t misused by third parties?",
+              "Can I revoke sublicenses or limit how my content is shared with others?"
+            ]
+          }
+        ],
+        "practical_meaning": "In practice, this clause means that anything you post on the site—such as photos, videos, or written content—can be used by the company in almost any way they choose, forever. They can also modify your content, combine it with other materials, and allow third parties to use it. Even if you delete your content or account, the company retains these rights. This could result in your content being used in ways you didn’t intend, such as in advertisements or promotional materials, without your knowledge or compensation.",
+        "user_action_needed": "Users should carefully consider what content they post on the site, especially if it’s personal, sensitive, or something they wouldn’t want to be used publicly or commercially. Avoid posting anything you wouldn’t want to lose control over. If you’re already using the site, review your posted content and consider removing anything you’re uncomfortable with, though the company may still retain rights to it. Users should also contact the company to clarify how their content might be used and whether there are any opt-out options.",
+        "severity_justification": "This was flagged as high severity because it significantly impacts users’ control over their personal content. The clause grants the company and third parties extensive rights to use, modify, and distribute user-generated content without limitations, potentially leading to misuse or exploitation. Users may not fully understand the implications of this clause, and the lack of clear limitations or opt-out options makes it particularly concerning."
+      },
+      "online_research": {
+        "search_query": "\"adult friend finder\" irrevocable, perpetual, non-exclusive, fully-paid, worldwide license to prepare derivative works of, or incorporate into other works to grant and authorize sublicenses of the foregoing terms conditions privacy policy explanation",
+        "top_result_url": "http://copyright.nova.edu/ashley-madison-hack/",
+        "top_result_title": "The Ashley Madison Hack: Why is a Website for Cheating Spouses ...",
+        "summary": "Adult Friend Finder is more of a “hook-up” site for swingers, as ... grant and to authorize sub-licenses and other transfers of the foregoing.”",
+        "detailed_content_available": true,
+        "additional_context": "![Nova Southeastern University Logo](https://sherman.library.nova.edu/cdn/media/images/logos/NSUFloridaWebWhite.png)\n\n# The Ashley Madison Hack: Why is a Website for Cheating Spouses Sending Out Dubious DMCA Notices?\n\nStephen Carlisle\nJuly 23, 2015\n\nThe days of whispering on the phone and the “no-tell motel” seem to be over. The internet has taken over the job of connecting people who wish to cheat on their spouses. But, as with all things secret, sometimes they get found out.\n\nOn June 19, 2015, online reporter Brian Krebs broke the story that the online service for cheating spouses, Ashley Madison, had been hacked. [1](#note-989-1 \"Online Cheating Site AshleyMadison Hacked\") The hackers demanded the parent company, Avid Dating Life [2](#note-989-2 \"Avid Life Media is the overall holding company, but Avid Dating Life is the company responsible for running Ashley Madison, and thus ADL will be used for purposes of clarity.\"):\n\n“take Ashley Madison and Established Men offline permanently "
+      }
+    }
+  ]
+}

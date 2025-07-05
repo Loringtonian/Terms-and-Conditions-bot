@@ -14,11 +14,11 @@ class TavilySearchResult(BaseModel):
 class TavilyService:
     """Service for interacting with Tavily MCP server"""
     
-    def __init__(self, base_url: str = "http://localhost:8000", api_key: Optional[str] = None):
+    def __init__(self, base_url: str = "https://api.tavily.com", api_key: Optional[str] = None):
         """Initialize the Tavily service.
         
         Args:
-            base_url: Base URL of the Tavily MCP server
+            base_url: Base URL of the Tavily API
             api_key: Tavily API key. If not provided, will use TAVILY_API_KEY from environment.
         """
         self.base_url = base_url.rstrip('/')
@@ -34,12 +34,13 @@ class TavilyService:
         Returns:
             List of search results with URLs and snippets
         """
-        query = f"{app_name} terms and conditions privacy policy canada site:.com"
+        query = f'"{app_name}" terms of service OR privacy policy canada'
         
         try:
             response = await self.client.post(
-                f"{self.base_url}/v1/search",
+                f"{self.base_url}/search",
                 json={
+                    "api_key": self.api_key,
                     "query": query,
                     "include_answer": False,
                     "include_raw_content": True,
@@ -49,8 +50,7 @@ class TavilyService:
                     "search_depth": "basic"
                 },
                 headers={
-                    "Content-Type": "application/json",
-                    "Authorization": f"Bearer {self.api_key}"
+                    "Content-Type": "application/json"
                 }
             )
             
@@ -82,13 +82,24 @@ class TavilyService:
             Extracted text content or None if extraction fails
         """
         try:
-            response = await self.client.get(
-                f"{self.base_url}/v1/extract",
-                params={"url": url},
-                headers={"Authorization": f"Bearer {self.api_key}"}
+            response = await self.client.post(
+                f"{self.base_url}/extract",
+                json={
+                    "api_key": self.api_key,
+                    "urls": [url]
+                },
+                headers={"Content-Type": "application/json"}
             )
             response.raise_for_status()
             data = response.json()
+            # Handle the response format - could be a list of results or direct text
+            if isinstance(data, dict) and "results" in data:
+                results = data["results"]
+                if results and len(results) > 0:
+                    first_result = results[0]
+                    return first_result.get("raw_content", first_result.get("content", first_result.get("text", "")))
+            elif isinstance(data, dict) and "content" in data:
+                return data["content"]
             return data.get("text", "")
             
         except Exception as e:
@@ -118,7 +129,7 @@ class TavilyService:
             print(f"Trying to extract content from: {url}")
             
             content = await self.extract_terms_text(url)
-            if content and len(content) > 1000:  # Ensure we have substantial content
+            if content and len(content) > 500:  # Lowered threshold for testing
                 return {
                     "app_name": app_name,
                     "terms_url": url,

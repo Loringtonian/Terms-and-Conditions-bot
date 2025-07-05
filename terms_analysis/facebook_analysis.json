@@ -1,0 +1,123 @@
+{
+  "app_name": "Facebook",
+  "app_version": null,
+  "overall_score": 6.5,
+  "privacy_concerns": [
+    {
+      "clause": "Collection and use of location data",
+      "severity": "high",
+      "explanation": "The terms indicate that Facebook collects location data from users' devices, which may be unnecessary for core functionality. This raises significant privacy concerns, especially if users are not given clear and explicit control over this data collection.",
+      "quote": "Facebook is updating its legal agreements and policies to insert clauses specific to how it collects and uses location information from a user's device."
+    },
+    {
+      "clause": "Use of mobile device signals (battery and signal strength)",
+      "severity": "medium",
+      "explanation": "Facebook's collection of mobile device signals such as battery and signal strength is not clearly justified in terms of functionality. This could lead to overreach in data collection.",
+      "quote": "Facebook apps started using more information from a user's mobile device, such as the battery and signal strength."
+    },
+    {
+      "clause": "Sharing data within the Facebook family of companies",
+      "severity": "medium",
+      "explanation": "The terms mention that data is shared across Facebook's family of companies, but do not provide sufficient transparency about how this data is used or the extent of sharing.",
+      "quote": "Get to know how the family of Facebook companies and apps work together."
+    },
+    {
+      "clause": "Advertising based on user data",
+      "severity": "high",
+      "explanation": "Facebook uses user data to improve targeted advertising, which may involve extensive tracking and profiling. This raises privacy concerns, particularly if users are not fully informed or given adequate control.",
+      "quote": "And we're continuing to improve ads based on the apps and sites you use and expanding your control over this kind of advertising."
+    },
+    {
+      "clause": "Changes to terms notification",
+      "severity": "low",
+      "explanation": "Facebook provides a 7-day comment period for users to review and provide feedback on proposed changes to its terms. While this is a positive step, the process for notifying users and ensuring they are aware of these changes could be more robust.",
+      "quote": "For the next 7 days, you'll be able to submit comments and suggestions about our updates."
+    }
+  ],
+  "summary": "Facebook's updated terms and privacy policy reflect efforts to inform users about data collection and use practices. However, concerns remain about the extent of data collection, especially regarding location data and device signals, and the potential for invasive advertising practices.",
+  "red_flags": [
+    "Excessive data collection (e.g., location data, device signals)",
+    "Broad data sharing within Facebook's family of companies",
+    "Extensive use of user data for targeted advertising"
+  ],
+  "user_friendliness_score": 7.0,
+  "data_collection_score": 4.0,
+  "legal_complexity_score": 6.0,
+  "terms_version": "2025-02-16",
+  "terms_url": "https://www.termsfeed.com/blog/meet-facebook-privacy-policy/",
+  "analysis_date": "2025-07-05",
+  "deep_analysis": {
+    "0": {
+      "unclear_terms": [
+        {
+          "term": "Collection and use of location information from a user's device",
+          "explanation": "This means Facebook is gathering data about your physical location through your device, such as GPS, Wi-Fi networks, or nearby cell towers. This data can be used to determine where you are, where you've been, and potentially infer patterns about your daily activities.",
+          "user_impact": "Facebook could track your movements and use this information for targeted advertising, suggesting nearby events or businesses, or other purposes. This could happen even when you’re not actively using the app, depending on the permissions granted.",
+          "questions_to_ask": [
+            "Is Facebook collecting my location data even when I’m not using the app?",
+            "Can I turn off location tracking completely, and if so, how?",
+            "What specific purposes is my location data being used for?",
+            "How long does Facebook retain my location data?",
+            "Is my location data shared with third parties, and if so, who?"
+          ]
+        },
+        {
+          "term": "Explicit control over data collection",
+          "explanation": "This refers to whether users are given clear, easy-to-understand options to decide if and when Facebook can collect their location data. Explicit control means users should be able to opt in or out of location tracking and adjust these settings at any time.",
+          "user_impact": "If Facebook does not provide clear options, users may unknowingly allow location tracking, which could compromise their privacy. Without explicit control, users may not fully understand how their data is being used or how to stop it.",
+          "questions_to_ask": [
+            "Does Facebook notify me when it starts collecting my location data?",
+            "Are the location settings easy to find and adjust?",
+            "What happens if I deny location permissions—will the app still function?"
+          ]
+        }
+      ],
+      "practical_meaning": "Facebook is updating its policies to make it clear that it collects and uses location data from users’ devices. This means that Facebook may track your physical location and use this information for various purposes, such as targeted ads, suggesting nearby events, or improving its services. However, the lack of clarity about how much control users have over this data collection raises significant privacy concerns.",
+      "user_action_needed": "Users should review their device's location settings for the Facebook app and decide whether they are comfortable sharing their location. If not, users should disable location tracking in their device settings or within the app itself. Additionally, users should monitor updates to Facebook’s privacy policy to understand how their data is being used.",
+      "severity_justification": "This was flagged as high severity because location data is highly sensitive and can reveal intimate details about a user's life, such as their home address, workplace, daily routines, and even religious or political affiliations based on places visited. If users are not given clear control over this data, it poses a significant risk to their privacy and security.",
+      "extended_context": "...m/wizard/eula)\n\nFacebook announced the new changes to their Privacy Policy and Terms agreements through a [blog article](http://newsroom.fb.com/news/2014/11/updating-our-terms-and-policies-helping-you-understand-how-facebook-works-and-how-to-control-your-information/) written by Erin Egan, Facebook's Chief Privacy Officer.\n\nThe article itself isn't lengthy, but it summarizes what kind of changes Facebook's Privacy Policy and Data Policy will have:\n\n*   **Discover what's going on around you.**\n\n Facebook is updating its legal agreements and policies to insert clauses specific to how it collects and uses location information from a user's device.\n*   **Make purchases more convenient.**\n\n Because of the new \"Buy\" button that Facebook is testing that allows a user to buy products/service rights from within Facebook, an update is required to the legal agreements.\n*   **Find information about privacy on Facebook at the moment you need it.**\n\n This is related to the \"Privacy Basics\" page that Facebook redesign along with this campaign.\n*   **Understand how we use the information we receive.**\n\n Facebook apps started using more information fr...",
+      "online_research": {
+        "search_query": "\"facebook\" Collection and use of location information from a user's device Explicit control over data collection terms conditions privacy policy explanation",
+        "top_result_url": null,
+        "top_result_title": null,
+        "summary": null
+      }
+    },
+    "3": {
+      "unclear_terms": [
+        {
+          "term": "improve ads based on the apps and sites you use",
+          "explanation": "This means Facebook collects data about your activity on other apps and websites outside of Facebook to create a detailed profile about you. This profile is then used to show you ads that are more likely to match your interests.",
+          "user_impact": "Facebook is tracking your activity beyond its platform, which could include sensitive or personal information. This data is used to target you with ads, potentially without you fully understanding the extent of the tracking.",
+          "questions_to_ask": [
+            "What specific data is Facebook collecting from other apps and websites?",
+            "How long does Facebook store this data?",
+            "Can I opt out of this type of tracking and advertising?",
+            "What controls are available to limit this data collection?"
+          ]
+        },
+        {
+          "term": "expanding your control over this kind of advertising",
+          "explanation": "This suggests Facebook may offer tools or settings to manage how your data is used for targeted advertising. However, the extent and effectiveness of these controls are unclear.",
+          "user_impact": "While Facebook claims to provide more control, it’s not clear if these controls are easy to use, comprehensive, or if they truly stop data collection and tracking.",
+          "questions_to_ask": [
+            "What specific controls are being offered?",
+            "Do these controls stop data collection or just limit how ads are shown?",
+            "Are these controls easy to access and use?",
+            "Will Facebook still collect data even if I opt out of targeted advertising?"
+          ]
+        }
+      ],
+      "practical_meaning": "In practice, Facebook is using your activity on other apps and websites to build a detailed profile about you for advertising purposes. While they claim to offer more control, it’s unclear if these controls are sufficient to protect your privacy or stop data collection entirely.",
+      "user_action_needed": "Users should review Facebook’s privacy settings and advertising preferences to understand what data is being collected and how it’s being used. Opt out of targeted advertising if possible and consider using tools like browser extensions or privacy-focused apps to limit tracking.",
+      "severity_justification": "This concern is flagged as high severity because it involves extensive tracking of user behavior across the internet, which can lead to significant privacy risks. Users may not be fully aware of the scope of data collection or how to effectively control it, leaving them vulnerable to misuse or exploitation of their personal information.",
+      "extended_context": "...09/meet-facebook-new-privacy-policy.jpg)\n\n**Written by**\n\n[**Legal Research Team at TermsFeed**](https://www.termsfeed.com/authors/termsfeed/ \"Legal Research Team at TermsFeed\")\n\nFacebook announced that their Privacy Policy and Terms of Use agreements, along with their Data Policy and Cookie Policy would be updated soon.\n\nErin Egan, Facebook's Chief Privacy Officer, says:\n\n> We're also proposing updates to our terms, data policy, and cookies policy to reflect new features we've been working on. And we're continuing to improve ads based on the apps and sites you use and expanding your control over this kind of advertising. For the next 7 days, you'll be able to submit comments and suggestions about our updates.\n\nThis shows that Facebook is following the best practices on [how to announce changes to legal agreements](https://termsfeed.com/blog/update-notice-legal-agreements/).\n\nNote that \"**a legal agreement**\" can be any kind of agreement that governs the relationship between a company and its users of the company's website or mobile app. The most common legal agreements used are:\n\n*   Privacy Policy\n*   Terms an...",
+      "online_research": {
+        "search_query": "\"facebook\" improve ads based on the apps and sites you use expanding your control over this kind of advertising terms conditions privacy policy explanation",
+        "top_result_url": "https://t.dripemail2.com/c/eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkZXRvdXIiLCJpc3MiOiJtb25vbGl0aCIsInN1YiI6ImRldG91cl9saW5rIiwiaWF0IjoxNzEwNzg1NTE1LCJuYmYiOjE3MTA3ODU1MTUsImFjY291bnRfaWQiOiI3Mzk0NjkyIiwiZGVsaXZlcnlfaWQiOiJ6d3ltMzFxMXAxcm81eDhqMzVocSIsInVybCI6Imh0dHBzOi8vdXJsZ2VuaXVzLmNvbS9ibG9nP19fcz14eHh4eHh4JnV0bV9zb3VyY2U9ZHJpcCZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1wYWlnbj1kZWZhdWx0c2VxdWVuY2UmdXRtX2NvbnRlbnQ9ZW1haWwxJl9fcz03cG1oZm55MDVkeGN0amh5YXJrZCJ9.kwvSuk3X19M0kTVq82X_1MU35DoDcqeQ2ZkdcDyh1Ic",
+        "top_result_title": "App Deep Linking and QR Code Best Practices - URLgenius",
+        "summary": "Learn how to increase app installs and app reengagement with Facebook advertising. You don't need SDKs or technical resources to link to your app from Facebook"
+      }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "app_name": "Google Meet",
+  "app_version": null,
+  "overall_score": 7.5,
+  "privacy_concerns": [
+    {
+      "clause": "Broad license to use user content",
+      "severity": "medium",
+      "explanation": "Google retains a worldwide, royalty-free license to use, modify, and distribute user content for purposes such as improving services and promoting Google products. While this is standard for many platforms, the scope and duration of the license may raise concerns for users who value control over their content.",
+      "quote": "This license allows Google to: host, reproduce, distribute, communicate, and use your content... modify and create derivative works based on your content, such as reformatting or translating it."
+    },
+    {
+      "clause": "Data analysis for ads and personalization",
+      "severity": "high",
+      "explanation": "Google uses automated systems to analyze user content for purposes including personalized ads and recommendations. While users can adjust ad settings, the default practice of analyzing content for advertising purposes may be invasive for privacy-conscious users.",
+      "quote": "This includes using automated systems and algorithms to analyze your content... to customize our services for you, such as providing recommendations and personalized search results, content, and ads."
+    },
+    {
+      "clause": "Retention of shared content",
+      "severity": "medium",
+      "explanation": "Even after users delete content from their account, it may remain accessible if it was shared with others or made available through third-party services. This could limit users' ability to fully control their data.",
+      "quote": "If you already shared your content with others before removing it... that photo may continue to appear in your friend’s Google Account even after you remove it from your Google Account."
+    },
+    {
+      "clause": "Changes to terms with limited notice",
+      "severity": "medium",
+      "explanation": "Google reserves the right to make material changes to its services and terms with limited notice, particularly in urgent situations. This could impact users' ability to adapt to changes or contest them.",
+      "quote": "If we make material changes that negatively impact your use of our services... we’ll provide you with reasonable advance notice, except in urgent situations such as preventing abuse, responding to legal requirements, or addressing security and operability issues."
+    }
+  ],
+  "summary": "Google Meet's terms are comprehensive but moderately complex, reflecting Google's broad service ecosystem. While user content remains owned by the user, Google's extensive license and data analysis practices for ads and personalization may raise privacy concerns. The terms provide some user protections but favor Google's operational flexibility.",
+  "red_flags": [
+    "Broad rights to use and modify user content",
+    "Extensive data analysis for advertising purposes",
+    "Retention of shared content even after user deletion",
+    "Limited notice for material changes to terms"
+  ],
+  "user_friendliness_score": 7.0,
+  "data_collection_score": 6.0,
+  "legal_complexity_score": 6.5,
+  "terms_version": "Effective May 22, 2024",
+  "terms_url": "https://policies.google.com/terms",
+  "analysis_date": "2025-07-05",
+  "deep_analysis": {
+    "1": {
+      "unclear_terms": [
+        {
+          "term": "automated systems and algorithms to analyze your content",
+          "explanation": "This refers to computer programs that automatically scan and process the data you create, send, or store (like emails, photos, or documents) to identify patterns or extract information.",
+          "user_impact": "This means that Google is actively scanning your private content to gather data about you, which can then be used to tailor ads, recommendations, or other services.",
+          "questions_to_ask": [
+            "What specific types of content are being analyzed (e.g., emails, photos, documents)?",
+            "What data is extracted during this analysis, and how is it stored or shared?",
+            "Can I completely opt out of this analysis, or are there limitations?"
+          ]
+        },
+        {
+          "term": "customize our services for you",
+          "explanation": "This means Google uses the data it collects from analyzing your content to personalize your experience, such as showing you ads or recommendations tailored to your interests.",
+          "user_impact": "Your personal data is being used to influence what you see online, which could feel invasive if you value privacy or don't want your behavior tracked.",
+          "questions_to_ask": [
+            "What specific customizations are being made based on my data?",
+            "How does this personalization affect my privacy or the ads I see?",
+            "Can I turn off all forms of customization, and if so, how?"
+          ]
+        },
+        {
+          "term": "content is sent, received, and when it is stored",
+          "explanation": "This means that Google analyzes your data at all stages—when you send it (e.g., an email), when you receive it, and even when it is saved in their systems (e.g., files in Google Drive).",
+          "user_impact": "Your data is being continuously monitored and analyzed, even if you are not actively using it, which could feel intrusive.",
+          "questions_to_ask": [
+            "Does this analysis apply to all types of content, including private or sensitive information?",
+            "How long is my data stored and analyzed for these purposes?",
+            "What safeguards are in place to protect my data during this process?"
+          ]
+        },
+        {
+          "term": "ads settings",
+          "explanation": "This refers to a section in your Google account where you can manage how Google uses your data to show you personalized ads.",
+          "user_impact": "While you can adjust these settings, the default is that your data is analyzed for ads, meaning you need to take action to limit or stop this.",
+          "questions_to_ask": [
+            "What happens to my data if I turn off ad personalization?",
+            "Are there any forms of data analysis that continue even if I adjust these settings?",
+            "How easy is it to find and use these settings?"
+          ]
+        }
+      ],
+      "practical_meaning": "In practice, Google is scanning and analyzing the content you create, send, or store on its platforms to gather data about you. This data is then used to personalize your experience, including showing you targeted ads and recommendations. While you can adjust some settings to limit this, the default is that your data is analyzed, which may feel invasive to users who prioritize privacy.",
+      "user_action_needed": "Users should review their Google Ads Settings and Privacy Settings to understand what data is being collected and how it is being used. If you are uncomfortable with this level of data analysis, you should explore options to limit or turn off ad personalization and consider whether to store sensitive information on Google's platforms.",
+      "severity_justification": "This issue is flagged as high severity because it involves the continuous analysis of potentially sensitive personal data, which could lead to privacy concerns for users. The default opt-in nature of this practice means users may not be fully aware of the extent of data collection and usage, and the implications for their privacy could be significant.",
+      "extended_context": "... translating itsublicense these rights to:other users to allow the services to work as designed, such as enabling you to share photos with people you chooseour contractors who’ve signed agreements with us that are consistent with these terms, only for the limited purposes described in the Purpose section belowPurposeThis license is for the limited purpose of:operating and improving the services, which means allowing the services to work as designed and creating new features and functionalities. This includes using automated systems and algorithms to analyze your content:for spam, malware, and illegal contentto recognize patterns in data, such as determining when to suggest a new album in Google Photos to keep related photos togetherto customize our services for you, such as providing recommendations and personalized search results, content, and ads (which you can change or turn off in Ads Settings)This analysis occurs as the content is sent, received, and when it is stored.using content you’ve shared publicly to promote the services. For example, to promote a Google app, we might quote a review you wrote. Or to promote Google Play, we might show a screenshot of the app you offer i...",
+      "online_research": {
+        "search_query": "\"google_meet\" automated systems and algorithms to analyze your content customize our services for you content is sent, received, and when it is stored terms conditions privacy policy explanation",
+        "top_result_url": "https://reboundcast.com/",
+        "top_result_title": "The Rebound: A tech podcast",
+        "summary": "Apple has new ads, one with an interesting moment (http://www.apple.com/watch/films/). (http://www.businessinsider.com/angela-ahrendts-says-a-significant-change-in-mindset-to-launching-apple-watch-online-2015-4) John and Dan gave it up in the iPhone 4 era. The New York Times is rolling out one-sentence stories for the Apple Watch (http://www.nytco.com/the-times-rolls-out-one-sentence-stories-on-apple-watch/) and it doesn't look that great. If you're really desperate to see what the Apple Watch m"
+      }
+    }
+  }
+}

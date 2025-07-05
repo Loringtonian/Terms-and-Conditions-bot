@@ -1,0 +1,69 @@
+{
+  "app_name": "google_sheets",
+  "total_high_severity_concerns": 1,
+  "analysis_timestamp": "2025-07-05",
+  "concerns_analyzed": [
+    {
+      "original_concern": {
+        "clause": "Data analysis for service improvement",
+        "severity": "high",
+        "explanation": "Google explicitly states that it uses automated systems to analyze user content for purposes such as spam detection, malware prevention, and personalized recommendations. This includes analyzing content as it is sent, received, and stored. This level of data processing may raise privacy concerns, especially for Canadian users who value strong data protection.",
+        "quote": "This includes using automated systems and algorithms to analyze your content: for spam, malware, and illegal content; to recognize patterns in data... to customize our services for you."
+      },
+      "extended_context": "... translating itsublicense these rights to:other users to allow the services to work as designed, such as enabling you to share photos with people you chooseour contractors who’ve signed agreements with us that are consistent with these terms, only for the limited purposes described in the Purpose section belowPurposeThis license is for the limited purpose of:operating and improving the services, which means allowing the services to work as designed and creating new features and functionalities. This includes using automated systems and algorithms to analyze your content:for spam, malware, and illegal contentto recognize patterns in data, such as determining when to suggest a new album in Google Photos to keep related photos togetherto customize our services for you, such as providing recommendations and personalized search results, content, and ads (which you can change or turn off in Ads Settings)This analysis occurs as the content is sent, received, and when it is stored.using content you’ve shared publicly to promote the services. For example, to promote a Google app, we might quote a review you wrote. Or to promote Google Play, we might show a screenshot of the a...",
+      "clarity_analysis": {
+        "unclear_terms": [
+          {
+            "term": "automated systems and algorithms to analyze your content",
+            "explanation": "This refers to computer programs that automatically scan and process the data you create, send, receive, or store on Google Sheets. This includes emails, documents, and other files to identify patterns or extract information.",
+            "user_impact": "Google is essentially reading and analyzing your data, even if no human is directly involved. This could include sensitive or private information you store in Google Sheets.",
+            "questions_to_ask": [
+              "What specific types of data are being analyzed?",
+              "Is this analysis limited to certain types of files or content?",
+              "How is my data protected during and after this analysis?",
+              "Can I opt out of this analysis entirely?"
+            ]
+          },
+          {
+            "term": "to customize our services for you",
+            "explanation": "This means Google uses the information it gathers from analyzing your data to tailor its services to your preferences, such as providing personalized recommendations, search results, or ads.",
+            "user_impact": "Your data is being used to create a profile about you, which could influence what content or ads you see. This may feel invasive if you are unaware of or uncomfortable with this level of personalization.",
+            "questions_to_ask": [
+              "What kind of personalized services will I receive as a result of this analysis?",
+              "Can I control or limit how my data is used for personalization?",
+              "What happens if I turn off personalized ads—will my data still be analyzed?"
+            ]
+          },
+          {
+            "term": "as the content is sent, received, and when it is stored",
+            "explanation": "This means Google is analyzing your data at all stages—when you upload it, share it, or even just save it in your account.",
+            "user_impact": "Even if you are not actively sharing your data with others, Google is still processing it. This could raise concerns about the constant monitoring of your private information.",
+            "questions_to_ask": [
+              "Does this mean Google has access to all my data at all times?",
+              "Are there any limits on how long my data is analyzed or stored?",
+              "What happens to my data if I delete it—does the analysis stop?"
+            ]
+          },
+          {
+            "term": "to recognize patterns in data",
+            "explanation": "This refers to Google's ability to identify trends or relationships in your data, such as grouping similar photos or suggesting related content.",
+            "user_impact": "Google is using your data to make inferences about your behavior, preferences, or activities, which could feel intrusive if you are unaware of or disagree with these practices.",
+            "questions_to_ask": [
+              "What specific patterns is Google looking for in my data?",
+              "How are these patterns used to improve services?",
+              "Can I see what patterns Google has identified about me?"
+            ]
+          }
+        ],
+        "practical_meaning": "In practice, this clause means Google is constantly analyzing the data you store, send, or receive through its services to improve its features, detect threats, and personalize your experience. This includes using your private information to make recommendations, show ads, or group related content. While this may enhance your user experience, it also raises significant privacy concerns, as your data is being processed extensively without direct control or oversight.",
+        "user_action_needed": "Users should review their Google account settings, particularly the Ads Settings, to understand and control how their data is used for personalization. They should also consider whether they are comfortable storing sensitive information on Google Sheets, given the level of data analysis involved. If privacy is a concern, users may want to explore alternative services or limit the type of data they store on Google Sheets.",
+        "severity_justification": "This was flagged as high severity because it involves extensive data processing that could include sensitive or private information. The lack of clarity around what specific data is analyzed, how it is used, and whether users can opt out entirely raises significant privacy concerns. Additionally, Canadian users, who are subject to stricter data protection laws, may find this level of data processing particularly troubling."
+      },
+      "online_research": {
+        "search_query": "\"google_sheets\" automated systems and algorithms to analyze your content to customize our services for you as the content is sent, received, and when it is stored terms conditions privacy policy explanation",
+        "no_results": true,
+        "message": "No additional context found online"
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "app_name": "YouTube Music",
+  "app_version": "N/A",
+  "overall_score": 8.5,
+  "privacy_concerns": [
+    {
+      "clause": "YouTube may need to make limited necessary changes to your Stored Music Content as may be needed for playback functionality.",
+      "severity": "low",
+      "explanation": "This clause is relatively benign as it specifies that changes to user-uploaded content are limited to ensuring playback functionality. However, it would be helpful to clarify what types of changes are considered 'necessary.'",
+      "quote": "We may need to make limited necessary changes to your Stored Music Content as may be needed for playback functionality on YouTube Music or through the YouTube Music app."
+    },
+    {
+      "clause": "You are legally responsible for the Stored Music Content you upload to YouTube Music.",
+      "severity": "medium",
+      "explanation": "While this clause is standard, it places the full legal burden on the user to ensure they have rights to any uploaded content. This could be problematic for users who inadvertently upload copyrighted material.",
+      "quote": "You are legally responsible for the Stored Music Content you upload to YouTube Music and you must not include any third-party intellectual property (such as copyrighted material) unless you have permission from that party or are otherwise legally entitled to do so."
+    }
+  ],
+  "summary": "YouTube Music's terms regarding stored music are generally user-friendly and privacy-conscious. Users retain ownership of their uploaded content, and the app does not share this content with third parties. However, users bear full legal responsibility for ensuring they have rights to their uploaded files.",
+  "red_flags": [
+    "Full legal responsibility placed on users for uploaded content"
+  ],
+  "user_friendliness_score": 9.0,
+  "data_collection_score": 9.0,
+  "legal_complexity_score": 8.0,
+  "terms_version": null,
+  "terms_url": "https://support.google.com/youtube/answer/9744173?hl=en",
+  "analysis_date": "2025-07-05"
+}

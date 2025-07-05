@@ -1,0 +1,37 @@
+{
+  "app_name": "Google Chrome",
+  "app_version": null,
+  "overall_score": 6.5,
+  "privacy_concerns": [
+    {
+      "clause": "Agreement to Google Terms of Service",
+      "severity": "medium",
+      "explanation": "The terms require users to agree to the broader Google Terms of Service, which may include extensive data collection and sharing practices. This could be concerning for users who are unaware of the full implications.",
+      "quote": "By using Chrome or ChromeOS, you agree to the Google Terms of Service located at https://policies.google.com/terms and these Google Chrome and ChromeOS Additional Terms of Service."
+    },
+    {
+      "clause": "AVC Patent Portfolio License",
+      "severity": "low",
+      "explanation": "The AVC license restricts the use of certain video encoding/decoding features to personal, non-commercial use. While this is standard, it may limit certain use cases for users.",
+      "quote": "THIS PRODUCT IS LICENSED UNDER THE AVC PATENT PORTFOLIO LICENSE FOR THE PERSONAL USE OF A CONSUMER OR OTHER USES IN WHICH IT DOES NOT RECEIVE REMUNERATION..."
+    },
+    {
+      "clause": "Changes to terms notification",
+      "severity": "medium",
+      "explanation": "There is no explicit mention of how users will be notified of changes to the terms, which could lead to users being unaware of updates that might affect their rights or data usage.",
+      "quote": "Last modified: 23 January, 2025"
+    }
+  ],
+  "summary": "The Google Chrome terms of service are moderately user-friendly but require users to agree to Google's broader terms, which may include extensive data collection. While the terms are relatively clear, there is a lack of transparency around changes to the terms and how users are notified.",
+  "red_flags": [
+    "Broad agreement to Google Terms of Service",
+    "Lack of explicit change notification policy",
+    "Potentially invasive data collection practices under Google's broader policies"
+  ],
+  "user_friendliness_score": 6.0,
+  "data_collection_score": 5.0,
+  "legal_complexity_score": 7.0,
+  "terms_version": "23 January, 2025",
+  "terms_url": "https://www.google.com/chrome/terms/",
+  "analysis_date": "2025-07-05"
+}

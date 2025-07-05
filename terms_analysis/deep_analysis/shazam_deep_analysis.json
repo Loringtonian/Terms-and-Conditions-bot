@@ -1,0 +1,51 @@
+{
+  "app_name": "shazam",
+  "total_high_severity_concerns": 1,
+  "analysis_timestamp": "2025-07-05",
+  "concerns_analyzed": [
+    {
+      "original_concern": {
+        "clause": "Broad rights to modify terms without user consent",
+        "severity": "high",
+        "explanation": "The terms allow Shazam (and Apple) to modify the agreement at any time without requiring explicit user consent, which could lead to unfavorable changes for users without adequate notice.",
+        "quote": "Apple reserves the right to modify these terms at any time. Continued use of the service constitutes acceptance of the modified terms."
+      },
+      "extended_context": "Could not locate quote in document: Apple reserves the right to modify these terms at any time. Continued use of the service constitutes...",
+      "clarity_analysis": {
+        "unclear_terms": [
+          {
+            "term": "Apple reserves the right to modify these terms at any time.",
+            "explanation": "This means Apple (and by extension, Shazam) can change the rules or conditions of using their service whenever they want, without needing to ask for your permission or explicitly notify you.",
+            "user_impact": "Users might unknowingly agree to new terms that could be less favorable, such as changes to privacy policies, fees, or how their data is used, simply by continuing to use the service.",
+            "questions_to_ask": [
+              "How will I be notified of changes to the terms?",
+              "Will I have a chance to review and reject the new terms before they take effect?",
+              "What happens if I disagree with the modified terms?"
+            ]
+          },
+          {
+            "term": "Continued use of the service constitutes acceptance of the modified terms.",
+            "explanation": "If you keep using Shazam after the terms are updated, it’s assumed that you agree to the new terms, even if you weren’t explicitly informed about the changes.",
+            "user_impact": "You could unintentionally agree to terms you don’t understand or wouldn’t normally accept, simply by using the app as usual.",
+            "questions_to_ask": [
+              "How can I find out when the terms have been updated?",
+              "Is there a way to opt out of the new terms without losing access to the service?",
+              "What are the risks of continuing to use the service without reviewing the updated terms?"
+            ]
+          }
+        ],
+        "practical_meaning": "In practice, this clause gives Apple and Shazam the ability to change the rules of their service at any time. Users are bound by these changes simply by continuing to use the app, even if they are unaware of the updates. This could result in users being subject to new policies or conditions that they might not agree with, such as changes to how their data is collected or shared, or new fees being introduced.",
+        "user_action_needed": "Users should regularly check for updates to the terms and conditions and review them carefully. If you notice changes, evaluate whether you’re comfortable with the new terms before continuing to use the service. Consider reaching out to Shazam or Apple for clarification if the changes are unclear.",
+        "severity_justification": "This was flagged as high severity because it directly impacts user rights and control. The ability to unilaterally modify terms without explicit user consent creates a significant risk that users could be subjected to unfavorable or harmful changes without their knowledge or agreement. This undermines transparency and informed consent, which are critical for fair user agreements."
+      },
+      "online_research": {
+        "search_query": "\"shazam\" Apple reserves the right to modify these terms at any time. Continued use of the service constitutes acceptance of the modified terms. terms conditions privacy policy explanation",
+        "top_result_url": "https://fuchsiawire.com/category/android/",
+        "top_result_title": "Android Archives - FuchsiaWire",
+        "summary": "Learn about Android news and updates that are now available on Apps and Devices, including tips, reviews, and the latest news.",
+        "detailed_content_available": false,
+        "additional_context": null
+      }
+    }
+  ]
+}

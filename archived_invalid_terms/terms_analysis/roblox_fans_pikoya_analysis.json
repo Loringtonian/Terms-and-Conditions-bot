@@ -1,0 +1,145 @@
+{
+  "app_name": "Roblox Fans (Pikoya)",
+  "app_version": null,
+  "overall_score": 5.5,
+  "privacy_concerns": [
+    {
+      "clause": "Personal Data collection for marketing and promotional purposes",
+      "severity": "medium",
+      "explanation": "The policy allows for the collection of personal data such as email addresses and names for marketing purposes, which may not be necessary for core functionality. Users must actively opt-out, which may not be user-friendly.",
+      "quote": "We may use your Personal Data to contact you with newsletters, marketing or promotional materials and other information that may be of interest to you."
+    },
+    {
+      "clause": "Extensive use of cookies and tracking technologies",
+      "severity": "high",
+      "explanation": "The policy permits the use of various tracking technologies, including advertising cookies, which can collect significant amounts of data about user behavior. This could lead to invasive profiling and targeted advertising.",
+      "quote": "Cookies are files with a small amount of data which may include an anonymous unique identifier... Advertising Cookies are used to serve you with advertisements that may be relevant to you and your interests."
+    },
+    {
+      "clause": "Data transfer to jurisdictions with potentially weaker privacy protections",
+      "severity": "high",
+      "explanation": "The policy explicitly states that data may be transferred to and processed in Israel, which may not have the same level of privacy protections as Canada. This raises concerns about the adequacy of safeguards for Canadian users.",
+      "quote": "Your information, including Personal Data, may be transferred to and maintained on remote computers located outside of your state, province, country or other governmental jurisdiction where the data protection laws may differ from those of your jurisdiction."
+    },
+    {
+      "clause": "Retention of data for undefined periods",
+      "severity": "medium",
+      "explanation": "The policy allows for the retention of personal data for as long as necessary for the purposes outlined, without clear time limits. This could lead to unnecessary prolonged storage of user data.",
+      "quote": "Pikoya will retain your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy."
+    },
+    {
+      "clause": "No support for 'Do Not Track' signals",
+      "severity": "medium",
+      "explanation": "The policy explicitly states that 'Do Not Track' signals are not supported, which may conflict with user expectations for privacy and control over tracking.",
+      "quote": "We do not support Do Not Track ('DNT')."
+    }
+  ],
+  "summary": "The terms and privacy policy for Roblox Fans (Pikoya) raise concerns about extensive data collection, tracking, and transfer to jurisdictions with weaker privacy protections. While some user rights are outlined, the policies are not particularly user-friendly or transparent, especially regarding data retention and advertising practices.",
+  "red_flags": [
+    "Extensive data collection for marketing and tracking purposes",
+    "Broad use of cookies and advertising technologies",
+    "Data transfers to jurisdictions with weaker privacy laws",
+    "No support for 'Do Not Track' signals",
+    "Unclear data retention policies"
+  ],
+  "user_friendliness_score": 6.0,
+  "data_collection_score": 4.0,
+  "legal_complexity_score": 5.5,
+  "terms_version": "September 16, 2018",
+  "terms_url": "https://roblox.virtualworldsland.com/privacy",
+  "analysis_date": "2025-07-05",
+  "deep_analysis": {
+    "1": {
+      "unclear_terms": [
+        {
+          "term": "Cookies and similar tracking technologies",
+          "explanation": "Cookies are small files stored on your device that track your activity on a website. 'Similar tracking technologies' refers to tools like beacons, tags, and scripts that also collect data about your behavior online.",
+          "user_impact": "These tools can collect detailed information about how you use the service, including your IP address, browsing habits, time spent on pages, and device information. This data can be used to build a profile of you, which may be shared with advertisers or other third parties.",
+          "questions_to_ask": [
+            "What specific data is being collected by these cookies and tracking technologies?",
+            "Who has access to the data collected through these cookies?",
+            "How long is this data stored, and is it anonymized?",
+            "Can I opt out of all tracking without losing access to the service?"
+          ]
+        },
+        {
+          "term": "Advertising Cookies",
+          "explanation": "These are cookies specifically designed to track your online behavior and interests in order to show you targeted advertisements.",
+          "user_impact": "Advertising cookies can lead to invasive profiling, where your browsing habits, preferences, and interests are tracked and used to serve you ads. This data may also be shared with third-party advertisers, potentially exposing your information to entities you are not aware of.",
+          "questions_to_ask": [
+            "Are advertising cookies mandatory to use the service?",
+            "Can I opt out of advertising cookies without affecting my experience?",
+            "What third parties receive data from advertising cookies?",
+            "How is my data protected when shared with advertisers?"
+          ]
+        },
+        {
+          "term": "Usage Data",
+          "explanation": "This refers to information collected about how you interact with the service, such as your IP address, browser type, pages visited, and time spent on the site.",
+          "user_impact": "This data can reveal a lot about your online behavior and habits, which can be used to create a detailed profile of you. This profile could be used for targeted advertising or other purposes without your full understanding.",
+          "questions_to_ask": [
+            "What specific usage data is being collected?",
+            "Is this data linked to my identity or anonymized?",
+            "Can I access or delete the usage data collected about me?",
+            "How is this data shared or used by Roblox or third parties?"
+          ]
+        }
+      ],
+      "practical_meaning": "In practice, Roblox is using cookies and tracking technologies to collect detailed information about how users interact with their platform. This includes tracking your browsing habits, preferences, and device information. Some of this data is used for targeted advertising, meaning you may see ads based on your online behavior. Additionally, this data may be shared with third-party advertisers, potentially exposing your information to external entities.",
+      "user_action_needed": "Users should review their cookie settings and consider opting out of non-essential cookies, especially advertising cookies, if they are concerned about privacy. They should also check if Roblox provides a way to manage or delete the data collected about them. If no clear options are provided, users may want to contact Roblox for clarification or consider limiting their use of the platform.",
+      "severity_justification": "This concern is flagged as high severity because the extensive use of cookies and tracking technologies can lead to invasive profiling and targeted advertising. This raises significant privacy concerns, especially for younger users who may not fully understand the implications of their data being collected and shared. Additionally, the lack of clear opt-out options or transparency about how data is used increases the risk of misuse or exposure of personal information.",
+      "extended_context": "...w the Service is accessed and used (\"Usage Data\"). This Usage Data may include information such as your computer's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that you visit, the time and date of your visit, the time spent on those pages, unique device identifiers and other diagnostic data.\n\n#### Tracking & Cookies Data\n\nWe use cookies and similar tracking technologies to track the activity on our Service and we hold certain information.\n\nCookies are files with a small amount of data which may include an anonymous unique identifier. Cookies are sent to your browser from a website and stored on your device. Other tracking technologies are also used such as beacons, tags and scripts to collect and track information and to improve and analyse our Service.\n\nYou can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Service.\n\nExamples of Cookies we use:\n\n* **Session Cookies.** We use Session Cookies to operate our Service.\n* **Preference Cookies.** We use Preference Cookies to remember your preferences and various s...",
+      "online_research": {
+        "search_query": "\"roblox\" Cookies and similar tracking technologies Advertising Cookies Usage Data terms conditions privacy policy explanation",
+        "top_result_url": "https://www.etsy.com/listing/1725297321/roblox-cake-topper-birthday-game",
+        "top_result_title": "Roblox - Cake Topper - Birthday - Game - Personalised - Etsy",
+        "summary": "Detailed information can be found in Etsy's Cookies & Similar Technologies Policy and our Privacy Policy. Required Cookies & Technologies. Some of the"
+      }
+    },
+    "2": {
+      "unclear_terms": [
+        {
+          "term": "Data transfer to jurisdictions with potentially weaker privacy protections",
+          "explanation": "This means that your personal information may be sent to and stored in countries that do not have the same strict privacy laws as your own country. For example, if you live in Canada, your data might be sent to Israel, where privacy protections may not be as strong or comprehensive.",
+          "user_impact": "Your personal data might not be as securely protected in Israel as it would be in Canada. This could increase the risk of your data being accessed, used, or shared in ways you might not expect or agree with.",
+          "questions_to_ask": [
+            "What specific safeguards are in place to protect my data when it is transferred to Israel?",
+            "Does Israel have privacy laws that are equivalent to those in my country (e.g., Canada)?",
+            "What rights do I have over my data once it is transferred to another country?",
+            "Can I opt out of having my data transferred to Israel or other jurisdictions with weaker privacy protections?"
+          ]
+        },
+        {
+          "term": "Your consent to this Privacy Policy represents your agreement to that transfer",
+          "explanation": "By agreeing to the Privacy Policy, you are giving the company permission to transfer your personal data to other countries, including Israel, even if those countries have weaker privacy protections.",
+          "user_impact": "You may unknowingly agree to have your data handled in a way that does not meet the privacy standards of your own country. This could limit your ability to control how your data is used or to seek legal recourse if your data is mishandled.",
+          "questions_to_ask": [
+            "What happens if I do not agree to this part of the Privacy Policy?",
+            "Can I use the service without consenting to the transfer of my data to another country?",
+            "How will I be informed if my data is transferred to a country with weaker privacy protections?"
+          ]
+        },
+        {
+          "term": "Pikoya will take all the steps reasonably necessary to ensure that your data is treated securely",
+          "explanation": "The company claims it will take reasonable measures to protect your data, but it does not specify what those measures are or how they ensure compliance with privacy standards in your country.",
+          "user_impact": "The lack of detail about these 'reasonable steps' makes it unclear how your data will actually be protected. This could leave your data vulnerable to misuse or breaches.",
+          "questions_to_ask": [
+            "What specific security measures are in place to protect my data during and after the transfer?",
+            "How does the company ensure compliance with my country's privacy laws when my data is stored in another country?",
+            "What happens if there is a data breach in the country where my data is stored?"
+          ]
+        }
+      ],
+      "practical_meaning": "This clause means that your personal data could be sent to and stored in Israel, a country that may not have the same level of privacy protections as your home country. By agreeing to the Privacy Policy, you are consenting to this transfer, even if it might expose your data to weaker safeguards. The company claims it will protect your data, but it does not provide specific details about how it will do so.",
+      "user_action_needed": "Users should carefully review the Privacy Policy and ask the company for more details about the safeguards in place for data transferred to Israel. If you are uncomfortable with your data being transferred to a country with potentially weaker privacy protections, you may want to reconsider using the service or inquire about opting out of such transfers.",
+      "severity_justification": "This issue is flagged as high severity because it directly impacts users' privacy and data security. Transferring data to a country with weaker privacy protections increases the risk of unauthorized access, misuse, or breaches. Additionally, users may not fully understand the implications of consenting to such transfers, which could lead to a loss of control over their personal information.",
+      "extended_context": "...h our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes and enforce our legal agreements and policies.\n\nPikoya will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period of time, except when this data is used to strengthen the security or to improve the functionality of our Service, or we are legally obligated to retain this data for longer periods.\n\n## Transfer of Data\n\nYour information, including Personal Data, may be transferred to and maintained on remote computers located outside of your state, province, country or other governmental jurisdiction where the data protection laws may differ from those of your jurisdiction.\n\nIf you are located outside Israel and choose to provide information to us, please note that we transfer the data, including Personal Data, to Israel and process it there.\n\nYour consent to this Privacy Policy followed by your submission of such information represents your agreement to that transfer.\n\nPikoya will take all the steps reasonably necessary to ensure that your data is treated securely and in accordance with this Privacy Policy and no transfer of your Personal Data will take place to ...",
+      "online_research": {
+        "search_query": "\"roblox\" Data transfer to jurisdictions with potentially weaker privacy protections Your consent to this Privacy Policy represents your agreement to that transfer Pikoya will take all the steps reasonably necessary to ensure that your data is treated securely terms conditions privacy policy explanation",
+        "top_result_url": null,
+        "top_result_title": null,
+        "summary": null
+      }
+    }
+  }
+}

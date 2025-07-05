@@ -1,0 +1,63 @@
+{
+  "app_name": "instagram",
+  "total_high_severity_concerns": 1,
+  "analysis_timestamp": "2025-07-05",
+  "concerns_analyzed": [
+    {
+      "original_concern": {
+        "clause": "Broad data collection and sharing across Meta platforms",
+        "severity": "high",
+        "explanation": "Instagram collects and shares user data extensively across Meta platforms and with external partners to personalize experiences and advertisements. This raises concerns about the scope of data collection and potential overreach.",
+        "quote": "Instagram is part of the Meta Companies, which share technology, systems, insights, and information—including the information we have about you."
+      },
+      "extended_context": "...technologies that help us personalize, protect, and improve our Service on an incredibly large scale for a broad global community. Technologies like artificial intelligence and machine learning give us the power to apply complex processes across our Service. Automated technologies also help us ensure the functionality and integrity of our Service. Learn more in the Privacy Policy. Providing consistent and seamless experiences across other Meta Company Products, outside of our contract with you. Instagram is part of the Meta Companies, which share technology, systems, insights, and information-including the information we have about you (learn more in the Privacy Policy) in order to provide services that are better, safer, and more secure. We also provide ways to interact across the Meta Company Products that you use, and designed systems to achieve a seamless and consistent experience across the Meta Company Products depending on your choices. Communicating with you. We may need to send you communications, like emails or in-product notices, to respond to you or inform you about any product-related issues, research, or our term...",
+      "clarity_analysis": {
+        "unclear_terms": [
+          {
+            "term": "Broad data collection and sharing across Meta platforms",
+            "explanation": "This means that Instagram collects a wide range of information about you (e.g., your activity, preferences, and interactions) and shares it with other Meta-owned platforms like Facebook, WhatsApp, and Oculus, as well as external partners. This data sharing is used to create a more personalized experience, target advertisements, and improve services across all Meta platforms.",
+            "user_impact": "Your personal data is not just used within Instagram but is shared across all Meta platforms and potentially with third-party partners. This could mean that your activity on Instagram influences what you see on Facebook or WhatsApp, and vice versa. It also means that Meta has a very detailed profile of you, which could be used for targeted advertising or other purposes.",
+            "questions_to_ask": [
+              "What specific types of data are being collected and shared across Meta platforms?",
+              "Can I opt out of this data sharing, and if so, how?",
+              "Who are the external partners that Meta shares my data with?",
+              "How is my data protected when it is shared across platforms or with third parties?",
+              "What happens to my data if I stop using Instagram or delete my account?"
+            ]
+          },
+          {
+            "term": "Technologies like artificial intelligence and machine learning",
+            "explanation": "This refers to automated systems that analyze your data to predict your behavior, preferences, and interests. These technologies are used to personalize your experience, such as showing you specific ads or content that Meta thinks you'll engage with.",
+            "user_impact": "AI and machine learning systems can create highly detailed profiles of you based on your activity, which may feel invasive. These systems may also make decisions about what content you see, potentially limiting your exposure to diverse perspectives.",
+            "questions_to_ask": [
+              "What kinds of decisions are being made about me using AI and machine learning?",
+              "How accurate are these systems, and what happens if they make incorrect assumptions about me?",
+              "Can I control or limit the use of AI and machine learning on my data?"
+            ]
+          },
+          {
+            "term": "Seamless and consistent experiences across Meta Company Products",
+            "explanation": "This means that Meta integrates your data and activity across its platforms to create a unified experience. For example, your Instagram activity might influence what you see on Facebook or WhatsApp, and vice versa.",
+            "user_impact": "While this may make using Meta platforms more convenient, it also means that Meta is constantly tracking and connecting your activity across all its platforms, which could feel invasive. It also increases the amount of data Meta collects about you.",
+            "questions_to_ask": [
+              "What does a 'seamless and consistent experience' actually involve?",
+              "Can I use Instagram without my data being shared with other Meta platforms?",
+              "What happens to my data if I only use one Meta platform and not others?"
+            ]
+          }
+        ],
+        "practical_meaning": "In practice, this clause means that Instagram collects a wide range of data about you and shares it with other Meta platforms and external partners. This data is used to create a unified experience across Meta's ecosystem, target advertisements, and improve their services. However, it also means that Meta has an extensive profile of you, which could be used in ways you may not fully understand or agree with.",
+        "user_action_needed": "Users should review Instagram's Privacy Policy to understand what data is being collected and how it is being shared. They should also explore privacy settings on Instagram and other Meta platforms to limit data sharing where possible. If concerned, users may want to consider whether they are comfortable with the level of data collection and sharing described.",
+        "severity_justification": "This was flagged as high severity because it involves extensive data collection and sharing, which could significantly impact user privacy. The lack of transparency about what data is collected, how it is shared, and with whom raises concerns about potential misuse or overreach. Additionally, users may not fully understand the implications of their data being shared across multiple platforms and with external partners."
+      },
+      "online_research": {
+        "search_query": "\"instagram\" Broad data collection and sharing across Meta platforms Technologies like artificial intelligence and machine learning Seamless and consistent experiences across Meta Company Products terms conditions privacy policy explanation",
+        "top_result_url": "https://help.instagram.com/581066165581870/",
+        "top_result_title": "Terms of Use - Instagram Help Center",
+        "summary": "We can remove any content or information you share on the Service if we believe that it violates these Terms of Use, our policies (including our Community Standards), or we are permitted or required to do so by law. We can refuse to provide or stop providing all or part of the Service to you (including terminating or disabling your access to the Meta Products and Meta Company Products) immediately to protect our community or services, or if you create risk or legal exposure for us, violate these",
+        "detailed_content_available": true,
+        "additional_context": "Terms of Use | Instagram Help Center\n=============== \n\n[![Image 1](https://help.instagram.com/images/pages/settings/instagram/Instagram_Glyph_Gradient.png) Help Center](https://help.instagram.com/)\n\nEnglish (US)\n\n[](https://help.instagram.com/search/)\n\n[](https://help.instagram.com/1417489251945243/?helpref=hc_global_nav)\n\nInstagram Features\n\nManage Your Account\n\nStaying Safe\n\nPrivacy, Security and Reporting\n\nTerms and Policies\n\n[Community Guidelines](https://help.instagram.com/477434105621119/?helpref=hc_fnav)\n\n[Privacy Policy](https://privacycenter.instagram.com/policy)\n\n[Terms of Use](https://help.instagram.com/581066165581870/?helpref=hc_fnav)\n\n[Platform Policy](https://developers.facebook.com/terms)\n\n[Cookies Policy](https://help.instagram.com/1896641480634370/?helpref=hc_fnav)\n\n[Transparency Center](https://transparency.fb.com/)\n\n[Community Payments Terms](https://help.instagram.com/2136147216424213/?helpref=hc_fnav)\n\n[Instagram Purchase Protection Policy](https://help.instagram."
+      }
+    }
+  ]
+}

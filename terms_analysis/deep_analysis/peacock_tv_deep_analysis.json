@@ -1,0 +1,59 @@
+{
+  "app_name": "peacock_tv",
+  "total_high_severity_concerns": 1,
+  "analysis_timestamp": "2025-07-05",
+  "concerns_analyzed": [
+    {
+      "original_concern": {
+        "clause": "Personalization and Advertising Features",
+        "severity": "high",
+        "explanation": "The terms indicate that user data is extensively analyzed for personalized recommendations and targeted advertising, which is described as integral to the service. This raises concerns about the breadth of data collection and whether users have meaningful control over their privacy settings.",
+        "quote": "The Peacock Service also analyzes your data to improve the services offered, and such continuous improvement is an integral part of the Peacock Service."
+      },
+      "extended_context": "... for all use of your account, including the use of your account by other members of your household.1.7. Personalization and Advertising Features. The personalized recommendations offered as part of the Peacock Service and targeted advertising included in certain Service Tiers enable us to provide you with Content (including recommending relevant Content) and features that may otherwise be unavailable to you or difficult to find and are integral to the Peacock Service and these Terms of Service. The Peacock Service also analyzes your data to improve the services offered, and such continuous improvement is an integral part of the Peacock Service. By using the Peacock Service, you are requesting and directing us to provide you with a personalized (and, if applicable, ad-supported) Peacock Service that processes data as described in our Privacy Policy, subject to any choices and rights described therein.2. Subscription Terms2.1. Service Tiers and Add-Ons. When purchasing your subscription to the Peacock Service, you may be presented with different plans or add-on options (each a “Service Tier”), and these Service Tiers may be subject to d...",
+      "clarity_analysis": {
+        "unclear_terms": [
+          {
+            "term": "Personalization and Advertising Features",
+            "explanation": "This refers to the service using your personal data to recommend content you might like and to show you targeted ads based on your preferences, behavior, and other collected information.",
+            "user_impact": "This means Peacock is collecting and analyzing a significant amount of your personal data, including your viewing habits, interactions, and possibly other information, to tailor recommendations and ads specifically for you. This could include sensitive data depending on how you use the service.",
+            "questions_to_ask": [
+              "What specific types of data are being collected for personalization and advertising?",
+              "Can I opt out of data collection for targeted advertising or personalization?",
+              "How long is my data stored, and who else has access to it?",
+              "What happens to my data if I cancel my subscription?"
+            ]
+          },
+          {
+            "term": "Integral to the Peacock Service",
+            "explanation": "This phrase means that the personalization and targeted advertising features are considered essential to how Peacock operates and are not optional for users.",
+            "user_impact": "You cannot use the service without agreeing to this level of data collection and analysis, as it is built into the core functionality of the platform.",
+            "questions_to_ask": [
+              "Does this mean I cannot use Peacock without agreeing to data collection for personalization and ads?",
+              "Are there any service tiers or options that limit or exclude data collection?",
+              "What happens if I do not want my data analyzed for these purposes?"
+            ]
+          },
+          {
+            "term": "Processes data as described in our Privacy Policy",
+            "explanation": "This means that the details of how your data is collected, used, shared, and stored are outlined in Peacock's Privacy Policy, which you are agreeing to by using the service.",
+            "user_impact": "You are agreeing to potentially broad data collection and usage practices, which may include sharing your data with third parties, depending on the terms in the Privacy Policy.",
+            "questions_to_ask": [
+              "What specific data processing practices are outlined in the Privacy Policy?",
+              "Does Peacock share my data with advertisers or other third parties?",
+              "Are there any limits on how my data can be used or shared?"
+            ]
+          }
+        ],
+        "practical_meaning": "In practice, this clause means that Peacock collects and analyzes a wide range of user data to provide personalized recommendations and targeted ads. This data collection is not optional, as it is described as a core part of the service. Users are also agreeing to the terms of the Privacy Policy, which may allow for extensive data sharing and usage beyond what is immediately apparent in the Terms of Service.",
+        "user_action_needed": "Users should carefully review Peacock's Privacy Policy to understand what data is being collected, how it is used, and whether there are any options to limit or control this data collection. Users should also consider whether they are comfortable with the level of data collection and sharing described, especially if they are using ad-supported tiers of the service.",
+        "severity_justification": "This was flagged as high severity because it involves extensive data collection and analysis that users cannot opt out of, which raises significant privacy concerns. Additionally, the language in the terms makes it clear that these practices are integral to the service, leaving users with little control or choice over how their data is used. This could have serious implications for user privacy, especially if sensitive data is being collected or shared with third parties."
+      },
+      "online_research": {
+        "search_query": "\"peacock_tv\" Personalization and Advertising Features Integral to the Peacock Service Processes data as described in our Privacy Policy terms conditions privacy policy explanation",
+        "no_results": true,
+        "message": "No additional context found online"
+      }
+    }
+  ]
+}

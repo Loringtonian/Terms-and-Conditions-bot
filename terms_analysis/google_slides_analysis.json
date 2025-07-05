@@ -1,0 +1,84 @@
+{
+  "app_name": "Google Slides",
+  "app_version": null,
+  "overall_score": 7.5,
+  "privacy_concerns": [
+    {
+      "clause": "Broad content licensing rights",
+      "severity": "medium",
+      "explanation": "Google retains a worldwide, royalty-free, and non-exclusive license to use user-generated content for purposes such as operating and improving services. While this is standard for many platforms, the scope of rights granted (e.g., modifying and creating derivative works) may concern users who prioritize control over their intellectual property.",
+      "quote": "This license allows Google to: host, reproduce, distribute, communicate, and use your content... modify and create derivative works based on your content, such as reformatting or translating it."
+    },
+    {
+      "clause": "Data analysis for personalized ads and recommendations",
+      "severity": "high",
+      "explanation": "Google explicitly states that it uses automated systems to analyze user content for purposes such as personalized ads and recommendations. This raises concerns about the extent of data mining and profiling, especially for Canadian users who may expect stricter privacy protections.",
+      "quote": "This includes using automated systems and algorithms to analyze your content: for spam, malware, and illegal content... to customize our services for you, such as providing recommendations and personalized search results, content, and ads."
+    },
+    {
+      "clause": "Content removal limitations",
+      "severity": "medium",
+      "explanation": "Even after users remove their content, it may remain accessible if shared with others or indexed by search engines. This could lead to privacy concerns for users who expect full control over their data.",
+      "quote": "If you remove from our services any content that’s covered by this license, then our systems will stop making that content publicly available in a reasonable amount of time. There are two exceptions: If you already shared your content with others... If you make your content available through other companies’ services..."
+    }
+  ],
+  "summary": "Google Slides' terms are generally clear and align with Google's broader ecosystem policies. However, concerns arise regarding the extensive data collection practices for ad personalization and the broad licensing rights granted to Google for user content. While the terms are comprehensive, they may feel overly complex for the average user.",
+  "red_flags": [
+    "Extensive data analysis for personalized ads",
+    "Broad licensing rights over user content",
+    "Limited control over content removal"
+  ],
+  "user_friendliness_score": 7.0,
+  "data_collection_score": 6.0,
+  "legal_complexity_score": 6.5,
+  "terms_version": "Effective May 22, 2024",
+  "terms_url": "https://policies.google.com/terms",
+  "analysis_date": "2025-07-05",
+  "deep_analysis": {
+    "1": {
+      "unclear_terms": [
+        {
+          "term": "automated systems and algorithms to analyze your content",
+          "explanation": "This refers to computer programs that scan and process the data you create, upload, or interact with (e.g., documents, photos, emails) to identify patterns or extract information.",
+          "user_impact": "Google is analyzing your personal data, including potentially sensitive information, to tailor ads, recommendations, and other services. This means your private content is being used to build a profile about you, which could include your preferences, habits, and interests.",
+          "questions_to_ask": [
+            "What specific types of content are being analyzed (e.g., emails, photos, documents)?",
+            "How long is this data stored, and is it anonymized?",
+            "Can I opt out of this analysis entirely, and if so, how?",
+            "What safeguards are in place to ensure my data is not misused or accessed by unauthorized parties?"
+          ]
+        },
+        {
+          "term": "customize our services for you",
+          "explanation": "This means Google uses the information it gathers from analyzing your data to provide personalized experiences, such as tailored ads, search results, or content recommendations.",
+          "user_impact": "While this may improve your experience by showing you relevant content, it also means Google is using your personal data to influence what you see online, which could limit your exposure to diverse information or lead to targeted advertising.",
+          "questions_to_ask": [
+            "What level of personalization is being applied, and can I control it?",
+            "How does this personalization affect the ads or content I see?",
+            "What happens to my data if I turn off personalization?"
+          ]
+        },
+        {
+          "term": "content is sent, received, and when it is stored",
+          "explanation": "This means Google is analyzing your data at all stages—when you upload or share it, when others interact with it, and while it is stored on their servers.",
+          "user_impact": "Your data is being continuously monitored, even after it has been stored, which could increase the risk of privacy breaches or misuse.",
+          "questions_to_ask": [
+            "Is my data encrypted during analysis and storage?",
+            "What happens to my data if I delete it from Google services?",
+            "Does this analysis include private or sensitive content, such as emails or photos?"
+          ]
+        }
+      ],
+      "practical_meaning": "Google is using advanced technology to scan and analyze the content you create, share, or store on its services. This data is then used to provide personalized ads, recommendations, and other features. While this may enhance your user experience, it also means Google is building a detailed profile of you based on your activity and content, which could raise privacy concerns.",
+      "user_action_needed": "Users should review their Google account settings, particularly the Ads Settings, to understand and control how their data is being used. They should also consider limiting the amount of sensitive or private content they store or share on Google services if they are uncomfortable with this level of analysis.",
+      "severity_justification": "This concern is flagged as high severity because it involves the continuous and extensive analysis of user data, including potentially sensitive information. This practice could lead to privacy violations, data misuse, or profiling that users may not fully understand or consent to. Additionally, Canadian users may expect stricter privacy protections under their laws, which could conflict with Google's practices.",
+      "extended_context": "... translating itsublicense these rights to:other users to allow the services to work as designed, such as enabling you to share photos with people you chooseour contractors who’ve signed agreements with us that are consistent with these terms, only for the limited purposes described in the Purpose section belowPurposeThis license is for the limited purpose of:operating and improving the services, which means allowing the services to work as designed and creating new features and functionalities. This includes using automated systems and algorithms to analyze your content:for spam, malware, and illegal contentto recognize patterns in data, such as determining when to suggest a new album in Google Photos to keep related photos togetherto customize our services for you, such as providing recommendations and personalized search results, content, and ads (which you can change or turn off in Ads Settings)This analysis occurs as the content is sent, received, and when it is stored.using content you’ve shared publicly to promote the services. For example, to promote a Google app, we might quote a review you wrote. Or to promote Google Play, we might show a screenshot of the app you offer in the Play Store.developing new technolo...",
+      "online_research": {
+        "search_query": "\"google_slides\" automated systems and algorithms to analyze your content customize our services for you content is sent, received, and when it is stored terms conditions privacy policy explanation",
+        "top_result_url": null,
+        "top_result_title": null,
+        "summary": null
+      }
+    }
+  }
+}

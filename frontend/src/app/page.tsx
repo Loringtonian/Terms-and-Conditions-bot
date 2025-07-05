@@ -486,7 +486,10 @@ export default function Home() {
         </div>
 
         {/* Elegant Secondary Actions */}
-        <div className="w-full max-w-lg mb-12">
+        <div className={`w-full max-w-lg mb-12 transition-all duration-300 ${
+          (searchQuery && showResults && (filteredServices.length > 0 || filteredServices.length === 0)) 
+            ? 'mt-20' : 'mt-0'
+        }`}>
           <div className="flex items-center justify-center space-x-6">
             <button 
               onClick={handlePasteTermsClick}

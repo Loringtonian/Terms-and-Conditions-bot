@@ -1,0 +1,110 @@
+{
+  "app_name": "google_drive",
+  "total_high_severity_concerns": 2,
+  "analysis_timestamp": "2025-07-05",
+  "concerns_analyzed": [
+    {
+      "original_concern": {
+        "clause": "Content License Grant",
+        "severity": "high",
+        "explanation": "The terms grant Google a broad license to use, host, store, reproduce, modify, create derivative works, and distribute user content. While this is stated to be for the purpose of operating and improving services, the scope of the license is extensive and continues even after users stop using the service unless content is deleted.",
+        "quote": "When you upload, submit, store, send or receive content to or through Google Drive, you give Google a worldwide licence to use, host, store, reproduce, modify, create derivative works... This licence continues even if you stop using our services unless you delete your content."
+      },
+      "extended_context": "...gle Drive for compliance with the Terms and our [Program Policies](https://support.google.com/docs/answer/148505?hl=en).\n\nGoogle Drive is available on mobile devices. Do not use Google Drive in a way that distracts you and prevents you from obeying traffic or safety laws.\n\n**Your Content.** Google Drive allows you to upload, submit, store, send and receive content. You retain ownership of any intellectual property rights that you hold in that content. In short, what belongs to you stays yours.\n\nWhen you upload, submit, store, send or receive content to or through Google Drive, you give Google a worldwide licence to use, host, store, reproduce, modify, create derivative works (such as those resulting from translations, adaptations or other changes we make so that your content works better with our services), communicate, publish, publicly perform, publicly display and distribute such content. The rights you grant in this licence are for the limited purpose of operating, promoting, and improving our services, and to develop new ones. This licence continues even if you stop using our services unless you delete your content. Make sure you have the necessary rights to grant us this licence for any content that you submit to Google Drive.\n\nSharing settings in Goo...",
+      "clarity_analysis": {
+        "unclear_terms": [
+          {
+            "term": "worldwide licence to use, host, store, reproduce, modify, create derivative works, communicate, publish, publicly perform, publicly display and distribute",
+            "explanation": "This means that by uploading content to Google Drive, you are giving Google permission to do a wide range of things with your content, including storing it, changing it (e.g., translating it or adapting it), sharing it publicly, and even creating new works based on it. This permission applies globally, meaning it is valid anywhere in the world.",
+            "user_impact": "Google has very broad rights over your content, which could include actions like sharing it publicly or modifying it in ways you might not expect. Even though Google states this is for improving their services, the language is vague and could potentially allow for uses beyond what users might anticipate.",
+            "questions_to_ask": [
+              "What specific actions does Google take with my content under this license?",
+              "How does Google ensure my content is not used in ways I wouldn’t approve of?",
+              "What protections are in place to prevent misuse of my content?"
+            ]
+          },
+          {
+            "term": "This licence continues even if you stop using our services unless you delete your content",
+            "explanation": "This means that even if you stop using Google Drive, Google retains the rights to your content unless you actively delete it from their servers.",
+            "user_impact": "If you forget to delete your files before leaving the service, Google can continue to use your content indefinitely. This could be concerning if you have sensitive or private information stored on Google Drive.",
+            "questions_to_ask": [
+              "How can I ensure all my content is fully deleted from Google’s servers?",
+              "Does Google retain backups of my content even after I delete it?",
+              "How long does it take for content to be fully removed from Google’s systems?"
+            ]
+          },
+          {
+            "term": "for the limited purpose of operating, promoting, and improving our services, and to develop new ones",
+            "explanation": "Google states that the rights they have over your content are limited to purposes like running their services, making them better, and creating new services. However, the term 'limited purpose' is not clearly defined, leaving room for interpretation.",
+            "user_impact": "The lack of specificity means Google could potentially use your content in ways you might not expect, as long as they can argue it fits within these broad purposes.",
+            "questions_to_ask": [
+              "What does 'promoting' services mean in this context? Could my content be used in advertisements?",
+              "What safeguards are in place to ensure my content isn’t used inappropriately?",
+              "Can I opt out of having my content used for developing new services?"
+            ]
+          }
+        ],
+        "practical_meaning": "In practice, this clause means that when you upload content to Google Drive, you are giving Google very broad rights to use your content in various ways, including modifying it and sharing it publicly. These rights persist even after you stop using the service unless you delete your content. While Google claims these rights are for operational and improvement purposes, the language is vague and leaves room for potential misuse or unexpected uses of your content.",
+        "user_action_needed": "Users should carefully review what content they upload to Google Drive, especially if it includes sensitive or private information. If you stop using Google Drive, make sure to delete all your content to prevent Google from retaining rights to it. Additionally, users should consider reaching out to Google for clarification on how their content might be used.",
+        "severity_justification": "This was flagged as high severity because the broad scope of the license combined with its indefinite duration (unless content is deleted) creates significant risks for users. Sensitive or private content could potentially be used in ways that users did not intend or foresee, and the vague language leaves room for interpretation that could disadvantage users."
+      },
+      "online_research": {
+        "search_query": "\"google_drive\" worldwide licence to use, host, store, reproduce, modify, create derivative works, communicate, publish, publicly perform, publicly display and distribute This licence continues even if you stop using our services unless you delete your content for the limited purpose of operating, promoting, and improving our services, and to develop new ones terms conditions privacy policy explanation",
+        "no_results": true,
+        "message": "No additional context found online"
+      }
+    },
+    {
+      "original_concern": {
+        "clause": "Dispute Resolution and Jurisdiction",
+        "severity": "high",
+        "explanation": "For Canadian users, disputes are subject to California law and jurisdiction, which may create barriers to legal recourse. This is a significant disadvantage for non-US users.",
+        "quote": "If you live outside the European Economic Area or Switzerland, the laws of California, USA... will apply to any disputes arising out of or relating to these Terms or Google Drive."
+      },
+      "extended_context": "...y implied warranties, is limited to the amount you paid us to use the services (or, if the subject of the claim is the limited service, to supplying you the services again).\n\nNothing in these terms is intended to exclude or limit the liability of Google and its suppliers and distributors for death or personal injury, fraud, fraudulent misrepresentation or any liability that cannot be excluded by law. Nothing in these terms shall affect your statutory rights.\n\n#### 11. Laws governing the Terms.\n\nIf you live outside the European Economic Area or Switzerland, the laws of California, USA, excluding Californiaâs conflict of laws rules, will apply to any disputes arising out of or relating to these Terms or Google Drive. All claims arising out of or relating to these Terms or Google Drive will be litigated exclusively in the federal or state courts of Santa Clara County, California, USA, and you and Google consent to personal jurisdiction in those courts.\n\nIf you live in the European Economic Area or Switzerland, the laws and courts of your country of residence will apply to any disputes arising out of or relating to these Terms or Google Drive, and you can bring l...",
+      "clarity_analysis": {
+        "unclear_terms": [
+          {
+            "term": "Dispute Resolution and Jurisdiction",
+            "explanation": "This refers to the rules about where and under what laws any legal disputes between you and Google will be resolved. In this case, it states that disputes will be governed by California law and must be resolved in courts located in Santa Clara County, California, USA.",
+            "user_impact": "If you are a Canadian user (or any user outside the European Economic Area or Switzerland), you are agreeing to handle any legal disputes with Google under California law and in California courts. This could make it more difficult, expensive, and time-consuming for you to pursue legal action, as you may need to hire a lawyer familiar with California law and potentially travel to California for court proceedings.",
+            "questions_to_ask": [
+              "Why does Google require disputes to be resolved in California rather than in my home country?",
+              "What are the potential costs and challenges of pursuing a legal claim in California?",
+              "Are there any alternative dispute resolution methods available, such as arbitration, that could be more convenient for me?",
+              "Does this clause prevent me from filing a claim in my own country’s courts?"
+            ]
+          },
+          {
+            "term": "Consent to Personal Jurisdiction",
+            "explanation": "This means that by using Google Drive, you are agreeing that California courts have the authority to make legal decisions about disputes between you and Google. You are essentially waiving your right to argue that another court (e.g., in your home country) should handle the case.",
+            "user_impact": "You may lose the ability to bring a legal claim in your local courts, even if it would be more convenient or favorable to you. This could also mean that you are subject to California’s legal standards, which may differ from those in your home country.",
+            "questions_to_ask": [
+              "What does consenting to personal jurisdiction in California mean for my ability to seek legal recourse in my home country?",
+              "Are there any exceptions to this clause that would allow me to file a claim locally?",
+              "How does California law differ from the laws in my home country, and could this affect my rights?"
+            ]
+          },
+          {
+            "term": "California’s Conflict of Laws Rules",
+            "explanation": "This phrase means that California law will apply to disputes, but specific rules that determine which state or country’s laws should apply in a given situation (conflict of laws rules) are excluded. Essentially, only California law will be used to resolve disputes, regardless of where you live.",
+            "user_impact": "This ensures that California law will govern your dispute, even if another jurisdiction’s laws might be more favorable to you. This could limit your legal options and protections.",
+            "questions_to_ask": [
+              "Why are California’s conflict of laws rules excluded, and how does this affect my rights?",
+              "Are there any protections under my local laws that I might lose by agreeing to this clause?",
+              "What specific aspects of California law could impact my case if a dispute arises?"
+            ]
+          }
+        ],
+        "practical_meaning": "This clause means that if you have a legal dispute with Google about Google Drive, you must handle it under California law and in California courts. For non-US users, this could create significant barriers, such as higher legal costs, unfamiliarity with California law, and the inconvenience of dealing with a foreign legal system.",
+        "user_action_needed": "Users should carefully consider whether they are comfortable with the potential costs and challenges of resolving disputes in California. If not, they should explore alternative services with more user-friendly dispute resolution terms. Users may also want to consult a legal professional to understand how this clause could impact their rights.",
+        "severity_justification": "This clause was flagged as high severity because it imposes significant legal and financial burdens on non-US users, particularly those in Canada. It effectively limits users’ ability to seek legal recourse in their own country, which could deter them from pursuing legitimate claims against Google. This creates an imbalance of power between the user and the company."
+      },
+      "online_research": {
+        "search_query": "\"google_drive\" Dispute Resolution and Jurisdiction Consent to Personal Jurisdiction California’s Conflict of Laws Rules terms conditions privacy policy explanation",
+        "no_results": true,
+        "message": "No additional context found online"
+      }
+    }
+  ]
+}

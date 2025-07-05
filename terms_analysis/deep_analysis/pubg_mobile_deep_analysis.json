@@ -1,0 +1,121 @@
+{
+  "app_name": "pubg_mobile",
+  "total_high_severity_concerns": 2,
+  "analysis_timestamp": "2025-07-05",
+  "concerns_analyzed": [
+    {
+      "original_concern": {
+        "clause": "Broad license to User Content",
+        "severity": "high",
+        "explanation": "The app claims a broad, royalty-free, transferable license to use, modify, and distribute user-generated content, including waiving moral rights. This could lead to user content being used in ways not anticipated or desired by the user.",
+        "quote": "By making any User Content available through the Services, you hereby grant to us the following license: a non-exclusive, transferable, worldwide, royalty-free license, with the right to sublicense, to use, copy, modify, create derivative works based upon, distribute, publicly display, and publicly perform your User Content."
+      },
+      "extended_context": "...sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Content You Create Outside the Services. “User Content” means any Content that you (or other Game Account holders) create or obtain outside the Services that you or another user makes available within the Services. To be clear, if Content is created within the Services, it is not User Content; only Content created or obtained from outside the Services that a user then makes available within the Services is User Content. By making any User Content available through the Services, you hereby grant to us the following license: a non-exclusive, transferable, worldwide, royalty-free license, with the right to sublicense, to use, copy, modify, create derivative works based upon, distribute, publicly display, and publicly perform your User Content in connection with operating and providing the Services and Content to you and to other users of the Services. Except to the extent prohibited by law, you waive the benefit of any “moral rights” or “droit moral” or similar rights in any country to any User Content. We may, in our sole discretion, remove, edit, or disable any User Content at any time and for any reason, including if we determine that the User Content violates this EULA. We do not assume any responsibility or liability for User Co...",
+      "clarity_analysis": {
+        "unclear_terms": [
+          {
+            "term": "Broad, royalty-free, transferable license",
+            "explanation": "This means the app can use your content without paying you, transfer the rights to others, and use it in almost any way they want, including modifying it or creating new works based on it.",
+            "user_impact": "Your content could be used in ways you didn’t expect, such as being shared with third parties, altered, or used for commercial purposes without your permission or compensation.",
+            "questions_to_ask": [
+              "What specific types of content does this apply to?",
+              "How might my content be used by the company or third parties?",
+              "Can I revoke this license if I stop using the app?",
+              "What protections are in place to prevent misuse of my content?"
+            ]
+          },
+          {
+            "term": "Waiving moral rights",
+            "explanation": "Moral rights are rights that allow creators to protect the integrity of their work and ensure they are credited as the author. Waiving these rights means you give up control over how your content is used or attributed.",
+            "user_impact": "The app could modify your content in ways you might find objectionable or use it without crediting you as the creator.",
+            "questions_to_ask": [
+              "What does waiving moral rights mean for my ability to control how my content is used?",
+              "Can the app use my content in ways that could harm my reputation?",
+              "Will I still be credited as the creator of my content?"
+            ]
+          },
+          {
+            "term": "Right to sublicense",
+            "explanation": "This means the app can give other companies or individuals permission to use your content without needing your approval.",
+            "user_impact": "Your content could end up being used by third parties you don’t know or trust, potentially for purposes you don’t agree with.",
+            "questions_to_ask": [
+              "Who might my content be sublicensed to?",
+              "What restrictions, if any, are placed on third parties who receive sublicenses?",
+              "Can I opt out of having my content sublicensed?"
+            ]
+          },
+          {
+            "term": "Sole discretion to remove, edit, or disable User Content",
+            "explanation": "The app reserves the right to take down, change, or disable your content at any time for any reason, without needing to explain why.",
+            "user_impact": "Your content could be removed or altered without notice, even if you believe it complies with the app’s rules.",
+            "questions_to_ask": [
+              "What criteria does the app use to decide whether to remove or edit content?",
+              "Will I be notified if my content is removed or altered?",
+              "Can I appeal if my content is taken down?"
+            ]
+          }
+        ],
+        "practical_meaning": "By uploading content to the app, you are giving the company very broad rights to use, modify, and share your content without compensating you or seeking further permission. You also lose control over how your content is attributed or altered, and the company can sublicense your content to others. Additionally, the app can remove or change your content at any time without explanation.",
+        "user_action_needed": "Users should carefully consider what content they upload to the app, especially if it is sensitive, valuable, or something they want to retain control over. Avoid uploading content you wouldn’t want to be widely shared, modified, or used commercially. If you’re unsure, ask the company for clarification on how your content might be used.",
+        "severity_justification": "This was flagged as high severity because it significantly impacts user rights and control over their own content. The broad license, combined with the waiver of moral rights and the ability to sublicense, creates a situation where users could lose control over their content entirely, with potential for misuse or exploitation by the company or third parties."
+      },
+      "online_research": {
+        "search_query": "\"pubg_mobile\" Broad, royalty-free, transferable license Waiving moral rights Right to sublicense terms conditions privacy policy explanation",
+        "no_results": true,
+        "message": "No additional context found online"
+      }
+    },
+    {
+      "original_concern": {
+        "clause": "Arbitration clause for dispute resolution",
+        "severity": "high",
+        "explanation": "The app mandates binding arbitration for dispute resolution, limiting users' ability to pursue legal action in court. This heavily favors the company and may not be in the best interest of Canadian consumers.",
+        "quote": "WHEN YOU AGREE TO THIS EULA YOU ARE AGREEING (WITH LIMITED EXCEPTION) TO RESOLVE ANY DISPUTE BETWEEN YOU AND US THROUGH BINDING, INDIVIDUAL ARBITRATION RATHER THAN IN COURT."
+      },
+      "extended_context": "...tions 18.Warranty Disclaimers 19.Limitation of Liability 20.Indemnity 21.Termination 22.Dispute Resolution and Governing Law 23.No Assignment 24.Miscellaneous 25.Contact Information &nbsp; &nbsp; &nbsp; 1. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A few important notices—arbitration, refunds and damages PLEASE REVIEW CAREFULLY SECTION 22 “DISPUTE RESOLUTION” BELOW FOR DETAILS REGARDING ARBITRATION. IMPORTANT NOTICE REGARDING ARBITRATION FOR PLAYERS IN THE UNITED STATES: WHEN YOU AGREE TO THIS EULA YOU ARE AGREEING (WITH LIMITED EXCEPTION) TO RESOLVE ANY DISPUTE BETWEEN YOU AND US THROUGH BINDING, INDIVIDUAL ARBITRATION RATHER THAN IN COURT. THIS EULA ALSO INCLUDES A LIMITATION ON DAMAGES THAT YOU CAN COLLECT FROM US THAT MAY ARISE OUT OF YOUR USE OF THE SERVICES. BY USING THE SERVICES, YOU AGREE TO THESE PROVISIONS. IF YOU DO NOT AGREE TO THE TERMS OF THIS EULA, YOU MAY NOT INSTALL, COPY, OR USE OUR SERVICES. WE DO NOT NORMALLY OFFER REFUNDS, EXCEPT WHERE EXPRESSLY AUTHORIZED BY US (SEE SECTION 10 FOR EXCEPTIONS), OR WHERE REFUNDS ARE REQUIRED UNDER LOCAL LAW. OUR EULA MAY ALSO CONTAIN COUNTRY-SPECIFIC ADDENDA THAT APPLY TO YOU BA...",
+      "clarity_analysis": {
+        "unclear_terms": [
+          {
+            "term": "Binding arbitration",
+            "explanation": "Binding arbitration is a private process where a neutral third party (the arbitrator) decides the outcome of a dispute instead of going to court. The decision is final and cannot usually be appealed.",
+            "user_impact": "This means users give up their right to sue the company in court, including participating in a class-action lawsuit. Instead, disputes will be resolved privately, which may favor the company.",
+            "questions_to_ask": [
+              "Who pays for the arbitration process, and are there any fees for users?",
+              "Can I still take legal action if I believe the arbitrator's decision is unfair?",
+              "Are there any exceptions to this arbitration clause?",
+              "What rights do I lose by agreeing to arbitration?"
+            ]
+          },
+          {
+            "term": "Individual arbitration",
+            "explanation": "This means disputes must be resolved on a one-on-one basis, and users cannot join together in a group or class-action lawsuit.",
+            "user_impact": "Users cannot band together to address widespread issues, which can make it harder to hold the company accountable for systemic problems.",
+            "questions_to_ask": [
+              "What happens if multiple users have the same issue with the company?",
+              "Are there any circumstances where class-action lawsuits are allowed?",
+              "How does this affect my ability to seek compensation for damages?"
+            ]
+          },
+          {
+            "term": "Limitation on damages",
+            "explanation": "This limits the amount of money users can recover from the company if they win a dispute, regardless of the harm caused.",
+            "user_impact": "Even if the company is found at fault, users may not be able to recover the full amount of their losses or damages.",
+            "questions_to_ask": [
+              "What specific damages are limited under this clause?",
+              "Is there a cap on the amount of compensation I can receive?",
+              "Does this limitation apply to all types of disputes?"
+            ]
+          }
+        ],
+        "practical_meaning": "This clause means that if you have a dispute with the company (e.g., over payments, account bans, or privacy violations), you cannot take the company to court or join a class-action lawsuit. Instead, you must resolve the issue through private arbitration, which is often less favorable to consumers. Additionally, the company has limited the amount of money you can claim in damages, even if they are at fault.",
+        "user_action_needed": "Users should carefully consider whether they are comfortable giving up their right to sue in court or join a class-action lawsuit. If not, they should avoid using the app or seek legal advice before agreeing to the terms. Users should also review the arbitration process and any associated costs.",
+        "severity_justification": "This is flagged as high severity because it significantly limits users' legal rights and options for resolving disputes. Arbitration clauses often favor companies, and the inability to participate in class-action lawsuits can make it harder for users to address widespread issues or seek fair compensation. Additionally, the limitation on damages further reduces users' ability to recover losses, which could be particularly harmful in cases of significant harm or financial loss."
+      },
+      "online_research": {
+        "search_query": "\"pubg_mobile\" Binding arbitration Individual arbitration Limitation on damages terms conditions privacy policy explanation",
+        "no_results": true,
+        "message": "No additional context found online"
+      }
+    }
+  ]
+}

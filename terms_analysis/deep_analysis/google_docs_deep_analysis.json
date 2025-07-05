@@ -1,0 +1,59 @@
+{
+  "app_name": "google_docs",
+  "total_high_severity_concerns": 1,
+  "analysis_timestamp": "2025-07-05",
+  "concerns_analyzed": [
+    {
+      "original_concern": {
+        "clause": "Data analysis and personalization",
+        "severity": "high",
+        "explanation": "Google explicitly states that it uses automated systems and algorithms to analyze user content for purposes such as spam detection, personalization, and advertising. This level of data analysis may feel invasive to users, particularly those concerned about privacy.",
+        "quote": "This includes using automated systems and algorithms to analyze your content: for spam, malware, and illegal content... to customize our services for you, such as providing recommendations and personalized search results, content, and ads."
+      },
+      "extended_context": "... translating itsublicense these rights to:other users to allow the services to work as designed, such as enabling you to share photos with people you chooseour contractors who’ve signed agreements with us that are consistent with these terms, only for the limited purposes described in the Purpose section belowPurposeThis license is for the limited purpose of:operating and improving the services, which means allowing the services to work as designed and creating new features and functionalities. This includes using automated systems and algorithms to analyze your content:for spam, malware, and illegal contentto recognize patterns in data, such as determining when to suggest a new album in Google Photos to keep related photos togetherto customize our services for you, such as providing recommendations and personalized search results, content, and ads (which you can change or turn off in Ads Settings)This analysis occurs as the content is sent, received, and when it is stored.using content you’ve shared publicly to promote the services. For example, to promote a Google app, we might quote a review you wrote. Or to promote Google Play, we might show a screenshot of the app you offer in the Play Store.developing new technolo...",
+      "clarity_analysis": {
+        "unclear_terms": [
+          {
+            "term": "automated systems and algorithms to analyze your content",
+            "explanation": "This refers to computer programs that automatically scan and process the information you upload, send, or store in Google Docs (like documents, photos, or emails). These systems look for patterns or specific data to perform tasks like detecting spam, malware, or illegal content, and to personalize your experience by suggesting content or showing targeted ads.",
+            "user_impact": "This means Google is constantly scanning your content, even private documents, to gather data about you. This data is then used to improve their services, but also to create personalized ads and recommendations, which can feel invasive if you value privacy.",
+            "questions_to_ask": [
+              "What specific types of data are being analyzed from my content?",
+              "How long does Google retain the data it analyzes from my content?",
+              "Can I opt out of this analysis entirely, and if so, how?",
+              "What safeguards are in place to ensure my data is not misused or accessed by unauthorized parties?"
+            ]
+          },
+          {
+            "term": "customize our services for you",
+            "explanation": "This means Google uses the data it collects from analyzing your content to tailor its services to your preferences. For example, it might suggest certain documents, show personalized search results, or display ads based on your activity.",
+            "user_impact": "Your activity and content are being used to create a profile of your preferences and behavior. While this can make services more convenient, it also means Google is building a detailed understanding of your habits, which could be shared with advertisers or other third parties.",
+            "questions_to_ask": [
+              "What specific customizations are being made based on my data?",
+              "Can I control or limit the extent of personalization?",
+              "Who else has access to the data used for personalization?"
+            ]
+          },
+          {
+            "term": "content is analyzed as it is sent, received, and stored",
+            "explanation": "This means that Google scans your content at every stage—when you upload it, share it, or even just save it in your account. This analysis is ongoing and happens in real-time.",
+            "user_impact": "Even if you don’t actively share your content, Google is still analyzing it. This could raise concerns about the privacy of sensitive or confidential information stored in Google Docs.",
+            "questions_to_ask": [
+              "Does Google analyze encrypted content?",
+              "What happens to the data from analyzed content if I delete it?",
+              "Is there a way to store content without it being analyzed?"
+            ]
+          }
+        ],
+        "practical_meaning": "In practice, this clause means that Google is constantly scanning and analyzing the content you create, upload, or store in their services. This data is used to improve their services, detect harmful content, and personalize your experience, including showing you targeted ads. However, this also means that Google has access to a significant amount of personal and potentially sensitive information, which could be concerning for users who value privacy.",
+        "user_action_needed": "Users should review their Google account settings, particularly the Ads Settings, to limit or turn off personalization. They should also consider whether they are comfortable storing sensitive or confidential information on Google Docs, given the level of data analysis. If privacy is a major concern, users might want to explore alternative services with stronger privacy protections.",
+        "severity_justification": "This was flagged as high severity because it involves the continuous and pervasive analysis of user content, including private and sensitive information. This level of data access and processing can feel invasive and raises significant privacy concerns, especially for users who may not fully understand the extent of Google's data collection and usage practices."
+      },
+      "online_research": {
+        "search_query": "\"google_docs\" automated systems and algorithms to analyze your content customize our services for you content is analyzed as it is sent, received, and stored terms conditions privacy policy explanation",
+        "no_results": true,
+        "message": "No additional context found online"
+      }
+    }
+  ]
+}

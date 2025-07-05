@@ -1,0 +1,37 @@
+{
+  "app_name": "Slack",
+  "app_version": null,
+  "overall_score": 7.5,
+  "privacy_concerns": [
+    {
+      "clause": "Data Sharing with Third Parties",
+      "severity": "medium",
+      "explanation": "Slack states that it may share Personal Data with third-party service providers, partners, and affiliates for purposes such as analytics, marketing, and improving services. While this is common, the scope of data sharing is not entirely clear, raising concerns about how user data is used beyond the platform.",
+      "quote": "We may share Personal Data with our affiliates, third-party service providers, and partners for purposes such as analytics and marketing."
+    },
+    {
+      "clause": "Broad Data Collection Practices",
+      "severity": "medium",
+      "explanation": "Slack collects a wide range of data, including user activity, device information, and metadata. While much of this is necessary for functionality, the extent of data collected may exceed what is strictly required for the app's core features.",
+      "quote": "We collect information about your use of Slack, including metadata, device information, and user activity."
+    },
+    {
+      "clause": "Changes to Privacy Policy",
+      "severity": "low",
+      "explanation": "Slack reserves the right to update its Privacy Policy and notify users by posting updates on its website. However, there is no explicit mention of direct notifications to users, which may lead to users being unaware of significant changes.",
+      "quote": "We may update this Privacy Policy from time to time by posting updates on our website."
+    }
+  ],
+  "summary": "Slack's terms and privacy policies are generally clear and user-friendly, with a strong emphasis on compliance with global standards like GDPR and CCPA. However, concerns arise from broad data collection practices and the potential for extensive third-party data sharing. Notifications about changes to terms could be more user-focused.",
+  "red_flags": [
+    "Broad rights to share data with third parties",
+    "Extensive data collection beyond core functionality",
+    "Lack of direct user notifications for policy changes"
+  ],
+  "user_friendliness_score": 8.0,
+  "data_collection_score": 6.5,
+  "legal_complexity_score": 7.0,
+  "terms_version": "Effective: July 5, 2023",
+  "terms_url": "https://slack.com/trust/privacy/privacy-policy",
+  "analysis_date": "2025-07-05"
+}

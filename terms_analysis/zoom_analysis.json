@@ -1,0 +1,104 @@
+{
+  "app_name": "Zoom",
+  "app_version": null,
+  "overall_score": 6.5,
+  "privacy_concerns": [
+    {
+      "clause": "Data collection during registration",
+      "severity": "medium",
+      "explanation": "Zoom requires users to provide personal information during registration and explicitly states that it is not liable for errors or omissions in user-provided data. This raises concerns about the extent of personal data collected and the lack of clarity on how it is protected.",
+      "quote": "You may be required to provide information about yourself to register for and to access or use the Services and Software."
+    },
+    {
+      "clause": "Broad rights to modify terms",
+      "severity": "high",
+      "explanation": "Zoom reserves the right to make modifications, deletions, and additions to the Terms of Service without clear notification requirements for users. This could lead to users being unaware of significant changes affecting their rights.",
+      "quote": "Zoom may make modifications, deletions, and additions to these Terms of Service and our Service Description."
+    },
+    {
+      "clause": "Arbitration and class-action waiver",
+      "severity": "high",
+      "explanation": "The terms include a binding arbitration clause and a waiver of class-action rights, which could limit users' ability to seek legal recourse in disputes with Zoom.",
+      "quote": "You and Zoom will arbitrate certain claims instead of going to court and that you will not bring class-action claims against Zoom."
+    },
+    {
+      "clause": "Account sharing prohibition",
+      "severity": "low",
+      "explanation": "Zoom prohibits account sharing and imposes restrictions on transferring user rights. While this is standard for many services, it may inconvenience users in shared or family settings.",
+      "quote": "You may not share an account, Host rights, or any other user rights with any other individual, unless otherwise expressly pre-approved by Zoom in writing."
+    }
+  ],
+  "summary": "Zoom's terms of service are moderately user-friendly but include several clauses that may raise concerns for Canadian consumers. Key issues include broad data collection practices, the ability to modify terms without clear notifications, and a binding arbitration clause that limits legal recourse.",
+  "red_flags": [
+    "Broad rights to modify terms without clear user notification",
+    "Binding arbitration clause and class-action waiver",
+    "Extensive data collection during registration"
+  ],
+  "user_friendliness_score": 6.0,
+  "data_collection_score": 5.5,
+  "legal_complexity_score": 5.0,
+  "terms_version": "Effective Date: August 11, 2023",
+  "terms_url": "https://explore.zoom.us/en/terms/",
+  "analysis_date": "2025-07-05",
+  "deep_analysis": {
+    "1": {
+      "unclear_terms": [
+        {
+          "term": "Zoom may make modifications, deletions, and additions to these Terms of Service and our Service Description",
+          "explanation": "This means Zoom has the right to change the rules or terms of their service agreement at any time, including adding new terms, removing existing ones, or altering current ones. They do not explicitly state they will notify users of these changes.",
+          "user_impact": "Users might unknowingly agree to new terms that could significantly impact their rights, obligations, or the way they use Zoom's services. For example, Zoom could introduce new fees, change how your data is handled, or limit your ability to take legal action without you being aware.",
+          "questions_to_ask": [
+            "Will Zoom notify users of changes to the Terms of Service? If so, how and when?",
+            "What happens if I disagree with the updated terms? Can I opt out or stop using the service without penalty?",
+            "How often does Zoom update its terms, and where can I find a record of past changes?"
+          ]
+        }
+      ],
+      "practical_meaning": "In practice, this clause allows Zoom to update its terms at any time without requiring explicit consent or notification to users. This means users are expected to regularly check the Terms of Service to stay informed about any changes. If users continue using Zoom after changes are made, they are assumed to have agreed to the new terms, even if they were unaware of them.",
+      "user_action_needed": "Users should regularly review Zoom's Terms of Service to stay informed about any changes. Consider setting a reminder to check for updates periodically. Additionally, users should ask Zoom for clarification on how they will be notified of changes and what options they have if they disagree with the new terms.",
+      "severity_justification": "This is flagged as high severity because it directly affects users' ability to make informed decisions about their rights and obligations. Without clear notification requirements, users could unknowingly agree to terms that negatively impact their privacy, financial obligations, or legal recourse. This lack of transparency undermines trust and puts users at a significant disadvantage.",
+      "extended_context": "...only use the Services and Software in accordance with the terms and subject to the conditions of this Agreement. READ THIS AGREEMENT CAREFULLY, AS IT PROVIDES, AMONG OTHER THINGS: (i) in Section 27, that you and Zoom will arbitrate certain claims instead of going to court and that you will not bring class-action claims against Zoom; (ii) in Sections 12 and 14, that certain terms and conditions apply with respect to recurring subscription Charges and automatic renewals; (iii) in Section 15, that Zoom may make modifications, deletions, and additions to these&nbsp;Terms of Service&nbsp;and our&nbsp;Service Description; and (iv) in Section 26, that you release Zoom from, and waive your right to recover from Zoom, certain damages. You acknowledge that you will only create an account or otherwise use the Services and Software if you agree to be legally bound by all terms and conditions herein. Your acceptance of this Agreement creates a legally binding contract between you and Zoom. 1. ACCOUNT INFORMATION; SHARING&nbsp; 1.1 Registration; Username and Passwords. You may be required to provide infor...",
+      "online_research": {
+        "search_query": "\"zoom\" Zoom may make modifications, deletions, and additions to these Terms of Service and our Service Description terms conditions privacy policy explanation",
+        "top_result_url": "https://www.nsoit.com/Cybersecurity-News/",
+        "top_result_title": "NSO Security Team News - NetSource One",
+        "summary": "NetSource One, Inc. Home; About Us. NetSource One Today · Career Opportunities · Contact Us & Location · Hours of Operation · Privacy Policy."
+      }
+    },
+    "2": {
+      "unclear_terms": [
+        {
+          "term": "Binding arbitration clause",
+          "explanation": "This means that if you have a legal dispute with Zoom, you cannot take the issue to a court of law. Instead, the dispute will be resolved through arbitration, which is a private process where a neutral third party (the arbitrator) decides the outcome.",
+          "user_impact": "You lose the right to have your case heard by a judge or jury in court. Arbitration decisions are usually final and cannot be appealed, and the process may favor companies over individuals.",
+          "questions_to_ask": [
+            "What types of disputes are covered by this arbitration clause?",
+            "Who selects the arbitrator, and how is the arbitration process conducted?",
+            "Are there any costs associated with arbitration, and who pays them?",
+            "Can I opt out of the arbitration clause, and if so, how?"
+          ]
+        },
+        {
+          "term": "Class-action waiver",
+          "explanation": "This means that you cannot join with other users to file a lawsuit against Zoom as a group. Instead, you must pursue any claims individually.",
+          "user_impact": "You lose the ability to pool resources with other users to address widespread issues, which can make it more difficult and expensive to pursue claims, especially for small individual disputes.",
+          "questions_to_ask": [
+            "What happens if multiple users have the same issue with Zoom?",
+            "Are there any exceptions to the class-action waiver?",
+            "Does this waiver apply to all types of claims, including those related to privacy or data breaches?"
+          ]
+        }
+      ],
+      "practical_meaning": "In practice, this clause means that if you have a dispute with Zoom—such as over billing, service issues, or privacy violations—you cannot sue them in court or join a class-action lawsuit with other users. Instead, you must resolve the issue through arbitration, which is typically less transparent and may limit your ability to achieve a fair outcome.",
+      "user_action_needed": "Users should carefully review the arbitration and class-action waiver terms to understand their rights and limitations. If Zoom allows an opt-out for arbitration, users should consider opting out within the specified timeframe. Additionally, users should keep records of any disputes or issues they encounter with Zoom in case they need to pursue arbitration.",
+      "severity_justification": "This was flagged as high severity because it significantly limits users' legal rights and options for recourse. Arbitration clauses and class-action waivers often favor corporations, making it harder for individuals to hold companies accountable for widespread or systemic issues. This could be particularly concerning in cases involving privacy violations or data breaches, where collective action is often the most effective way to seek justice.",
+      "extended_context": "... Capitalized terms in this Agreement will have definitions as set forth in the applicable section where they are defined, in the Zoom&nbsp;Services Description, or in Section 34 below. We may provide the Services and Software through Zoom Communications, Inc., our affiliate(s), or both. You may only use the Services and Software in accordance with the terms and subject to the conditions of this Agreement. READ THIS AGREEMENT CAREFULLY, AS IT PROVIDES, AMONG OTHER THINGS: (i) in Section 27, that you and Zoom will arbitrate certain claims instead of going to court and that you will not bring class-action claims against Zoom; (ii) in Sections 12 and 14, that certain terms and conditions apply with respect to recurring subscription Charges and automatic renewals; (iii) in Section 15, that Zoom may make modifications, deletions, and additions to these&nbsp;Terms of Service&nbsp;and our&nbsp;Service Description; and (iv) in Section 26, that you release Zoom from, and waive your right to recover from Zoom, certain damages. You acknowledge that you will only create an account or otherwise use the Services and Software if...",
+      "online_research": {
+        "search_query": "\"zoom\" Binding arbitration clause Class-action waiver terms conditions privacy policy explanation",
+        "top_result_url": null,
+        "top_result_title": null,
+        "summary": null
+      }
+    }
+  }
+}

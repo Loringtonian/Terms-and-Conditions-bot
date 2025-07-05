@@ -1,0 +1,43 @@
+{
+  "app_name": "Hoop Messenger",
+  "app_version": null,
+  "overall_score": 6.5,
+  "privacy_concerns": [
+    {
+      "clause": "User Content Licensing",
+      "severity": "medium",
+      "explanation": "The terms grant Hoop Messenger a royalty-free, irrevocable, and worldwide license to use, modify, and distribute user-generated content. While this is common, the irrevocable nature and broad scope of the license could be concerning for users who value control over their content.",
+      "quote": "You grant your license royalty free, irrevocable, and worldwide."
+    },
+    {
+      "clause": "Updates without Notification",
+      "severity": "medium",
+      "explanation": "The app reserves the right to update its software and services without notifying users. This could lead to unexpected changes in functionality or data handling practices without user awareness.",
+      "quote": "Hoop Messenger may or may not notify its Users about updates. Your use and download of the updates signifies your consent."
+    },
+    {
+      "clause": "Termination of Service",
+      "severity": "medium",
+      "explanation": "Hoop Messenger reserves the right to terminate user accounts and services without prior notice for any reason. This policy could be seen as overly broad and potentially unfair to users.",
+      "quote": "We reserve the right to modify or terminate Hoop Messenger’s service for any reason, without prior notice."
+    },
+    {
+      "clause": "Data Sharing and Ownership",
+      "severity": "low",
+      "explanation": "While the app states that user-generated content is owned by the user, it also retains a license to use and distribute this content. This duality may not be clear to all users.",
+      "quote": "Hoop Messenger does not claim any ownership rights in the Content that you post on or through our Service."
+    }
+  ],
+  "summary": "Hoop Messenger's terms and conditions are moderately user-friendly but include some concerning clauses regarding content licensing, updates without notification, and broad termination rights. While the app respects user ownership of content, its irrevocable license and lack of clear data-sharing limitations may raise privacy concerns.",
+  "red_flags": [
+    "Irrevocable and broad content licensing rights",
+    "Updates without user notification",
+    "Broad termination rights without prior notice"
+  ],
+  "user_friendliness_score": 6.0,
+  "data_collection_score": 7.0,
+  "legal_complexity_score": 5.0,
+  "terms_version": null,
+  "terms_url": "https://hoopmessenger.ca/it/legal/",
+  "analysis_date": "2025-07-05"
+}

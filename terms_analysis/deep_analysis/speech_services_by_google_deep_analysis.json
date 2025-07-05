@@ -1,71 +1,58 @@
 {
-  "app_name": "Speech Services By Google",
+  "app_name": "speech_services_by_google",
   "total_high_severity_concerns": 1,
   "analysis_timestamp": "2025-07-05",
   "concerns_analyzed": [
     {
       "original_concern": {
-        "clause": "Broad disclaimer of warranties",
+        "clause": "Data analysis for personalization and advertising",
         "severity": "high",
-        "explanation": "The terms broadly disclaim all warranties, including implied warranties of merchantability or fitness for a particular purpose. This could leave users without adequate protections for defective or malfunctioning products.",
-        "quote": "Application Services are provided on an as-available basis without warranties of any kind, either expressed or implied, that the Application Service will be uninterrupted or error-free, including but not limited to vagaries of weather, disruption of Service, acts of God, warranties of title, local or regional limitations, no infringement, NOR IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE."
+        "explanation": "Google explicitly states that it uses automated systems to analyze user content for purposes such as personalization and advertising. This could be seen as invasive, especially for users who are not fully aware of the extent of data processing.",
+        "quote": "This includes using automated systems and algorithms to analyze your content: for spam, malware, and illegal content; to recognize patterns in data; to customize our services for you, such as providing recommendations and personalized search results, content, and ads."
       },
-      "extended_context": "...(hereinafter “Device”) made in any form whatsoever and at any time, some or all of the pre-installed, or subsequently installed Application Services may not be available or capable of functioning as intended by the provider of the Application Services in any or all usage areas for reasons outside of Hisense’s control, including but not limited to, Internet access, local service limitations, etc. Any purchase or use of the Device, including any Application Services, is purely at the user’s risk. Application Services are provided on an as-available basis without warranties of any kind, either expressed or implied, that the Application Service will be uninterrupted or error-free, including but not limited to vagaries of weather, disruption of Service, acts of God, warranties of title, local or regional limitations, no infringement, NOR IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. No advice or information given by Hisense, providers, affiliates, or contractors or their respective employees shall create such a warranty. Hisense specifically disclaims responsibility for any or all Application Services from functioning at any time, and by purchasing the Device, you accept such disclaimer without any claim on Hisense. You are solely responsible for providing an active and working connection to the Internet, along with any and all hardware and/or software necessary to use the...",
+      "extended_context": "... translating itsublicense these rights to:other users to allow the services to work as designed, such as enabling you to share photos with people you chooseour contractors who’ve signed agreements with us that are consistent with these terms, only for the limited purposes described in the Purpose section belowPurposeThis license is for the limited purpose of:operating and improving the services, which means allowing the services to work as designed and creating new features and functionalities. This includes using automated systems and algorithms to analyze your content:for spam, malware, and illegal contentto recognize patterns in data, such as determining when to suggest a new album in Google Photos to keep related photos togetherto customize our services for you, such as providing recommendations and personalized search results, content, and ads (which you can change or turn off in Ads Settings)This analysis occurs as the content is sent, received, and when it is stored.using content you’ve shared publicly to promote the services. For example, to promote a Google app, we might quote a review you wrote. Or to promote Google Play, we might show a screenshot of the app you offer in the Play Store.developing new technologies and services for Google ...",
       "clarity_analysis": {
         "unclear_terms": [
           {
-            "term": "Broad disclaimer of warranties",
-            "explanation": "This means the company is stating that they are not guaranteeing the quality, reliability, or functionality of their services or products. They are also not responsible if the product or service does not work as expected or advertised.",
-            "user_impact": "If the service or product malfunctions, is defective, or doesn't meet your needs, you may not be able to hold the company accountable or get a refund, repair, or replacement. Essentially, you are using the product or service at your own risk.",
+            "term": "automated systems and algorithms to analyze your content",
+            "explanation": "This refers to Google's use of computer programs to scan and process the data you provide (e.g., emails, photos, search history) to identify patterns, detect spam or malware, and customize services like ads and recommendations.",
+            "user_impact": "This means that Google is constantly analyzing your personal data, including private communications and stored content, to tailor ads and services to you. This could feel invasive, especially if you are unaware of the extent of this analysis.",
             "questions_to_ask": [
-              "What happens if the service or product doesn't work as advertised?",
-              "Are there any situations where the company will take responsibility for defects or malfunctions?",
-              "What recourse do I have if the product or service causes me financial or other harm?",
-              "Does this disclaimer comply with local consumer protection laws?"
+              "What specific types of content are being analyzed (e.g., emails, photos, voice recordings)?",
+              "How long is my data stored and analyzed for these purposes?",
+              "Can I opt out of this analysis entirely, and if so, how?",
+              "What safeguards are in place to protect my data from misuse or breaches?"
             ]
           },
           {
-            "term": "Implied warranties of merchantability or fitness for a particular purpose",
-            "explanation": "These are legal guarantees that a product will work as expected (merchantability) and that it will be suitable for a specific purpose if the seller knows about that purpose (fitness for a particular purpose). By disclaiming these, the company is saying they are not making these guarantees.",
-            "user_impact": "If the product or service is defective or unsuitable for your intended use, you may not be able to rely on these legal protections to seek a remedy.",
+            "term": "customize our services for you, such as providing recommendations and personalized search results, content, and ads",
+            "explanation": "Google uses the data it collects about you to create a personalized experience, such as showing you ads or search results tailored to your interests and behavior.",
+            "user_impact": "This means your online activity and personal data are being used to influence what you see online, which could limit your exposure to diverse content or feel like an invasion of privacy.",
             "questions_to_ask": [
-              "Does this product or service come with any guarantees at all?",
-              "What protections do I have if the product or service is defective or doesn't meet my needs?",
-              "Are there any exceptions to this disclaimer under local laws?"
+              "What types of ads or recommendations will be shown to me based on this data?",
+              "Can I see what data Google has collected about me?",
+              "How can I control or limit the personalization of ads and content?"
             ]
           },
           {
-            "term": "As-available basis",
-            "explanation": "This means the company is not guaranteeing that the service will always be available, uninterrupted, or error-free. It could be temporarily or permanently unavailable for various reasons.",
-            "user_impact": "You may experience service outages or disruptions, and the company is not obligated to fix them or compensate you for any inconvenience or loss caused by these issues.",
+            "term": "analysis occurs as the content is sent, received, and when it is stored",
+            "explanation": "Google processes your data at all stages—when you send or receive it (e.g., emails, messages) and while it is stored on their servers.",
+            "user_impact": "This means that even if you are not actively using Google's services, your stored data is still being analyzed. This could raise concerns about the constant monitoring of your personal information.",
             "questions_to_ask": [
-              "What happens if the service is unavailable for an extended period?",
-              "Will I be compensated for service disruptions or outages?",
-              "Are there any guarantees about the minimum level of service availability?"
-            ]
-          },
-          {
-            "term": "Acts of God, vagaries of weather, local or regional limitations",
-            "explanation": "These are examples of situations outside the company's control that they are using to justify not being responsible for service interruptions or failures.",
-            "user_impact": "If the service is disrupted due to natural disasters, weather conditions, or regional restrictions, the company will not take responsibility or provide compensation.",
-            "questions_to_ask": [
-              "What specific events or conditions fall under these categories?",
-              "How will I know if a service disruption is due to one of these reasons?",
-              "Are there any protections for users in these situations?"
+              "Does this mean Google is analyzing my private communications in real-time?",
+              "What happens to my data if I delete it—does Google still retain or analyze it?",
+              "Are there limits to what Google can analyze, such as sensitive or confidential information?"
             ]
           }
         ],
-        "practical_meaning": "The company is essentially saying that they are not responsible for ensuring the product or service works as expected, is free from defects, or is suitable for your needs. They are also not liable for any interruptions, errors, or failures in the service, even if these cause you inconvenience or harm. This leaves users with very limited protections or recourse if something goes wrong.",
-        "user_action_needed": "Users should carefully evaluate whether they are comfortable using a product or service that comes with no guarantees or protections. If this is a critical service or product, consider whether you can afford to take on the risk of it not working as expected. Additionally, check local consumer protection laws to see if these disclaimers are enforceable in your region.",
-        "severity_justification": "This was flagged as high severity because it significantly limits the user's rights and protections. By disclaiming all warranties, the company shifts all risk to the user, which could result in financial loss, inconvenience, or harm without any recourse. This is particularly concerning for essential or expensive products and services."
+        "practical_meaning": "In practice, this clause means that Google is continuously analyzing the data you provide to improve its services and show you personalized ads and content. This includes scanning your emails, photos, and other stored content to identify patterns and tailor your experience. While this can make services more convenient, it also raises significant privacy concerns as it involves extensive data collection and processing.",
+        "user_action_needed": "Users should review their Google account settings, particularly the Ads Settings, to understand and control how their data is being used for personalization. They should also consider whether they are comfortable with the extent of data analysis described and explore options to limit or opt out of certain types of data processing.",
+        "severity_justification": "This was flagged as high severity because it involves the analysis of potentially sensitive personal data, including private communications and stored content, for purposes that may not be fully understood by users. The constant monitoring and use of this data for advertising could feel invasive and raises concerns about user consent, data security, and privacy."
       },
       "online_research": {
-        "search_query": "\"Speech Services By Google\" Broad disclaimer of warranties Implied warranties of merchantability or fitness for a particular purpose As-available basis terms conditions privacy policy explanation",
-        "top_result_url": "https://cdn.prod.website-files.com/5bb9339024337ca51e2eb44f/68508ad3953463e6b3292df8_THA%20Board%20of%20Directors%20Meeting%20Agenda%20June%202025.pdf",
-        "top_result_title": "[PDF] Tulsa Honor Academy - June 2025 Board Meeting",
-        "summary": "... implied (other than those stated above), including implied warranties of merchantability or fitness for a particular purpose, and any implied warranties arising.",
-        "detailed_content_available": false,
-        "additional_context": null
+        "search_query": "\"speech_services_by_google\" automated systems and algorithms to analyze your content customize our services for you, such as providing recommendations and personalized search results, content, and ads analysis occurs as the content is sent, received, and when it is stored terms conditions privacy policy explanation",
+        "no_results": true,
+        "message": "No additional context found online"
       }
     }
   ]

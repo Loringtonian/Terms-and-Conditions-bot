@@ -1,0 +1,158 @@
+{
+  "app_name": "Bumble",
+  "app_version": null,
+  "overall_score": 6.5,
+  "privacy_concerns": [
+    {
+      "clause": "Automatic subscription renewal",
+      "severity": "medium",
+      "explanation": "The terms mention that subscriptions are automatically renewed unless canceled, which may lead to unexpected charges for users who are unaware of this policy.",
+      "quote": "Please be aware that if you subscribe to services for a term (the 'Initial Term'), then the terms of your subscription will be automatically renewed for additional periods of the same duration as the Initial Term at Bumble’s then-current fee for such services, unless you cancel your subscription in accordance with Section 6 below."
+    },
+    {
+      "clause": "Broad content licensing rights",
+      "severity": "high",
+      "explanation": "By uploading content, users grant Bumble a perpetual, worldwide, royalty-free license to use, modify, and distribute their content. This raises concerns about user control over their personal data and content.",
+      "quote": "By uploading Your Content on Bumble, you represent and warrant to us that you have all necessary rights and licenses to do so, and automatically grant us a non-exclusive, royalty free, perpetual, worldwide license to use Your Content in any way."
+    },
+    {
+      "clause": "Data sharing with Facebook",
+      "severity": "medium",
+      "explanation": "Users creating accounts via Facebook authorize Bumble to access and use certain Facebook data, which may include sensitive personal information. This could be invasive for users concerned about privacy.",
+      "quote": "If you create an Account using your Facebook login details, you authorize us to access, display and use certain information from your Facebook account (e.g. profile pictures, relationship status, location and information about Facebook friends)."
+    },
+    {
+      "clause": "Arbitration agreement",
+      "severity": "high",
+      "explanation": "The arbitration clause limits users' ability to pursue claims in court and requires disputes to be resolved through binding arbitration, which may disadvantage consumers.",
+      "quote": "In particular, it contains an arbitration agreement that will, with limited exceptions, require disputes between us to be submitted to binding and final arbitration."
+    },
+    {
+      "clause": "Account termination without notice",
+      "severity": "medium",
+      "explanation": "Bumble reserves the right to terminate accounts without notice for various reasons, including conduct deemed inappropriate at their sole discretion. This policy could be unfair to users.",
+      "quote": "We expressly reserve the right to terminate or suspend your Account without notice (1) for violating these Terms, (2) due to your conduct on the App, or your conduct with other users of the App (including your 'offline' conduct), if we, in our sole discretion, determine your conduct was inappropriate or improper."
+    }
+  ],
+  "summary": "Bumble's terms and conditions are moderately user-friendly but raise significant concerns regarding privacy and user rights. The terms include broad content licensing rights, automatic subscription renewals, and a binding arbitration clause, which may disadvantage users. Data collection practices, particularly through Facebook integration, may also be invasive.",
+  "red_flags": [
+    "Broad content licensing rights",
+    "Binding arbitration clause",
+    "Automatic subscription renewal",
+    "Data sharing with Facebook",
+    "Account termination without notice"
+  ],
+  "user_friendliness_score": 6.0,
+  "data_collection_score": 5.0,
+  "legal_complexity_score": 6.5,
+  "terms_version": null,
+  "terms_url": "https://bumble.com/terms",
+  "analysis_date": "2025-07-05",
+  "deep_analysis": {
+    "1": {
+      "unclear_terms": [
+        {
+          "term": "perpetual, worldwide, royalty-free license",
+          "explanation": "This means that once you upload content to Bumble, they can use it forever (perpetual), anywhere in the world (worldwide), and without paying you anything (royalty-free).",
+          "user_impact": "You lose control over how Bumble uses your content, as they can use it indefinitely and for free, even if you delete your account or content.",
+          "questions_to_ask": [
+            "What specific types of content does this apply to (e.g., photos, messages, profile information)?",
+            "Can I revoke this license if I delete my account or content?",
+            "How does Bumble use my content in practice (e.g., for advertising, partnerships)?"
+          ]
+        },
+        {
+          "term": "non-exclusive license",
+          "explanation": "This means you still own your content and can use it elsewhere, but Bumble also has the right to use it without needing your permission again.",
+          "user_impact": "While you retain ownership of your content, Bumble can use it however they want without asking you or compensating you.",
+          "questions_to_ask": [
+            "Does Bumble notify users when their content is used for purposes outside the app?",
+            "What protections are in place to prevent misuse of my content?"
+          ]
+        },
+        {
+          "term": "editing, copying, modifying, adapting, translating, reformatting, creating derivative works",
+          "explanation": "This means Bumble can change your content in any way they see fit, such as cropping photos, translating text, or creating new content based on your original work.",
+          "user_impact": "Your content could be altered in ways you didn’t intend or approve of, and you have no control over how it’s changed or used.",
+          "questions_to_ask": [
+            "What safeguards are in place to ensure my content isn’t misrepresented after being modified?",
+            "Can I request to see how my content has been altered or used?"
+          ]
+        },
+        {
+          "term": "assign and/or sub-license",
+          "explanation": "This means Bumble can transfer or share their rights to use your content with other companies, such as affiliates or partners, without needing your approval.",
+          "user_impact": "Your content could be shared with third parties you don’t know about, and you have no control over how they use it.",
+          "questions_to_ask": [
+            "Who are Bumble’s affiliates and partners that might receive my content?",
+            "What restrictions, if any, are placed on third parties who receive my content?"
+          ]
+        }
+      ],
+      "practical_meaning": "When you upload content to Bumble, you are giving them very broad rights to use, modify, and share your content indefinitely, anywhere in the world, and without compensating you. This includes the ability to share your content with other companies or partners, and they can use it for purposes like advertising or creating new materials. Even if you delete your account, Bumble may still retain and use your content.",
+      "user_action_needed": "Users should carefully consider what content they upload to Bumble, especially personal photos or sensitive information, as they may lose control over how it is used. If you are uncomfortable with these terms, you may want to limit the type of content you share or reconsider using the platform.",
+      "severity_justification": "This was flagged as high severity because it significantly impacts user privacy and control over personal content. The perpetual and worldwide nature of the license, combined with the ability to modify and share content with third parties, creates a high risk of misuse or unintended exposure of user content. Users may not fully understand the implications of these terms, leading to potential harm.",
+      "extended_context": "...ourself to third parties online as you would under any other circumstances. As Bumble is a public community, Your Content will be visible to other users of the App all around the world - so make sure you are comfortable sharing Your Content before you post. As such, you agree that Your Content may be viewed by other users and any person visiting, participating in or who is sent a link to the App (e.g. individuals who receive a link to a user’s profile or shared content from other Bumble Users). By uploading Your Content on Bumble, you represent and warrant to us that you have all necessary rights and licenses to do so, and automatically grant us a non-exclusive, royalty free, perpetual, worldwide license to use Your Content in any way (including, without limitation, editing, copying, modifying, adapting, translating, reformatting, creating derivative works from, incorporating into other works, advertising, distributing and otherwise making available to the general public such Content, whether in whole or in part and in any format or medium currently known or developed in the future). We may assign and/or sub-license the above license to our affiliates and successors without any further approval by you. We do not have any obli...",
+      "online_research": {
+        "search_query": "\"bumble\" perpetual, worldwide, royalty-free license non-exclusive license editing, copying, modifying, adapting, translating, reformatting, creating derivative works terms conditions privacy policy explanation",
+        "top_result_url": null,
+        "top_result_title": null,
+        "summary": null
+      }
+    },
+    "3": {
+      "unclear_terms": [
+        {
+          "term": "Arbitration agreement",
+          "explanation": "An arbitration agreement is a clause in a contract that requires disputes between the parties to be resolved by a private arbitrator instead of going to court. Arbitration is typically binding, meaning you cannot appeal the decision in most cases.",
+          "user_impact": "This means that if you have a dispute with Bumble (e.g., about billing, privacy, or service issues), you cannot take them to court or have a jury trial. Instead, you must resolve the issue through arbitration, which is often less favorable to consumers because it can limit your legal options and remedies.",
+          "questions_to_ask": [
+            "What is the process for opting out of the arbitration agreement?",
+            "What are the specific exceptions to the arbitration requirement?",
+            "Who pays for the arbitration fees, and are there any hidden costs?",
+            "What rights or remedies might I lose by agreeing to arbitration?",
+            "Can I still join a class-action lawsuit if I agree to arbitration?"
+          ]
+        },
+        {
+          "term": "Binding and final arbitration",
+          "explanation": "This means that the decision made by the arbitrator is final and cannot be appealed or challenged in court, even if you believe the decision was unfair or incorrect.",
+          "user_impact": "You are giving up your right to have a judge or jury review the dispute, and you cannot appeal the arbitrator's decision, even if it is unfavorable to you.",
+          "questions_to_ask": [
+            "What happens if I disagree with the arbitrator's decision?",
+            "Are there any circumstances where I can appeal or challenge the arbitration outcome?"
+          ]
+        },
+        {
+          "term": "Opt-out of the arbitration agreement",
+          "explanation": "This refers to your ability to decline the arbitration agreement if you follow the specific process outlined in the terms. Opting out allows you to retain your right to take disputes to court.",
+          "user_impact": "If you do not opt out, you are automatically agreeing to arbitration and waiving your right to go to court. Opting out is typically time-sensitive and requires you to take specific actions within a certain period after agreeing to the terms.",
+          "questions_to_ask": [
+            "How do I opt out of the arbitration agreement?",
+            "What is the deadline for opting out?",
+            "Will opting out affect my ability to use Bumble's services?"
+          ]
+        },
+        {
+          "term": "Individual basis only",
+          "explanation": "This means that you cannot join a class-action lawsuit or combine your claims with others. Any dispute must be resolved individually between you and Bumble.",
+          "user_impact": "You cannot band together with other users to share legal costs or pursue collective action, which can make it more expensive and difficult to challenge Bumble over widespread issues.",
+          "questions_to_ask": [
+            "What happens if multiple users have the same issue with Bumble?",
+            "Can I still participate in a class-action lawsuit if I opt out of arbitration?"
+          ]
+        }
+      ],
+      "practical_meaning": "This clause means that if you have a dispute with Bumble, you cannot take them to court or participate in a class-action lawsuit unless you opt out of the arbitration agreement. Instead, you must resolve the issue through arbitration, which is a private process that is often less favorable to consumers. The decision made in arbitration is final and cannot be appealed, and you must handle disputes on an individual basis, which can be costly and time-consuming.",
+      "user_action_needed": "Users should carefully review Section 14 of Bumble's terms to understand the arbitration process and how to opt out if they wish to retain their right to go to court. If you decide to opt out, follow the instructions in Section 14 immediately, as there is likely a deadline. Keep a record of your opt-out request for future reference.",
+      "severity_justification": "This was flagged as high severity because arbitration agreements significantly limit users' legal rights, including the right to a jury trial and the ability to participate in class-action lawsuits. These limitations can make it harder for users to hold companies accountable for unfair practices or resolve disputes effectively. Additionally, the opt-out process is often time-sensitive and not well-publicized, meaning many users may unknowingly waive their rights.",
+      "extended_context": "...y Policy. Please be aware that if you subscribe to services for a term (the “Initial Term”), then the terms of your subscription will be automatically renewed for additional periods of the same duration as the Initial Term at Bumble’s then-current fee for such services, unless you cancel your subscription in accordance with Section 6 below. You should also note that Section 14 of these Terms contains provisions governing how claims that you and Bumble Group have against each other are resolved. In particular, it contains an arbitration agreement that will, with limited exceptions, require disputes between us to be submitted to binding and final arbitration. You have a right to opt out of the arbitration agreement pursuant to Section 14 below. If you do not opt out of the arbitration agreement in accordance with Section 14, (1) you will only be permitted to pursue claims and seek relief against us on an individual basis only; and (2) you are waiving your right to seek relief in a court of law and to have a jury trial on your claims. And a notice to California subscribers: You may cancel your subscription and request a refund at any time prior to mi...",
+      "online_research": {
+        "search_query": "\"bumble\" Arbitration agreement Binding and final arbitration Opt-out of the arbitration agreement terms conditions privacy policy explanation",
+        "top_result_url": null,
+        "top_result_title": null,
+        "summary": null
+      }
+    }
+  }
+}

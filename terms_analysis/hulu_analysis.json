@@ -1,0 +1,83 @@
+{
+  "app_name": "Hulu",
+  "app_version": null,
+  "overall_score": 6.5,
+  "privacy_concerns": [
+    {
+      "clause": "Use and Sharing of Certain Information",
+      "severity": "medium",
+      "explanation": "The terms indicate that user data, including payment information, may be shared across The Walt Disney Company and its services. While this may enhance user convenience, it raises concerns about the extent of data sharing and potential lack of granular user control over how their data is used.",
+      "quote": "We may store and allow you to use your payment information for purchases across the Services and across The Walt Disney Company, if you have consented to such usage."
+    },
+    {
+      "clause": "Binding Arbitration and Class Action Waiver",
+      "severity": "high",
+      "explanation": "The inclusion of a binding arbitration clause and class action waiver limits users' ability to pursue legal action collectively or in court, which could disadvantage consumers in disputes.",
+      "quote": "ANY DISPUTE BETWEEN YOU AND US, EXCEPT FOR SMALL CLAIMS, IS SUBJECT TO A CLASS ACTION WAIVER AND MUST BE RESOLVED BY INDIVIDUAL BINDING ARBITRATION."
+    },
+    {
+      "clause": "Changes to Terms Notification",
+      "severity": "medium",
+      "explanation": "While users are notified of changes to the terms, the 30-day notice period and reliance on electronic communication may not be sufficient for all users to stay informed or take action if they disagree with the changes.",
+      "quote": "We may amend this Agreement, effective thirty (30) days after we send you notice or post the amendment on the Services."
+    }
+  ],
+  "summary": "Hulu's terms and conditions are moderately user-friendly but include some concerning provisions. The binding arbitration clause and class action waiver significantly limit user rights. Additionally, data sharing across The Walt Disney Company raises privacy concerns, and the notification process for changes to terms may not be robust enough for all users.",
+  "red_flags": [
+    "Binding arbitration and class action waiver",
+    "Broad data sharing across The Walt Disney Company",
+    "Potentially insufficient notice for changes to terms"
+  ],
+  "user_friendliness_score": 6.0,
+  "data_collection_score": 5.0,
+  "legal_complexity_score": 6.0,
+  "terms_version": "May 5, 2025",
+  "terms_url": "https://hulu.com/terms",
+  "analysis_date": "2025-07-05",
+  "deep_analysis": {
+    "1": {
+      "unclear_terms": [
+        {
+          "term": "Binding Arbitration",
+          "explanation": "This means that if you have a dispute with Hulu, you cannot take them to court. Instead, the dispute will be resolved by a private third-party arbitrator, whose decision is final and legally binding.",
+          "user_impact": "You lose the right to have your case heard in a public court by a judge or jury. Arbitration is often less favorable to consumers because companies typically choose the arbitration service, which may be biased.",
+          "questions_to_ask": [
+            "What are the rules and procedures of the arbitration process?",
+            "Who pays for the arbitration costs?",
+            "Can I appeal the arbitrator's decision if I disagree with it?"
+          ]
+        },
+        {
+          "term": "Class Action Waiver",
+          "explanation": "This means you cannot join with other users to file a lawsuit against Hulu as a group. Instead, you must resolve your dispute individually.",
+          "user_impact": "You lose the ability to pool resources with other users who have similar complaints, which can make it more expensive and difficult to pursue legal action.",
+          "questions_to_ask": [
+            "What happens if many users have the same issue with Hulu?",
+            "Are there any exceptions to the class action waiver?",
+            "How does this affect my ability to hold Hulu accountable for widespread issues?"
+          ]
+        },
+        {
+          "term": "Small Claims Exception",
+          "explanation": "This means that disputes that fall under the jurisdiction of small claims court (typically for smaller amounts of money) can still be resolved in court rather than through arbitration.",
+          "user_impact": "You can still take Hulu to small claims court for minor disputes, but larger claims must go through arbitration.",
+          "questions_to_ask": [
+            "What is the monetary limit for small claims court in my state?",
+            "How do I file a claim in small claims court?",
+            "Does Hulu have any restrictions on what qualifies as a small claim?"
+          ]
+        }
+      ],
+      "practical_meaning": "This clause means that if you have a dispute with Hulu, you cannot sue them in court or join a class action lawsuit. Instead, you must resolve the issue individually through arbitration, which is a private process that may favor the company. However, for smaller disputes, you can still use small claims court.",
+      "user_action_needed": "Users should carefully consider whether they are comfortable giving up their right to sue Hulu in court or participate in a class action. If not, they may want to reconsider using Hulu's services. Users should also familiarize themselves with the arbitration process and small claims court rules in their jurisdiction.",
+      "severity_justification": "This is flagged as high severity because it significantly limits users' legal rights and options for resolving disputes. Arbitration and class action waivers often disadvantage consumers by making it harder to hold companies accountable for widespread issues or unfair practices. This can leave users with little recourse in the event of a dispute.",
+      "extended_context": "... agree to additional terms and conditions in connection with your use of the Services. If you do not agree to this Agreement, you may not use the Services. We may amend this Agreement, effective thirty (30) days after we send you notice or post the amendment on the Services. If you do not agree to any change to this Agreement, you must discontinue using the Services. Our customer service representatives are not authorized to modify any provision of this Agreement, either verbally or in writing. ANY DISPUTE BETWEEN YOU AND US, EXCEPT FOR SMALL CLAIMS, IS SUBJECT TO A CLASS ACTION WAIVER AND MUST BE RESOLVED BY INDIVIDUAL BINDING ARBITRATION. PLEASE READ THE ARBITRATION PROVISION IN THIS AGREEMENT AS IT AFFECTS YOUR RIGHTS UNDER THIS CONTRACT. List of Sections User Eligibility and Registration Subscription Terms Copyright License Grant and Restrictions Usage Terms Use and Sharing of Certain Information Suspension and Termination Binding Arbitration and Class Action Waiver Additional Provisions 1. USER ELIGIBILITY AND REGISTRATION a. Eligibility and Age Limitations. You must be 18 years of age, or the age of majority in your state or...",
+      "online_research": {
+        "search_query": "\"hulu\" Binding Arbitration Class Action Waiver Small Claims Exception terms conditions privacy policy explanation",
+        "top_result_url": null,
+        "top_result_title": null,
+        "summary": null
+      }
+    }
+  }
+}

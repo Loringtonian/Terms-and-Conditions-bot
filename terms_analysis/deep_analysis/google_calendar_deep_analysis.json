@@ -1,0 +1,68 @@
+{
+  "app_name": "google_calendar",
+  "total_high_severity_concerns": 1,
+  "analysis_timestamp": "2025-07-05",
+  "concerns_analyzed": [
+    {
+      "original_concern": {
+        "clause": "Permission to use your content",
+        "severity": "high",
+        "explanation": "Google retains broad rights to use, modify, and sublicense user content for purposes such as improving services and promoting its products. While this is standard for many platforms, the scope of the license (worldwide, royalty-free, and perpetual) raises concerns about user control over their content.",
+        "quote": "This license allows Google to: host, reproduce, distribute, communicate, and use your content... publish, publicly perform, or publicly display your content, if you’ve made it visible to others... modify and create derivative works based on your content."
+      },
+      "extended_context": "... address of a local business. That information doesn’t require a license because it’s considered common knowledge that everyone’s free to use.feedback that you offer, such as suggestions to improve our services. Feedback is covered in the Service-related communications section below.ScopeThis license is:worldwide, which means it’s valid anywhere in the worldnon-exclusive, which means you can license your content to othersroyalty-free, which means there are no monetary fees for this licenseRightsThis license allows Google to:host, reproduce, distribute, communicate, and use your content — for example, to save your content on our systems and make it accessible from anywhere you gopublish, publicly perform, or publicly display your content, if you’ve made it visible to othersmodify and create derivative works based on your content, such as reformatting or translating itsublicense these rights to:other users to allow the services to work as designed, such as enabling you to share photos with people you chooseour contractors who’ve signed agreements with us that are consistent with these terms, only for the limited purposes described in the Purpose section belowPurposeThis license is for the limited purpose of:operating and improving the s...",
+      "clarity_analysis": {
+        "unclear_terms": [
+          {
+            "term": "worldwide, royalty-free, and perpetual license",
+            "explanation": "This means Google has the right to use your content anywhere in the world, without paying you, and for an unlimited amount of time.",
+            "user_impact": "You lose control over how your content is used globally, and you cannot revoke this permission once granted.",
+            "questions_to_ask": [
+              "What specific content does this apply to?",
+              "Can I delete my content and revoke this license?",
+              "How does Google ensure my content is not misused?"
+            ]
+          },
+          {
+            "term": "modify and create derivative works",
+            "explanation": "Google can change your content or create new content based on it, such as reformatting, translating, or altering it in other ways.",
+            "user_impact": "Your content might be altered in ways you didn’t intend or approve of, potentially changing its meaning or context.",
+            "questions_to_ask": [
+              "What types of modifications might Google make to my content?",
+              "Will I be notified if my content is modified?",
+              "Can I opt out of modifications or derivative works?"
+            ]
+          },
+          {
+            "term": "sublicense these rights",
+            "explanation": "Google can grant the same rights to your content to other users or contractors, as long as it aligns with their stated purposes.",
+            "user_impact": "Your content could be shared with third parties, including contractors, which increases the risk of misuse or unauthorized access.",
+            "questions_to_ask": [
+              "Who are these contractors, and what are their agreements with Google?",
+              "How is my content protected when sublicensed?",
+              "Can I limit who my content is sublicensed to?"
+            ]
+          },
+          {
+            "term": "operating and improving the services",
+            "explanation": "Google uses your content to ensure their services work properly and to make improvements, such as fixing bugs or enhancing features.",
+            "user_impact": "Your content might be analyzed or used in ways you didn’t anticipate, even if it’s for service improvement.",
+            "questions_to_ask": [
+              "What specific improvements or operations require access to my content?",
+              "How is my content anonymized or protected during this process?",
+              "Can I opt out of my content being used for service improvements?"
+            ]
+          }
+        ],
+        "practical_meaning": "In practice, this clause gives Google extensive rights to use, modify, and share your content, even after you stop using their services. This is intended to ensure their services function smoothly and improve over time, but it also means you lose significant control over your content once it’s uploaded or shared through Google Calendar.",
+        "user_action_needed": "Users should carefully consider what content they upload or share via Google Calendar, especially if it’s sensitive or personal. Review your privacy settings to limit visibility and sharing, and avoid uploading content you wouldn’t want modified, shared, or used indefinitely.",
+        "severity_justification": "This was flagged as high severity because the broad scope of the license (worldwide, royalty-free, perpetual) significantly reduces user control over their content. The ability to modify, create derivative works, and sublicense the content to third parties increases the risk of misuse, misrepresentation, or unauthorized access. These terms could have long-term implications for users’ privacy and intellectual property rights."
+      },
+      "online_research": {
+        "search_query": "\"google_calendar\" worldwide, royalty-free, and perpetual license modify and create derivative works sublicense these rights terms conditions privacy policy explanation",
+        "no_results": true,
+        "message": "No additional context found online"
+      }
+    }
+  ]
+}

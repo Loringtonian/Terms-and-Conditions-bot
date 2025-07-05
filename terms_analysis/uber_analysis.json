@@ -1,0 +1,38 @@
+{
+  "app_name": "Uber",
+  "app_version": null,
+  "overall_score": 5.5,
+  "privacy_concerns": [
+    {
+      "clause": "Data collection and sharing practices",
+      "severity": "medium",
+      "explanation": "The terms reference a Privacy Notice but do not provide explicit details in the main document about what data is collected, how it is used, or shared. This lack of transparency can be concerning for users.",
+      "quote": "The Privacy Notice, which describes how we collect, use, and disclose your personal information."
+    },
+    {
+      "clause": "Broad rights to modify terms",
+      "severity": "high",
+      "explanation": "Uber reserves the right to modify the terms at any time, effective immediately upon posting, without requiring explicit user consent. This could lead to users being bound by terms they are unaware of.",
+      "quote": "Uber reserves the right to modify these Terms or its policies relating to the Services at any time, effective upon posting of an updated version of these Terms."
+    },
+    {
+      "clause": "Mandatory arbitration and class action waiver",
+      "severity": "high",
+      "explanation": "The arbitration clause significantly limits users' ability to seek legal recourse in court, including waiving rights to participate in class actions. This heavily favors the company and may be seen as unfair.",
+      "quote": "By agreeing to these Terms, you agree that you are required to resolve any claim that you may have against Uber on an individual basis in binding arbitration."
+    }
+  ],
+  "summary": "Uber's terms and conditions are complex and heavily favor the company. The mandatory arbitration clause and class action waiver restrict user rights, while the ability to modify terms without explicit consent raises fairness concerns. Privacy practices are not fully transparent within the document, which could be problematic for users.",
+  "red_flags": [
+    "Mandatory arbitration clause",
+    "Class action waiver",
+    "Broad rights to modify terms without user consent",
+    "Lack of transparency on data collection and sharing"
+  ],
+  "user_friendliness_score": 5.0,
+  "data_collection_score": 4.0,
+  "legal_complexity_score": 3.0,
+  "terms_version": "Last modified: 8/19/2024",
+  "terms_url": "https://uber.com/terms",
+  "analysis_date": "2025-07-05"
+}

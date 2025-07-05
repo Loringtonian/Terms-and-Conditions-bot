@@ -1,0 +1,91 @@
+{
+  "app_name": "Google Docs",
+  "app_version": null,
+  "overall_score": 7.5,
+  "privacy_concerns": [
+    {
+      "clause": "License to use user content",
+      "severity": "medium",
+      "explanation": "While Google states that users retain ownership of their content, the license granted to Google is broad and includes rights to modify, distribute, and create derivative works. This could raise concerns about how user content is used, especially for personalized advertising or promotional purposes.",
+      "quote": "This license allows Google to: host, reproduce, distribute, communicate, and use your content... modify and create derivative works based on your content... sublicense these rights to other users and contractors."
+    },
+    {
+      "clause": "Data analysis and personalization",
+      "severity": "high",
+      "explanation": "Google explicitly states that it uses automated systems and algorithms to analyze user content for purposes such as spam detection, personalization, and advertising. This level of data analysis may feel invasive to users, particularly those concerned about privacy.",
+      "quote": "This includes using automated systems and algorithms to analyze your content: for spam, malware, and illegal content... to customize our services for you, such as providing recommendations and personalized search results, content, and ads."
+    },
+    {
+      "clause": "Content removal exceptions",
+      "severity": "medium",
+      "explanation": "Even after users delete their content, it may remain accessible if it was shared with others or indexed by search engines. This limits user control over their data.",
+      "quote": "If you already shared your content with others before removing it... that photo may continue to appear in your friend’s Google Account even after you remove it from your Google Account."
+    },
+    {
+      "clause": "Broad rights to modify terms",
+      "severity": "medium",
+      "explanation": "Google reserves the right to update terms and make material changes to services with limited notice. This could disadvantage users who may not be aware of or agree with the changes.",
+      "quote": "If we make material changes that negatively impact your use of our services... we’ll provide you with reasonable advance notice, except in urgent situations."
+    }
+  ],
+  "summary": "Google Docs' terms are moderately user-friendly but raise significant privacy concerns due to broad data collection and usage rights. While users retain ownership of their content, Google's license to modify and distribute it, along with extensive data analysis for personalization, may be invasive. The terms are relatively clear but could be simplified further for better accessibility.",
+  "red_flags": [
+    "Broad rights to use, modify, and distribute user content",
+    "Extensive data analysis and personalization practices",
+    "Content may remain accessible after deletion in certain cases",
+    "Limited user control over changes to terms"
+  ],
+  "user_friendliness_score": 7.0,
+  "data_collection_score": 5.5,
+  "legal_complexity_score": 6.5,
+  "terms_version": "Effective May 22, 2024",
+  "terms_url": "https://policies.google.com/terms",
+  "analysis_date": "2025-07-05",
+  "deep_analysis": {
+    "1": {
+      "unclear_terms": [
+        {
+          "term": "automated systems and algorithms to analyze your content",
+          "explanation": "This refers to computer programs that automatically scan and process the information you upload, send, or store in Google Docs (like documents, photos, or emails). These systems look for patterns or specific data to perform tasks like detecting spam, malware, or illegal content, and to personalize your experience by suggesting content or showing targeted ads.",
+          "user_impact": "This means Google is constantly scanning your content, even private documents, to gather data about you. This data is then used to improve their services, but also to create personalized ads and recommendations, which can feel invasive if you value privacy.",
+          "questions_to_ask": [
+            "What specific types of data are being analyzed from my content?",
+            "How long does Google retain the data it analyzes from my content?",
+            "Can I opt out of this analysis entirely, and if so, how?",
+            "What safeguards are in place to ensure my data is not misused or accessed by unauthorized parties?"
+          ]
+        },
+        {
+          "term": "customize our services for you",
+          "explanation": "This means Google uses the data it collects from analyzing your content to tailor its services to your preferences. For example, it might suggest certain documents, show personalized search results, or display ads based on your activity.",
+          "user_impact": "Your activity and content are being used to create a profile of your preferences and behavior. While this can make services more convenient, it also means Google is building a detailed understanding of your habits, which could be shared with advertisers or other third parties.",
+          "questions_to_ask": [
+            "What specific customizations are being made based on my data?",
+            "Can I control or limit the extent of personalization?",
+            "Who else has access to the data used for personalization?"
+          ]
+        },
+        {
+          "term": "content is analyzed as it is sent, received, and stored",
+          "explanation": "This means that Google scans your content at every stage—when you upload it, share it, or even just save it in your account. This analysis is ongoing and happens in real-time.",
+          "user_impact": "Even if you don’t actively share your content, Google is still analyzing it. This could raise concerns about the privacy of sensitive or confidential information stored in Google Docs.",
+          "questions_to_ask": [
+            "Does Google analyze encrypted content?",
+            "What happens to the data from analyzed content if I delete it?",
+            "Is there a way to store content without it being analyzed?"
+          ]
+        }
+      ],
+      "practical_meaning": "In practice, this clause means that Google is constantly scanning and analyzing the content you create, upload, or store in their services. This data is used to improve their services, detect harmful content, and personalize your experience, including showing you targeted ads. However, this also means that Google has access to a significant amount of personal and potentially sensitive information, which could be concerning for users who value privacy.",
+      "user_action_needed": "Users should review their Google account settings, particularly the Ads Settings, to limit or turn off personalization. They should also consider whether they are comfortable storing sensitive or confidential information on Google Docs, given the level of data analysis. If privacy is a major concern, users might want to explore alternative services with stronger privacy protections.",
+      "severity_justification": "This was flagged as high severity because it involves the continuous and pervasive analysis of user content, including private and sensitive information. This level of data access and processing can feel invasive and raises significant privacy concerns, especially for users who may not fully understand the extent of Google's data collection and usage practices.",
+      "extended_context": "... translating itsublicense these rights to:other users to allow the services to work as designed, such as enabling you to share photos with people you chooseour contractors who’ve signed agreements with us that are consistent with these terms, only for the limited purposes described in the Purpose section belowPurposeThis license is for the limited purpose of:operating and improving the services, which means allowing the services to work as designed and creating new features and functionalities. This includes using automated systems and algorithms to analyze your content:for spam, malware, and illegal contentto recognize patterns in data, such as determining when to suggest a new album in Google Photos to keep related photos togetherto customize our services for you, such as providing recommendations and personalized search results, content, and ads (which you can change or turn off in Ads Settings)This analysis occurs as the content is sent, received, and when it is stored.using content you’ve shared publicly to promote the services. For example, to promote a Google app, we might quote a review you wrote. Or to promote Google Play, we might show a screenshot of the app you offer in the Play Store.developing new technolo...",
+      "online_research": {
+        "search_query": "\"google_docs\" automated systems and algorithms to analyze your content customize our services for you content is analyzed as it is sent, received, and stored terms conditions privacy policy explanation",
+        "top_result_url": null,
+        "top_result_title": null,
+        "summary": null
+      }
+    }
+  }
+}

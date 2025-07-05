@@ -1,0 +1,37 @@
+{
+  "app_name": "Prime Video",
+  "app_version": null,
+  "overall_score": 7.5,
+  "privacy_concerns": [
+    {
+      "clause": "Your Amazon Prime Video service provider may change from time to time, with or without prior notice.",
+      "severity": "medium",
+      "explanation": "This clause allows Amazon to change the service provider without notifying users, potentially impacting the handling of personal data and applicable legal protections.",
+      "quote": "Your Amazon Prime Video service provider may change from time to time, with or without prior notice (unless required by applicable law)."
+    },
+    {
+      "clause": "Amazon will use technologies to verify your geographic location.",
+      "severity": "medium",
+      "explanation": "The use of location verification technologies may raise privacy concerns, especially if users are not fully informed about the extent and purpose of this data collection.",
+      "quote": "Amazon will use technologies to verify your geographic location."
+    },
+    {
+      "clause": "Personalized content and features as part of the Services.",
+      "severity": "medium",
+      "explanation": "Personalization involves data collection and analysis, which may include sensitive user behavior and preferences. The terms do not clearly specify the scope of data collected for this purpose.",
+      "quote": "We personalize content and features as part of the Services, including showing you recommendations on Digital Content, features and services that might be of interest to you."
+    }
+  ],
+  "summary": "The Prime Video terms are generally user-friendly but include clauses that allow for significant data collection and changes to service providers without clear user notification. While the terms address key aspects like subscription cancellation, they lack transparency about data usage and geographic restrictions.",
+  "red_flags": [
+    "Broad rights to change service providers without notice",
+    "Use of location verification technologies",
+    "Extensive data collection for personalization without clear boundaries"
+  ],
+  "user_friendliness_score": 7.0,
+  "data_collection_score": 6.5,
+  "legal_complexity_score": 6.0,
+  "terms_version": "May 15, 2025",
+  "terms_url": "https://www.primevideo.com/help/?language=en_US&nodeId=202095490",
+  "analysis_date": "2025-07-05"
+}

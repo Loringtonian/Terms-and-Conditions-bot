@@ -1,0 +1,62 @@
+{
+  "app_name": "Discord",
+  "total_high_severity_concerns": 1,
+  "analysis_timestamp": "2025-07-05",
+  "concerns_analyzed": [
+    {
+      "original_concern": {
+        "clause": "Information from actions you take",
+        "severity": "high",
+        "explanation": "Discord collects extensive behavioral data, including user interactions, server participation, and content moderation decisions. This level of tracking may exceed what is necessary for the app's functionality.",
+        "quote": "We collect information about your use of Discord and your activities on the services. This includes information such as the friends you add, the users, bots, and apps you engage with, the games you play on your device, the servers or other communities you join and participate in, your roles in servers, content moderation decisions you make, information about purchases or sales you make on or through Discord including what you purchased or sold, and other related actions."
+      },
+      "extended_context": "...on. If you sell something through Discord, you may be required to provide additional information to Discord or to our payment processors, such as bank account information to facilitate payments, tax identification information, and copies of government issued identification required to identify users in accordance with regulatory obligations. If we decide to process our own payments in the future, we would receive and process this information ourselves.\n*   **Information from actions you take**. We collect information about your use of Discord and your activities on the services. This includes information such as the friends you add, the users, bots, and apps you engage with, the games you play on your device, the servers or other communities you join and participate in, your roles in servers, content moderation decisions you make, information about purchases or sales you make on or through Discord including what you purchased or sold, and other related actions. You can control the extent to which we collect, use, and display this information as described in the “[How to control your privacy](https://support.discord.com/hc/en-us/articles/360004109911-Data-Privacy-Controls)” section below.\n*   **Information from optional features**. Certain features, like contact syncing, may require that you provide additional information (or grant us access to such information) to make them work. This also includes third-party integrations you choose to enable and the...",
+      "clarity_analysis": {
+        "unclear_terms": [
+          {
+            "term": "Information from actions you take",
+            "explanation": "This refers to data collected based on how you interact with Discord, including your activity within servers, the friends you add, the bots and apps you use, the games you play, and even decisions you make as a moderator. Essentially, it tracks almost everything you do on the platform.",
+            "user_impact": "This means Discord is monitoring and recording a wide range of your activities, which could include sensitive or private interactions. This data could potentially be used for targeted advertising, shared with third parties, or exposed in a data breach.",
+            "questions_to_ask": [
+              "Why does Discord need to collect such detailed information about my activities?",
+              "How long is this data stored, and who has access to it?",
+              "Can I opt out of certain types of data collection?",
+              "What specific protections are in place to secure this data from breaches or misuse?"
+            ]
+          },
+          {
+            "term": "Content moderation decisions you make",
+            "explanation": "This refers to Discord tracking and storing information about how you moderate content in servers, such as banning users, deleting posts, or assigning roles.",
+            "user_impact": "If you are a server moderator, your decisions are being logged and could potentially be reviewed by Discord or shared with others. This could raise concerns about privacy and accountability for your actions.",
+            "questions_to_ask": [
+              "Why does Discord need to track moderation decisions?",
+              "Who can access this data, and under what circumstances?",
+              "Can this data be used against me in any way?"
+            ]
+          },
+          {
+            "term": "Information about purchases or sales you make",
+            "explanation": "This means Discord collects data on any transactions you make through the platform, including what you buy or sell, and may also collect additional financial information like bank account details or tax identification numbers.",
+            "user_impact": "This could expose sensitive financial information to potential risks, such as data breaches or misuse. It also means Discord has detailed records of your purchasing behavior.",
+            "questions_to_ask": [
+              "How is my financial information stored and protected?",
+              "Is this data shared with third parties, and if so, who?",
+              "Can I delete this data if I stop using Discord?"
+            ]
+          }
+        ],
+        "practical_meaning": "In practice, Discord is collecting a significant amount of behavioral and transactional data about its users. This includes not only what you do on the platform but also potentially sensitive financial and moderation-related information. While some of this data collection may be necessary for functionality, the extent of the tracking raises concerns about privacy, data security, and how this information might be used or shared.",
+        "user_action_needed": "Users should review Discord's privacy settings and adjust them to limit data collection where possible. They should also be cautious about sharing sensitive information on the platform and consider whether they are comfortable with the level of tracking described. Moderators and users engaging in transactions should be particularly aware of the implications.",
+        "severity_justification": "This was flagged as high severity because the scope of data collection is extensive and includes sensitive information such as financial details and behavioral patterns. This level of tracking could pose significant privacy risks, especially if the data is misused, shared with third parties, or exposed in a breach. Additionally, many users may not fully understand the extent of this tracking or how to control it."
+      },
+      "online_research": {
+        "search_query": "\"Discord\" Information from actions you take Content moderation decisions you make Information about purchases or sales you make terms conditions privacy policy explanation",
+        "top_result_url": "https://www.techdirt.com/2025/05/07/yet-again-the-data-shows-migrants-are-more-law-abiding-than-us-citizens/",
+        "top_result_title": "Yet Again, The Data Shows Migrants Are More Law-Abiding Than ...",
+        "summary": "... Discord. The latest chatter on the Techdirt Insider Discord channel ... information, see our privacy policy.",
+        "detailed_content_available": true,
+        "additional_context": "![Techdirt.](https://www.techdirt.com/wp-content/themes/techdirt/assets/images/techdirt.svg)\n![](https://ii.techdirt.com/s/t/i/podcast-title-small.png)\n\n# Yet Again, The Data Shows Migrants Are More Law-Abiding Than US Citizens\n\n![](https://www.techdirt.com/wp-content/uploads/2022/02/overhype.jpg)\n\n[Overhype](https://www.techdirt.com/?s&topic=overhype)\n\n### from the *make-america-safe-again* dept\n\nThis has always been the truth. And it has always been ignored [by people like Donald Trump](https://www.techdirt.com/2025/04/02/ice-is-using-pure-bullshit-to-turn-people-into-venezuelan-gang-members-to-keep-hitting-its-daily-arrest-quota/), who combine “if it bleeds, it leads” media narratives with the always-exploitable fear of “others.”\n\nWhether a migrant is in this country legally or illegally, the odds of them committing criminal acts are much lower than those for US citizens. And it makes sense. Any criminal act committed by a migrant — even one here legally — can provide grounds for de"
+      }
+    }
+  ]
+}

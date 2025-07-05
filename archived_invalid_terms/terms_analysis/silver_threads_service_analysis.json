@@ -1,0 +1,37 @@
+{
+  "app_name": "Silver Threads Service",
+  "app_version": null,
+  "overall_score": 7.5,
+  "privacy_concerns": [
+    {
+      "clause": "Personal Data may be used for newsletters, marketing, or promotional materials.",
+      "severity": "medium",
+      "explanation": "The policy allows for the use of personal data for marketing purposes, which may not align with user expectations for a service aimed at seniors. While users can opt out, this requires proactive action.",
+      "quote": "We may use your Personal Data to contact you with newsletters, marketing or promotional materials and other information that may be of interest to you."
+    },
+    {
+      "clause": "Transfer of data to jurisdictions with differing data protection laws.",
+      "severity": "medium",
+      "explanation": "The policy mentions that data may be transferred to other jurisdictions with different data protection laws, which could potentially weaken privacy protections for Canadian users.",
+      "quote": "Your information, including Personal Data, may be transferred to — and maintained on — computers located outside of your state, province, country or other governmental jurisdiction where the data protection laws may differ from those of your jurisdiction."
+    },
+    {
+      "clause": "Retention of Usage Data for internal analysis purposes.",
+      "severity": "low",
+      "explanation": "Usage Data is retained for internal analysis, but the policy does not specify clear limits on retention duration, which could lead to prolonged data storage.",
+      "quote": "Silver Threads Service will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period of time, except when this data is used to strengthen the security or to improve the functionality of our Service."
+    }
+  ],
+  "summary": "The Silver Threads Service terms and privacy policy are relatively user-friendly and clear, with a focus on transparency about data collection and usage. However, concerns arise from the use of personal data for marketing and the potential transfer of data to jurisdictions with differing privacy laws.",
+  "red_flags": [
+    "Use of personal data for marketing purposes without explicit opt-in.",
+    "Potential transfer of data to jurisdictions with weaker privacy protections.",
+    "Unclear limits on the retention of Usage Data."
+  ],
+  "user_friendliness_score": 8.0,
+  "data_collection_score": 7.0,
+  "legal_complexity_score": 8.5,
+  "terms_version": "Effective July 15, 2019",
+  "terms_url": "https://silverthreads.ca/privacy-policy/",
+  "analysis_date": "2025-07-05"
+}

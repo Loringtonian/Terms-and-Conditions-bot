@@ -1,0 +1,108 @@
+{
+  "app_name": "X",
+  "app_version": null,
+  "overall_score": 6.5,
+  "privacy_concerns": [
+    {
+      "clause": "Broad content licensing rights",
+      "severity": "high",
+      "explanation": "The terms grant X a worldwide, royalty-free license to use, modify, and distribute user content, including for purposes such as training AI models and syndication, without compensation to the user.",
+      "quote": "By submitting, posting or displaying Content on or through the Services, you grant us a worldwide, non-exclusive, royalty-free license (with the right to sublicense) to use, copy, reproduce, process, adapt, modify, publish, transmit, display, upload, download, and distribute such Content in any and all media or distribution methods now known or later developed, for any purpose."
+    },
+    {
+      "clause": "Data sharing with third parties",
+      "severity": "medium",
+      "explanation": "The terms allow for the sharing of user data with third-party providers and partners for purposes such as advertising and service improvement, which may raise privacy concerns for Canadian users.",
+      "quote": "In consideration for our granting you access to and use of the Services, you agree that we and our third-party providers and partners may place advertising on the Services or in connection with the display of Content or information from the Services whether submitted by you or others."
+    },
+    {
+      "clause": "Limited liability and disclaimers",
+      "severity": "medium",
+      "explanation": "The terms heavily limit X's liability for damages and provide services on an 'AS IS' basis, which may leave users with limited recourse in case of harm or service issues.",
+      "quote": "We provide the Services on an 'AS IS' and 'AS AVAILABLE' basis, and we disclaim all warranties, responsibility, and liability to you or others to the extent permitted by law."
+    },
+    {
+      "clause": "Account suspension or termination",
+      "severity": "medium",
+      "explanation": "X reserves the right to suspend or terminate accounts for reasons such as inactivity or commercial inviability, which may be considered arbitrary or unfair by users.",
+      "quote": "We may also suspend or terminate your account for other reasons, such as prolonged inactivity, risk of legal exposure, or commercial inviability."
+    },
+    {
+      "clause": "Data transfer to other jurisdictions",
+      "severity": "medium",
+      "explanation": "The terms allow for the transfer of user data to jurisdictions like the United States and Ireland, which may not have equivalent privacy protections as Canada.",
+      "quote": "You understand that through your use of the Services you consent to the collection and use (as set forth in the Privacy Policy) of this information, including the transfer of this information to the United States, Ireland, and/or other countries for storage, processing and use by us and our affiliates."
+    }
+  ],
+  "summary": "The terms of service for X provide a comprehensive overview of user responsibilities and platform policies but raise concerns about broad content licensing, data sharing, and limited liability. While the terms are moderately clear, they favor the company in several key areas, including data usage and enforcement rights.",
+  "red_flags": [
+    "Broad rights to use and modify user content without compensation",
+    "Extensive data sharing with third parties",
+    "Limited liability for the platform",
+    "Arbitrary account suspension or termination policies",
+    "Data transfer to jurisdictions with potentially weaker privacy protections"
+  ],
+  "user_friendliness_score": 6.0,
+  "data_collection_score": 5.0,
+  "legal_complexity_score": 5.5,
+  "terms_version": "Effective: November 15, 2024",
+  "terms_url": "https://x.com/en/tos",
+  "analysis_date": "2025-07-05",
+  "deep_analysis": {
+    "0": {
+      "unclear_terms": [
+        {
+          "term": "worldwide, non-exclusive, royalty-free license (with the right to sublicense)",
+          "explanation": "This means that the company (X) can use your content anywhere in the world, without paying you, and can also allow others (third parties) to use your content without needing your permission.",
+          "user_impact": "Your content can be used by X and shared with others for free, in ways you might not expect or approve of, including for commercial purposes or AI training.",
+          "questions_to_ask": [
+            "What specific purposes will my content be used for?",
+            "Who are the third parties that might gain access to my content?",
+            "Can I revoke this license if I delete my content or account?",
+            "How will my content be protected from misuse or exploitation?"
+          ]
+        },
+        {
+          "term": "use, copy, reproduce, process, adapt, modify, publish, transmit, display, upload, download, and distribute",
+          "explanation": "This phrase gives X very broad rights to do almost anything with your content, including altering it, sharing it widely, or using it in ways you may not have intended.",
+          "user_impact": "Your content could be changed, repurposed, or shared in ways that you might not agree with, and you won’t have control over how it’s used.",
+          "questions_to_ask": [
+            "What limits, if any, are there on how my content can be modified or distributed?",
+            "Will I be notified if my content is used in a significant way?",
+            "Can I opt out of certain uses, such as AI training or syndication?"
+          ]
+        },
+        {
+          "term": "for any purpose",
+          "explanation": "This means X can use your content for literally any reason, including commercial purposes, advertising, or training AI models, without needing further permission from you.",
+          "user_impact": "Your content could be used in ways you didn’t anticipate, such as being included in advertisements or used to train AI systems, potentially without your knowledge.",
+          "questions_to_ask": [
+            "What specific purposes does 'any purpose' include?",
+            "Are there any restrictions on how my content can be used commercially?",
+            "What happens to my content if I delete it from the platform?"
+          ]
+        },
+        {
+          "term": "training of our machine learning and artificial intelligence models",
+          "explanation": "This means X can use your content to improve or develop AI systems, which could include analyzing your text, images, or videos to teach AI how to perform tasks.",
+          "user_impact": "Your content might be permanently stored and used to train AI systems, even if you delete it later. This could raise privacy concerns or lead to your content being embedded in AI tools without your consent.",
+          "questions_to_ask": [
+            "What specific types of content will be used for AI training?",
+            "Can I opt out of having my content used for AI purposes?",
+            "Will my content be anonymized before being used for AI training?"
+          ]
+        }
+      ],
+      "practical_meaning": "This clause allows X to use your content in almost any way they want, including sharing it with others, modifying it, and using it for commercial purposes like advertising or AI training. You retain ownership of your content, but X has extremely broad rights to use it without compensating you or seeking further permission.",
+      "user_action_needed": "Users should carefully consider what content they upload to X, especially if it’s sensitive, personal, or something they wouldn’t want used for commercial or AI purposes. If you’re uncomfortable with these terms, you may want to limit the type of content you share or avoid using the platform altogether.",
+      "severity_justification": "This is flagged as high severity because it gives X sweeping rights over user content, including the ability to use it for commercial purposes and AI training without compensation or clear limits. This could lead to significant privacy concerns, loss of control over personal content, and potential misuse of user-generated material.",
+      "extended_context": "...ing form (https://help.x.com/forms/dmca) or contacting our designated copyright agent at: X Corp. Attn: Copyright Agent 865 FM 1209, Building 2 Bastrop, TX 78602 Reports:&nbsp;https://help.x.com/forms/dmca Email: copyright@x.com Your Rights and Grant of Rights in the Content You retain your rights to any Content you submit, post or display on or through the Services. What’s yours is yours — you own your Content (and your incorporated audio, photos and videos are considered part of the Content). By submitting, posting or displaying Content on or through the Services, you grant us a worldwide, non-exclusive, royalty-free license (with the right to sublicense) to use, copy, reproduce, process, adapt, modify, publish, transmit, display, upload, download, and distribute such Content in any and all media or distribution methods now known or later developed, for any purpose. For clarity, these rights include, for example, curating, transforming, and translating. This license authorizes us to make your Content available to the rest of the world and to let others do the same. You agree that this license includes the right for us to (i) analyze text and other information you provide and to otherwise provide, promote, and improve the Services, including, for example, for use with and training of our machine learning and artificial intelligence models, whether generativ...",
+      "online_research": {
+        "search_query": "\"x\" worldwide, non-exclusive, royalty-free license (with the right to sublicense) use, copy, reproduce, process, adapt, modify, publish, transmit, display, upload, download, and distribute for any purpose terms conditions privacy policy explanation",
+        "top_result_url": "https://edit.tosdr.org/cases/139",
+        "top_result_title": "Your content can be distributed through any media known now or in ...",
+        "summary": "X, \"By submitting, posting or displaying Content on or through the Services, you grant us a worldwide, non-exclusive, royalty-free license (with the right to"
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "app_name": "x",
+  "total_high_severity_concerns": 1,
+  "analysis_timestamp": "2025-07-05",
+  "concerns_analyzed": [
+    {
+      "original_concern": {
+        "clause": "Broad content licensing rights",
+        "severity": "high",
+        "explanation": "The terms grant X a worldwide, royalty-free license to use, modify, and distribute user content, including for purposes such as training AI models and syndication, without compensation to the user.",
+        "quote": "By submitting, posting or displaying Content on or through the Services, you grant us a worldwide, non-exclusive, royalty-free license (with the right to sublicense) to use, copy, reproduce, process, adapt, modify, publish, transmit, display, upload, download, and distribute such Content in any and all media or distribution methods now known or later developed, for any purpose."
+      },
+      "extended_context": "...ing form (https://help.x.com/forms/dmca) or contacting our designated copyright agent at: X Corp. Attn: Copyright Agent 865 FM 1209, Building 2 Bastrop, TX 78602 Reports:&nbsp;https://help.x.com/forms/dmca Email: copyright@x.com Your Rights and Grant of Rights in the Content You retain your rights to any Content you submit, post or display on or through the Services. What’s yours is yours — you own your Content (and your incorporated audio, photos and videos are considered part of the Content). By submitting, posting or displaying Content on or through the Services, you grant us a worldwide, non-exclusive, royalty-free license (with the right to sublicense) to use, copy, reproduce, process, adapt, modify, publish, transmit, display, upload, download, and distribute such Content in any and all media or distribution methods now known or later developed, for any purpose. For clarity, these rights include, for example, curating, transforming, and translating. This license authorizes us to make your Content available to the rest of the world and to let others do the same. You agree that this license includes the right for us to (i) analyze text and other information you provide and to otherwise provide, promote, and improve the Services, including, for example, for use with and training of our machine learning and artificial intelligence models, whether generativ...",
+      "clarity_analysis": {
+        "unclear_terms": [
+          {
+            "term": "worldwide, non-exclusive, royalty-free license (with the right to sublicense)",
+            "explanation": "This means that the company (X) can use your content anywhere in the world, without paying you, and can also allow others (third parties) to use your content without needing your permission.",
+            "user_impact": "Your content can be used by X and shared with others for free, in ways you might not expect or approve of, including for commercial purposes or AI training.",
+            "questions_to_ask": [
+              "What specific purposes will my content be used for?",
+              "Who are the third parties that might gain access to my content?",
+              "Can I revoke this license if I delete my content or account?",
+              "How will my content be protected from misuse or exploitation?"
+            ]
+          },
+          {
+            "term": "use, copy, reproduce, process, adapt, modify, publish, transmit, display, upload, download, and distribute",
+            "explanation": "This phrase gives X very broad rights to do almost anything with your content, including altering it, sharing it widely, or using it in ways you may not have intended.",
+            "user_impact": "Your content could be changed, repurposed, or shared in ways that you might not agree with, and you won’t have control over how it’s used.",
+            "questions_to_ask": [
+              "What limits, if any, are there on how my content can be modified or distributed?",
+              "Will I be notified if my content is used in a significant way?",
+              "Can I opt out of certain uses, such as AI training or syndication?"
+            ]
+          },
+          {
+            "term": "for any purpose",
+            "explanation": "This means X can use your content for literally any reason, including commercial purposes, advertising, or training AI models, without needing further permission from you.",
+            "user_impact": "Your content could be used in ways you didn’t anticipate, such as being included in advertisements or used to train AI systems, potentially without your knowledge.",
+            "questions_to_ask": [
+              "What specific purposes does 'any purpose' include?",
+              "Are there any restrictions on how my content can be used commercially?",
+              "What happens to my content if I delete it from the platform?"
+            ]
+          },
+          {
+            "term": "training of our machine learning and artificial intelligence models",
+            "explanation": "This means X can use your content to improve or develop AI systems, which could include analyzing your text, images, or videos to teach AI how to perform tasks.",
+            "user_impact": "Your content might be permanently stored and used to train AI systems, even if you delete it later. This could raise privacy concerns or lead to your content being embedded in AI tools without your consent.",
+            "questions_to_ask": [
+              "What specific types of content will be used for AI training?",
+              "Can I opt out of having my content used for AI purposes?",
+              "Will my content be anonymized before being used for AI training?"
+            ]
+          }
+        ],
+        "practical_meaning": "This clause allows X to use your content in almost any way they want, including sharing it with others, modifying it, and using it for commercial purposes like advertising or AI training. You retain ownership of your content, but X has extremely broad rights to use it without compensating you or seeking further permission.",
+        "user_action_needed": "Users should carefully consider what content they upload to X, especially if it’s sensitive, personal, or something they wouldn’t want used for commercial or AI purposes. If you’re uncomfortable with these terms, you may want to limit the type of content you share or avoid using the platform altogether.",
+        "severity_justification": "This is flagged as high severity because it gives X sweeping rights over user content, including the ability to use it for commercial purposes and AI training without compensation or clear limits. This could lead to significant privacy concerns, loss of control over personal content, and potential misuse of user-generated material."
+      },
+      "online_research": {
+        "search_query": "\"x\" worldwide, non-exclusive, royalty-free license (with the right to sublicense) use, copy, reproduce, process, adapt, modify, publish, transmit, display, upload, download, and distribute for any purpose terms conditions privacy policy explanation",
+        "top_result_url": "https://edit.tosdr.org/cases/139",
+        "top_result_title": "Your content can be distributed through any media known now or in ...",
+        "summary": "X, \"By submitting, posting or displaying Content on or through the Services, you grant us a worldwide, non-exclusive, royalty-free license (with the right to",
+        "detailed_content_available": true,
+        "additional_context": "![](/assets/favicon-20b5c217fa439e0558be39c4e46770b4cfa2a4e2c7c8a485a12f65d57cefacc2.ico)\n\n### Your content can be distributed through any media known now or in the future\n\nClassification: neutral\n\nWeight: 50\n\n| Service | Title | Rating | Status | Author |\n| --- | --- | --- | --- | --- |\n| Discord | [broad license including right to distribute through any media](/points/4306 \"View more details\") |  | DECLINED | user 463 |\n| Reddit | [\"to use, copy, modify, adapt, prepare derivative works of, distribute, store, perform, and display Your Content and any name, username, voice, or likeness provided in connection with Your Content in all media formats and channels now known or later developed anywhere in the world.\"](/points/13396 \"View more details\") |  | APPROVED | Dr\\_Jeff  [Staff](https://to.tosdr.org/about \"This user is a ToS;DR Team member\") |\n| Delicious | [Very broad copyright license on your content, includes right for Delicious to distribute through any media](/points/676 \"View mo"
+      }
+    }
+  ]
+}

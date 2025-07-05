@@ -1,0 +1,62 @@
+{
+  "app_name": "paramount",
+  "total_high_severity_concerns": 1,
+  "analysis_timestamp": "2025-07-05",
+  "concerns_analyzed": [
+    {
+      "original_concern": {
+        "clause": "Advertising and tracking practices",
+        "severity": "high",
+        "explanation": "The terms explicitly prohibit the use of ad blockers and allow Paramount to suspend or terminate subscriptions if users attempt to block ads. This could be seen as overly restrictive and prioritizing advertising revenue over user experience.",
+        "quote": "You must not prevent, or attempt to prevent, the display of advertisements on the Service, or use any ad blocker or similar tool."
+      },
+      "extended_context": "..., functionality, features, device compatibility or have certain conditions or limitations.\n\n(c) Any Content and Subscriptions to the Service may contain promotional trailers for other content on the Paramount+ Service, advertising, sponsorship and product placement, which may vary in frequency, volume and nature over time, depending on the type of Subscription you sign up to and/or the Content viewed. Subscriptions described as ad-free will still feature advertising breaks in live Content.\n\n(d) You must not prevent, or attempt to prevent, the display of advertisements on the Service, or use any ad blocker or similar tool. If you do not comply with this requirement then we may, on reasonable notice to you:\n\n*   (i) suspend or terminate your Subscription; or\n*   (ii) give you the option of moving to an alternative Subscription on a specified date, at the then-current price of that alternative Subscription. If you opt out of changing your Subscription plan and continue to prevent the display of advertisements on our Service, then we may suspend or terminate your Subscription.\n\n### 4.2 Plan switching\n\n(a) If you sig...",
+      "clarity_analysis": {
+        "unclear_terms": [
+          {
+            "term": "You must not prevent, or attempt to prevent, the display of advertisements on the Service, or use any ad blocker or similar tool.",
+            "explanation": "This means that Paramount prohibits users from using ad-blocking software or any other method to stop ads from appearing while using their service. If you try to block ads, Paramount can suspend or cancel your subscription.",
+            "user_impact": "Users who rely on ad blockers for a smoother experience or to avoid intrusive ads may face penalties, including losing access to their subscription. Even if you pay for the service, you are required to view ads unless you have a specific ad-free plan (which still may include ads in live content).",
+            "questions_to_ask": [
+              "What qualifies as an 'ad blocker or similar tool'? Could browser extensions or privacy settings be considered violations?",
+              "How will Paramount detect if I am using an ad blocker? Will they monitor my device or browsing activity?",
+              "What happens if an ad blocker is accidentally enabled—will my subscription be immediately suspended?",
+              "Are there any exceptions for accessibility or usability reasons, such as blocking ads that cause technical issues?"
+            ]
+          },
+          {
+            "term": "Subscriptions described as ad-free will still feature advertising breaks in live Content.",
+            "explanation": "Even if you pay for an 'ad-free' subscription, you may still see ads during live broadcasts or live-streamed content.",
+            "user_impact": "Users who pay extra for an ad-free experience may still encounter ads, which could feel misleading or frustrating. This could reduce the value of the 'ad-free' subscription for some users.",
+            "questions_to_ask": [
+              "What types of ads will appear in live content, and how frequent are they?",
+              "Is there a way to avoid ads entirely, even during live content?",
+              "Does Paramount provide clear disclosure about what 'ad-free' actually means before purchasing the subscription?"
+            ]
+          },
+          {
+            "term": "We may, on reasonable notice to you, suspend or terminate your Subscription.",
+            "explanation": "Paramount reserves the right to cancel or pause your subscription if you violate their ad-blocking policy, but they claim they will provide 'reasonable notice' before doing so.",
+            "user_impact": "Users may lose access to their subscription if Paramount determines they are blocking ads, even unintentionally. The term 'reasonable notice' is vague and does not specify how much time users will have to resolve the issue.",
+            "questions_to_ask": [
+              "What constitutes 'reasonable notice'? How will Paramount notify users of a potential suspension or termination?",
+              "Will users have an opportunity to fix the issue before their subscription is terminated?",
+              "What happens to any prepaid subscription fees if the account is suspended or terminated?"
+            ]
+          }
+        ],
+        "practical_meaning": "In practice, this clause means that Paramount prioritizes its advertising revenue over user preferences. Users are required to view ads unless they pay for an ad-free plan, which still includes ads during live content. If users attempt to block ads, Paramount can suspend or terminate their subscription, potentially without clear or sufficient warning. This policy may feel restrictive or unfair to users who expect more control over their viewing experience.",
+        "user_action_needed": "Users should carefully review their subscription plan to understand what 'ad-free' actually includes and decide whether they are comfortable with the advertising policies. Avoid using ad blockers or similar tools while using Paramount's service to prevent account suspension or termination. If you rely on ad blockers for accessibility or usability reasons, consider reaching out to Paramount for clarification or accommodations.",
+        "severity_justification": "This issue is flagged as high severity because it directly impacts user experience and could result in the loss of access to a paid service. The policy is restrictive, potentially invasive (if ad-blocker detection involves monitoring user activity), and may mislead users about the nature of 'ad-free' subscriptions. It also raises concerns about fairness and transparency in how Paramount enforces these rules."
+      },
+      "online_research": {
+        "search_query": "\"paramount\" You must not prevent, or attempt to prevent, the display of advertisements on the Service, or use any ad blocker or similar tool. Subscriptions described as ad-free will still feature advertising breaks in live Content. We may, on reasonable notice to you, suspend or terminate your Subscription. terms conditions privacy policy explanation",
+        "top_result_url": "https://www.paramountpressexpress.com/cbs-entertainment/shows/the-price-is-right-at-night/releases",
+        "top_result_title": "The Price is Right at Night | Releases - Paramount Press Express",
+        "summary": "Terms of Use · Privacy Policy · California Notice; Your Privacy Choices. © 2025 Paramount. All Rights Reserved. Choose or Create Collections. Search Collections.",
+        "detailed_content_available": true,
+        "additional_context": "## Top Searches\n\n![](https://public-assets-pressexpress.s3.amazonaws.com/assets/logos/original/2021/10/08/cbs_entertainment_horz_dark_logo_3-1.svg)\n![](https://public-assets-pressexpress.s3.amazonaws.com/assets/logos/original/2021/10/08/cbs_entertainment_horz_white_logo_3-1.svg)\n\n## The Price is Right at Night\n\n### Releases\n\nCBS Entertainment\n\n![Image for Release](https://public-assets-pressexpress.s3.amazonaws.com/assets/releases/docimages/4c489d1b/CBSFallSchedule2025-2026FinalShowCards_html_a0b0bfbc86c135a1.jpg)\n\nRelease\n\n#### CBS ANNOUNCES ITS 2025-2026 PRIMETIME SCHEDULE\n\nNew Series Order: “Y: Marshals (Working Title),” a Drama Starring Luke Grimes Reprising His Role as Kayce Dutton\nNew Series Order: First-Ever True-Crime Series from Bestselling Mystery Author Harlan Coben, “Harlan Coben’s Final Twist”\nPreviously Announced New Dramas “Boston Blue,” “Sheriff Country,” “CIA” and New Comedy “DMV” Join 18 Returning Shows\nNew Singing Competition Series “The Road” Executive Produced by T"
+      }
+    }
+  ]
+}

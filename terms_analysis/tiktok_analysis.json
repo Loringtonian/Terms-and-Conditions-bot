@@ -1,7 +1,8 @@
 {
   "app_name": "TikTok",
   "app_version": null,
-  "overall_score": 5.5,
+  "overall_score": 5.0
+,
   "privacy_concerns": [
     {
       "clause": "Changes to the Terms",

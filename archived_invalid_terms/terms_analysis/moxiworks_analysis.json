@@ -1,0 +1,50 @@
+{
+  "app_name": "MoxiWorks",
+  "app_version": null,
+  "overall_score": 6.5,
+  "privacy_concerns": [
+    {
+      "clause": "Broad data collection categories (Identifiers, Geolocation, Internet activity, etc.)",
+      "severity": "high",
+      "explanation": "The policy outlines extensive data collection practices, including sensitive categories like geolocation, browsing history, and personal identifiers. While some of this data may be necessary for functionality, the breadth of collection raises concerns about overreach.",
+      "quote": "We have collected the following categories of personal information from users in the last twelve (12) months: A. Identifiers, B. Personal information categories... G. Geolocation data, F. Internet or other similar network activity."
+    },
+    {
+      "clause": "Third-party analytics and tracking",
+      "severity": "medium",
+      "explanation": "The use of third-party analytics providers like Google Analytics and DoubleClick involves sharing user data with external entities. While opt-out options are provided, the reliance on third parties for tracking and analytics introduces privacy risks.",
+      "quote": "We use Analytics Providers, such as Google Analytics and DoubleClick Cookies, to collect information about Service usage and users of the Service."
+    },
+    {
+      "clause": "Cross-border data transfers",
+      "severity": "medium",
+      "explanation": "Data is stored and processed in the United States and Canada, which may not offer the same privacy protections as other jurisdictions. This could be problematic for users in countries with stricter privacy laws.",
+      "quote": "PLEASE BE AWARE THAT MOXIWORKS AND ALL ASSOCIATED SERVICES AND SYSTEMS ARE HOUSED ON SERVERS IN THE UNITED STATES AND CANADA."
+    },
+    {
+      "clause": "Broad consent requirement",
+      "severity": "medium",
+      "explanation": "Users must agree to the collection, use, and sharing of their data as a condition of using the service. This limits user control over their personal information and may not align with Canadian privacy norms.",
+      "quote": "By visiting, accessing or using the Service, you expressly consent to the collection, use, storage, transfer, processing and disclosure of your information."
+    },
+    {
+      "clause": "Unclear account deletion process",
+      "severity": "low",
+      "explanation": "The policy does not provide detailed information on how users can delete their accounts or ensure their data is fully removed, which could create barriers for users seeking to exercise their rights.",
+      "quote": "Specific details on how to correct or change your information are provided on the 'Settings' page of 'My Account.'"
+    }
+  ],
+  "summary": "The MoxiWorks Privacy Policy outlines extensive data collection and sharing practices, including sensitive information like geolocation and browsing history. While it provides some transparency and opt-out mechanisms, the reliance on third-party analytics and cross-border data transfers raises privacy concerns. The policy is moderately clear but could improve in user control and fairness.",
+  "red_flags": [
+    "Extensive data collection beyond app functionality",
+    "Broad rights to share data with third-party analytics providers",
+    "Cross-border data transfers with potentially weaker privacy protections",
+    "Broad consent requirement limiting user control"
+  ],
+  "user_friendliness_score": 6.0,
+  "data_collection_score": 5.0,
+  "legal_complexity_score": 7.0,
+  "terms_version": "July 2021",
+  "terms_url": "https://max-bachman.c21.ca/privacy-policy",
+  "analysis_date": "2025-07-05"
+}

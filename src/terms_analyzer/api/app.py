@@ -254,7 +254,10 @@ def scrape_and_analyze_service(request_id, service_name, known_url=None):
         
         if not result or not result.get('success'):
             scraping_requests[request_id]['status'] = 'failed'
-            scraping_requests[request_id]['error'] = 'Failed to scrape terms and conditions. The service may not have accessible terms or the URL may be incorrect.'
+            if known_url:
+                scraping_requests[request_id]['error'] = f'Failed to extract terms from the provided URL: {known_url}. The URL may be incorrect or the content may not be accessible.'
+            else:
+                scraping_requests[request_id]['error'] = f'Could not find terms and conditions for "{service_name}". The service may not have publicly accessible terms, or try providing a specific URL to the terms page.'
             scraping_requests[request_id]['completed_at'] = time.time()
             return
         
@@ -326,9 +329,18 @@ def get_services():
                     display_name = service_name.replace('_', ' ').title()
                     service_id = service_name
                 
-                # Check if we have the markdown file for this service
+                # Check if we have a valid terms file for this service
                 markdown_file = storage_dir / f"{service_name}.md"
-                has_terms = markdown_file.exists() and markdown_file.stat().st_size > 100  # Must exist and have some content
+                has_terms = False
+                
+                if markdown_file.exists() and markdown_file.stat().st_size > 100:
+                    try:
+                        with open(markdown_file, 'r', encoding='utf-8') as f:
+                            content = f.read()
+                        validation_result = validate_terms_content(content, service_name)
+                        has_terms = validation_result['is_valid']
+                    except Exception:
+                        has_terms = False
                 
                 # Determine category and icon based on service name
                 category, icon = get_service_category_and_icon(service_name)
@@ -453,7 +465,7 @@ def get_terms(service_id):
         terms_file = storage_dir / f'{service_id}.md'
         
         if not terms_file.exists():
-            return jsonify({"error": f"Terms file not found for service '{service_id}'. This service has analysis but no original terms document."}), 404
+            return jsonify({"error": f"Original terms document not available for this service. This service has analysis but the source terms document was not saved."}), 404
         
         with open(terms_file, 'r', encoding='utf-8') as f:
             terms_text = f.read()
@@ -482,6 +494,9 @@ def get_top_bottom_services():
         
         services_with_scores = []
         
+        # Get storage directory to check for terms files
+        storage_dir = project_root / 'terms_storage'
+        
         # Get all analysis files
         for analysis_file in analysis_dir.glob('*.json'):
             # Skip deep analysis files
@@ -493,6 +508,26 @@ def get_top_bottom_services():
                     analysis_data = json.load(f)
                 
                 service_name = analysis_file.stem.replace('_analysis', '')
+                
+                # Only include services that have valid terms files with actual terms content
+                markdown_file = storage_dir / f"{service_name}.md"
+                has_valid_terms = False
+                
+                if markdown_file.exists() and markdown_file.stat().st_size > 100:
+                    try:
+                        with open(markdown_file, 'r', encoding='utf-8') as f:
+                            content = f.read()
+                        validation_result = validate_terms_content(content, service_name)
+                        has_valid_terms = validation_result['is_valid']
+                        if not has_valid_terms:
+                            print(f"Skipping {service_name} - invalid terms content: {validation_result['reason']}")
+                    except Exception as e:
+                        print(f"Skipping {service_name} - error reading terms file: {e}")
+                
+                # Skip services without valid terms (these are stale/deleted services or invalid content)
+                if not has_valid_terms:
+                    continue
+                
                 overall_score = analysis_data.get('overall_score', 0)
                 app_name = analysis_data.get('app_name', service_name.replace('_', ' ').title())
                 
@@ -531,9 +566,9 @@ def get_top_bottom_services():
         # Sort by overall score
         services_with_scores.sort(key=lambda x: x['overall_score'])
         
-        # Get bottom 3 (worst) and top 3 (best)
-        bottom_services = services_with_scores[:3]
-        top_services = services_with_scores[-3:][::-1]  # Reverse to show highest first
+        # Get bottom 5 (worst) and top 5 (best)
+        bottom_services = services_with_scores[:5]
+        top_services = services_with_scores[-5:][::-1]  # Reverse to show highest first
         
         return jsonify({
             "top_services": top_services,
@@ -621,7 +656,7 @@ def validate_terms_content(content: str, service_name: str) -> dict:
         'techcrunch.com', 'theverge.com', 'engadget.com', 'ars-technica.com',
         'news article', 'breaking news', 'reuters', 'associated press',
         'photo illustration', 'getty images', 'in this photo',
-        'parliament passed', 'controversy', 'bill forces'
+        'parliament passed', 'bill forces'
     ]
     
     for indicator in news_indicators:
@@ -639,9 +674,9 @@ def validate_terms_content(content: str, service_name: str) -> dict:
     
     terms_matches = sum(1 for indicator in terms_indicators if indicator in content_lower)
     
-    # Require at least 3 terms-related indicators
-    if terms_matches < 3:
-        return {'is_valid': False, 'reason': f'Only {terms_matches} terms indicators found, need at least 3'}
+    # Require at least 2 terms-related indicators (reduced from 3)
+    if terms_matches < 2:
+        return {'is_valid': False, 'reason': f'Only {terms_matches} terms indicators found, need at least 2'}
     
     # Check content length - terms should be substantial
     if len(content) < 1000:

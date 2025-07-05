@@ -1,0 +1,143 @@
+{
+  "app_name": "Audible",
+  "app_version": null,
+  "overall_score": 6.5,
+  "privacy_concerns": [
+    {
+      "clause": "Agreement Changes",
+      "severity": "high",
+      "explanation": "The terms allow Audible to change the agreement and any aspect of the service at their discretion without notifying users. This creates uncertainty for users about their rights and obligations.",
+      "quote": "We may, in our discretion, change the Terms and all elements of them and any aspect of the Service, without notice to you."
+    },
+    {
+      "clause": "Data Sharing with Affiliates",
+      "severity": "medium",
+      "explanation": "Audible is an affiliate of Amazon, and the terms reference Amazon's privacy policies, which include broad data collection and sharing practices. This may lead to extensive data sharing across Amazon's ecosystem.",
+      "quote": "Audible is an affiliate of Amazon.com Services LLC and the Service is an Amazon Service for the purposes of the Amazon.com Conditions of Use."
+    },
+    {
+      "clause": "Termination by Us",
+      "severity": "medium",
+      "explanation": "Audible reserves the right to terminate memberships at their discretion without notice, which could be unfair to users depending on the circumstances.",
+      "quote": "We reserve the right to cancel the Service and any membership plan in whole or in part, and to terminate your membership and use of the Service at our discretion without notice."
+    },
+    {
+      "clause": "Dispute Resolution",
+      "severity": "high",
+      "explanation": "Disputes are subject to Amazon's Conditions of Use, which may include binding arbitration clauses and limitations on legal recourse, potentially disadvantaging Canadian consumers.",
+      "quote": "Any dispute or claim arising from or relating to these Terms or your use of the Service is subject to the dispute resolution, governing law, disclaimer of warranties, limitation of liability and all other terms in the Amazon.com Conditions of Use."
+    },
+    {
+      "clause": "Content Availability",
+      "severity": "medium",
+      "explanation": "Audible does not guarantee the availability of purchased or promotional content, which could lead to users losing access to content they believe they own.",
+      "quote": "We may add or remove purchasable, promotional and membership content (collectively, 'Content') from our catalog, membership plans and our Service at any time and make no guarantee as to the availability of specific Content."
+    }
+  ],
+  "summary": "Audible's terms and conditions are moderately user-friendly but raise concerns about privacy, data sharing, and user rights. The ability to change terms without notice, broad data-sharing practices with Amazon, and limitations on content availability are significant issues for Canadian consumers.",
+  "red_flags": [
+    "Broad rights to change terms without notice",
+    "Extensive data sharing with Amazon and affiliates",
+    "Unilateral termination rights",
+    "Binding arbitration clauses in dispute resolution",
+    "No guarantee of content availability"
+  ],
+  "user_friendliness_score": 6.0,
+  "data_collection_score": 5.0,
+  "legal_complexity_score": 5.5,
+  "terms_version": "February 25, 2025",
+  "terms_url": "https://audible.com/terms",
+  "analysis_date": "2025-07-05",
+  "deep_analysis": {
+    "0": {
+      "unclear_terms": [
+        {
+          "term": "We may, in our discretion, change the Terms and all elements of them and any aspect of the Service, without notice to you.",
+          "explanation": "This means Audible has the right to modify the terms of the agreement or any part of their service whenever they want, without informing you beforehand.",
+          "user_impact": "Users may unknowingly agree to new terms or changes in the service that could affect their rights, obligations, or the way they use the service. For example, Audible could change pricing, cancel benefits, or alter refund policies without notifying users.",
+          "questions_to_ask": [
+            "What kinds of changes can Audible make without notifying me?",
+            "How will I know if the terms have changed?",
+            "What happens if I disagree with the new terms?",
+            "Is there a way to opt out of changes or get notified in advance?"
+          ]
+        },
+        {
+          "term": "Your continued use of the Service after we change the Terms constitutes your acceptance of the changes.",
+          "explanation": "If you keep using Audible after they make changes to the terms, it means you automatically agree to the new terms, even if you didn’t know about them.",
+          "user_impact": "You could unknowingly agree to terms that are less favorable to you, such as higher fees, reduced benefits, or stricter cancellation policies.",
+          "questions_to_ask": [
+            "How can I review changes to the terms before continuing to use the service?",
+            "Will Audible notify me of changes in any way, such as by email or app notification?",
+            "What happens if I stop using the service but don’t explicitly cancel my membership?"
+          ]
+        }
+      ],
+      "practical_meaning": "In practice, this clause gives Audible the ability to change the rules of the service or the terms of your agreement at any time, without telling you. If you keep using the service, you are assumed to agree to these changes. This could lead to situations where you are bound by terms you didn’t know about, such as changes to pricing, cancellation policies, or how your data is used.",
+      "user_action_needed": "Users should regularly check Audible’s terms and conditions for updates to avoid being caught off guard by unfavorable changes. If you notice changes you don’t agree with, you should stop using the service and cancel your membership immediately.",
+      "severity_justification": "This is flagged as high severity because it creates significant uncertainty for users. Audible’s ability to change terms without notice undermines transparency and could lead to users being bound by terms they didn’t explicitly agree to. This lack of notification and consent is a major concern for consumer rights and trust.",
+      "extended_context": "...r a promotion requires you to have a valid payment instrument on file, such as a credit card or other permitted payment method, we may validate that payment method including by requesting a temporary authorization from the financial institution issuing your payment instrument. If we determine that your payment instrument is invalid, without limiting any of our other rights, we may revoke any benefits, Credits or Content you may have received as part of the offer. &nbsp; &nbsp; Agreement Changes We may, in our discretion, change the Terms and all elements of them and any aspect of the Service, without notice to you. If any change to the Terms is found invalid, void, or for any reason unenforceable, that change is severable and does not affect the validity and enforceability of any remaining changes and the remainder of the Terms. Your continued use of the Service after we change the Terms constitutes your acceptance of the changes. If you do not agree to any changes, you must not use the Service and must cancel your membership. Termination by Us Our business may change over time and we reserve the right to...",
+      "online_research": {
+        "search_query": "\"audible\" We may, in our discretion, change the Terms and all elements of them and any aspect of the Service, without notice to you. Your continued use of the Service after we change the Terms constitutes your acceptance of the changes. terms conditions privacy policy explanation",
+        "top_result_url": "https://www.audible.ca/legal/conditions-of-use",
+        "top_result_title": "Audiobooks & Original Audio | Get your first book free! | Audible.ca",
+        "summary": "Agreement Changes. We may, in our discretion, change the Terms and all elements of them and any aspect of the Service without notice to you."
+      }
+    },
+    "3": {
+      "unclear_terms": [
+        {
+          "term": "Dispute resolution",
+          "explanation": "This refers to how disagreements between you and Audible (or Amazon, its parent company) will be handled. Instead of going to court, disputes may be resolved through arbitration, which is a private process where a neutral third party decides the outcome.",
+          "user_impact": "This means you may not have the option to sue Audible/Amazon in court, join a class-action lawsuit, or have your case heard by a judge or jury. Arbitration can also limit your ability to appeal decisions and may favor the company due to the way the process is structured.",
+          "questions_to_ask": [
+            "Does this clause prevent me from filing a lawsuit in my country?",
+            "Am I allowed to join a class-action lawsuit under these terms?",
+            "What are the specific rules of the arbitration process?",
+            "Who pays for the arbitration fees, and where will it take place?"
+          ]
+        },
+        {
+          "term": "Binding arbitration clauses",
+          "explanation": "This means that if you have a dispute with Audible/Amazon, you are required to resolve it through arbitration, and the decision made by the arbitrator is final and legally binding.",
+          "user_impact": "You give up your right to take Audible/Amazon to court or have a jury trial. Arbitration decisions are often confidential, and the process may not be as transparent as a court proceeding.",
+          "questions_to_ask": [
+            "Can I opt out of arbitration, and if so, how?",
+            "What rights do I lose by agreeing to binding arbitration?",
+            "Are there any exceptions to the arbitration requirement?"
+          ]
+        },
+        {
+          "term": "Limitations on legal recourse",
+          "explanation": "This refers to restrictions on your ability to seek certain types of compensation or remedies if you have a dispute with Audible/Amazon.",
+          "user_impact": "You may not be able to recover full damages or pursue certain legal actions, such as punitive damages or injunctive relief, even if Audible/Amazon is at fault.",
+          "questions_to_ask": [
+            "What types of claims or damages are excluded under these terms?",
+            "Are there any caps on the amount of compensation I can receive?",
+            "Does this clause comply with consumer protection laws in my country?"
+          ]
+        },
+        {
+          "term": "Amazon.com Conditions of Use",
+          "explanation": "This is a separate document that outlines the terms and conditions for using Amazon's services, including dispute resolution, governing law, and other legal provisions.",
+          "user_impact": "By agreeing to Audible's terms, you are also agreeing to Amazon's Conditions of Use, which may include additional restrictions or obligations that you might not be aware of.",
+          "questions_to_ask": [
+            "Where can I find and review the Amazon.com Conditions of Use?",
+            "Are there any terms in the Amazon.com Conditions of Use that conflict with my local laws?",
+            "Do these terms apply to all Audible users, regardless of their country of residence?"
+          ]
+        }
+      ],
+      "practical_meaning": "In practice, this clause means that if you have a dispute with Audible, you are likely required to resolve it through arbitration rather than through the court system. Additionally, the terms of the dispute resolution process are governed by Amazon's Conditions of Use, which may impose further restrictions on your legal rights, such as limiting the types of claims you can bring or the compensation you can receive. This could be particularly disadvantageous for Canadian consumers or users in other jurisdictions where arbitration clauses may conflict with local consumer protection laws.",
+      "user_action_needed": "Users should carefully review the Amazon.com Conditions of Use to understand the full scope of the dispute resolution process and any limitations on their legal rights. If you are uncomfortable with arbitration or the limitations imposed, consider whether you want to continue using the service. You may also want to contact Audible/Amazon to ask if there is an option to opt out of arbitration or seek legal advice to understand your rights under local laws.",
+      "severity_justification": "This was flagged as high severity because it significantly impacts users' legal rights and remedies in the event of a dispute. Binding arbitration clauses and limitations on legal recourse can disadvantage consumers by restricting their ability to pursue claims in court, join class-action lawsuits, or seek full compensation for damages. These terms may also conflict with local consumer protection laws, particularly for users outside the United States, such as in Canada, where such clauses may not be enforceable or may require additional scrutiny.",
+      "extended_context": "... at our discretion without notice. If we do so, we will give you a prorated refund based on the number of days remaining in your membership unless we terminate your membership for conduct that we determine, in our discretion, violates the Terms, violates any applicable law, involves fraud or misuse of the Service, or is harmful to our interests or another user. Our failure to insist upon or enforce your strict compliance with the Terms will not constitute a waiver of any of our rights. Disputes Any dispute or claim arising from or relating to these Terms or your use of the Service is subject to the dispute resolution, governing law, disclaimer of warranties, limitation of liability and all other terms in the Amazon.com Conditions of Use. Audible Address Audible, Inc. 1 Washington Park Newark, NJ 07102 © Copyright 1997 - 2025 Audible Inc. About Audible Careers Conditions of Use Privacy Notice Interest-Based Ads License Cookies Your ads privacy choices United States (English)",
+      "online_research": {
+        "search_query": "\"audible\" Dispute resolution Binding arbitration clauses Limitations on legal recourse terms conditions privacy policy explanation",
+        "top_result_url": "https://onthebluecruise.com/terms-and-conditions/",
+        "top_result_title": "Terms & Conditions - On The Blue Cruise 2025",
+        "summary": "RESOLUTION OF DISPUTES; ARBITRATION; WAIVER OF JURY TRIAL; WAIVER OF CLASS ACTION. ANY DISPUTE OR CLAIM RELATING IN ANY WAY TO THE CRUISE, YOUR USE OF THE"
+      }
+    }
+  }
+}

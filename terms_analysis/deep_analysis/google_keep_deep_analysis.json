@@ -1,0 +1,69 @@
+{
+  "app_name": "google_keep",
+  "total_high_severity_concerns": 1,
+  "analysis_timestamp": "2025-07-05",
+  "concerns_analyzed": [
+    {
+      "original_concern": {
+        "clause": "Content persistence after deletion",
+        "severity": "high",
+        "explanation": "Even after users delete their content, it may persist in other users' accounts or on external services. This could lead to a loss of control over personal data.",
+        "quote": "If you already shared your content with others before removing it... that photo may continue to appear in your friend’s Google Account even after you remove it from your Google Account."
+      },
+      "extended_context": "...ht quote a review you wrote. Or to promote Google Play, we might show a screenshot of the app you offer in the Play Store.developing new technologies and services for Google consistent with these termsDurationThis license lasts for as long as your content is protected by intellectual property rights.If you remove from our services any content that’s covered by this license, then our systems will stop making that content publicly available in a reasonable amount of time. There are two exceptions:If you already shared your content with others before removing it. For example, if you shared a photo with a friend who then made a copy of it, or shared it again, then that photo may continue to appear in your friend’s Google Account even after you remove it from your Google Account.If you make your content available through other companies’ services, it’s possible that search engines, including Google Search, will continue to find and display your content as part of their search results.Using Google servicesYour Google AccountIf you meet these age requirements you can create a Google Account for your convenience. Some services require that you have a Google Account in order ...",
+      "clarity_analysis": {
+        "unclear_terms": [
+          {
+            "term": "Content persistence after deletion",
+            "explanation": "This means that even if you delete something from your Google account, it might still exist in other places, such as in the accounts of people you shared it with or on external services like search engines.",
+            "user_impact": "Users may lose control over their personal data because deleted content can still be accessed or shared by others, or remain visible on external platforms.",
+            "questions_to_ask": [
+              "What specific types of content are affected by this (e.g., photos, documents, messages)?",
+              "How long does it take for content to be removed from Google's systems after deletion?",
+              "What mechanisms does Google have in place to ensure content is fully deleted?",
+              "Can users request the removal of shared content from others' accounts or external services?"
+            ]
+          },
+          {
+            "term": "Reasonable amount of time",
+            "explanation": "This phrase is vague and does not specify how long it takes for Google to stop making deleted content publicly available.",
+            "user_impact": "Users may not know how long their deleted content remains accessible, leading to uncertainty about when their data is truly removed.",
+            "questions_to_ask": [
+              "What does Google consider a 'reasonable amount of time' for content deletion?",
+              "Is there a maximum time frame for content to be fully removed?",
+              "Can users track the deletion process or receive confirmation when it’s complete?"
+            ]
+          },
+          {
+            "term": "Shared content with others",
+            "explanation": "If you share content (e.g., photos, files) with someone else, they may still have access to it even after you delete it from your account.",
+            "user_impact": "Users cannot fully control or retract content once it has been shared, which could lead to privacy risks if the recipient misuses or further distributes the content.",
+            "questions_to_ask": [
+              "Does Google provide tools to revoke access to shared content?",
+              "Can users request Google to delete shared content from others' accounts?",
+              "What happens if the recipient of the shared content shares it further?"
+            ]
+          },
+          {
+            "term": "Content available through other companies’ services",
+            "explanation": "If your content is indexed by search engines or shared on external platforms, it may remain visible there even after you delete it from Google services.",
+            "user_impact": "Users may not be able to fully remove their content from the internet, leading to potential privacy or reputational risks.",
+            "questions_to_ask": [
+              "Does Google notify users when their content is indexed by external services?",
+              "Can users request Google to work with external services to remove their content?",
+              "What steps can users take to minimize the visibility of their content on external platforms?"
+            ]
+          }
+        ],
+        "practical_meaning": "In practice, this clause means that deleting content from your Google account does not guarantee it is completely removed from all locations. If you shared the content with others or it was indexed by external services, it may still exist and be accessible elsewhere. This limits your ability to fully control your personal data once it has been shared or made public.",
+        "user_action_needed": "Users should be cautious about sharing sensitive or personal content through Google services, as they may not be able to fully delete or retract it later. They should also review their sharing settings and consider the implications of sharing content with others or making it public.",
+        "severity_justification": "This issue is flagged as high severity because it directly impacts users' ability to control their personal data and privacy. The persistence of deleted content can lead to unintended exposure, misuse, or reputational harm, especially if sensitive information is involved. The lack of clarity around deletion timelines and the inability to fully retract shared content further exacerbates the concern."
+      },
+      "online_research": {
+        "search_query": "\"google_keep\" Content persistence after deletion Reasonable amount of time Shared content with others terms conditions privacy policy explanation",
+        "no_results": true,
+        "message": "No additional context found online"
+      }
+    }
+  ]
+}

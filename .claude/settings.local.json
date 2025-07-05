@@ -27,7 +27,8 @@
       "Bash(npm uninstall:*)",
       "Bash(npm install:*)",
       "Bash(pkill:*)",
-      "Bash(cp:*)"
+      "Bash(cp:*)",
+      "Bash(source:*)"
     ],
     "deny": []
   }

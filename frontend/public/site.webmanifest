@@ -4,6 +4,11 @@
   "description": "Decode the legal complexity. Understand what you're really agreeing to.",
   "icons": [
     {
+      "src": "/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
       "src": "/favicon.ico",
       "sizes": "32x32",
       "type": "image/x-icon"

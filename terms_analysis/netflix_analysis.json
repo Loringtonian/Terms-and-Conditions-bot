@@ -1,0 +1,97 @@
+{
+  "app_name": "Netflix",
+  "app_version": null,
+  "overall_score": 7.5,
+  "privacy_concerns": [
+    {
+      "clause": "Arbitration Agreement and Class Action Waiver",
+      "severity": "high",
+      "explanation": "The terms require users to resolve disputes through arbitration and waive their right to participate in class action lawsuits. This heavily favors the company and limits consumer options for legal recourse.",
+      "quote": "YOU AGREE TO THE ARBITRATION AGREEMENT AND CLASS ACTION WAIVER DESCRIBED IN SECTION 7 TO RESOLVE ANY DISPUTES WITH NETFLIX (EXCEPT FOR MATTERS THAT MAY BE TAKEN TO SMALL CLAIMS COURT)."
+    },
+    {
+      "clause": "Promotional Offers and Account Hold",
+      "severity": "medium",
+      "explanation": "Netflix reserves the right to revoke promotional offers and put accounts on hold based on their sole discretion, which may lead to unfair treatment or lack of transparency for users.",
+      "quote": "We reserve the right to revoke an Offer and put your account on hold in the event that we determine you are not eligible."
+    },
+    {
+      "clause": "Data Collection for Offer Eligibility",
+      "severity": "medium",
+      "explanation": "Netflix uses device ID, payment method, and contact information to determine eligibility for promotional offers, which may raise privacy concerns if users are not fully informed about how this data is used.",
+      "quote": "We may use information such as device ID, method of payment or your contact information to determine Offer eligibility."
+    },
+    {
+      "clause": "No Refunds Policy",
+      "severity": "low",
+      "explanation": "The no-refund policy may be inconvenient for users, especially in cases of accidental charges or dissatisfaction with the service.",
+      "quote": "Payments are nonrefundable and there are no refunds or credits for partially used subscription periods."
+    },
+    {
+      "clause": "Geographic Restrictions",
+      "severity": "low",
+      "explanation": "Content availability is restricted by geographic location, which may limit the value of the service for users who travel frequently or relocate.",
+      "quote": "You may access Netflix content primarily within the country in which you have established your account and only in geographic locations where we offer your subscription plan."
+    }
+  ],
+  "summary": "Netflix's terms of use are moderately user-friendly, with clear explanations of subscription and billing policies. However, the arbitration clause and data collection practices for promotional offers raise concerns about fairness and privacy. The no-refund policy and geographic restrictions may also inconvenience some users.",
+  "red_flags": [
+    "Mandatory arbitration and class action waiver",
+    "Broad discretion to revoke promotional offers",
+    "Data collection for promotional offer eligibility",
+    "No refunds for unused subscription periods",
+    "Geographic restrictions on content access"
+  ],
+  "user_friendliness_score": 7.0,
+  "data_collection_score": 6.5,
+  "legal_complexity_score": 6.0,
+  "terms_version": null,
+  "terms_url": "https://help.netflix.com/legal/termsofuse",
+  "analysis_date": "2025-07-05",
+  "deep_analysis": {
+    "0": {
+      "unclear_terms": [
+        {
+          "term": "Arbitration Agreement",
+          "explanation": "An arbitration agreement means that if you have a dispute with Netflix, you agree to resolve it through a private process called arbitration instead of going to court. Arbitration is handled by a neutral third party, but it is less formal than a court trial and usually cannot be appealed.",
+          "user_impact": "This means you give up your right to take Netflix to court for most disputes, including having a judge or jury decide your case.",
+          "questions_to_ask": [
+            "What types of disputes are covered under this arbitration agreement?",
+            "Who pays for the arbitration process?",
+            "Can I still go to court for any reason, or is arbitration mandatory for all disputes?"
+          ]
+        },
+        {
+          "term": "Class Action Waiver",
+          "explanation": "A class action waiver means that you cannot join with other users to file a lawsuit against Netflix as a group. Instead, you must resolve disputes individually.",
+          "user_impact": "This limits your ability to combine resources with other users who may have similar complaints, which can make it harder and more expensive to pursue legal action.",
+          "questions_to_ask": [
+            "What happens if many users have the same issue with Netflix?",
+            "Are there any exceptions to the class action waiver?",
+            "Does this apply to disputes that arise after I stop using Netflix?"
+          ]
+        },
+        {
+          "term": "Small Claims Court Exception",
+          "explanation": "The terms state that disputes that qualify for small claims court can still be taken to that court instead of arbitration. Small claims court is a simpler, less formal court process for resolving smaller disputes, usually involving limited amounts of money.",
+          "user_impact": "This provides a narrow exception where you can still take Netflix to court, but only for disputes that meet the specific criteria for small claims court in your jurisdiction.",
+          "questions_to_ask": [
+            "What is the monetary limit for disputes in small claims court?",
+            "What types of disputes qualify for small claims court?",
+            "Can Netflix still require arbitration for disputes that qualify for small claims court?"
+          ]
+        }
+      ],
+      "practical_meaning": "In practice, this clause means that if you have a dispute with Netflix, you cannot sue them in court or join a class action lawsuit with other users. Instead, you must resolve the issue through arbitration, which is a private process that often favors companies over individuals. The only exception is if your dispute qualifies for small claims court, which has strict limits on the types and amounts of claims it can handle.",
+      "user_action_needed": "Users should carefully consider whether they are comfortable giving up their right to sue Netflix in court or join a class action lawsuit. If not, they may want to reconsider agreeing to these terms. Users should also familiarize themselves with the arbitration process and the small claims court rules in their jurisdiction.",
+      "severity_justification": "This was flagged as high severity because it significantly limits users' legal rights and options for resolving disputes. Arbitration often favors companies, and the class action waiver prevents users from pooling resources to address widespread issues, which can make it harder for individuals to hold Netflix accountable for potential wrongdoing.",
+      "extended_context": "... of our service. As used in these Terms of Use, \"Netflix service\", \"our service\" or \"the service\" means the personalized service provided by Netflix for discovering and accessing Netflix content, including all features and functionalities, recommendations and reviews, our websites, and user interfaces, as well as all content and software associated with our service. References to ‘you’ in these Terms of Use indicate the member who created the Netflix account and whose payment method is charged. YOU AGREE TO THE ARBITRATION AGREEMENT AND CLASS ACTION WAIVER DESCRIBED IN SECTION 7 TO RESOLVE ANY DISPUTES WITH NETFLIX (EXCEPT FOR MATTERS THAT MAY BE TAKEN TO SMALL CLAIMS COURT). Membership1.1. Your Netflix membership will continue and automatically renew until terminated. To use the Netflix service you must have Internet access and a Netflix ready device and provide us with one or more Payment Methods. \"Payment Method\" means a current, valid, accepted method of payment, as may be updated from time to time and which may include payment through your account with a third party. You must cancel your membership before it renews in order to avoid billing of the subscription ...",
+      "online_research": {
+        "search_query": "\"netflix\" Arbitration Agreement Class Action Waiver Small Claims Court Exception terms conditions privacy policy explanation",
+        "top_result_url": "http://www.metnews.com/articles/recent-news.htm",
+        "top_result_title": "Links to Metropolitan News-Enterprise news stories earlier in the year",
+        "summary": "C.A. Won't Sever Provisions in Problem Arbitration Agreement (February 26, 2025). Plaintiffs' Antitrust Claims Against Qualcomm Largely Fail (February 26"
+      }
+    }
+  }
+}

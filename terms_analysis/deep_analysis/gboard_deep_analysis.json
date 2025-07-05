@@ -1,0 +1,59 @@
+{
+  "app_name": "gboard",
+  "total_high_severity_concerns": 1,
+  "analysis_timestamp": "2025-07-05",
+  "concerns_analyzed": [
+    {
+      "original_concern": {
+        "clause": "Data sharing with contractors and third parties",
+        "severity": "high",
+        "explanation": "Google may sublicense user content to contractors and other users under certain conditions. Although limited to service functionality, this could lead to data being shared more broadly than users anticipate.",
+        "quote": "Sublicense these rights to: other users to allow the services to work as designed, such as enabling you to share photos with people you choose; our contractors who’ve signed agreements with us that are consistent with these terms."
+      },
+      "extended_context": "Could not locate quote in document: Sublicense these rights to: other users to allow the services to work as designed, such as enabling ...",
+      "clarity_analysis": {
+        "unclear_terms": [
+          {
+            "term": "Sublicense these rights",
+            "explanation": "This means Google can grant permission to others (like contractors or other users) to use your content in specific ways, as long as it aligns with the intended functionality of the service.",
+            "user_impact": "Your data or content (e.g., text, photos, or other inputs) could be shared with third parties or other users to make the app work as intended. For example, if you share a photo or use predictive text, that data might be processed or accessed by contractors working for Google.",
+            "questions_to_ask": [
+              "What specific data is being sublicensed to contractors or other users?",
+              "How are contractors vetted, and what safeguards are in place to ensure they protect my data?",
+              "Can I opt out of this sublicensing or data sharing?",
+              "What happens to my data if I stop using the service?"
+            ]
+          },
+          {
+            "term": "Contractors who’ve signed agreements with us",
+            "explanation": "This refers to third-party companies or individuals hired by Google to perform certain tasks (e.g., data processing, app functionality support). These contractors are required to follow Google’s terms and policies.",
+            "user_impact": "Your data could be accessed by external parties (contractors) who are not directly part of Google. While they are bound by agreements, there is still a risk of misuse or breaches.",
+            "questions_to_ask": [
+              "What specific agreements do contractors sign, and how are they enforced?",
+              "What happens if a contractor violates these agreements?",
+              "How long do contractors retain access to my data?"
+            ]
+          },
+          {
+            "term": "Allow the services to work as designed",
+            "explanation": "This means data sharing is justified as necessary for the app to function properly, such as enabling features like predictive text, autocorrect, or sharing content with others.",
+            "user_impact": "Google may share or process your data in ways you might not expect, under the justification that it is required for the app to function. This could include sharing data with other users or contractors.",
+            "questions_to_ask": [
+              "What specific features require my data to be shared?",
+              "Are there alternative ways to use the app without sharing data?",
+              "How is my data anonymized or protected during this process?"
+            ]
+          }
+        ],
+        "practical_meaning": "In practice, this clause means that Google can share your data with third-party contractors or other users to enable Gboard’s features to work as intended. For example, contractors might process your text inputs to improve predictive text algorithms, or data might be shared with other users when you send content through the app. While Google claims these parties are bound by agreements, there is still a risk of data being shared more broadly than users might expect.",
+        "user_action_needed": "Users should review Google’s privacy policy to understand what data is being shared and why. If you are uncomfortable with this level of data sharing, consider limiting your use of features that require data sharing or switching to a keyboard app with stricter privacy controls. Additionally, users should inquire about opt-out options or data anonymization practices.",
+        "severity_justification": "This was flagged as high severity because it involves the potential sharing of sensitive user data (e.g., text inputs, photos) with third parties and contractors. Even though agreements are in place, there is a risk of misuse, data breaches, or broader sharing than users anticipate. The lack of transparency around what data is shared and how it is protected heightens the concern."
+      },
+      "online_research": {
+        "search_query": "\"gboard\" Sublicense these rights Contractors who’ve signed agreements with us Allow the services to work as designed terms conditions privacy policy explanation",
+        "no_results": true,
+        "message": "No additional context found online"
+      }
+    }
+  ]
+}

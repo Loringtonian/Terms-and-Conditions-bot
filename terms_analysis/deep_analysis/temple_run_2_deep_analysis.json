@@ -1,0 +1,58 @@
+{
+  "app_name": "Temple Run 2",
+  "total_high_severity_concerns": 1,
+  "analysis_timestamp": "2025-07-05",
+  "concerns_analyzed": [
+    {
+      "original_concern": {
+        "clause": "Broad data collection for advertising purposes",
+        "severity": "high",
+        "explanation": "The terms indicate that user data, including device identifiers and potentially location data, may be collected and shared with third-party advertisers. This raises significant privacy concerns, especially if the data collection is not strictly necessary for the app's functionality.",
+        "quote": "We may collect information about your device, including unique device identifiers, and share it with third-party advertisers to provide personalized ads."
+      },
+      "extended_context": "Could not locate quote in document: We may collect information about your device, including unique device identifiers, and share it with...",
+      "clarity_analysis": {
+        "unclear_terms": [
+          {
+            "term": "unique device identifiers",
+            "explanation": "This refers to a unique code or number assigned to your device, such as an advertising ID or IMEI number, which can be used to track your activity across apps and websites.",
+            "user_impact": "This means your device can be tracked over time, even if you don’t provide personal information like your name. Advertisers can build a profile of your behavior and preferences based on this data.",
+            "questions_to_ask": [
+              "What specific device identifiers are being collected?",
+              "Can I opt out of this data collection or tracking?",
+              "How long is this data stored, and who has access to it?"
+            ]
+          },
+          {
+            "term": "personalized ads",
+            "explanation": "These are advertisements tailored to your interests based on the data collected about your behavior, preferences, and location.",
+            "user_impact": "Your activity and data are being analyzed to show you ads that are more likely to catch your attention. This could feel invasive if you’re unaware of the extent of data being collected.",
+            "questions_to_ask": [
+              "What data is used to personalize ads?",
+              "Can I disable personalized ads?",
+              "Are there any safeguards to prevent misuse of this data?"
+            ]
+          },
+          {
+            "term": "third-party advertisers",
+            "explanation": "These are external companies or organizations that Temple Run 2 shares your data with to deliver ads.",
+            "user_impact": "Your data is not just used by the app but is also shared with other companies, which increases the risk of misuse or unauthorized access.",
+            "questions_to_ask": [
+              "Who are these third-party advertisers?",
+              "What are their privacy policies?",
+              "Is my data anonymized before being shared?"
+            ]
+          }
+        ],
+        "practical_meaning": "In practice, this clause means that Temple Run 2 collects data from your device, such as unique identifiers and possibly your location, and shares it with advertisers to show you ads tailored to your interests. This data sharing could happen even if you’re not actively using the app, and it may be difficult to control or stop.",
+        "user_action_needed": "Users should review the app’s privacy settings to see if there are options to limit data collection or opt out of personalized ads. Additionally, users can adjust their device settings (e.g., reset advertising IDs or disable location tracking) to reduce the amount of data being shared.",
+        "severity_justification": "This was flagged as high severity because it involves the collection and sharing of potentially sensitive data (e.g., location and unique identifiers) with third parties. This poses significant privacy risks, especially if users are not fully informed or given meaningful control over their data. The lack of transparency about which third parties receive the data and how it is used further exacerbates the concern."
+      },
+      "online_research": {
+        "search_query": "\"Temple Run 2\" unique device identifiers personalized ads third-party advertisers terms conditions privacy policy explanation",
+        "no_results": true,
+        "message": "No additional context found online"
+      }
+    }
+  ]
+}

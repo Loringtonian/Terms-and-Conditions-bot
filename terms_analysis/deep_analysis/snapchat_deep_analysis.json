@@ -1,0 +1,63 @@
+{
+  "app_name": "Snapchat",
+  "total_high_severity_concerns": 1,
+  "analysis_timestamp": "2025-07-05",
+  "concerns_analyzed": [
+    {
+      "original_concern": {
+        "clause": "Data sharing with third parties",
+        "severity": "high",
+        "explanation": "Snapchat's policy mentions sharing user data with third parties, including advertisers, which could lead to invasive targeted advertising and potential misuse of user information.",
+        "quote": "We process your information to provide you a more personalized experience, including to show you content and information that is most relevant to your experience, as well as more relevant advertisements."
+      },
+      "extended_context": "... notices that provide you more information about our products and services. And if you’re a Spectacles user you can learn more on how we collect and use your data in the [Spectacles Supplemental Privacy Policy](https://values.snap.com/privacy/privacy-policy/spectacles-supplemental-privacy-policy).\n\nTransparency is one of our core values at Snap. We believe there shouldn’t be any surprises about the data we collect and how we use it — that’s why we’re upfront with how we process it. For example, we process your information to provide you a more personalized experience, including to show you content and information that is most relevant to your experience, as well as more relevant advertisements. Understanding your interests and preferences help us provide a better product experience.\n\nFurthermore, we believe a personalized experience should not come at the expense of your privacy. Just like in real life, there are some moments you want to share privately with your close friends, and others that you want to share publicly. That’s why from day one our philosophy has been to delete content by default and to give Snapchatters control by providing the tools that allow them to decide what ha...",
+      "clarity_analysis": {
+        "unclear_terms": [
+          {
+            "term": "Data sharing with third parties",
+            "explanation": "This means Snapchat may share your personal information, such as your activity on the app, preferences, and interests, with external companies or organizations. These third parties can include advertisers, analytics companies, or other business partners.",
+            "user_impact": "Your data could be used by advertisers to target you with specific ads based on your behavior and preferences. This could lead to invasive advertising practices and, in some cases, your data being shared or sold to other companies without you fully understanding how it will be used.",
+            "questions_to_ask": [
+              "What specific types of data are being shared with third parties?",
+              "Who are these third parties, and what will they do with my data?",
+              "Can I opt out of data sharing with third parties?",
+              "How long will my data be stored by these third parties?",
+              "What safeguards are in place to prevent misuse of my data?"
+            ]
+          },
+          {
+            "term": "Personalized experience",
+            "explanation": "This refers to Snapchat using your data to tailor the content you see, such as showing you ads or posts that align with your interests and preferences.",
+            "user_impact": "While this might improve your experience on the app, it also means Snapchat is closely monitoring your behavior, such as what you view, click on, or interact with. This could feel invasive and raises concerns about how much the company knows about you.",
+            "questions_to_ask": [
+              "What data is being used to create a 'personalized experience'?",
+              "Can I use Snapchat without agreeing to personalized ads or content?",
+              "How does Snapchat ensure my data is not used inappropriately?"
+            ]
+          },
+          {
+            "term": "Relevant advertisements",
+            "explanation": "This means Snapchat uses your data to show you ads that are more likely to interest you based on your activity and preferences.",
+            "user_impact": "Your data is being analyzed and shared with advertisers to target you with ads. This could lead to feeling like your privacy is being compromised, as advertisers may know a lot about your habits and interests.",
+            "questions_to_ask": [
+              "What data is being shared with advertisers?",
+              "Can I opt out of targeted advertising?",
+              "How does Snapchat ensure advertisers do not misuse my data?"
+            ]
+          }
+        ],
+        "practical_meaning": "In practice, Snapchat collects and analyzes your data to create a personalized experience, which includes showing you targeted ads. This data may also be shared with third-party advertisers or partners, who could use it for their own purposes, such as creating marketing campaigns or selling it to other entities. While Snapchat claims to prioritize transparency and privacy, the sharing of data with third parties introduces risks of misuse or unauthorized access.",
+        "user_action_needed": "Users should review Snapchat's privacy settings to see if they can limit data sharing or opt out of targeted advertising. They should also read the Spectacles Supplemental Privacy Policy if they use Spectacles to understand additional data practices. Users may want to consider whether they are comfortable with the level of data sharing described and, if not, explore alternative platforms with stricter privacy policies.",
+        "severity_justification": "This concern is flagged as high severity because data sharing with third parties can lead to significant privacy risks, including invasive targeted advertising, potential misuse of personal information, and loss of control over how your data is used. Once data is shared with third parties, it becomes harder to track or control, increasing the likelihood of breaches or unauthorized use."
+      },
+      "online_research": {
+        "search_query": "\"Snapchat\" Data sharing with third parties Personalized experience Relevant advertisements terms conditions privacy policy explanation",
+        "top_result_url": "https://hallboothsmith.com/attorney/brian-j-manikowski/?print-posts=word",
+        "top_result_title": "Hall Booth Smith, PC",
+        "summary": "As we roll into 2025, the parade of new state data privacy laws continues. The states with data privacy laws going into effect in 2025 are Delaware, Iowa",
+        "detailed_content_available": false,
+        "additional_context": null
+      }
+    }
+  ]
+}

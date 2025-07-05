@@ -1,0 +1,62 @@
+{
+  "app_name": "YouTube",
+  "total_high_severity_concerns": 1,
+  "analysis_timestamp": "2025-07-05",
+  "concerns_analyzed": [
+    {
+      "original_concern": {
+        "clause": "Third-party data sharing",
+        "severity": "high",
+        "explanation": "YouTube's terms allow sharing data with affiliates within Alphabet Inc. and potentially with third parties for advertising and analytics purposes. This broad sharing may not align with user expectations for privacy.",
+        "quote": "References to YouTube’s 'Affiliates' in these terms means the other companies within the Alphabet Inc. corporate group (now or in the future)."
+      },
+      "extended_context": "Could not locate quote in document: References to YouTube’s 'Affiliates' in these terms means the other companies within the Alphabet In...",
+      "clarity_analysis": {
+        "unclear_terms": [
+          {
+            "term": "Third-party data sharing",
+            "explanation": "This refers to YouTube sharing your personal data (e.g., viewing habits, preferences, and potentially other identifiable information) with companies outside of YouTube, including other companies owned by Alphabet Inc. (Google's parent company) or external advertisers and analytics providers.",
+            "user_impact": "Your data could be used by other companies for purposes like targeted advertising, profiling, or analytics, which may not align with your privacy expectations. This could result in receiving ads based on your activity on YouTube or other Alphabet services, and your data might be stored or processed in ways you are unaware of.",
+            "questions_to_ask": [
+              "What specific data is being shared with third parties or affiliates?",
+              "Can I opt out of this data sharing, and if so, how?",
+              "What safeguards are in place to ensure my data is not misused by third parties?",
+              "Are there limits on how long third parties can retain my data?"
+            ]
+          },
+          {
+            "term": "Affiliates within Alphabet Inc.",
+            "explanation": "This refers to other companies owned by Alphabet Inc., such as Google, Google Ads, or other future companies Alphabet may acquire. These companies may have access to your data under YouTube's terms.",
+            "user_impact": "Your data may be shared across a wide network of companies under Alphabet, which could lead to broader use of your personal information beyond YouTube, potentially including services you don’t use or are unaware of.",
+            "questions_to_ask": [
+              "Which specific Alphabet companies have access to my data?",
+              "How is my data used across these companies?",
+              "Does this sharing extend to future companies Alphabet acquires?"
+            ]
+          },
+          {
+            "term": "Advertising and analytics purposes",
+            "explanation": "This means your data may be used to show you targeted ads or to analyze user behavior to improve services or advertising strategies.",
+            "user_impact": "Your personal data could be used to create a profile about you, which advertisers or other third parties might use to target you with specific ads. This could feel invasive if you are not aware of or comfortable with how your data is being used.",
+            "questions_to_ask": [
+              "What kind of advertising data is collected and shared?",
+              "Can I control or limit how my data is used for advertising?",
+              "Are there any guarantees that my data won’t be sold to other companies?"
+            ]
+          }
+        ],
+        "practical_meaning": "In practice, YouTube's terms allow your personal data to be shared with a wide range of companies, both within Alphabet Inc. and with external third parties. This means your data might be used for targeted advertising, analytics, or other purposes that extend beyond YouTube itself. This could result in your data being used in ways you didn’t explicitly agree to or expect, such as receiving ads based on your YouTube activity or having your data analyzed by companies you’ve never interacted with.",
+        "user_action_needed": "Users should review YouTube’s privacy settings to see if they can limit data sharing or opt out of personalized ads. They should also read YouTube’s privacy policy to understand what data is collected and shared. If privacy is a major concern, users might consider using YouTube while logged out or through privacy-focused tools like ad blockers or VPNs.",
+        "severity_justification": "This issue is flagged as high severity because it involves the potential for widespread sharing of personal data without clear user consent or understanding. The broad scope of data sharing, including with future Alphabet companies or unknown third parties, poses significant privacy risks. Users may not fully grasp the extent of this sharing or have sufficient control over their data, which could lead to misuse or exploitation of their personal information."
+      },
+      "online_research": {
+        "search_query": "\"YouTube\" Third-party data sharing Affiliates within Alphabet Inc. Advertising and analytics purposes terms conditions privacy policy explanation",
+        "top_result_url": "https://www.wisdomtree.com/investments/blog/2025/05/21/this-is-what-ai-commitment-looks-like-392-billion-and-rising",
+        "top_result_title": "This Is What AI Commitment Looks Like: $392 Billion and Rising",
+        "summary": "Alphabet maintained its $75 billion capex guidance for 2025, more than doubling its historic run rate.3 Amazon, meanwhile, reported capex that",
+        "detailed_content_available": false,
+        "additional_context": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "app_name": "Candy Crush Saga",
+  "app_version": null,
+  "overall_score": 5.0,
+  "privacy_concerns": [
+    {
+      "clause": "Broad data collection for competition participation",
+      "severity": "medium",
+      "explanation": "The terms for the competition lack clarity on the extent of data collected from participants and how it will be used beyond the competition. This could lead to potential misuse or over-collection of personal data.",
+      "quote": "To redeem the In-Game Reward, participants shall follow the following steps: [Details missing]."
+    },
+    {
+      "clause": "Third-party data sharing",
+      "severity": "medium",
+      "explanation": "The terms do not explicitly state whether or not participant data will be shared with third parties, such as Nestle or other partners, which raises concerns about privacy and transparency.",
+      "quote": "No explicit mention of third-party data sharing policies."
+    },
+    {
+      "clause": "Unclear account deletion or data removal process",
+      "severity": "high",
+      "explanation": "The terms do not provide any information on how users can delete their accounts or request the removal of their data, which is a significant omission from a privacy perspective.",
+      "quote": "No mention of account deletion or data removal processes."
+    }
+  ],
+  "summary": "The terms and conditions for Candy Crush Saga's competition are moderately user-friendly but lack clarity and transparency in key areas, such as data collection, third-party sharing, and account deletion. These omissions could lead to privacy concerns for Canadian users.",
+  "red_flags": [
+    "Unclear data collection practices",
+    "No explicit third-party data sharing policies",
+    "No account deletion or data removal process"
+  ],
+  "user_friendliness_score": 5.0,
+  "data_collection_score": 6.0,
+  "legal_complexity_score": 4.0,
+  "terms_version": null,
+  "terms_url": "https://www.kitkat.com/candy-crush/terms-conditions",
+  "analysis_date": "2025-07-05",
+  "deep_analysis": {
+    "2": {
+      "unclear_terms": [
+        {
+          "term": "Account deletion or data removal process",
+          "explanation": "This refers to the steps or methods users can take to permanently delete their account or request the removal of their personal data from the company's systems.",
+          "user_impact": "Without clear instructions on how to delete your account or remove your data, users may not be able to exercise their rights to privacy or control over their personal information. This could mean your data remains stored indefinitely, even if you stop using the app.",
+          "questions_to_ask": [
+            "How can I delete my account permanently?",
+            "What happens to my personal data after I delete my account?",
+            "Does the company retain any of my data after account deletion, and if so, for how long?",
+            "Is there a specific contact or form to request data removal?"
+          ]
+        }
+      ],
+      "practical_meaning": "In practice, this means that Candy Crush Saga's terms do not provide users with a clear way to delete their accounts or request the removal of their personal data. This omission could prevent users from exercising their rights under privacy laws, such as the GDPR (General Data Protection Regulation) or CCPA (California Consumer Privacy Act), which often require companies to provide these options.",
+      "user_action_needed": "Users should reach out to the company directly to ask for clarification on how to delete their accounts or request data removal. If no clear process is provided, users may need to escalate their concerns to a data protection authority or consumer protection agency, especially if they are in a jurisdiction with strong privacy laws.",
+      "severity_justification": "This issue is flagged as high severity because it directly impacts users' ability to control their personal data, which is a fundamental privacy right. Without a clear process for account deletion or data removal, users are left vulnerable to potential misuse or indefinite retention of their personal information. This lack of transparency is particularly concerning in a digital app that likely collects significant amounts of user data.",
+      "extended_context": "Could not locate quote in document: No mention of account deletion or data removal processes....",
+      "online_research": {
+        "search_query": "\"Candy Crush Saga\" Account deletion or data removal process terms conditions privacy policy explanation",
+        "top_result_url": "http://www.jiankangyumeirong.com/bdt/2435.aspx",
+        "top_result_title": "孙耀琦：多样夏季教你最Chic搭配！ - 健康与美容",
+        "summary": "We've got a joint account zovirax sirop STOCKHOLM - With 100 million people logging on every day for a fix of its games like Candy Crush Saga"
+      }
+    }
+  }
+}

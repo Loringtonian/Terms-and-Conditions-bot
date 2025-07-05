@@ -1,0 +1,98 @@
+{
+  "app_name": "Picsart",
+  "app_version": null,
+  "overall_score": 6.5,
+  "privacy_concerns": [
+    {
+      "clause": "Grant of Rights to Your Content",
+      "severity": "high",
+      "explanation": "Picsart requires users to grant a perpetual, worldwide, sublicensable, and transferable license to their content, which includes the right to use, reproduce, and distribute it for any purpose connected to the service. While users can delete their content to end the license, the broad scope of rights granted raises concerns about user control over their intellectual property.",
+      "quote": "You grant Picsart a worldwide, non-exclusive, royalty-free, sublicensable and transferable license to use your Content—including to host, reproduce, distribute, create derivative works, display, and perform it—for any purpose in connection with the Service and our business."
+    },
+    {
+      "clause": "Arbitration Clause and Class Action Waiver",
+      "severity": "medium",
+      "explanation": "The terms include a binding arbitration clause and a class action waiver, which limit users' ability to resolve disputes through court or collective legal action. While there is an opt-out option, this mechanism may not be clear or accessible to all users.",
+      "quote": "THESE TERMS CONTAIN AN ARBITRATION CLAUSE AND CLASS ACTION WAIVER THAT IMPACT YOUR RIGHTS ABOUT HOW TO RESOLVE DISPUTES."
+    },
+    {
+      "clause": "Privacy Policy Reference",
+      "severity": "medium",
+      "explanation": "The terms defer to a separate Privacy Policy for details on data collection and usage, which may not be immediately transparent to users. This could obscure the extent of data collection and sharing practices.",
+      "quote": "Our Privacy Policy describes how we collect, use, share, or otherwise process information about you and your use of the Service."
+    },
+    {
+      "clause": "Advertising and Promotions",
+      "severity": "low",
+      "explanation": "The service includes advertisements and allows third-party tracking and promotions, which may raise concerns about user privacy and data sharing with advertisers.",
+      "quote": "The Service may include advertisements, and those advertisements may link to independent third-party websites."
+    }
+  ],
+  "summary": "Picsart's terms are moderately user-friendly but raise significant concerns about content ownership and data privacy. Users must grant broad rights to their content and navigate an arbitration clause that limits legal recourse. The terms defer key privacy details to a separate policy, which may obscure transparency.",
+  "red_flags": [
+    "Broad content licensing rights granted to Picsart",
+    "Binding arbitration clause and class action waiver",
+    "Potentially unclear data collection and sharing practices",
+    "Advertising and third-party tracking concerns"
+  ],
+  "user_friendliness_score": 6.0,
+  "data_collection_score": 5.0,
+  "legal_complexity_score": 6.5,
+  "terms_version": "June 30, 2023",
+  "terms_url": "https://picsart.com/terms-of-use",
+  "analysis_date": "2025-07-05",
+  "deep_analysis": {
+    "0": {
+      "unclear_terms": [
+        {
+          "term": "perpetual, worldwide, sublicensable, and transferable license",
+          "explanation": "This means that once you upload content to Picsart, you are giving them permission to use your content forever (perpetual), anywhere in the world (worldwide), and they can allow others (third parties) to use it too (sublicensable and transferable).",
+          "user_impact": "You lose significant control over how your content is used. Even if you delete your content, Picsart may still retain the rights to use it in certain ways.",
+          "questions_to_ask": [
+            "What happens to my content if I delete my Picsart account?",
+            "Can Picsart sell or license my content to third parties without my explicit consent?",
+            "What protections are in place to ensure my content isn’t misused?"
+          ]
+        },
+        {
+          "term": "use, reproduce, distribute, create derivative works, display, and perform",
+          "explanation": "Picsart can use your content in various ways, including copying it, sharing it, modifying it to create new works, showing it publicly, or using it in marketing materials.",
+          "user_impact": "Your content could be altered or used in ways you didn’t intend, such as in advertising or promotional campaigns, without additional approval or compensation.",
+          "questions_to_ask": [
+            "Can Picsart use my content in advertisements or for commercial purposes?",
+            "Will I be notified if my content is used in a way I didn’t expect?",
+            "Can I opt out of certain uses of my content?"
+          ]
+        },
+        {
+          "term": "for any purpose in connection with the Service and our business",
+          "explanation": "Picsart can use your content for anything related to their platform or business operations, which could include marketing, partnerships, or other commercial activities.",
+          "user_impact": "Your content might be used in ways that benefit Picsart’s business, even if it doesn’t directly benefit you as the creator.",
+          "questions_to_ask": [
+            "What specific business purposes does Picsart have in mind for my content?",
+            "Can I limit how my content is used for Picsart’s business purposes?"
+          ]
+        },
+        {
+          "term": "subject to any privacy settings set by you",
+          "explanation": "Picsart claims they will respect your privacy settings when using your content, but it’s unclear how strictly this is enforced or what happens if privacy settings are changed.",
+          "user_impact": "If your privacy settings are not properly enforced, your content could be shared more broadly than you intended.",
+          "questions_to_ask": [
+            "How does Picsart ensure my privacy settings are respected?",
+            "What happens if there’s a technical error or breach that overrides my privacy settings?"
+          ]
+        }
+      ],
+      "practical_meaning": "By uploading content to Picsart, you are giving them very broad rights to use your content in almost any way they see fit, including sharing it with others, modifying it, or using it for their business purposes. While they claim not to own your content, the license you grant them effectively allows them to treat it as if they do, within the scope of their business and service operations.",
+      "user_action_needed": "Users should carefully consider whether they are comfortable with Picsart having such broad rights to their content. If you are uploading sensitive, valuable, or personal content, you may want to reconsider or ensure your privacy settings are appropriately configured. Additionally, users should monitor how their content is being used and contact Picsart if they notice any misuse.",
+      "severity_justification": "This was flagged as high severity because it significantly impacts user control over their intellectual property. The perpetual and sublicensable nature of the license means users may lose control over how their content is used indefinitely, even after they delete it. This could lead to unexpected or undesired uses of their content, including commercial exploitation without compensation.",
+      "extended_context": "...we are not responsible for such Content.\n\nWe reserve the right to remove Content that violates these terms or our[Community Guidelines](https://picsart.com/community-guidelines), including copyright, trademark, or other intellectual property violations, sexually explicit Content, or Content that we determine is otherwise inappropriate in our sole discretion.\n\nGrant of Rights to Your Content\n\nExcept to the extent it contains Picsart Content, we do not claim any ownership rights in your Content.\n\nYou grant Picsart a worldwide, non-exclusive, royalty-free, sublicensable and transferable license to use your Content—including to host, reproduce, distribute, create derivative works, display, and perform it (subject to any privacy settings set by you)—for any purpose in connection with the Service and our business, including for the purpose of promoting and redistributing part or all of the Service. This license is perpetual and authorizes us to make your Content available to other users on the Service when you have shared your Content.\n\nPicsart’s mission is to empower visual storytellers. We further this mission by encouraging our creators to share and build on each other’s ideas and creations. We sometimes refer to this as “Remixing” another person’s work. Th...",
+      "online_research": {
+        "search_query": "\"Picsart\" perpetual, worldwide, sublicensable, and transferable license use, reproduce, distribute, create derivative works, display, and perform for any purpose in connection with the Service and our business terms conditions privacy policy explanation",
+        "top_result_url": null,
+        "top_result_title": null,
+        "summary": null
+      }
+    }
+  }
+}

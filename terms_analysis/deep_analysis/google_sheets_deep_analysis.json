@@ -1,0 +1,62 @@
+{
+  "app_name": "Google Sheets",
+  "total_high_severity_concerns": 1,
+  "analysis_timestamp": "2025-07-05",
+  "concerns_analyzed": [
+    {
+      "original_concern": {
+        "clause": "Third-party integrations and data sharing",
+        "severity": "high",
+        "explanation": "Google Sheets integrates with other Google services and potentially third-party applications, which may result in data sharing. Users may not have full control or visibility over how their data is used or shared in these contexts.",
+        "quote": "We may share non-personally identifiable information publicly and with our partners — like publishers, advertisers, developers, or rights holders."
+      },
+      "extended_context": "Could not locate quote in document: We may share non-personally identifiable information publicly and with our partners — like publisher...",
+      "clarity_analysis": {
+        "unclear_terms": [
+          {
+            "term": "non-personally identifiable information",
+            "explanation": "This refers to data that cannot directly identify you as an individual, such as aggregated statistics, usage patterns, or anonymized data. However, in some cases, this data can still be combined with other information to infer details about you.",
+            "user_impact": "Even though this data is not directly tied to your identity, it can still be used to profile your behavior, preferences, or activities, especially when combined with other datasets.",
+            "questions_to_ask": [
+              "What specific types of non-personally identifiable information are being shared?",
+              "Can this data be re-identified or linked back to me in any way?",
+              "How is this data being used by third parties, such as advertisers or developers?",
+              "Can I opt out of this data sharing, and if so, how?"
+            ]
+          },
+          {
+            "term": "partners — like publishers, advertisers, developers, or rights holders",
+            "explanation": "This refers to third-party entities that Google collaborates with, such as companies that display ads, create apps or tools that integrate with Google Sheets, or own intellectual property rights.",
+            "user_impact": "Your data may be shared with a wide range of external organizations, and you may not have visibility into who these partners are or how they use your data.",
+            "questions_to_ask": [
+              "Who are these 'partners,' and is there a list of them available?",
+              "What safeguards are in place to ensure these partners handle my data responsibly?",
+              "What happens if one of these partners misuses my data?"
+            ]
+          },
+          {
+            "term": "data sharing",
+            "explanation": "This refers to the practice of transferring or granting access to your data to other entities, either within Google’s ecosystem or to external third parties.",
+            "user_impact": "Your data could be used for purposes beyond what you originally intended, such as targeted advertising, analytics, or other commercial uses. You may not have control over how your data is handled once shared.",
+            "questions_to_ask": [
+              "What specific data is being shared, and for what purposes?",
+              "Is there a way to limit or control what data is shared?",
+              "How can I review or delete data that has already been shared?"
+            ]
+          }
+        ],
+        "practical_meaning": "In practice, this clause means that Google Sheets may share data about how you use the service (even if it’s anonymized) with other Google services and external third parties, such as advertisers or app developers. This could result in your data being used for targeted advertising, analytics, or other purposes that you may not be fully aware of or have control over.",
+        "user_action_needed": "Users should review their privacy settings in Google Sheets and related Google services to see if data sharing can be limited. They should also consider whether they are comfortable with the potential for their data to be shared with third parties and used for purposes like advertising. If not, they may want to explore alternative tools or services with stricter privacy controls.",
+        "severity_justification": "This was flagged as high severity because users may not fully understand the extent of data sharing or the potential implications. The lack of transparency about who the 'partners' are and how the data is used creates a significant risk of misuse or unintended consequences, such as profiling or targeted advertising without explicit consent. Additionally, users may not have sufficient control to opt out of this data sharing, which undermines their privacy rights."
+      },
+      "online_research": {
+        "search_query": "\"Google Sheets\" non-personally identifiable information partners — like publishers, advertisers, developers, or rights holders data sharing terms conditions privacy policy explanation",
+        "top_result_url": "https://www.cbinsights.com/investor/peter-thiel",
+        "top_result_title": "Peter Thiel Portfolio Investments, Peter Thiel Funds, Peter Thiel Exits",
+        "summary": "Google Sheets · Microsoft Teams · Slack · Google Slides · App Partners ... CB Insights Website Terms of Use · Privacy Policy · Do Not Sell My Info",
+        "detailed_content_available": true,
+        "additional_context": "![CB Insights](https://public-pages.cbinsights.com/public-site/555491/_next/static/public/images/CBI_Logo_White.svg?w=3840&q=75)\n![Featured Item](https://public-pages.cbinsights.com/public-site/555491/_next/static/public/images/VC_Persona_Videos.png?w=640&q=75)\n\n### How VCs Use CB Insights\n\n[Go to the video gallery  →](https://www.cbinsights.com/how-vcs-use-cb-insights/)\n\n![Featured Item](https://public-pages.cbinsights.com/public-site/555491/_next/static/public/images/professionalservices.png?w=640&q=75)\n\n### Professional Services\n\n[Learn More →](https://www.cbinsights.com/who-we-serve/industries/professional-services/)\n\n![Featured Item](https://public-pages.cbinsights.com/public-site/555491/_next/static/public/images/Feeds_General.svg?w=640&q=75)\n\n### Platform Overview\n\n[Learn More →](https://www.cbinsights.com/what-we-offer/platform/)\n\nLoading...\n\n## Predict your next investment\n\n# Peter Thiel\n\n## Are you an investor?\n\n## Investments\n\n## Portfolio Exits\n\n## About Peter Thiel\n\nPeter "
+      }
+    }
+  ]
+}

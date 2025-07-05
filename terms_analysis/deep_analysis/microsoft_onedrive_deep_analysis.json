@@ -1,0 +1,39 @@
+{
+  "app_name": "Microsoft Onedrive",
+  "total_high_severity_concerns": 1,
+  "analysis_timestamp": "2025-07-05",
+  "concerns_analyzed": [
+    {
+      "original_concern": {
+        "clause": "Changes to terms without direct user notification",
+        "severity": "high",
+        "explanation": "Microsoft's terms allow for changes to be made without direct notification to users, requiring users to frequently check the terms to stay informed.",
+        "quote": "We may update these terms from time to time without prior notice."
+      },
+      "extended_context": "Could not locate quote in document: We may update these terms from time to time without prior notice....",
+      "clarity_analysis": {
+        "unclear_terms": [
+          {
+            "term": "We may update these terms from time to time without prior notice.",
+            "explanation": "This means Microsoft can change the rules or conditions of using OneDrive at any time without telling you directly (e.g., via email or notification). Instead, they expect you to periodically check the terms yourself to stay updated.",
+            "user_impact": "Users might unknowingly agree to new terms that could significantly affect their privacy, data usage, or rights. For example, Microsoft could introduce new policies about how your data is shared or stored, and you might not realize it unless you manually check the terms.",
+            "questions_to_ask": [
+              "How often should I check the terms to stay informed?",
+              "What kind of changes could Microsoft make without notifying me?",
+              "Is there a way to receive alerts or updates about changes to the terms?",
+              "What happens if I disagree with the updated terms?"
+            ]
+          }
+        ],
+        "practical_meaning": "In practice, this clause means that Microsoft can change the rules for using OneDrive at any time, and it is your responsibility to keep up with those changes. If you don't regularly check the terms, you might miss updates that could affect your rights or how your data is handled.",
+        "user_action_needed": "Users should periodically review Microsoft's terms of service to stay informed about any changes. Alternatively, users could contact Microsoft to ask if there is a way to receive notifications about updates. If you notice a change you disagree with, you may need to stop using the service or contact Microsoft for clarification.",
+        "severity_justification": "This is flagged as high severity because it places an unreasonable burden on users to monitor changes that could significantly impact their privacy or rights. Without direct notification, users are at risk of unknowingly agreeing to terms that may not align with their expectations or preferences. This lack of transparency undermines informed consent."
+      },
+      "online_research": {
+        "search_query": "\"Microsoft Onedrive\" We may update these terms from time to time without prior notice. terms conditions privacy policy explanation",
+        "no_results": true,
+        "message": "No additional context found online"
+      }
+    }
+  ]
+}

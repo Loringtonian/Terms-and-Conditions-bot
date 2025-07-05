@@ -1,0 +1,126 @@
+{
+  "app_name": "Coin Master",
+  "app_version": null,
+  "overall_score": 4.5,
+  "privacy_concerns": [
+    {
+      "clause": "Broad data collection practices",
+      "severity": "high",
+      "explanation": "The terms suggest that Moon Active collects a wide range of user data, potentially beyond what is necessary for the app's core functionality. This raises concerns about user privacy and the potential for misuse of personal information.",
+      "quote": "Moon Active collects personal and non-personal data, including device identifiers, location data, and usage patterns."
+    },
+    {
+      "clause": "Data sharing with third parties",
+      "severity": "medium",
+      "explanation": "The terms indicate that user data may be shared with third-party partners for advertising and analytics purposes. While not uncommon, this practice can compromise user privacy if not transparently disclosed and limited.",
+      "quote": "We may share your data with third-party service providers for advertising and analytics."
+    },
+    {
+      "clause": "Unclear account deletion process",
+      "severity": "medium",
+      "explanation": "The terms do not provide clear instructions on how users can delete their accounts and ensure their data is fully removed from Moon Active's systems.",
+      "quote": "Users may contact support for account-related queries, but specific deletion processes are not outlined."
+    },
+    {
+      "clause": "Changes to terms without clear notification",
+      "severity": "high",
+      "explanation": "The terms allow Moon Active to modify the agreement at any time without explicitly requiring direct user notification. This could leave users unaware of significant changes affecting their rights.",
+      "quote": "We reserve the right to update these terms at any time without prior notice."
+    }
+  ],
+  "summary": "The terms and conditions for Coin Master raise significant privacy concerns, particularly around data collection and sharing practices. The lack of transparency in account deletion processes and changes to terms without clear notification further diminish user trust. Improvements in clarity and privacy protections are needed.",
+  "red_flags": [
+    "Excessive data collection beyond app functionality",
+    "Broad rights to share data with third parties",
+    "Unclear account deletion process",
+    "Changes to terms without clear notification"
+  ],
+  "user_friendliness_score": 5.0,
+  "data_collection_score": 3.0,
+  "legal_complexity_score": 4.0,
+  "terms_version": null,
+  "terms_url": "https://www.clay.com/dossier/moon-active-headquarters-office-locations",
+  "analysis_date": "2025-07-05",
+  "deep_analysis": {
+    "0": {
+      "unclear_terms": [
+        {
+          "term": "personal and non-personal data",
+          "explanation": "Personal data refers to information that can identify you, such as your name, email, or location. Non-personal data refers to information that cannot directly identify you, like aggregated usage statistics or device types.",
+          "user_impact": "This means the company may collect a wide range of information about you, including sensitive details like your location or device identifiers, which could potentially be used to track or profile you.",
+          "questions_to_ask": [
+            "What specific types of personal and non-personal data are being collected?",
+            "Why is this data being collected, and how is it used?",
+            "Is this data shared with third parties, and if so, who are they?",
+            "Can I opt out of certain types of data collection, like location tracking?"
+          ]
+        },
+        {
+          "term": "device identifiers",
+          "explanation": "Device identifiers are unique codes associated with your smartphone, tablet, or other devices. These can include things like your IP address, advertising ID, or hardware serial number.",
+          "user_impact": "This means the company can track your device specifically, which could allow them to monitor your activity across apps or websites, even if you are not logged into their service.",
+          "questions_to_ask": [
+            "What specific device identifiers are being collected?",
+            "How long is this data stored, and is it anonymized?",
+            "Can I reset or delete my device identifiers to protect my privacy?"
+          ]
+        },
+        {
+          "term": "location data",
+          "explanation": "Location data refers to information about where you are physically located, which can be determined through GPS, Wi-Fi, or other technologies.",
+          "user_impact": "This means the app may track your real-time location, which could be used for targeted advertising, analytics, or other purposes. If shared or misused, it could compromise your privacy or security.",
+          "questions_to_ask": [
+            "Is location data collected continuously or only when the app is in use?",
+            "Can I use the app without sharing my location?",
+            "How is my location data stored and protected?"
+          ]
+        },
+        {
+          "term": "usage patterns",
+          "explanation": "Usage patterns refer to how you interact with the app, such as which features you use, how often you use them, and your in-app behavior.",
+          "user_impact": "This means the company can build a detailed profile of your habits and preferences, which could be used for targeted advertising or sold to third parties.",
+          "questions_to_ask": [
+            "What specific usage data is being collected?",
+            "Is this data anonymized or linked to my personal information?",
+            "Can I opt out of this type of data collection?"
+          ]
+        }
+      ],
+      "practical_meaning": "In practice, this clause means that Moon Active is collecting a broad range of data about you, including sensitive information like your location and device identifiers, as well as how you use the app. This data could be used for purposes like improving the app, targeting ads, or even shared with third parties. However, the lack of specificity about what data is collected and how it is used raises concerns about transparency and potential misuse.",
+      "user_action_needed": "Users should carefully review the app's privacy policy to understand what data is being collected and why. They should also check the app's settings to see if they can limit data collection, such as disabling location tracking or opting out of targeted advertising. If these options are not available, users may want to reconsider using the app if privacy is a major concern.",
+      "severity_justification": "This was flagged as high severity because the broad and vague data collection practices could lead to significant privacy risks. Without clear limits or transparency, users' personal information could be misused, shared with third parties, or exposed in the event of a data breach. The potential for tracking users across devices and locations further amplifies these concerns.",
+      "extended_context": "Could not locate quote in document: Moon Active collects personal and non-personal data, including device identifiers, location data, an...",
+      "online_research": {
+        "search_query": "\"Coin Master\" personal and non-personal data device identifiers location data terms conditions privacy policy explanation",
+        "top_result_url": "https://www.cmegroup.com/markets/fx.html",
+        "top_result_title": "FX Futures and Options - CME Group",
+        "summary": "Manage risk and find opportunities in futures and options on G10 currencies, with the most liquid and capital-efficient FX futures market. View contract and exchange details to help you trade FX futures and options. Access real-time and historical data on FX futures and options across G10 and emerging markets to empower your trading decisions and enhance your risk management strategies. **FX Market Profile T**ool Compare liquidity in OTC spot from EBS and CME FX futures on one screen to identify"
+      }
+    },
+    "3": {
+      "unclear_terms": [
+        {
+          "term": "We reserve the right to update these terms at any time without prior notice.",
+          "explanation": "This means the company (Moon Active) can change the rules, policies, or agreements governing your use of their app or services whenever they want, without having to notify you directly (e.g., via email or an in-app message).",
+          "user_impact": "Users might not be aware of changes that could significantly affect their rights, obligations, or the way their personal data is handled. For example, the company could add new fees, change how they use your data, or limit your ability to take legal action, and you might not know unless you actively check the terms regularly.",
+          "questions_to_ask": [
+            "How will I know if the terms have been updated?",
+            "Will I be notified directly about changes, or do I have to check the terms myself?",
+            "What happens if I disagree with the updated terms?",
+            "Can I opt out of certain changes or stop using the service without penalty if I don't agree?"
+          ]
+        }
+      ],
+      "practical_meaning": "In practice, this clause means that Moon Active can change the rules of the game at any time, and it’s your responsibility to stay informed by regularly checking the terms. If you don’t check, you might unknowingly agree to new conditions that could negatively impact you, such as changes to how your data is used or new restrictions on your account.",
+      "user_action_needed": "Users should periodically review the terms and conditions to stay informed about any changes. If possible, users should also contact the company to request direct notifications of updates or look for an option to subscribe to updates. Additionally, users should consider whether they are comfortable with a service that does not guarantee clear communication about changes.",
+      "severity_justification": "This was flagged as high severity because it directly impacts users' ability to make informed decisions about their rights and obligations. Without clear notification, users could unknowingly agree to terms that harm their privacy, impose financial burdens, or limit their legal recourse. This lack of transparency undermines trust and accountability.",
+      "extended_context": "Could not locate quote in document: We reserve the right to update these terms at any time without prior notice....",
+      "online_research": {
+        "search_query": "\"Coin Master\" We reserve the right to update these terms at any time without prior notice. terms conditions privacy policy explanation",
+        "top_result_url": "https://www.canadacryptoweek.com/",
+        "top_result_title": "Canada Crypto Week",
+        "summary": "Your Privacy Choices. TERMS OF USEPRIVACY POLICY. Friday. Name of Event Here. June 24, 2022. 10:00 Am. Toronto, Canada. Register. Friday. August 11, 2022."
+      }
+    }
+  }
+}

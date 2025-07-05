@@ -1,0 +1,84 @@
+{
+  "app_name": "Google Sheets",
+  "app_version": null,
+  "overall_score": 6.5,
+  "privacy_concerns": [
+    {
+      "clause": "Data collection and sharing with Google services",
+      "severity": "medium",
+      "explanation": "Google Sheets operates under Google's broader privacy policy, which allows for significant data collection, including user activity, content, and metadata. This data may be used for service improvement, advertising, and other purposes, which could be invasive for users unaware of the extent of data usage.",
+      "quote": "Google collects information about your activity in our services, which we use to do things like recommend a YouTube video you might like or give you quicker search results."
+    },
+    {
+      "clause": "Third-party integrations and data sharing",
+      "severity": "high",
+      "explanation": "Google Sheets integrates with other Google services and potentially third-party applications, which may result in data sharing. Users may not have full control or visibility over how their data is used or shared in these contexts.",
+      "quote": "We may share non-personally identifiable information publicly and with our partners — like publishers, advertisers, developers, or rights holders."
+    },
+    {
+      "clause": "Account deletion and data retention policies",
+      "severity": "medium",
+      "explanation": "While Google allows users to delete their accounts, the process can be cumbersome, and data may be retained for extended periods for legal or operational purposes, which may not align with user expectations.",
+      "quote": "When you delete data, we follow a deletion process to make sure that your data is safely and completely removed from our servers or retained only in anonymized form."
+    }
+  ],
+  "summary": "Google Sheets is a user-friendly tool for creating and editing spreadsheets with real-time collaboration features. However, its data collection practices and potential sharing with third parties raise privacy concerns. The terms are moderately complex, and users may find it challenging to fully understand the implications of data usage and retention policies.",
+  "red_flags": [
+    "Broad rights to collect and share user data",
+    "Potentially invasive third-party integrations",
+    "Cumbersome account deletion process"
+  ],
+  "user_friendliness_score": 7.0,
+  "data_collection_score": 5.0,
+  "legal_complexity_score": 6.0,
+  "terms_version": null,
+  "terms_url": "https://www.torontomu.ca/google/teach-with-google-workspace/sign-up-sheets/",
+  "analysis_date": "2025-07-05",
+  "deep_analysis": {
+    "1": {
+      "unclear_terms": [
+        {
+          "term": "non-personally identifiable information",
+          "explanation": "This refers to data that cannot directly identify you as an individual, such as aggregated statistics, usage patterns, or anonymized data. However, in some cases, this data can still be combined with other information to infer details about you.",
+          "user_impact": "Even though this data is not directly tied to your identity, it can still be used to profile your behavior, preferences, or activities, especially when combined with other datasets.",
+          "questions_to_ask": [
+            "What specific types of non-personally identifiable information are being shared?",
+            "Can this data be re-identified or linked back to me in any way?",
+            "How is this data being used by third parties, such as advertisers or developers?",
+            "Can I opt out of this data sharing, and if so, how?"
+          ]
+        },
+        {
+          "term": "partners — like publishers, advertisers, developers, or rights holders",
+          "explanation": "This refers to third-party entities that Google collaborates with, such as companies that display ads, create apps or tools that integrate with Google Sheets, or own intellectual property rights.",
+          "user_impact": "Your data may be shared with a wide range of external organizations, and you may not have visibility into who these partners are or how they use your data.",
+          "questions_to_ask": [
+            "Who are these 'partners,' and is there a list of them available?",
+            "What safeguards are in place to ensure these partners handle my data responsibly?",
+            "What happens if one of these partners misuses my data?"
+          ]
+        },
+        {
+          "term": "data sharing",
+          "explanation": "This refers to the practice of transferring or granting access to your data to other entities, either within Google’s ecosystem or to external third parties.",
+          "user_impact": "Your data could be used for purposes beyond what you originally intended, such as targeted advertising, analytics, or other commercial uses. You may not have control over how your data is handled once shared.",
+          "questions_to_ask": [
+            "What specific data is being shared, and for what purposes?",
+            "Is there a way to limit or control what data is shared?",
+            "How can I review or delete data that has already been shared?"
+          ]
+        }
+      ],
+      "practical_meaning": "In practice, this clause means that Google Sheets may share data about how you use the service (even if it’s anonymized) with other Google services and external third parties, such as advertisers or app developers. This could result in your data being used for targeted advertising, analytics, or other purposes that you may not be fully aware of or have control over.",
+      "user_action_needed": "Users should review their privacy settings in Google Sheets and related Google services to see if data sharing can be limited. They should also consider whether they are comfortable with the potential for their data to be shared with third parties and used for purposes like advertising. If not, they may want to explore alternative tools or services with stricter privacy controls.",
+      "severity_justification": "This was flagged as high severity because users may not fully understand the extent of data sharing or the potential implications. The lack of transparency about who the 'partners' are and how the data is used creates a significant risk of misuse or unintended consequences, such as profiling or targeted advertising without explicit consent. Additionally, users may not have sufficient control to opt out of this data sharing, which undermines their privacy rights.",
+      "extended_context": "Could not locate quote in document: We may share non-personally identifiable information publicly and with our partners — like publisher...",
+      "online_research": {
+        "search_query": "\"Google Sheets\" non-personally identifiable information partners — like publishers, advertisers, developers, or rights holders data sharing terms conditions privacy policy explanation",
+        "top_result_url": "https://www.cbinsights.com/investor/peter-thiel",
+        "top_result_title": "Peter Thiel Portfolio Investments, Peter Thiel Funds, Peter Thiel Exits",
+        "summary": "Google Sheets · Microsoft Teams · Slack · Google Slides · App Partners ... CB Insights Website Terms of Use · Privacy Policy · Do Not Sell My Info"
+      }
+    }
+  }
+}

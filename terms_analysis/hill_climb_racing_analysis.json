@@ -1,0 +1,101 @@
+{
+  "app_name": "Hill Climb Racing",
+  "app_version": null,
+  "overall_score": 6.5,
+  "privacy_concerns": [
+    {
+      "clause": "Data collection for advertising and analytics purposes",
+      "severity": "medium",
+      "explanation": "The app collects a wide range of personal data, including IP address, device identifiers, and location data, for advertising and analytics purposes. While some of this is necessary for app functionality, the extent of data collection raises concerns about user privacy.",
+      "quote": "We process personal data automatically as part of delivering the Services, such as: your IP address and mobile device identifiers (such as your device ID, advertising ID, MAC address and IMEI); data about your device, such as device name and operating system, browser type and language; data we collect with cookies and similar technologies."
+    },
+    {
+      "clause": "Sharing data with advertising partners",
+      "severity": "high",
+      "explanation": "The app explicitly states that it may share personal data with advertising partners for their independent use, including creating personalized ad profiles and selecting targeted ads. This raises significant privacy concerns, especially for users who may not fully understand the implications.",
+      "quote": "With your separate consent we may process your personal data in order to: share it with our advertising partners for their independent use. These uses may include creating a personalized ad profile about you, selecting personalized ads for you, measuring ad performance, generating audience insights, and other uses."
+    },
+    {
+      "clause": "Social features exposing user data",
+      "severity": "medium",
+      "explanation": "Social features in the app allow other players to see profile data, in-game activities, and messages. While this is common in gaming apps, users may not be fully aware of the extent to which their data is visible to others.",
+      "quote": "Social features are a core component of our games. Other players and users may, for example, see your profile data, in-game activities and read the messages you have posted."
+    },
+    {
+      "clause": "Broad rights to update terms",
+      "severity": "medium",
+      "explanation": "The terms allow the company to update the privacy policy and terms of service at any time, with notification provided via the app. However, continued use of the app after changes implies acceptance, which may not be clear to all users.",
+      "quote": "Please note that we may from time to time update this policy by posting a new version on fingersoft.com. If we make any material changes, we will notify you by posting a notice in the Services prior to the change becoming effective."
+    }
+  ],
+  "summary": "The terms and privacy policy for Hill Climb Racing provide a moderately clear explanation of data collection and usage. However, the app collects extensive personal data, including for advertising purposes, and shares it with third-party partners. Users should carefully review the consent options and be aware of the potential for targeted advertising and data sharing.",
+  "red_flags": [
+    "Extensive data collection for advertising and analytics",
+    "Sharing data with third-party advertising partners for independent use",
+    "Broad rights to update terms without explicit user consent",
+    "Social features exposing user data to other players"
+  ],
+  "user_friendliness_score": 6.0,
+  "data_collection_score": 5.0,
+  "legal_complexity_score": 7.0,
+  "terms_version": "Effective May 4th, 2023",
+  "terms_url": "https://fingersoft.com/privacy-policy/",
+  "analysis_date": "2025-07-05",
+  "deep_analysis": {
+    "1": {
+      "unclear_terms": [
+        {
+          "term": "share it with our advertising partners for their independent use",
+          "explanation": "This means the app can give your personal data to third-party advertisers, who can then use it for their own purposes, such as creating detailed profiles about you, showing you targeted ads, and analyzing your behavior.",
+          "user_impact": "Your personal data could be used by advertisers in ways you may not expect or control. This could include tracking your online activity across different apps and websites, and potentially exposing you to privacy risks if the data is mishandled or shared further.",
+          "questions_to_ask": [
+            "What specific data is being shared with advertising partners?",
+            "Who are these advertising partners, and how do they use the data?",
+            "Can I opt out of this data sharing, and if so, how?",
+            "What happens to my data if I withdraw my consent later?"
+          ]
+        },
+        {
+          "term": "creating a personalized ad profile about you",
+          "explanation": "This involves collecting and analyzing your personal data (like your interests, behaviors, and demographics) to build a detailed profile that advertisers use to decide which ads to show you.",
+          "user_impact": "Advertisers may know a lot about your preferences, habits, and even sensitive information, which could feel invasive. This profiling could also lead to manipulation or discrimination based on your data.",
+          "questions_to_ask": [
+            "What kind of information is included in my ad profile?",
+            "How long is this profile stored, and who has access to it?",
+            "Can I see or delete my ad profile?"
+          ]
+        },
+        {
+          "term": "measuring ad performance, generating audience insights, and other uses",
+          "explanation": "This means advertisers analyze how well their ads perform and gather information about the audience engaging with their ads. 'Other uses' is vague and could include anything from further data analysis to sharing data with additional third parties.",
+          "user_impact": "Your data could be used in ways that are not clearly defined, making it hard to know how your privacy is being impacted. This vagueness could lead to misuse or unauthorized sharing of your data.",
+          "questions_to_ask": [
+            "What are the 'other uses' mentioned here?",
+            "How is my data being analyzed, and who has access to the results?",
+            "Is my data anonymized during these processes?"
+          ]
+        },
+        {
+          "term": "with your separate consent",
+          "explanation": "This means the app will ask for your explicit permission before sharing your data with advertisers. However, the way consent is requested (e.g., through pop-ups or pre-checked boxes) could influence your decision.",
+          "user_impact": "You might unknowingly give consent if the request is unclear or buried in lengthy terms. Once given, your data could be shared and used in ways you didn’t fully understand.",
+          "questions_to_ask": [
+            "How is my consent obtained, and can I easily refuse?",
+            "What happens if I don’t give consent—can I still use the app?",
+            "Can I revoke my consent later, and how?"
+          ]
+        }
+      ],
+      "practical_meaning": "In practice, this clause allows the app to share your personal data with advertisers, who can then use it to target you with ads, analyze your behavior, and potentially share it further. While the app claims to ask for your consent, the way this consent is obtained and the lack of clarity around how your data is used make it difficult to fully understand or control what happens to your information.",
+      "user_action_needed": "Users should carefully review any consent requests and avoid agreeing to data sharing unless they fully understand what is being shared and how it will be used. Look for options to opt out of personalized ads or data sharing in the app’s settings. If no clear options are provided, consider contacting the app’s support team for clarification.",
+      "severity_justification": "This was flagged as high severity because it involves sharing personal data with third parties for their independent use, which significantly reduces user control over their information. The vague language and potential for misuse or further sharing of data amplify the privacy risks, especially for users who may not fully understand the implications of their consent.",
+      "extended_context": "...y process your personal data to:_**\n\n*   show non-targeted ads to you in our Services, either from us or our advertising partners;\n*   keep track of your activity in our Services to learn about your interests;\n*   keep track of installations and installation source of our games;\n*   measure, analyze and improve the effectiveness of our advertising both in and outside of the Services; and\n*   send you communications about offers, rewards, events, or other news related to the Services.\n\n_Consent. With your separate consent we may process your personal data in order to:_\n\n*   share it with our advertising partners for their independent use. These uses may include creating a personalized ad profile about you, selecting personalized ads for you, measuring ad performance, generating audience insights, and other uses:\n*    to send you newsletters or other similar communication if you have subscribed to them; and\n*   any other purposes as described in the relevant consent screen in the applicable Services.\n\n**The personal data we process**\n--------------------------------\n\nYour personal data is being processed and collected throughout your use of the Services, such as technical data related to your device or internet connection. Some personal data is processed automatically where some require your input...",
+      "online_research": {
+        "search_query": "\"Hill Climb Racing\" share it with our advertising partners for their independent use creating a personalized ad profile about you measuring ad performance, generating audience insights, and other uses terms conditions privacy policy explanation",
+        "top_result_url": "https://privacy.commonsense.org/evaluation/Hill-Climb-Racing",
+        "top_result_title": "Privacy Evaluation for Hill Climb Racing",
+        "summary": "Unclear whether personal information is sold or rented to third parties. Personal information is shared for third-party marketing."
+      }
+    }
+  }
+}

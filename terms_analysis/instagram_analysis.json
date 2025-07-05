@@ -1,31 +1,90 @@
 {
   "app_name": "Instagram",
-  "app_version": "N/A",
-  "overall_score": 6.5,
+  "app_version": null,
+  "overall_score": 5.5,
   "privacy_concerns": [
     {
-      "clause": "Data Sharing with Third Parties",
+      "clause": "Broad data collection practices",
       "severity": "high",
-      "explanation": "Instagram's terms often include broad rights to share user data with third parties, which can be concerning for user privacy.",
-      "quote": "We may share information about you with third parties in connection with providing our services or operating our business."
+      "explanation": "Instagram collects a significant amount of user data, including location, device information, browsing history, and interactions within the app. This data is used for targeted advertising and may be shared with third parties, which raises concerns about user privacy.",
+      "quote": "We collect information about the people, accounts, hashtags, and groups you are connected to and how you interact with them across our Products."
     },
     {
-      "clause": "Account Deletion Process",
+      "clause": "Third-party data sharing",
       "severity": "medium",
-      "explanation": "The process for deleting an Instagram account can be cumbersome, requiring multiple steps and often not immediately removing all user data.",
-      "quote": "It may take up to 90 days to delete data stored in backup systems."
+      "explanation": "Instagram reserves the right to share user data with third-party partners, including advertisers, which may lead to a lack of transparency about how data is used once shared.",
+      "quote": "We share information with third-party partners who help us provide and improve our Products or who use advertising or related products."
+    },
+    {
+      "clause": "Changes to terms notification",
+      "severity": "medium",
+      "explanation": "The terms allow Instagram to modify its policies at any time without requiring explicit user consent, which may leave users unaware of significant changes impacting their rights.",
+      "quote": "We may update our terms and policies from time to time, and we encourage you to review them regularly."
+    },
+    {
+      "clause": "Account deletion process",
+      "severity": "low",
+      "explanation": "While Instagram allows users to delete their accounts, the process is not immediately intuitive and may require navigating through multiple steps, which could discourage users from taking action.",
+      "quote": "You can delete your account by following the instructions in the Help Center."
     }
   ],
-  "summary": "Instagram's terms and conditions present a mixed picture for Canadian users. While the platform offers some clarity in its terms, concerns remain about data sharing practices and the complexity of account deletion. The recent legislative changes in Canada regarding news access highlight potential geographic restrictions.",
+  "summary": "Instagram's terms and conditions present significant concerns for Canadian users, particularly around data collection and sharing practices. While the platform provides some transparency, the broad scope of data usage and the ability to change terms without explicit consent are notable drawbacks. The account deletion process, while available, could be more user-friendly.",
   "red_flags": [
     "Excessive data collection beyond app functionality",
     "Broad rights to share data with third parties",
-    "Difficult account deletion processes"
+    "Unilateral changes to terms without explicit user consent"
   ],
-  "user_friendliness_score": 7.0,
-  "data_collection_score": 5.0,
-  "legal_complexity_score": 6.0,
+  "user_friendliness_score": 6.0,
+  "data_collection_score": 4.0,
+  "legal_complexity_score": 5.0,
   "terms_version": null,
-  "terms_url": null,
-  "analysis_date": "2025-07-05"
+  "terms_url": "https://help.instagram.com/581066165581870",
+  "analysis_date": "2025-07-05",
+  "deep_analysis": {
+    "0": {
+      "unclear_terms": [
+        {
+          "term": "We collect information about the people, accounts, hashtags, and groups you are connected to and how you interact with them across our Products.",
+          "explanation": "This means Instagram tracks your activity on the platform, including who you follow, what hashtags you engage with, and the groups you join. It also monitors how you interact with these connections, such as liking posts, commenting, or sharing content.",
+          "user_impact": "Instagram is building a detailed profile of your interests, behaviors, and social connections. This information is used to personalize your experience, such as showing you specific ads or content, but it also means your data is being shared with advertisers or other third parties.",
+          "questions_to_ask": [
+            "What specific data is being collected about my interactions?",
+            "How long is this data stored, and can I delete it?",
+            "Who are the third parties that this data is shared with?",
+            "Can I opt out of this data collection or sharing?"
+          ]
+        },
+        {
+          "term": "Targeted advertising",
+          "explanation": "This refers to ads that are tailored to you based on the data Instagram collects about your behavior, preferences, and interactions on the platform.",
+          "user_impact": "You may see ads that feel very personal or invasive because they are based on your private activity. This also means your data is being used to generate revenue for Instagram and its partners.",
+          "questions_to_ask": [
+            "What types of ads will I see based on my data?",
+            "Can I limit or control the use of my data for targeted advertising?",
+            "What happens to my data if I stop using Instagram?"
+          ]
+        },
+        {
+          "term": "Shared with third parties",
+          "explanation": "This means Instagram may provide your data to other companies, such as advertisers, analytics firms, or business partners, for purposes like ad targeting or improving their services.",
+          "user_impact": "Your personal information could be accessed by companies you don’t know or trust, and it may be used in ways you didn’t explicitly agree to. This could increase the risk of data misuse or breaches.",
+          "questions_to_ask": [
+            "Who are these third parties, and what are they doing with my data?",
+            "Is my data anonymized before it is shared?",
+            "What protections are in place to prevent misuse of my data by third parties?"
+          ]
+        }
+      ],
+      "practical_meaning": "Instagram is collecting a wide range of data about your activity on the platform, including your connections, interactions, and preferences. This data is used to create a detailed profile of you, which is then used for targeted advertising and potentially shared with other companies. While this may enhance your experience on the platform, it also raises significant privacy concerns, as your data could be used in ways you may not fully understand or agree with.",
+      "user_action_needed": "Users should review Instagram's privacy settings to limit data collection where possible, such as turning off location tracking or opting out of targeted ads. They should also regularly review what data Instagram has collected about them and delete any unnecessary or sensitive information. If privacy is a major concern, users may want to consider limiting their activity on the platform or using alternative apps with stricter privacy policies.",
+      "severity_justification": "This issue is flagged as high severity because it involves extensive data collection practices that could significantly impact user privacy. The sharing of data with third parties increases the risk of misuse, breaches, or unauthorized access to sensitive information. Users may not be fully aware of the extent of data being collected or how it is being used, which makes this a critical concern.",
+      "extended_context": "Could not locate quote in document: We collect information about the people, accounts, hashtags, and groups you are connected to and how...",
+      "online_research": {
+        "search_query": "\"Instagram\" We collect information about the people, accounts, hashtags, and groups you are connected to and how you interact with them across our Products. Targeted advertising Shared with third parties terms conditions privacy policy explanation",
+        "top_result_url": "https://help.instagram.com/155833707900388",
+        "top_result_title": "Data Policy - Instagram Help Center",
+        "summary": "We collect information about the people, accounts, hashtags and Facebook groups, and Pages you are connected to and how you interact with them"
+      }
+    }
+  }
 }

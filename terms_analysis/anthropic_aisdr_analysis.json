@@ -1,0 +1,81 @@
+{
+  "app_name": "Anthropic (AiSDR)",
+  "app_version": null,
+  "overall_score": 6.5,
+  "privacy_concerns": [
+    {
+      "clause": "Communications and marketing materials subscription",
+      "severity": "medium",
+      "explanation": "Users are automatically subscribed to newsletters and marketing materials upon account creation, which may be intrusive. Although users can opt out, this practice may not be ideal for privacy-conscious individuals.",
+      "quote": "By creating an Account on our Service, you agree to subscribe to newsletters, marketing or promotional materials and other information we may send."
+    },
+    {
+      "clause": "Third-party payment processing",
+      "severity": "medium",
+      "explanation": "The terms allow sharing of user payment data with third-party processors like Stripe or PayPal. While standard, this raises concerns about data security and compliance with Canadian privacy laws.",
+      "quote": "We may employ the use of third party services for the purpose of facilitating payment and the completion of Purchases."
+    },
+    {
+      "clause": "No sensitive information disclaimer",
+      "severity": "medium",
+      "explanation": "The service explicitly disclaims liability for handling sensitive information, which may leave users unprotected if such data is inadvertently processed.",
+      "quote": "YOU ACKNOWLEDGE THAT THE SERVICES HAVE NOT BEEN DESIGNED TO PROCESS OR MANAGE SENSITIVE INFORMATION AND ACCORDINGLY YOU AGREE NOT TO USE THE SUBSCRIPTION SERVICE TO COLLECT, MANAGE OR PROCESS SENSITIVE INFORMATION."
+    },
+    {
+      "clause": "Changes to terms notification",
+      "severity": "high",
+      "explanation": "The company reserves the right to modify terms unilaterally and makes them effective upon posting or notification. This may not provide users sufficient time to review and respond to changes.",
+      "quote": "We may modify these Terms... All such changes shall become effective upon the posting of the revised Terms of Service on the Website or upon notice to you, as applicable."
+    }
+  ],
+  "summary": "The AiSDR terms of service are moderately user-friendly but raise concerns about privacy, data sharing, and unilateral changes to terms. While the document is relatively clear, it includes clauses that could disadvantage users, such as automatic subscriptions to marketing materials and liability disclaimers for sensitive data handling.",
+  "red_flags": [
+    "Automatic subscription to marketing communications",
+    "Broad sharing of payment data with third parties",
+    "Unilateral changes to terms without sufficient user notice",
+    "Disclaimers for handling sensitive information"
+  ],
+  "user_friendliness_score": 6.0,
+  "data_collection_score": 5.5,
+  "legal_complexity_score": 7.0,
+  "terms_version": "01/08/2024",
+  "terms_url": "https://aisdr.com/terms/",
+  "analysis_date": "2025-07-05",
+  "deep_analysis": {
+    "3": {
+      "unclear_terms": [
+        {
+          "term": "modify these Terms... effective upon posting or notification",
+          "explanation": "This means the company can change the rules or conditions of the agreement at any time without needing your explicit consent. The changes become binding as soon as they are posted on the website or you are notified, whichever happens first.",
+          "user_impact": "You might not have enough time to understand or respond to the changes before they take effect. This could lead to you unknowingly agreeing to terms that are less favorable or that significantly impact your rights.",
+          "questions_to_ask": [
+            "How will I be notified of changes to the terms?",
+            "Will I have a chance to review and reject the changes before they take effect?",
+            "What happens if I disagree with the new terms?",
+            "Is there a way to track or be alerted to changes in the terms?"
+          ]
+        },
+        {
+          "term": "effective upon posting",
+          "explanation": "This means the updated terms automatically apply to you as soon as they are made available on the company's website, even if you haven't seen or read them yet.",
+          "user_impact": "You could be bound by new terms without being aware of them, especially if the company does not actively notify you or if you miss the notification.",
+          "questions_to_ask": [
+            "Does the company provide clear and timely notifications of changes?",
+            "How can I ensure I stay informed about updates to the terms?",
+            "What are my options if I don't agree with the changes?"
+          ]
+        }
+      ],
+      "practical_meaning": "In practice, this clause allows the company to change the terms of service at any time, and you are automatically bound by those changes once they are posted or you are notified. This could include changes to how your data is used, your rights to use the service, or even your ability to take legal action against the company.",
+      "user_action_needed": "Users should regularly check the terms of service for updates and ensure they understand any changes. If the company provides notifications, make sure to read them promptly. Consider reaching out to the company to ask for clarification or to express concerns if the changes seem unfair or unclear.",
+      "severity_justification": "This was flagged as high severity because it directly impacts users' ability to make informed decisions about their relationship with the company. Unilateral changes to terms without sufficient notice or consent can lead to users unknowingly agreeing to unfavorable or harmful conditions, which undermines trust and transparency.",
+      "extended_context": "Could not locate quote in document: We may modify these Terms... All such changes shall become effective upon the posting of the revised...",
+      "online_research": {
+        "search_query": "\"Anthropic\" modify these Terms... effective upon posting or notification effective upon posting terms conditions privacy policy explanation",
+        "top_result_url": "https://www.mdpi.com/2504-2289/9/5/132",
+        "top_result_title": "Comparative Evaluation of Multimodal Large Language Models for ...",
+        "summary": "AI Governance and Accountability: An Analysis of Anthropic's Claude. arXiv ... Terms and Conditions Privacy Policy. We use cookies on our website to"
+      }
+    }
+  }
+}

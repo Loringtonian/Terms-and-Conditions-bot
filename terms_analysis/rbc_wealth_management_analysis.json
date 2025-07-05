@@ -1,0 +1,37 @@
+{
+  "app_name": "RBC Wealth Management",
+  "app_version": null,
+  "overall_score": 7.5,
+  "privacy_concerns": [
+    {
+      "clause": "Advertising and cookies data sharing",
+      "severity": "medium",
+      "explanation": "The policy allows for sharing personal information with advertising partners and other third parties for tailored marketing purposes. While this is disclosed, it may not be fully transparent to users how their data is being used.",
+      "quote": "We may also securely share certain personal information with select suppliers and partners such as cloud, web-hosting services, data-processing services, creative or promotional agencies and measurement services, to provide you with recommended products or services that may be of interest to you."
+    },
+    {
+      "clause": "Cookie-based tracking",
+      "severity": "medium",
+      "explanation": "The use of cookies for personalization and advertising purposes is extensive, and while users can manage their preferences, the default settings favor data collection.",
+      "quote": "These cookies are set by our advertising partners and allows us to show you tailored offers or recommendations on third party sites."
+    },
+    {
+      "clause": "Broad data usage for personalization",
+      "severity": "medium",
+      "explanation": "The policy permits combining collected data with other information to create personalized experiences, which could lead to extensive profiling of users.",
+      "quote": "We may use the data derived and collected, in combination with other information we have about you, to tailor the site content or on-site promotions based on your preferences."
+    }
+  ],
+  "summary": "The RBC Wealth Management privacy policy is generally user-friendly and transparent, with clear options for managing cookie preferences. However, the extensive use of data for advertising and personalization raises moderate privacy concerns, particularly regarding third-party data sharing and profiling.",
+  "red_flags": [
+    "Broad rights to share data with third parties for advertising",
+    "Extensive use of cookies for tracking and personalization",
+    "Potential lack of transparency in data usage for tailored experiences"
+  ],
+  "user_friendliness_score": 8.0,
+  "data_collection_score": 6.5,
+  "legal_complexity_score": 7.0,
+  "terms_version": null,
+  "terms_url": "https://www.rbcwealthmanagement.com/en-us/legal/our-privacy-policy",
+  "analysis_date": "2025-07-05"
+}

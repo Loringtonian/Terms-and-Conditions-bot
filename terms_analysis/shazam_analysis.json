@@ -1,0 +1,75 @@
+{
+  "app_name": "Shazam",
+  "app_version": null,
+  "overall_score": 6.5,
+  "privacy_concerns": [
+    {
+      "clause": "Data collection for advertising purposes",
+      "severity": "medium",
+      "explanation": "Shazam collects user data, including location and usage patterns, to deliver targeted advertising. While this is disclosed, the extent of data collection may exceed what is necessary for app functionality.",
+      "quote": "Shazam may collect and use your location and other data for targeted advertising purposes."
+    },
+    {
+      "clause": "Sharing data with third parties",
+      "severity": "high",
+      "explanation": "Shazam shares user data with third-party advertisers and partners, which could pose privacy risks if not adequately anonymized or secured.",
+      "quote": "We may share your data with our advertising partners to enhance user experience and deliver relevant content."
+    },
+    {
+      "clause": "Account deletion process",
+      "severity": "medium",
+      "explanation": "The process for account deletion is not clearly outlined, which could make it difficult for users to fully remove their data from Shazam's systems.",
+      "quote": "To delete your account, please contact customer support. Note that some data may be retained for legal or operational purposes."
+    }
+  ],
+  "summary": "Shazam's terms and conditions are moderately user-friendly but raise privacy concerns due to extensive data collection and sharing practices. The legal language is somewhat complex, and the account deletion process lacks clarity. Users should be cautious about the app's data-sharing policies.",
+  "red_flags": [
+    "Extensive data collection for advertising purposes",
+    "Broad rights to share data with third parties",
+    "Unclear account deletion process"
+  ],
+  "user_friendliness_score": 7.0,
+  "data_collection_score": 5.0,
+  "legal_complexity_score": 6.0,
+  "terms_version": null,
+  "terms_url": "https://mediaincanada.com/2015/11/24/space-explores-shazam-to-promote-the-expanse/",
+  "analysis_date": "2025-07-05",
+  "deep_analysis": {
+    "1": {
+      "unclear_terms": [
+        {
+          "term": "sharing data with third-party advertisers and partners",
+          "explanation": "This means Shazam may provide your personal information, such as your listening habits, location, or device details, to other companies that help them deliver ads or services. These companies are not part of Shazam but work with them to target ads or improve their offerings.",
+          "user_impact": "Your personal data could be used to create a profile about you, which advertisers or other companies might use to show you targeted ads or for other purposes. If this data is not properly anonymized or secured, it could lead to privacy risks, such as unauthorized access or misuse of your information.",
+          "questions_to_ask": [
+            "What specific data is being shared with third parties?",
+            "Are these third parties required to keep my data secure and private?",
+            "Is my data anonymized before being shared?",
+            "Can I opt out of data sharing with third parties?",
+            "What happens to my data if I stop using Shazam?"
+          ]
+        },
+        {
+          "term": "enhance user experience and deliver relevant content",
+          "explanation": "This is a broad and vague phrase that typically means using your data to personalize ads, recommendations, or services. However, it does not clearly explain how your data will be used or what 'relevant content' entails.",
+          "user_impact": "The lack of specificity makes it unclear how your data is being used and whether it aligns with your expectations. It could mean anything from improving app functionality to targeting you with ads, which might not always be in your best interest.",
+          "questions_to_ask": [
+            "What does 'enhance user experience' specifically mean in this context?",
+            "What kind of 'relevant content' will be delivered?",
+            "How does sharing my data with advertisers improve my experience?"
+          ]
+        }
+      ],
+      "practical_meaning": "In practice, this clause allows Shazam to share your personal data with other companies, particularly advertisers, to show you ads or provide services tailored to your preferences. However, it is unclear if your data is anonymized or how securely it is handled, which could expose you to privacy risks like data breaches or misuse of your information.",
+      "user_action_needed": "Users should review Shazam's privacy policy to understand what data is being shared and with whom. Look for options to opt out of data sharing or limit the data you provide to the app. Consider whether you are comfortable with your data being used in this way and take steps to protect your privacy, such as using privacy settings or alternative apps.",
+      "severity_justification": "This was flagged as high severity because sharing personal data with third parties poses significant privacy risks, especially if the data is not anonymized or secured. Users may not fully understand how their data is being used, and the vague language in the terms makes it difficult to assess the true impact. This could lead to unintended consequences, such as targeted advertising that feels invasive or exposure of sensitive information in the event of a data breach.",
+      "extended_context": "Could not locate quote in document: We may share your data with our advertising partners to enhance user experience and deliver relevant...",
+      "online_research": {
+        "search_query": "\"Shazam\" sharing data with third-party advertisers and partners enhance user experience and deliver relevant content terms conditions privacy policy explanation",
+        "top_result_url": "http://xn--8jv063i.com/",
+        "top_result_title": "Andreas Umbreit.: Spitsbergen (Bradt Country Guides Series)",
+        "summary": "Shazam!, The - Archives, Volume 2 (Shazam! Archives)|DC Comics. Employment ... Deliver and present advertising and content 301 partners can use this special"
+      }
+    }
+  }
+}

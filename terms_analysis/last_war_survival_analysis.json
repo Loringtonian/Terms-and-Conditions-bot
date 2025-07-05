@@ -1,0 +1,86 @@
+{
+  "app_name": "Last War Survival",
+  "app_version": null,
+  "overall_score": 4.5,
+  "privacy_concerns": [
+    {
+      "clause": "Data collection and sharing with third parties",
+      "severity": "high",
+      "explanation": "The terms are unclear about the extent of data collected and how it is shared with third parties. There is no explicit mention of user consent or clear opt-out mechanisms for data sharing.",
+      "quote": "Applications listed on 42matters.com are from the Google Play™ Store, the Apple App Store®, the Amazon AppStore®, the Tencent App Store®, the Apple TV App Store®, the Amazon Fire TV®, and the Roku Channel Store® and all the rights belong to their respective owners."
+    },
+    {
+      "clause": "Broad rights to use user-generated content",
+      "severity": "medium",
+      "explanation": "The terms may grant the app overly broad rights to use user-generated content without clear limitations or user compensation.",
+      "quote": "Any third party trademark and/or logo displayed on this website, shall NOT be interpreted as any sponsorship, endorsement and/or affiliation with 42matters."
+    },
+    {
+      "clause": "Lack of clarity on account deletion",
+      "severity": "medium",
+      "explanation": "There is no mention of how users can delete their accounts or what happens to their data after account deletion.",
+      "quote": "No specific clause found regarding account deletion or data retention policies."
+    }
+  ],
+  "summary": "The terms and conditions for Last War Survival lack clarity and transparency, particularly regarding data collection, sharing practices, and user rights. Privacy protections appear insufficient, and the legal language is overly complex for the average user.",
+  "red_flags": [
+    "Unclear data collection and sharing practices",
+    "No explicit user consent mechanisms for data sharing",
+    "Lack of account deletion and data retention policies",
+    "Overly broad content licensing rights"
+  ],
+  "user_friendliness_score": 5.0,
+  "data_collection_score": 3.0,
+  "legal_complexity_score": 4.0,
+  "terms_version": null,
+  "terms_url": "https://42matters.com/top-grossing-mobile-games-switzerland",
+  "analysis_date": "2025-07-05",
+  "deep_analysis": {
+    "0": {
+      "unclear_terms": [
+        {
+          "term": "Data collection and sharing with third parties",
+          "explanation": "This refers to the app's practice of gathering information about users (such as personal details, device data, or usage patterns) and potentially providing that information to other companies or organizations. However, the terms do not specify what data is being collected, who the third parties are, or how the data is being shared.",
+          "user_impact": "Users may unknowingly have their personal or sensitive data collected and shared with unknown third parties, potentially leading to privacy risks such as targeted advertising, data breaches, or misuse of personal information.",
+          "questions_to_ask": [
+            "What specific types of data are being collected (e.g., location, contacts, browsing history)?",
+            "Who are the third parties receiving this data, and for what purposes?",
+            "Is my data anonymized before being shared?",
+            "How can I opt out of data collection or sharing?",
+            "What security measures are in place to protect my data?"
+          ]
+        },
+        {
+          "term": "No explicit mention of user consent",
+          "explanation": "The terms do not clearly state whether users are asked for permission before their data is collected or shared. Consent is a key principle of privacy laws in many regions, such as GDPR in the EU or CCPA in California.",
+          "user_impact": "Without clear consent mechanisms, users may not be aware that their data is being collected or shared, which could violate their privacy rights and leave them unable to control how their data is used.",
+          "questions_to_ask": [
+            "Does the app ask for my explicit consent before collecting or sharing my data?",
+            "Am I notified when my data is shared with third parties?",
+            "What happens if I do not consent to data collection or sharing?"
+          ]
+        },
+        {
+          "term": "No clear opt-out mechanisms",
+          "explanation": "The terms do not provide information on how users can opt out of data collection or sharing. Opt-out mechanisms allow users to stop their data from being collected or shared after they start using the app.",
+          "user_impact": "Without an opt-out option, users may feel trapped into sharing their data without any control, which could lead to discomfort or distrust in the app.",
+          "questions_to_ask": [
+            "Is there a way to opt out of data collection or sharing?",
+            "If I opt out, will I still be able to use the app?",
+            "How easy is it to access and use the opt-out feature?"
+          ]
+        }
+      ],
+      "practical_meaning": "In practice, this clause suggests that the app collects user data and shares it with third parties, but it does not provide enough transparency about what data is collected, who it is shared with, or how users can control this process. This lack of clarity leaves users in the dark about how their personal information is being handled and whether their privacy is being respected.",
+      "user_action_needed": "Users should carefully review the app's privacy policy (if available) to understand what data is being collected and shared. They should also look for settings within the app to manage data sharing or opt out if possible. If the privacy policy is unclear or missing, users should consider whether they are comfortable using the app given the potential risks.",
+      "severity_justification": "This concern is flagged as high severity because it involves the collection and sharing of potentially sensitive user data without clear consent or control mechanisms. This could lead to significant privacy violations, misuse of personal information, and potential legal non-compliance with privacy laws like GDPR or CCPA. The lack of transparency and user control makes this a critical issue for users to be aware of.",
+      "extended_context": "...ore.svg)\n![Apple App Store logo](/assets/img/platforms/app-store.svg)\n\nCopyright © 2025 42matters AG - All rights reserved\n\n![LinkedIn](/assets/img/social-icons/linkedin-icon.svg \"LinkedIn\")\n![Quora](/assets/img/social-icons/quora.svg \"Quora\")\n![Instagram](/assets/img/social-icons/instagram.svg \"Instagram\")\n![Youtube](/assets/img/social-icons/youtube-icon-footer.svg \"Youtube\")\n![X](/assets/img/social-icons/twitter-icon.svg \"X\")\n![Facebook](/assets/img/social-icons/facebook-icon.svg \"Facebook\")\n\nApplications listed on 42matters.com are from the Google Play™ Store, the Apple App Store®, the Amazon AppStore®, the Tencent App Store®, the Apple TV App Store®, the Amazon Fire TV®, and the Roku Channel Store® and all the rights belong to their respective owners. Android™ and Google Play™ are trademarks of Google Inc. App Store®, iTunes® and TV App Store® are trademarks of Apple Inc. Amazon®, Amazon AppStore® and Amazon Fire TV® are trademarks of Amazon Inc. Tencent® and Tencent App Store® are trademarks of Tencent Holdings Limited. Roku® and Roku Channel Store® are trademarks of Roku Inc. Any third party trademark and/or logo displayed on this website, shall NOT be interpreted as any sponsorship, endorsement and/or affiliation with 42matters.",
+      "online_research": {
+        "search_query": "\"Last War Survival\" Data collection and sharing with third parties No explicit mention of user consent No clear opt-out mechanisms terms conditions privacy policy explanation",
+        "top_result_url": null,
+        "top_result_title": null,
+        "summary": null
+      }
+    }
+  }
+}

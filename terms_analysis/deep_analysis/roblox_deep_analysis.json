@@ -1,0 +1,135 @@
+{
+  "app_name": "Roblox",
+  "total_high_severity_concerns": 2,
+  "analysis_timestamp": "2025-07-05",
+  "concerns_analyzed": [
+    {
+      "original_concern": {
+        "clause": "Broad data collection for marketing and analytics",
+        "severity": "high",
+        "explanation": "The policy permits the collection of extensive personal and usage data, including IP addresses, device identifiers, and browsing activity, which can be used for marketing and analytics purposes. This level of data collection may exceed what is necessary for the service's functionality.",
+        "quote": "We may use your Personal Data to contact you with newsletters, marketing or promotional materials and other information that may be of interest to you."
+      },
+      "extended_context": "...rmation Collection and Use\n\nWe collect several different types of information for various purposes to provide and improve our Service to you.\n\n### Types of Data Collected\n\n#### Personal Data\n\nWhile using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you (\"Personal Data\"). Personally identifiable information may include, but is not limited to:\n\n* Email address\n* First name and last name\n* Cookies and Usage Data\n\nWe may use your Personal Data to contact you with newsletters, marketing or promotional materials and other information that may be of interest to you. You may opt out of receiving any, or all, of these communications from us by following the unsubscribe link or instructions provided in any email we send or by [contacting us](https://roblox.virtualworldsland.com/contact).\n\n#### Usage Data\n\nWe may also collect information on how the Service is accessed and used (\"Usage Data\"). This Usage Data may include information such as your computer's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that ...",
+      "clarity_analysis": {
+        "unclear_terms": [
+          {
+            "term": "Personal Data",
+            "explanation": "This refers to any information that can identify you as an individual, such as your name, email address, or other details that are unique to you.",
+            "user_impact": "This means Roblox can collect and store information that directly identifies you, which could potentially be shared or used for purposes beyond what you might expect.",
+            "questions_to_ask": [
+              "What specific personal data is being collected?",
+              "How long is this data stored?",
+              "Who is this data shared with, and for what purposes?"
+            ]
+          },
+          {
+            "term": "Usage Data",
+            "explanation": "This includes data about how you interact with the service, such as your IP address, browser type, and activity on the platform (e.g., pages visited, time spent on the platform).",
+            "user_impact": "This means Roblox can track your behavior while using their service, which could be used to build a detailed profile of your online activity.",
+            "questions_to_ask": [
+              "What specific usage data is being collected?",
+              "Is this data anonymized or linked to my personal identity?",
+              "Can I opt out of this data collection?"
+            ]
+          },
+          {
+            "term": "Marketing or promotional materials",
+            "explanation": "This refers to emails, notifications, or other communications sent to you to promote products, services, or events.",
+            "user_impact": "Your personal data could be used to send you advertisements or promotional content, which may not align with your preferences.",
+            "questions_to_ask": [
+              "How often will I receive marketing communications?",
+              "Can I fully opt out of marketing communications, and how?",
+              "Will my data be shared with third parties for marketing purposes?"
+            ]
+          },
+          {
+            "term": "Cookies and Usage Data",
+            "explanation": "Cookies are small files stored on your device that track your online activity, while usage data refers to how you interact with the service.",
+            "user_impact": "This means Roblox can monitor your activity across their platform and potentially other websites, which could be used for targeted advertising or analytics.",
+            "questions_to_ask": [
+              "What types of cookies are being used, and for what purposes?",
+              "Can I disable cookies without affecting my ability to use the service?",
+              "Is my usage data shared with third-party advertisers or analytics companies?"
+            ]
+          }
+        ],
+        "practical_meaning": "In practice, Roblox collects a wide range of personal and usage data, including identifiable information (like your name and email) and behavioral data (like your IP address and browsing activity). This data is used for marketing, promotional purposes, and analytics, which could involve profiling you to target ads or improve their services. While you can opt out of some communications, the data collection itself may still occur, and it’s unclear how much control users have over this process.",
+        "user_action_needed": "Users should review Roblox's privacy settings to understand what data is being collected and how it is used. Opt out of marketing communications if you do not want to receive promotional materials. Additionally, users should inquire about how to limit or disable data collection, such as cookies or usage tracking, and whether their data is shared with third parties.",
+        "severity_justification": "This was flagged as high severity because the broad scope of data collection (including personal and usage data) could lead to privacy risks, such as unauthorized sharing of data, targeted advertising without consent, or potential misuse of sensitive information. The lack of clarity around how this data is used and shared raises significant concerns for user privacy and control."
+      },
+      "online_research": {
+        "search_query": "\"Roblox\" Personal Data Usage Data Marketing or promotional materials terms conditions privacy policy explanation",
+        "top_result_url": "https://www.etsy.com/shop/artwithmeshop",
+        "top_result_title": "artwithmeshop",
+        "summary": "Priscilla reviewed Roblox Man Face Sticker Sheet | Fun Roblox Character Face Decals | Gaming Stickers ... We may use your personal information for marketing and",
+        "detailed_content_available": false,
+        "additional_context": null
+      }
+    },
+    {
+      "original_concern": {
+        "clause": "Third-party data sharing for advertising",
+        "severity": "high",
+        "explanation": "The policy explicitly allows sharing of user data with third-party advertising networks like Google AdSense and Bing Ads. This raises concerns about user privacy, as these networks may use the data for interest-based advertising across platforms.",
+        "quote": "Google, as a third party vendor, uses cookies to serve ads on our Service... You may opt out of the use of the DoubleClick Cookie for interest-based advertising."
+      },
+      "extended_context": "...can prevent Mixpanel from using your information for analytics purposes by opting-out. To opt-out of Mixpanel service, please visit this page: <https://mixpanel.com/optout/>\n\n  For more information on what type of information Mixpanel collects, please visit the Terms of Use page of Mixpanel: <https://mixpanel.com/terms/>\n\n### Advertising\n\nWe may use third-party Service Providers to show advertisements to you to help support and maintain our Service.\n\n* **Google AdSense & DoubleClick Cookie**\n\n  Google, as a third party vendor, uses cookies to serve ads on our Service. Google's use of the DoubleClick cookie enables it and its partners to serve ads to our users based on their visit to our Service or other websites on the Internet.\n\n  You may opt out of the use of the DoubleClick Cookie for interest-based advertising by visiting the Google Ads Settings web page: <http://www.google.com/ads/preferences/>\n* **Bing Ads**\n\n  Bing Ads is an advertising service provided by Microsoft, Inc.\n\n  You can opt-out of Bing Ads remarketing by visiting: <https://advertise.bingads.microsoft.com/en-us/resources/policies/personalized-ads>\n\n  For more information abo...",
+      "clarity_analysis": {
+        "unclear_terms": [
+          {
+            "term": "Third-party Service Providers",
+            "explanation": "These are external companies or organizations that Roblox partners with to provide certain services, in this case, advertising. Examples include Google AdSense and Bing Ads.",
+            "user_impact": "Your personal data, such as browsing behavior, may be shared with these companies, who can use it to target you with ads across different websites and platforms.",
+            "questions_to_ask": [
+              "What specific data is being shared with these third-party providers?",
+              "How long do these third-party providers retain my data?",
+              "Can I fully opt out of all data sharing, or just certain types of ads?"
+            ]
+          },
+          {
+            "term": "DoubleClick Cookie",
+            "explanation": "A tracking cookie used by Google to collect data about your online behavior, such as websites you visit, to serve personalized ads.",
+            "user_impact": "This cookie tracks your activity not only on Roblox but also across other websites, creating a detailed profile of your interests for targeted advertising.",
+            "questions_to_ask": [
+              "How can I confirm that the DoubleClick Cookie has been disabled after opting out?",
+              "Does opting out of the DoubleClick Cookie stop all tracking, or just limit personalized ads?",
+              "Are there other cookies or tracking mechanisms in use that I should be aware of?"
+            ]
+          },
+          {
+            "term": "Interest-based advertising",
+            "explanation": "Ads that are tailored to your interests based on data collected about your online activity, such as websites you visit, searches you perform, or content you engage with.",
+            "user_impact": "Your online behavior is being monitored and analyzed to show you ads that are more likely to catch your attention, which may feel invasive to some users.",
+            "questions_to_ask": [
+              "What specific behaviors or data points are being used to determine my interests?",
+              "Can I opt out of interest-based advertising entirely, or just from specific providers?",
+              "What happens to the data already collected about me if I opt out?"
+            ]
+          },
+          {
+            "term": "Opt-out mechanisms",
+            "explanation": "Links or settings provided by third-party advertisers (e.g., Google Ads Settings, Bing Ads opt-out page) that allow you to limit or stop certain types of data collection or advertising.",
+            "user_impact": "You have some control over how your data is used, but opting out may not completely stop data collection or ads—it may only limit personalized ads.",
+            "questions_to_ask": [
+              "Does opting out through these mechanisms stop all data sharing, or just limit certain types of ads?",
+              "Are these opt-out mechanisms easy to use and effective?",
+              "What other steps can I take to protect my privacy beyond these opt-out options?"
+            ]
+          }
+        ],
+        "practical_meaning": "Roblox shares user data with third-party advertising networks like Google and Microsoft to display targeted ads. These companies use tracking technologies, such as cookies, to monitor your online activity both on Roblox and across other websites. While opt-out options are provided, they may not fully prevent data collection or tracking, and users may still see non-personalized ads.",
+        "user_action_needed": "Users should review the opt-out options provided by Google and Bing to limit interest-based advertising. Additionally, users can explore browser settings or third-party tools to block tracking cookies and enhance privacy. It’s also important to regularly review Roblox’s privacy policy for updates.",
+        "severity_justification": "This was flagged as high severity because it involves sharing user data with third parties, which can significantly impact user privacy. The tracking extends beyond Roblox to other websites, creating comprehensive profiles of users' online behavior. While opt-out options are available, they may not fully prevent data collection, leaving users with limited control over their personal information."
+      },
+      "online_research": {
+        "search_query": "\"Roblox\" Third-party Service Providers DoubleClick Cookie Interest-based advertising terms conditions privacy policy explanation",
+        "top_result_url": "https://searchherald.com/topic/google-adwords",
+        "top_result_title": "Google AdWords: The Most Important SEO News - The Search Herald",
+        "summary": "Only the most important SEO news The Most Important News About: Google AdWords April, 24 2025 April, 23 2025 April, 22 2025 April, 21 2025 April, 18 2025 April, 17 2025 April, 16 2025 April, 14 2025 April, 10 2025 April, 9 2025 April, 8 2025 April, 7 2025 April, 4 2025 April, 3 2025 April, 2 2025 April, 1 2025 March, 31 2025 March, 28 2025 March, 26 2025 March, 25 2025 March, 24 2025 March, 21 2025 March, 18 2025 March, 12 2025 March, 11 2025 March, 10 2025 March, 7 2025 March, 4 2025 March, 3 2",
+        "detailed_content_available": true,
+        "additional_context": "Only the most important SEO news\n\nThe Most Important News About:\nGoogle AdWords\n\nMay, 20 2025\n\nMay, 19 2025\n\nMay, 16 2025\n\nMay, 15 2025\n\nMay, 13 2025\n\nMay, 12 2025\n\nMay, 9 2025\n\nMay, 7 2025\n\nMay, 6 2025\n\nMay, 5 2025\n\nMay, 2 2025\n\nMay, 1 2025\n\nApril, 24 2025\n\nApril, 23 2025\n\nApril, 22 2025\n\nApril, 21 2025\n\nApril, 18 2025\n\nApril, 17 2025\n\nApril, 16 2025\n\nApril, 14 2025\n\nApril, 10 2025\n\nApril, 9 2025\n\nApril, 8 2025\n\nApril, 7 2025\n\nApril, 4 2025\n\nApril, 3 2025\n\nApril, 2 2025\n\nApril, 1 2025\n\nMarch, 31 2025\n\nMarch, 28 2025\n\nMarch, 26 2025\n\nMarch, 25 2025\n\nMarch, 24 2025\n\nMarch, 21 2025\n\nMarch, 18 2025\n\nMarch, 12 2025\n\nMarch, 11 2025\n\nMarch, 10 2025\n\nMarch, 7 2025\n\nMarch, 4 2025\n\nMarch, 3 2025\n\nMarch, 2 2025\n\nFebruary, 28 2025\n\nFebruary, 27 2025\n\nFebruary, 26 2025\n\nFebruary, 24 2025\n\nFebruary, 21 2025\n\nFebruary, 20 2025\n\nFebruary, 18 2025\n\nFebruary, 14 2025\n\nFebruary, 13 2025\n\nFebruary, 12 2025\n\nFebruary, 11 2025\n\nFebruary, 7 2025\n\nFebruary, 6 2025\n\nFebruary, 5 2025\n\nFebruary, 4 2025\n\nFebruar"
+      }
+    }
+  ]
+}

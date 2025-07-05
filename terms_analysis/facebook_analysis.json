@@ -4,28 +4,144 @@
   "overall_score": 6.5,
   "privacy_concerns": [
     {
-      "clause": "Data sharing with third parties",
+      "clause": "Broad data collection practices",
       "severity": "high",
-      "explanation": "Facebook's terms often include broad rights to share user data with third parties, which can be concerning from a privacy standpoint, especially given the platform's extensive data collection practices.",
-      "quote": "Facebook may share your information with third-party partners for advertising and analytics."
+      "explanation": "Facebook collects extensive user data, including personal, behavioral, and location data, which is often beyond what is necessary for the platform's core functionality. This data is also shared with third parties for advertising and other purposes.",
+      "quote": "Facebook collects information about the content you provide, your activity on the platform, and your interactions with others, as well as device information and location data."
     },
     {
-      "clause": "Account deletion process",
+      "clause": "Third-party data sharing",
+      "severity": "high",
+      "explanation": "Facebook's terms allow for broad sharing of user data with third-party partners, including advertisers and other entities, which raises significant privacy concerns, especially given the lack of granular user control over this sharing.",
+      "quote": "We share information with third-party partners to help us provide and improve our services, including advertisers and measurement partners."
+    },
+    {
+      "clause": "Account deletion complexity",
       "severity": "medium",
-      "explanation": "The process for deleting a Facebook account can be cumbersome, with potential delays and retention of data for unspecified periods.",
-      "quote": "When you delete your account, we delete things you have posted, such as your photos and status updates, and you won't be able to recover that information later."
+      "explanation": "While Facebook provides a process for account deletion, it retains user data for a significant period and may continue to use anonymized data. This raises concerns about the permanence of user data removal.",
+      "quote": "When you delete your account, we delete your data, but some information may remain in backup storage for a limited period."
+    },
+    {
+      "clause": "Changes to terms notification",
+      "severity": "medium",
+      "explanation": "Facebook reserves the right to change its terms and conditions with limited notice to users, which may impact user rights without adequate transparency.",
+      "quote": "We may update these terms from time to time, and we will notify you by posting the updated terms on our website."
     }
   ],
-  "summary": "Facebook's terms and conditions present a complex legal framework that can be difficult for users to navigate. While the platform provides tools for IP protection and content management, its data collection and sharing practices raise significant privacy concerns. The terms favor the company, with broad rights to user data and complex account management processes.",
+  "summary": "Facebook's terms and conditions reflect its extensive data collection and sharing practices, which pose significant privacy concerns for Canadian users. While the platform provides tools for intellectual property protection and content management, the terms are complex and heavily favor Facebook's interests, with limited user control over data and term changes.",
   "red_flags": [
     "Excessive data collection beyond app functionality",
     "Broad rights to share data with third parties",
-    "Difficult account deletion processes"
+    "Complex account deletion process",
+    "Limited notice for changes to terms"
   ],
   "user_friendliness_score": 6.0,
   "data_collection_score": 4.0,
-  "legal_complexity_score": 5.0,
-  "terms_version": "N/A",
-  "terms_url": "https://www.facebook.com/terms.php",
-  "analysis_date": "2023-10-05"
+  "legal_complexity_score": 5.5,
+  "terms_version": "May 31, 2021",
+  "terms_url": "https://ised-isde.canada.ca/site/strategic-policy-sector/en/marketplace-framework-policy/copyright-policy/submissions-consultation-modern-copyright-framework-online-intermediaries/facebook",
+  "analysis_date": "2025-07-05",
+  "deep_analysis": {
+    "0": {
+      "unclear_terms": [
+        {
+          "term": "Broad data collection practices",
+          "explanation": "This refers to Facebook gathering a wide range of information about you, including what you post, who you interact with, how you use the platform, your device details (like phone model or browser), and even your physical location.",
+          "user_impact": "This means Facebook knows a lot about you, far beyond what you might expect. It tracks your behavior, preferences, and movements, which can be used to build a detailed profile of your life. This data is also shared with advertisers and other third parties, potentially exposing you to targeted ads or other uses of your data that you may not be aware of.",
+          "questions_to_ask": [
+            "What specific data is Facebook collecting about me?",
+            "How is my location data being used and shared?",
+            "Who are the third parties that Facebook shares my data with?",
+            "Can I limit the amount of data Facebook collects about me?",
+            "What happens to my data if I delete my account?"
+          ]
+        },
+        {
+          "term": "Device information",
+          "explanation": "This includes details about the device you use to access Facebook, such as your phone or computer model, operating system, browser type, IP address, and possibly other technical details.",
+          "user_impact": "Facebook can use this information to track your online activity across devices and potentially link your behavior on Facebook to other apps or websites you visit.",
+          "questions_to_ask": [
+            "What specific device information is being collected?",
+            "Can Facebook track me even when I’m not using the app?",
+            "Is this data shared with advertisers or other companies?"
+          ]
+        },
+        {
+          "term": "Location data",
+          "explanation": "This refers to Facebook tracking your physical location, either through GPS, Wi-Fi signals, or your IP address.",
+          "user_impact": "Facebook can know where you are at any given time, which could be used for targeted advertising or other purposes. This could feel invasive, especially if you’re unaware of how often your location is being tracked.",
+          "questions_to_ask": [
+            "How often is my location being tracked?",
+            "Can I turn off location tracking?",
+            "What happens to my location data after it’s collected?"
+          ]
+        },
+        {
+          "term": "Shared with third parties",
+          "explanation": "This means Facebook provides your data to other companies, such as advertisers, analytics firms, or business partners.",
+          "user_impact": "Your personal information could be used in ways you didn’t intend, such as for targeted ads, profiling, or even sold to other companies. You may have little control over how these third parties use your data.",
+          "questions_to_ask": [
+            "Who are these third parties?",
+            "What data is being shared with them?",
+            "Can I opt out of having my data shared?"
+          ]
+        }
+      ],
+      "practical_meaning": "In practice, this means Facebook collects a significant amount of personal and behavioral data about you, often more than is necessary for you to simply use the platform. This data is used to create a detailed profile of you, which is then monetized by sharing it with advertisers and other companies. This could lead to privacy concerns, as your data might be used in ways you don’t fully understand or agree with.",
+      "user_action_needed": "Users should review their privacy settings on Facebook to limit data collection where possible, such as turning off location tracking or restricting ad preferences. They should also consider what they share on the platform and whether they’re comfortable with Facebook’s data practices. Reading Facebook’s privacy policy in detail and asking questions about unclear terms is also recommended.",
+      "severity_justification": "This issue is flagged as high severity because it involves extensive data collection and sharing practices that could significantly impact users’ privacy. The broad scope of data collected, combined with the lack of transparency about how it’s shared and used, creates a high potential for misuse or unintended consequences for users.",
+      "extended_context": "Could not locate quote in document: Facebook collects information about the content you provide, your activity on the platform, and your...",
+      "online_research": {
+        "search_query": "\"Facebook\" Broad data collection practices Device information Location data terms conditions privacy policy explanation",
+        "top_result_url": "https://www.cushmanwakefield.com/en/global-privacy-policy",
+        "top_result_title": "global client / third party privacy and confidentiality policy",
+        "summary": "The Global Client/Third Party Privacy & Confidentiality Policy (“Policy”) describes C&W's methods regarding the collection, processing, storage, and"
+      }
+    },
+    "1": {
+      "unclear_terms": [
+        {
+          "term": "third-party partners",
+          "explanation": "This refers to external companies or organizations that Facebook works with, such as advertisers, analytics firms, or other businesses that help Facebook operate its services or generate revenue.",
+          "user_impact": "Your personal data, including browsing habits, interests, and potentially sensitive information, may be shared with companies outside of Facebook. These companies may use your data for their own purposes, such as targeted advertising or analytics, which could lead to privacy risks.",
+          "questions_to_ask": [
+            "Who are these third-party partners, and what types of data are shared with them?",
+            "How does Facebook ensure these partners handle my data securely and responsibly?",
+            "Can I opt out of this data sharing, and if so, how?",
+            "What specific data is being shared, and for what purposes?"
+          ]
+        },
+        {
+          "term": "help us provide and improve our services",
+          "explanation": "This phrase is often used to justify data sharing by claiming it is necessary to enhance user experience or improve the platform's functionality. However, it is vague and does not specify exactly how your data is being used.",
+          "user_impact": "Facebook may use this broad justification to share your data for purposes you might not expect or agree with, such as improving ad targeting or conducting market research.",
+          "questions_to_ask": [
+            "What specific improvements or services are being developed using my data?",
+            "How does sharing my data with advertisers or measurement partners directly benefit me as a user?",
+            "Is there a way to limit or control how my data is used for these purposes?"
+          ]
+        },
+        {
+          "term": "advertisers and measurement partners",
+          "explanation": "Advertisers are companies that pay Facebook to show you ads, while measurement partners are firms that analyze data to assess the effectiveness of those ads or other services.",
+          "user_impact": "These entities may receive detailed information about your online behavior, preferences, and interactions, which could be used to profile you or target you with ads. This could also lead to your data being stored or processed by multiple companies, increasing the risk of misuse or breaches.",
+          "questions_to_ask": [
+            "What safeguards are in place to prevent misuse of my data by advertisers or measurement partners?",
+            "Can these partners share my data with others, and if so, under what conditions?",
+            "How long do these partners retain my data, and can I request its deletion?"
+          ]
+        }
+      ],
+      "practical_meaning": "In practice, this clause means that Facebook collects your data and shares it with external companies, such as advertisers and analytics firms, to generate revenue and improve its services. However, users have limited visibility or control over which companies receive their data, what data is shared, and how it is used. This creates significant privacy risks, as your data could be used in ways you are unaware of or might not agree with.",
+      "user_action_needed": "Users should review their privacy settings on Facebook to see if there are options to limit data sharing with third parties. They should also consider using tools like ad blockers or privacy-focused browser extensions to reduce data collection. Additionally, users may want to contact Facebook to request more transparency about its data-sharing practices and advocate for more granular control over their data.",
+      "severity_justification": "This issue is flagged as high severity because it involves the sharing of potentially sensitive personal data with third parties without clear user consent or control. This practice increases the risk of data misuse, breaches, and loss of privacy, which could have serious consequences for users, such as identity theft, unwanted profiling, or exposure of private information.",
+      "extended_context": "Could not locate quote in document: We share information with third-party partners to help us provide and improve our services, includin...",
+      "online_research": {
+        "search_query": "\"Facebook\" third-party partners help us provide and improve our services advertisers and measurement partners terms conditions privacy policy explanation",
+        "top_result_url": "https://www.flashscore.ca/h2h/basketball/usa-fkKQAvuh/canada-dnhQoFr2/",
+        "top_result_title": "Canada W @ USA W LIVE 05/07/2025 | Basketball - Flashscore.ca",
+        "summary": "Terms of Use · Privacy policy · GDPR and Journalism · Advertise · Contact · Mobile · Live Scores · Recommended Sites · FAQ. Follow us. Facebook."
+      }
+    }
+  }
 }

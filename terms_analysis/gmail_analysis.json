@@ -1,0 +1,43 @@
+{
+  "app_name": "Gmail",
+  "app_version": null,
+  "overall_score": 7.5,
+  "privacy_concerns": [
+    {
+      "clause": "IP address considered personal information",
+      "severity": "medium",
+      "explanation": "The Government of Canada considers IP addresses to be personal information, and while anonymization is mentioned for Google Analytics, the potential for identification through third-party cooperation is a concern.",
+      "quote": "The IP address, on its own, does not identify an individual. However, in certain circumstances, such as with the co-operation of an ISP for example, it could be used to identify an individual using the site."
+    },
+    {
+      "clause": "Data shared with third-party services like Google Analytics",
+      "severity": "medium",
+      "explanation": "While anonymization is applied to IP addresses, data is still shared with third-party providers like Google Analytics, which may be subject to U.S. laws such as the USA Patriot Act.",
+      "quote": "Data collected for Web analytics purposes goes outside of Canada to the United States of America and may be subject to the governing legislation of that country, such as the USA Patriot Act."
+    },
+    {
+      "clause": "Use of cookies and digital markers",
+      "severity": "low",
+      "explanation": "Digital markers are used for web analytics and user experience improvement, but users have the option to disable them in their browser settings.",
+      "quote": "You may adjust your browser settings to reject digital markers, including cookies, if you so choose. However, it may affect your ability to interact with the Healthy Canadians website."
+    },
+    {
+      "clause": "Data retention for web analytics",
+      "severity": "low",
+      "explanation": "Data collected through Webtrends is retained for a maximum of 18 months, which is a reasonable timeframe, but users may not be fully aware of this retention policy.",
+      "quote": "Healthy Canadians uses Webtrends internally and retains information collected for Web analytics for a maximum period of 18 months."
+    }
+  ],
+  "summary": "The terms and conditions for Gmail, as analyzed through the Healthy Canadians privacy notice, demonstrate a reasonable commitment to user privacy and transparency. However, concerns arise from data sharing with third-party services like Google Analytics and the potential for IP address identification. The terms are generally clear and user-friendly, with provisions for user control over cookies and digital markers.",
+  "red_flags": [
+    "Data shared with third-party services like Google Analytics",
+    "Potential identification through IP address and third-party cooperation",
+    "Data subject to U.S. laws like the USA Patriot Act"
+  ],
+  "user_friendliness_score": 8.0,
+  "data_collection_score": 7.0,
+  "legal_complexity_score": 7.5,
+  "terms_version": null,
+  "terms_url": "https://healthycanadians.gc.ca/important-eng.php",
+  "analysis_date": "2025-07-05"
+}

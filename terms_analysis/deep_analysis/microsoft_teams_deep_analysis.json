@@ -1,0 +1,107 @@
+{
+  "app_name": "Microsoft Teams",
+  "total_high_severity_concerns": 2,
+  "analysis_timestamp": "2025-07-05",
+  "concerns_analyzed": [
+    {
+      "original_concern": {
+        "clause": "Changes to Terms",
+        "severity": "high",
+        "explanation": "Microsoft reserves the right to update and modify the terms at any time without prior notice to users. This could lead to significant changes in user rights or obligations without their explicit consent.",
+        "quote": "Microsoft reserves the right to update and modify the TOU at any time without notice to you."
+      },
+      "extended_context": "This is the Trace Id: e7a3966cad9e161a489f7aebc2e72d0f\n\n\n\n[Skip to main content](javascript:void(0))\n\n\n[Microsoft](https://www.microsoft.com)\n\n[Legal](https://www.microsoft.com/en-us/legal )\n\n[0\nCart\n0 items in shopping cart](https://www.microsoft.com/en-ca/store/cart)\n\nSign in\n\n# Microsoft Terms of Use\n\nLast Updated: February 7, 2022\n\n## Acceptance of Terms\n\nThe services that Microsoft provides to you are subject to the following Terms of Use (\"TOU\"). Microsoft reserves the right to update and modify the TOU at any time without notice to you. The most current version of the TOU can be reviewed by clicking on the \"Terms of Use\" hyperlink located at the bottom of our web pages. When we make updates to the TOU, Microsoft will update the date at the top of this page. By using the website after a new version of the TOU has been posted, you agree to the terms of such new version.\n\n## Description of Services\n\nThrough its network of Web properties, Microsoft provides you with access to a variety of resources, including developer tools, down...",
+      "clarity_analysis": {
+        "unclear_terms": [
+          {
+            "term": "Microsoft reserves the right to update and modify the TOU at any time without notice to you.",
+            "explanation": "This means Microsoft can change the rules governing your use of their services whenever they want, without informing you beforehand. You are expected to comply with the new terms simply by continuing to use their services.",
+            "user_impact": "Users might unknowingly agree to new terms that could significantly alter their rights, responsibilities, or privacy protections. For example, Microsoft could add clauses that allow them to collect more personal data or limit your ability to take legal action against them.",
+            "questions_to_ask": [
+              "How will I know when the terms have changed?",
+              "What kind of changes could Microsoft make without notifying me?",
+              "Can I opt out of the new terms if I disagree with them?",
+              "What happens if I continue using the service but don't agree with the updated terms?"
+            ]
+          },
+          {
+            "term": "By using the website after a new version of the TOU has been posted, you agree to the terms of such new version.",
+            "explanation": "This means that simply using Microsoft’s services after they update the terms is considered as your agreement to the new terms, even if you haven’t explicitly read or accepted them.",
+            "user_impact": "You might unknowingly agree to terms that you haven’t reviewed, which could include changes that negatively affect your rights or impose new obligations on you.",
+            "questions_to_ask": [
+              "Am I notified when the terms are updated, or do I have to check manually?",
+              "What happens if I don’t agree with the new terms but still need to use the service?",
+              "Are there any limits to the kinds of changes Microsoft can make to the terms?"
+            ]
+          }
+        ],
+        "practical_meaning": "In practice, this clause allows Microsoft to change the rules of their services at any time without notifying users directly. Users are expected to regularly check the terms themselves and are automatically bound by any updates simply by continuing to use the service. This puts the burden on users to stay informed and could result in them unknowingly agreeing to unfavorable changes.",
+        "user_action_needed": "Users should regularly review the Terms of Use on Microsoft’s website to stay informed about any changes. If you notice updates, carefully review them to ensure you’re comfortable with the new terms. If you disagree with the changes, consider whether you want to continue using the service. Additionally, users should ask Microsoft for more transparency, such as email notifications for updates.",
+        "severity_justification": "This was flagged as high severity because it gives Microsoft unilateral power to change the terms without notifying users, which could significantly impact user rights and obligations. The lack of notice or explicit consent means users might unknowingly agree to terms that could harm their privacy, limit their legal recourse, or impose new restrictions on their use of the service."
+      },
+      "online_research": {
+        "search_query": "\"Microsoft Teams\" Microsoft reserves the right to update and modify the TOU at any time without notice to you. By using the website after a new version of the TOU has been posted, you agree to the terms of such new version. terms conditions privacy policy explanation",
+        "top_result_url": "https://tallo.com/jobs/technology/software-developer-engineer/ga/cobb/",
+        "top_result_title": "Software Developer / Engineer Jobs & Work In Cobb, Georgia - Tallo",
+        "summary": "... Microsoft Teams Lead Architect – RRN00013731 ... 05/07/2025. JobFull TimeOnsite · II. IT Ignition ... Privacy Policy · Terms of Service; Your Privacy",
+        "detailed_content_available": true,
+        "additional_context": "![Tallo](https://tallo.com/uploads/tallo-logo_132x44.svg)\n![Tallo ](https://tallo.com/uploads/tallo-logo_2552x135.png)\n\n# Find & Apply For Software Developer / Engineer Jobs In Cobb, Georgia\n\nSoftware Developer / Engineer jobs in Cobb, Georgia involve designing, developing, and testing software applications. Responsibilities include writing code, debugging programs, and collaborating with team members. Candidates need strong problem-solving skills, proficiency in programming languages, and a bachelor's degree in computer science or a related field. Below you can find different Software Developer / Engineer positions in Cobb, Georgia.\n\n## Jobs in Cobb\n\nBrowse jobs from a variety of sources below, sorted with the most recently published, nearest to the top. Click the title to view more information and apply online.\n\nApplication Architect\n\nGenesis10  \nCobb, GA\n\nMobile Architect\n\nSOAL TECH  \nCobb, GA\n\nSenior Software Engineer- Life Sciences, Data Discovery\n\nDatavant  \nCobb, GA\n\n“Cloudera D"
+      }
+    },
+    {
+      "original_concern": {
+        "clause": "Limitation of Liability",
+        "severity": "high",
+        "explanation": "The terms include broad disclaimers of liability, limiting Microsoft's responsibility for damages, including loss of data or profits. This heavily favors the company and leaves users with minimal recourse in case of issues.",
+        "quote": "In no event shall Microsoft and/or its respective suppliers be liable for any special, indirect or consequential damages, or any damages whatsoever resulting from loss of use, data, or profits."
+      },
+      "extended_context": "...tability of the information contained in the documents and related graphics published as part of the services for any purpose. All such documents and related graphics are provided \"as is\" without warranty of any kind. Microsoft and/or its respective suppliers hereby disclaim all warranties and conditions with regard to this information, including all warranties and conditions of merchantability, whether express, implied or statutory, fitness for a particular purpose, title and non-infringement. In no event shall Microsoft and/or its respective suppliers be liable for any special, indirect or consequential damages, or any damages whatsoever resulting from loss of use, data, or profits, whether in an action of contract, negligence or other tortious action, arising out of or in connection with the use or performance of information available from the services.**\n\nThe documents and related graphics published on the services could include technical inaccuracies or typographical errors. Changes are periodically added to the information herein. Microsoft and/or its respective suppliers may make improvements and/or changes in the product(s) and/or the program(s) described herein at a...",
+      "clarity_analysis": {
+        "unclear_terms": [
+          {
+            "term": "Limitation of Liability",
+            "explanation": "This clause limits Microsoft's legal responsibility for any harm or damages users might experience while using their services. Essentially, Microsoft is saying they are not responsible for certain types of damages, including loss of data, profits, or other indirect consequences, even if the issue arises due to their services.",
+            "user_impact": "If something goes wrong while using Microsoft Teams—such as losing important data, experiencing downtime, or suffering financial losses—Microsoft is not legally obligated to compensate you for these damages. This means users bear the risk of using the service, even if the issue stems from Microsoft's actions or negligence.",
+            "questions_to_ask": [
+              "What specific scenarios does this limitation apply to? For example, does it include security breaches or service outages?",
+              "Are there any exceptions where Microsoft would take responsibility for damages?",
+              "What steps can I take to protect my data or minimize risks while using Microsoft Teams?",
+              "Does this limitation apply to both free and paid versions of Microsoft Teams?"
+            ]
+          },
+          {
+            "term": "Special, indirect, or consequential damages",
+            "explanation": "These terms refer to damages that are not directly caused by an issue but are a result of it. For example, if a service outage causes you to miss a business deal, the lost revenue would be considered a 'consequential damage.'",
+            "user_impact": "Microsoft is stating they will not be responsible for any ripple effects or secondary consequences of issues with their service. This could leave users without recourse for significant financial or operational losses.",
+            "questions_to_ask": [
+              "What counts as 'special' or 'indirect' damages in this context?",
+              "If I experience a major business disruption due to a Microsoft Teams issue, what options do I have for recourse?",
+              "Are there any insurance or backup options I should consider to protect myself from these risks?"
+            ]
+          },
+          {
+            "term": "Provided 'as is' without warranty",
+            "explanation": "This means Microsoft is not guaranteeing that the service will work perfectly, be free of errors, or meet your specific needs. They are essentially saying you use the service at your own risk.",
+            "user_impact": "If Microsoft Teams has bugs, downtime, or fails to perform as expected, Microsoft is not responsible for fixing it or compensating you. This can be especially problematic for businesses relying on the service for critical operations.",
+            "questions_to_ask": [
+              "What does 'as is' mean in terms of service reliability and support?",
+              "If I encounter a major issue, what support options are available to me?",
+              "Are there any guarantees for uptime or performance in the paid versions of Microsoft Teams?"
+            ]
+          }
+        ],
+        "practical_meaning": "This clause means that Microsoft is limiting its legal responsibility for any problems users might face while using Microsoft Teams. They are not guaranteeing the service will always work as expected, and they are not liable for any damages, including financial losses, caused by issues with the service. Users are essentially agreeing to take on all the risks of using the platform.",
+        "user_action_needed": "Users should carefully evaluate their reliance on Microsoft Teams, especially for critical operations. Consider implementing additional safeguards, such as regularly backing up data, having contingency plans for outages, and understanding what support options are available. Businesses should also assess whether they need additional legal or insurance protections to cover potential risks.",
+        "severity_justification": "This clause was flagged as high severity because it significantly limits Microsoft's accountability, leaving users with minimal recourse in the event of serious issues like data loss, service outages, or financial harm. This can have a major impact on businesses and individuals who rely on Microsoft Teams for essential communication and operations."
+      },
+      "online_research": {
+        "search_query": "\"Microsoft Teams\" Limitation of Liability Special, indirect, or consequential damages Provided 'as is' without warranty terms conditions privacy policy explanation",
+        "top_result_url": "https://www.etsy.com/listing/4302088900/simple-decision-tracker-template-word",
+        "top_result_title": "Simple Decision Tracker Template (word, PDF) - Etsy - Etsy",
+        "summary": "... requirements. 7. Limitation of Liability In no event shall the Seller be liable for any indirect, consequential, special, or incidental damages arising out",
+        "detailed_content_available": false,
+        "additional_context": null
+      }
+    }
+  ]
+}

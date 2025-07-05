@@ -1,0 +1,30 @@
+{
+  "app_name": "Crunchyroll",
+  "app_version": null,
+  "overall_score": 7.5,
+  "privacy_concerns": [
+    {
+      "clause": "Accessibility Plan mentions consultations with third-party organizations.",
+      "severity": "low",
+      "explanation": "The plan outlines detailed consultations with disability advocacy groups and experts, which is positive. However, it does not explicitly address how user data is protected during these consultations.",
+      "quote": "HS worked with the Independent Broadcast Group to do meaningful consultations with disability advocacy groups, experts on accessibility, and persons with disabilities."
+    },
+    {
+      "clause": "Third-party integrations for accessibility testing.",
+      "severity": "medium",
+      "explanation": "The plan mentions third-party firms for accessibility audits and improvements. While this is beneficial for accessibility, it raises potential concerns about data sharing with these firms, which is not explicitly addressed.",
+      "quote": "Crunchyroll also engages with third party firms to ensure that its ecosystem of interactions (e.g., mobile, web, and smart TV apps) are accessible for a myriad of experiences."
+    }
+  ],
+  "summary": "The Crunchyroll Accessibility Plan demonstrates a strong commitment to inclusivity and accessibility, particularly for Canadian users. It outlines clear steps to improve workplace accommodations and user experience accessibility. However, some concerns arise regarding third-party data sharing and the lack of explicit privacy protections in these contexts.",
+  "red_flags": [
+    "Potential data sharing with third-party firms for accessibility audits.",
+    "Lack of explicit mention of privacy protections during stakeholder consultations."
+  ],
+  "user_friendliness_score": 8.0,
+  "data_collection_score": 7.0,
+  "legal_complexity_score": 8.5,
+  "terms_version": null,
+  "terms_url": "https://sites.sonypictures.com/corp/privacypolicies/b2c/accessibilityplan.html",
+  "analysis_date": "2025-07-05"
+}

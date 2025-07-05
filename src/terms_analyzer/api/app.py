@@ -263,7 +263,8 @@ def scrape_and_analyze_service(request_id, service_name, known_url=None):
         # Step 2: Analyze the scraped terms
         print(f"Starting analysis for {service_name}")
         try:
-            analysis_result = analysis_service.analyze_service(service_name)
+            import asyncio
+            analysis_result = asyncio.run(analysis_service.analyze_app(service_name, save_results=True))
             
             if not analysis_result:
                 scraping_requests[request_id]['status'] = 'failed'
@@ -274,7 +275,7 @@ def scrape_and_analyze_service(request_id, service_name, known_url=None):
             scraping_requests[request_id]['progress'] = 95
             
             # Step 3: Transform for frontend
-            transformed_result = transform_analysis_data(analysis_result)
+            transformed_result = transform_analysis_data(analysis_result.dict())
             
             scraping_requests[request_id]['status'] = 'completed'
             scraping_requests[request_id]['progress'] = 100
@@ -379,23 +380,199 @@ def get_analysis(service_id):
         analysis_file = analysis_dir / f'{service_id}_analysis.json'
         deep_analysis_file = analysis_dir / 'deep_analysis' / f'{service_id}_deep_analysis.json'
         
+        # Also try alternative naming patterns for deep analysis
+        alt_deep_analysis_patterns = []
+        if service_id == 'netflix_in_your_neighbourhood':
+            alt_deep_analysis_patterns.append(analysis_dir / 'deep_analysis' / 'netflix_deep_analysis.json')
+        
+        # Try the base service name if the full ID doesn't work
+        if '_' in service_id:
+            base_name = service_id.split('_')[0]  # e.g., 'netflix' from 'netflix_in_your_neighbourhood'
+            alt_deep_analysis_patterns.append(analysis_dir / 'deep_analysis' / f'{base_name}_deep_analysis.json')
+        
         analysis_data = None
         
         # Check for deep analysis first
+        deep_analysis_data = None
+        regular_analysis_data = None
+        
         if deep_analysis_file.exists():
             with open(deep_analysis_file, 'r') as f:
-                raw_data = json.load(f)
-                analysis_data = transform_deep_analysis_data(raw_data)
-        elif analysis_file.exists():
-            with open(analysis_file, 'r') as f:
-                raw_data = json.load(f)
-                analysis_data = transform_analysis_data(raw_data)
+                deep_raw_data = json.load(f)
+                deep_analysis_data = transform_deep_analysis_data(deep_raw_data)
         else:
+            # Try alternative patterns
+            for alt_file in alt_deep_analysis_patterns:
+                if alt_file.exists():
+                    with open(alt_file, 'r') as f:
+                        deep_raw_data = json.load(f)
+                        deep_analysis_data = transform_deep_analysis_data(deep_raw_data)
+                    break
+        
+        # Also load regular analysis for scores if deep analysis exists
+        if analysis_file.exists():
+            with open(analysis_file, 'r') as f:
+                regular_raw_data = json.load(f)
+                regular_analysis_data = transform_analysis_data(regular_raw_data)
+        
+        # Combine deep analysis with regular analysis scores
+        if deep_analysis_data and regular_analysis_data:
+            analysis_data = deep_analysis_data.copy()
+            # Override scores from regular analysis
+            analysis_data['user_friendliness_score'] = regular_analysis_data['user_friendliness_score']
+            analysis_data['data_collection_score'] = regular_analysis_data['data_collection_score']
+            analysis_data['legal_complexity_score'] = regular_analysis_data['legal_complexity_score']
+            # Also use the regular analysis score and summary
+            analysis_data['score'] = regular_analysis_data['score']
+            analysis_data['summary'] = regular_analysis_data['summary']
+        elif deep_analysis_data:
+            analysis_data = deep_analysis_data
+        elif regular_analysis_data:
+            analysis_data = regular_analysis_data
+        else:
+            analysis_data = None
+        
+        if analysis_data is None:
             return jsonify({"error": "Analysis not found"}), 404
         
         return jsonify(analysis_data)
     except Exception as e:
         return jsonify({"error": f"Error getting analysis: {str(e)}"}), 500
+
+@app.route('/terms/<service_id>', methods=['GET'])
+def get_terms(service_id):
+    """
+    Get the original terms and conditions text for a specific service.
+    """
+    try:
+        # Get the project root directory
+        project_root = Path(__file__).parent.parent.parent.parent
+        storage_dir = project_root / 'terms_storage'
+        
+        # Try to find the terms file
+        terms_file = storage_dir / f'{service_id}.md'
+        
+        if not terms_file.exists():
+            return jsonify({"error": "Terms not found"}), 404
+        
+        with open(terms_file, 'r', encoding='utf-8') as f:
+            terms_text = f.read()
+        
+        return jsonify({
+            "service_id": service_id,
+            "terms_text": terms_text
+        })
+    except Exception as e:
+        return jsonify({"error": f"Error getting terms: {str(e)}"}), 500
+
+@app.route('/validate-all-terms', methods=['GET'])
+def validate_all_terms():
+    """
+    Validate all terms files and return a report of which are valid/invalid.
+    """
+    try:
+        # Get the project root directory
+        project_root = Path(__file__).parent.parent.parent.parent
+        storage_dir = project_root / 'terms_storage'
+        
+        if not storage_dir.exists():
+            return jsonify({"error": "Terms storage directory not found"}), 404
+        
+        validation_results = {
+            "valid": [],
+            "invalid": [],
+            "summary": {
+                "total_files": 0,
+                "valid_count": 0,
+                "invalid_count": 0
+            }
+        }
+        
+        # Check all .md files in storage
+        for terms_file in storage_dir.glob('*.md'):
+            service_name = terms_file.stem
+            validation_results["summary"]["total_files"] += 1
+            
+            try:
+                with open(terms_file, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                
+                validation_result = validate_terms_content(content, service_name)
+                
+                result_entry = {
+                    "service_name": service_name,
+                    "file_name": terms_file.name,
+                    "reason": validation_result['reason'],
+                    "content_length": len(content)
+                }
+                
+                if validation_result['is_valid']:
+                    validation_results["valid"].append(result_entry)
+                    validation_results["summary"]["valid_count"] += 1
+                else:
+                    validation_results["invalid"].append(result_entry)
+                    validation_results["summary"]["invalid_count"] += 1
+                    
+            except Exception as e:
+                validation_results["invalid"].append({
+                    "service_name": service_name,
+                    "file_name": terms_file.name,
+                    "reason": f"Error reading file: {str(e)}",
+                    "content_length": 0
+                })
+                validation_results["summary"]["invalid_count"] += 1
+        
+        return jsonify(validation_results)
+    except Exception as e:
+        return jsonify({"error": f"Error validating terms: {str(e)}"}), 500
+
+def validate_terms_content(content: str, service_name: str) -> dict:
+    """
+    Validate if content is actually terms of service/privacy policy.
+    Returns dict with 'is_valid' boolean and 'reason' string.
+    """
+    if not content or len(content) < 100:
+        return {'is_valid': False, 'reason': 'Content too short'}
+    
+    content_lower = content.lower()
+    
+    # Check for news website indicators (strong signals it's NOT terms)
+    news_indicators = [
+        'bbc.com', 'cnn.com', 'reuters.com', 'ap.org', 'bloomberg.com',
+        'techcrunch.com', 'theverge.com', 'engadget.com', 'ars-technica.com',
+        'news article', 'breaking news', 'reuters', 'associated press',
+        'photo illustration', 'getty images', 'in this photo',
+        'parliament passed', 'controversy', 'bill forces'
+    ]
+    
+    for indicator in news_indicators:
+        if indicator in content_lower:
+            return {'is_valid': False, 'reason': f'Contains news content indicator: {indicator}'}
+    
+    # Check for terms/privacy policy indicators (positive signals)
+    terms_indicators = [
+        'terms of service', 'terms of use', 'user agreement', 'privacy policy',
+        'data collection', 'cookies', 'we collect', 'personal information',
+        'your data', 'user content', 'intellectual property', 'license',
+        'prohibited conduct', 'termination', 'disclaimers', 'limitation of liability',
+        'governing law', 'arbitration', 'acceptable use'
+    ]
+    
+    terms_matches = sum(1 for indicator in terms_indicators if indicator in content_lower)
+    
+    # Require at least 3 terms-related indicators
+    if terms_matches < 3:
+        return {'is_valid': False, 'reason': f'Only {terms_matches} terms indicators found, need at least 3'}
+    
+    # Check content length - terms should be substantial
+    if len(content) < 1000:
+        return {'is_valid': False, 'reason': 'Content too short for terms of service'}
+    
+    # Additional check: if it looks like a news article structure
+    if any(phrase in content_lower for phrase in ['facebook and instagram to', 'meta has said', 'the bill forces']):
+        return {'is_valid': False, 'reason': 'Content appears to be a news article about the service, not terms of service'}
+    
+    return {'is_valid': True, 'reason': f'Valid terms content with {terms_matches} indicators'}
 
 def get_service_category_and_icon(service_name):
     """
@@ -444,9 +621,9 @@ def transform_deep_analysis_data(raw_data):
         'score': overall_score,
         'summary': f"Analysis reveals {high_severity_count} high-severity concerns that require attention.",
         'total_high_severity_concerns': high_severity_count,
-        'user_friendliness_score': None,
-        'data_collection_score': None,
-        'legal_complexity_score': None,
+        'user_friendliness_score': raw_data.get('user_friendliness_score'),
+        'data_collection_score': raw_data.get('data_collection_score'),
+        'legal_complexity_score': raw_data.get('legal_complexity_score'),
         'concerns': concerns,
         'recommendations': [
             'Review privacy settings carefully',

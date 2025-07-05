@@ -1,0 +1,40 @@
+{
+  "app_name": "Peacock Tv",
+  "total_high_severity_concerns": 1,
+  "analysis_timestamp": "2025-07-05",
+  "concerns_analyzed": [
+    {
+      "original_concern": {
+        "clause": "Data collection and sharing practices",
+        "severity": "high",
+        "explanation": "The terms do not explicitly outline what data is collected, how it is used, or whether it is shared with third parties. This lack of transparency raises concerns about user privacy.",
+        "quote": "No explicit mention of data collection or sharing practices in the provided terms."
+      },
+      "extended_context": "Could not locate quote in document: No explicit mention of data collection or sharing practices in the provided terms....",
+      "clarity_analysis": {
+        "unclear_terms": [
+          {
+            "term": "Data collection and sharing practices",
+            "explanation": "This refers to how a company gathers information about you (e.g., your name, email, browsing history, viewing habits) and whether or how they share that information with other companies or organizations.",
+            "user_impact": "If the terms do not specify what data is collected, how it is used, or who it is shared with, users cannot know what personal information is being gathered, how it might be used (e.g., for targeted ads, sold to advertisers, or shared with partners), or how to protect their privacy.",
+            "questions_to_ask": [
+              "What specific types of data are being collected (e.g., personal information, viewing habits, location)?",
+              "How is my data being used by Peacock TV?",
+              "Is my data being shared with third parties? If so, who are they?",
+              "Can I opt out of data collection or sharing practices?",
+              "How long is my data stored, and how is it protected?"
+            ]
+          }
+        ],
+        "practical_meaning": "In practice, this lack of transparency means that Peacock TV could be collecting a wide range of personal information about you without your full understanding. They could also be sharing or selling this data to advertisers, partners, or other third parties without explicitly informing you. This creates a significant privacy risk because you have no control or insight into how your data is being handled.",
+        "user_action_needed": "Users should carefully review Peacock TV's privacy policy (if available separately) to understand their data practices. If the privacy policy is also unclear or unavailable, users should consider limiting the personal information they provide, using privacy tools (e.g., VPNs or ad blockers), and contacting Peacock TV to request clarification on their data practices.",
+        "severity_justification": "This issue is flagged as high severity because it directly impacts user privacy and trust. Without clear information on data collection and sharing, users are left vulnerable to potential misuse of their personal information, such as unauthorized data sharing, targeted advertising, or even data breaches. Transparency is critical for informed consent, and its absence is a significant concern."
+      },
+      "online_research": {
+        "search_query": "\"Peacock Tv\" Data collection and sharing practices terms conditions privacy policy explanation",
+        "no_results": true,
+        "message": "No additional context found online"
+      }
+    }
+  ]
+}

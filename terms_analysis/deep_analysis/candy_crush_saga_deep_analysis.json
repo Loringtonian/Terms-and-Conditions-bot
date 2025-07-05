@@ -1,0 +1,42 @@
+{
+  "app_name": "Candy Crush Saga",
+  "total_high_severity_concerns": 1,
+  "analysis_timestamp": "2025-07-05",
+  "concerns_analyzed": [
+    {
+      "original_concern": {
+        "clause": "Unclear account deletion or data removal process",
+        "severity": "high",
+        "explanation": "The terms do not provide any information on how users can delete their accounts or request the removal of their data, which is a significant omission from a privacy perspective.",
+        "quote": "No mention of account deletion or data removal processes."
+      },
+      "extended_context": "Could not locate quote in document: No mention of account deletion or data removal processes....",
+      "clarity_analysis": {
+        "unclear_terms": [
+          {
+            "term": "Account deletion or data removal process",
+            "explanation": "This refers to the steps or methods users can take to permanently delete their account or request the removal of their personal data from the company's systems.",
+            "user_impact": "Without clear instructions on how to delete your account or remove your data, users may not be able to exercise their rights to privacy or control over their personal information. This could mean your data remains stored indefinitely, even if you stop using the app.",
+            "questions_to_ask": [
+              "How can I delete my account permanently?",
+              "What happens to my personal data after I delete my account?",
+              "Does the company retain any of my data after account deletion, and if so, for how long?",
+              "Is there a specific contact or form to request data removal?"
+            ]
+          }
+        ],
+        "practical_meaning": "In practice, this means that Candy Crush Saga's terms do not provide users with a clear way to delete their accounts or request the removal of their personal data. This omission could prevent users from exercising their rights under privacy laws, such as the GDPR (General Data Protection Regulation) or CCPA (California Consumer Privacy Act), which often require companies to provide these options.",
+        "user_action_needed": "Users should reach out to the company directly to ask for clarification on how to delete their accounts or request data removal. If no clear process is provided, users may need to escalate their concerns to a data protection authority or consumer protection agency, especially if they are in a jurisdiction with strong privacy laws.",
+        "severity_justification": "This issue is flagged as high severity because it directly impacts users' ability to control their personal data, which is a fundamental privacy right. Without a clear process for account deletion or data removal, users are left vulnerable to potential misuse or indefinite retention of their personal information. This lack of transparency is particularly concerning in a digital app that likely collects significant amounts of user data."
+      },
+      "online_research": {
+        "search_query": "\"Candy Crush Saga\" Account deletion or data removal process terms conditions privacy policy explanation",
+        "top_result_url": "http://www.jiankangyumeirong.com/bdt/2435.aspx",
+        "top_result_title": "孙耀琦：多样夏季教你最Chic搭配！ - 健康与美容",
+        "summary": "We've got a joint account zovirax sirop STOCKHOLM - With 100 million people logging on every day for a fix of its games like Candy Crush Saga",
+        "detailed_content_available": true,
+        "additional_context": "![](/upfiles/images/2024-11/202411211325566444.png)\n![](/upfiles/images/2017-04/201704201344291567.jpg)\n\n# 孙耀琦：多样夏季教你最Chic搭配！\n\n2017-04-20\n\n今年夏天如何穿搭早知道\n\n炎热的盛夏在耀武扬威地烘烤着脚下的土地，是谁能带来一丝凉爽或是一抹活泼的色彩？本期HB私人衣橱特邀近期热播的 《仙剑云之凡》 中走出的活泼少女蘅绾绾、《六扇门》中名门闺秀曹懿恩的扮演者孙耀琦，看她如何搭配出最Chic的风格吧！\n\n![](/upfiles/images/../../../../upfiles/images//6362829279595944743299555.jpg \"QQ截图20170420133957.jpg\")\n\n![](/upfiles/images/../../../../upfiles/images//6362829279595944743299555.jpg \"QQ截图20170420133957.jpg\")\n\n***孙耀琦搭配心得***\n\n短裙 运动鞋，是我生活中最爱的装扮，因为真的好舒服，可以想怎样运动就怎样运动，时尚，要先满足自我欣赏。\n\n![](/upfiles/images/../../../../upfiles/images//6362829285888819088659736.jpg \"QQ截图20170420133957.jpg\")\n\n![](/upfiles/images/../../../../upfiles/images//6362829285888819088659736.jpg \"QQ截图20170420133957.jpg\")\n\n看到这套LOOK，实在是夏天的代表穿搭了。由欢愉色彩、不拘一格的设计改良及独特拼接手法共同打造的这件连衣裙，给炎热的夏季带来了生机勃勃的能量。涌动着的裙装中展现了葱郁动植物图案样式，将热带氛围十足的色调满满拼凑。搭配同样热情洋溢的饰品和运动鞋式样的小白拖鞋可见一斑。漫步海边，享受无穷缤纷夏季！\n\n![](/upfiles/images/../../../../upfiles/images//6362829293045367411456730.jpg \"QQ截图2017042013395"
+      }
+    }
+  ]
+}

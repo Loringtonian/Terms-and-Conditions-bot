@@ -1,0 +1,44 @@
+{
+  "app_name": "Silver Threads",
+  "app_version": null,
+  "overall_score": 7.5,
+  "privacy_concerns": [
+    {
+      "clause": "Transfer of Data",
+      "severity": "medium",
+      "explanation": "The policy states that user data may be transferred to jurisdictions with different data protection laws, which could potentially expose user data to weaker privacy protections.",
+      "quote": "Your information, including Personal Data, may be transferred to — and maintained on — computers located outside of your state, province, country or other governmental jurisdiction where the data protection laws may differ from those of your jurisdiction."
+    },
+    {
+      "clause": "Retention of Data",
+      "severity": "medium",
+      "explanation": "The policy does not specify clear retention periods for personal data, leaving ambiguity about how long user data will be stored.",
+      "quote": "Silver Threads Service will retain your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy."
+    },
+    {
+      "clause": "Cookies and Tracking Technologies",
+      "severity": "low",
+      "explanation": "The use of cookies and tracking technologies is disclosed, but the policy does not provide detailed information about the specific types of cookies used or their purposes.",
+      "quote": "We use cookies and similar tracking technologies to track the activity on our Service and we hold certain information."
+    },
+    {
+      "clause": "Disclosure for Law Enforcement",
+      "severity": "medium",
+      "explanation": "The policy allows for disclosure of personal data to law enforcement without specifying the legal standards or safeguards in place to protect user data.",
+      "quote": "Under certain circumstances, Silver Threads Service may be required to disclose your Personal Data if required to do so by law or in response to valid requests by public authorities."
+    }
+  ],
+  "summary": "The Silver Threads privacy policy is generally user-friendly and provides clear explanations of data collection and usage practices. However, there are concerns regarding data transfers to jurisdictions with different privacy laws, ambiguous data retention periods, and limited transparency around cookies and law enforcement disclosures.",
+  "red_flags": [
+    "Ambiguity in data retention periods",
+    "Potential exposure to weaker privacy protections due to data transfers",
+    "Limited transparency regarding cookies and tracking technologies",
+    "Broad disclosure rights to law enforcement without clear safeguards"
+  ],
+  "user_friendliness_score": 8.0,
+  "data_collection_score": 7.0,
+  "legal_complexity_score": 7.5,
+  "terms_version": "Effective date: July 15, 2019",
+  "terms_url": "https://silverthreads.ca/privacy-policy/",
+  "analysis_date": "2025-07-05"
+}

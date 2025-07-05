@@ -1,0 +1,30 @@
+{
+  "app_name": "Vercel",
+  "app_version": null,
+  "overall_score": 7.5,
+  "privacy_concerns": [
+    {
+      "clause": "Consent to receive communications from Vercel and its partners",
+      "severity": "medium",
+      "explanation": "By submitting the form, users agree to receive communications from Vercel and its partners about products and services. This could lead to excessive marketing emails or third-party communications, which may not be explicitly clear to users.",
+      "quote": "By submitting this, you agree to Vercel's Event Terms and Conditions and Privacy Policy, and that Vercel and its partners can send you communications about products and services."
+    },
+    {
+      "clause": "Data sharing with partners",
+      "severity": "medium",
+      "explanation": "The terms allow Vercel to share user data with its partners, but it is unclear who these partners are and how the data will be used, which raises privacy concerns.",
+      "quote": "Vercel and its partners can send you communications about products and services."
+    }
+  ],
+  "summary": "Vercel's terms and conditions for this event are relatively user-friendly, with clear links to their Event Terms and Privacy Policy. However, there are moderate concerns regarding data sharing with partners and consent for marketing communications, which could be more transparent. The legal language is moderately complex but not overly burdensome for the average user.",
+  "red_flags": [
+    "Broad consent to data sharing with unspecified partners",
+    "Potential for excessive marketing communications"
+  ],
+  "user_friendliness_score": 8.0,
+  "data_collection_score": 6.5,
+  "legal_complexity_score": 7.0,
+  "terms_version": null,
+  "terms_url": "https://vercel.com/legal/event-terms-conditions",
+  "analysis_date": "2025-07-05"
+}

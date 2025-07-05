@@ -1,0 +1,117 @@
+{
+  "app_name": "Clash Royale",
+  "total_high_severity_concerns": 2,
+  "analysis_timestamp": "2025-07-05",
+  "concerns_analyzed": [
+    {
+      "original_concern": {
+        "clause": "Data collection and sharing with third parties",
+        "severity": "high",
+        "explanation": "The terms indicate that user data, including personal information, may be shared with third-party partners for analytics, advertising, and other purposes. This is concerning as it may not be essential for the app's core functionality.",
+        "quote": "We may share your information with third-party partners for purposes such as analytics and advertising."
+      },
+      "extended_context": "Could not locate quote in document: We may share your information with third-party partners for purposes such as analytics and advertisi...",
+      "clarity_analysis": {
+        "unclear_terms": [
+          {
+            "term": "third-party partners",
+            "explanation": "This refers to companies or organizations outside of the app's developer or publisher that may receive your data. These could include advertisers, analytics companies, or other service providers.",
+            "user_impact": "Your personal information might be shared with companies you don’t directly interact with, and they could use it for purposes like targeted advertising or analyzing your behavior.",
+            "questions_to_ask": [
+              "Who are these third-party partners? Are they reputable companies?",
+              "What specific data is being shared with these third parties?",
+              "How will these third parties use my data?",
+              "Can I opt out of this data sharing?"
+            ]
+          },
+          {
+            "term": "analytics",
+            "explanation": "This refers to the process of collecting and analyzing data about how you use the app, such as how often you play, what features you use, and how you interact with the game.",
+            "user_impact": "Your in-app behavior is being tracked and analyzed, which could lead to personalized ads or other uses of your data that you may not be aware of.",
+            "questions_to_ask": [
+              "What kind of analytics data is being collected?",
+              "Is this data anonymized, or can it be linked back to me personally?",
+              "How long is this data stored?"
+            ]
+          },
+          {
+            "term": "advertising purposes",
+            "explanation": "This means your data may be used to show you targeted ads based on your behavior, preferences, or other personal information.",
+            "user_impact": "You may see ads tailored to your interests, but this also means your data is being used to profile you for marketing purposes.",
+            "questions_to_ask": [
+              "What kind of ads will I see as a result of this data sharing?",
+              "Can I opt out of targeted advertising?",
+              "Is my data being sold to advertisers or just shared?"
+            ]
+          }
+        ],
+        "practical_meaning": "In practice, this clause means that your personal information, such as your name, email, device information, and in-app behavior, could be shared with other companies. These companies might use your data to analyze your activity or show you ads tailored to your interests. This data sharing is not necessarily required for the app to function but is likely done to generate revenue for the app developers.",
+        "user_action_needed": "Users should carefully review the app's privacy settings to see if there are options to limit data sharing or opt out of targeted advertising. They should also consider whether they are comfortable with their data being shared with third parties and potentially used for purposes beyond the app's core functionality.",
+        "severity_justification": "This was flagged as high severity because it involves the sharing of personal information with third parties, which can pose privacy risks. Users may not be fully aware of how their data is being used or who it is being shared with, and this lack of transparency can lead to misuse or unauthorized access to sensitive information."
+      },
+      "online_research": {
+        "search_query": "\"Clash Royale\" third-party partners analytics advertising purposes terms conditions privacy policy explanation",
+        "top_result_url": "https://www.mklibrary.com/sitemap/",
+        "top_result_title": "Sitemap - MK Library",
+        "summary": "FTC Advertising Disclosure · Terms and Conditions · Opt-out preferences · Imprint · Privacy Statement (US) · Disclaimer · Cookie Policy · Privacy Statement. ©",
+        "detailed_content_available": false,
+        "additional_context": null
+      }
+    },
+    {
+      "original_concern": {
+        "clause": "Advertising and tracking practices",
+        "severity": "high",
+        "explanation": "The app uses tracking technologies for targeted advertising, which may include tracking user behavior across different platforms. This could be invasive to user privacy.",
+        "quote": "We use cookies and similar technologies to provide personalized advertisements and improve user experience."
+      },
+      "extended_context": "Could not locate quote in document: We use cookies and similar technologies to provide personalized advertisements and improve user expe...",
+      "clarity_analysis": {
+        "unclear_terms": [
+          {
+            "term": "cookies and similar technologies",
+            "explanation": "Cookies are small files stored on your device that track your activity on a website or app. 'Similar technologies' can include things like tracking pixels, device fingerprinting, or other methods to monitor your behavior.",
+            "user_impact": "This means the app is actively collecting data about how you use it, and potentially other apps or websites, to build a profile about you for targeted advertising.",
+            "questions_to_ask": [
+              "What specific data is being collected through these technologies?",
+              "Are these tracking technologies monitoring my activity outside of the app?",
+              "Can I opt out of this tracking or targeted advertising?",
+              "How long is my data stored, and who has access to it?"
+            ]
+          },
+          {
+            "term": "personalized advertisements",
+            "explanation": "These are ads tailored to you based on your behavior, preferences, and data collected from your activity on the app or other platforms.",
+            "user_impact": "Your personal data is being used to decide what ads you see, which could feel invasive if you’re unaware of the extent of the tracking.",
+            "questions_to_ask": [
+              "What data is used to personalize these ads?",
+              "Are third parties (advertisers) given access to my data?",
+              "Can I see or delete the data collected about me?"
+            ]
+          },
+          {
+            "term": "tracking user behavior across different platforms",
+            "explanation": "This means the app may track your activity not just within the app, but also on other apps or websites you visit, potentially creating a detailed profile of your online behavior.",
+            "user_impact": "Your privacy could be compromised as your activity across multiple platforms is monitored and used for advertising or other purposes.",
+            "questions_to_ask": [
+              "Does the app track my activity on other apps or websites?",
+              "How is this cross-platform tracking done, and can I stop it?",
+              "Is my data shared with third parties or advertisers?"
+            ]
+          }
+        ],
+        "practical_meaning": "In practice, this clause means that the app is collecting and using your data to show you ads that are tailored to your interests. This could involve tracking your behavior both within the app and potentially across other apps or websites. This level of tracking can feel invasive because it creates a detailed profile of your online habits, which is shared with advertisers or other third parties.",
+        "user_action_needed": "Users should review the app's privacy settings to see if they can opt out of personalized ads or tracking. They should also check if the app provides a way to delete or limit the data collected. If no clear options are available, users may want to reconsider using the app or take additional steps to protect their privacy, such as using ad blockers or privacy-focused tools.",
+        "severity_justification": "This was flagged as high severity because it involves invasive tracking practices that could compromise user privacy. The app's use of cross-platform tracking and data sharing with advertisers raises significant concerns about how much control users have over their personal information and how transparently this is communicated."
+      },
+      "online_research": {
+        "search_query": "\"Clash Royale\" cookies and similar technologies personalized advertisements tracking user behavior across different platforms terms conditions privacy policy explanation",
+        "top_result_url": "https://m.economictimes.com/archivelist/year-2025,month-5,starttime-45783.cms",
+        "top_result_title": "06 May, 2025 top news - The Economic Times",
+        "summary": "06 May, 2025 top news: What happened on 06 May, 2025. 06 May, 2025 top stories, 06 May, 2025 major events, breaking news from 06 May, 2025 on The Economic",
+        "detailed_content_available": false,
+        "additional_context": null
+      }
+    }
+  ]
+}

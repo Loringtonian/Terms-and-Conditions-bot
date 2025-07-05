@@ -1,0 +1,118 @@
+{
+  "app_name": "Tinder",
+  "app_version": null,
+  "overall_score": 6.5,
+  "privacy_concerns": [
+    {
+      "clause": "Mandatory arbitration and class action waiver",
+      "severity": "high",
+      "explanation": "The terms include a mandatory arbitration clause and a class action waiver, which limits users' ability to pursue legal action in court or join collective lawsuits. This can be disadvantageous for users who may face disputes with the company.",
+      "quote": "THESE PROVISIONS INCLUDE A MANDATORY PRE-ARBITRATION INFORMAL DISPUTE RESOLUTION PROCESS, AN ARBITRATION AGREEMENT, SMALL CLAIMS COURT ELECTION, CLASS ACTION WAIVER, ADDITIONAL PROCEDURES FOR MASS ARBITRATION FILINGS, AND JURY TRIAL WAIVER THAT AFFECT YOUR RIGHTS."
+    },
+    {
+      "clause": "Broad rights to modify terms",
+      "severity": "medium",
+      "explanation": "Tinder reserves the right to modify the terms at any time, with users being responsible for regularly checking for updates. This places an undue burden on users to stay informed and could lead to users unknowingly agreeing to unfavorable changes.",
+      "quote": "Subject to applicable law, we reserve the right to modify, amend, or change the Terms at any time. Notice of material changes will be posted on this page with an updated effective date."
+    },
+    {
+      "clause": "Data sharing with affiliates and third parties",
+      "severity": "medium",
+      "explanation": "The terms reference a Privacy Policy that likely permits data sharing with affiliates and third parties. While this is common, it raises concerns about the extent of data sharing and the transparency of these practices.",
+      "quote": "Your access and use of our Services is also subject to the Privacy Policy, Cookie Policy, Community Guidelines, and Safety Tips."
+    },
+    {
+      "clause": "Account termination without warning",
+      "severity": "medium",
+      "explanation": "Tinder reserves the right to terminate user accounts without warning if users fail to meet eligibility requirements or violate the terms. This could lead to sudden loss of access without sufficient recourse for users.",
+      "quote": "If at any time you cease to meet these requirements, all authorization to access our Services or systems is automatically revoked, and you must immediately delete your account, and we retain the right to remove your access to our Services without warning."
+    }
+  ],
+  "summary": "Tinder's terms of use are moderately user-friendly but contain several clauses that could disadvantage users, particularly regarding dispute resolution and data sharing. The terms are relatively clear but require users to proactively monitor changes.",
+  "red_flags": [
+    "Mandatory arbitration and class action waiver",
+    "Broad rights to modify terms without explicit user consent",
+    "Potentially extensive data sharing with affiliates and third parties",
+    "Account termination without warning or recourse"
+  ],
+  "user_friendliness_score": 6.0,
+  "data_collection_score": 5.0,
+  "legal_complexity_score": 7.0,
+  "terms_version": "Effective June 1, 2024",
+  "terms_url": "https://policies.tinder.com/terms",
+  "analysis_date": "2025-07-05",
+  "deep_analysis": {
+    "0": {
+      "unclear_terms": [
+        {
+          "term": "Mandatory arbitration",
+          "explanation": "This means that if you have a dispute with Tinder, you cannot take the issue to court. Instead, you must resolve it through arbitration, which is a private process where a neutral third party (the arbitrator) decides the outcome.",
+          "user_impact": "You lose the right to have your case heard by a judge or jury in a public court. Arbitration can also limit your ability to gather evidence (discovery) and appeal decisions.",
+          "questions_to_ask": [
+            "What are the rules and procedures for the arbitration process?",
+            "Who pays for the arbitration fees?",
+            "Can I choose the arbitrator, or does Tinder choose them?",
+            "Is the arbitration process fair and unbiased?"
+          ]
+        },
+        {
+          "term": "Class action waiver",
+          "explanation": "This means you cannot join other users in a collective lawsuit against Tinder. Each user must pursue their dispute individually.",
+          "user_impact": "If many users experience the same issue, you cannot band together to share legal costs or strengthen your case. This makes it harder to hold Tinder accountable for widespread issues.",
+          "questions_to_ask": [
+            "What happens if multiple users have the same complaint?",
+            "Can I still join a group arbitration process?",
+            "Are there any exceptions to the class action waiver?"
+          ]
+        },
+        {
+          "term": "Jury trial waiver",
+          "explanation": "This means you give up your right to have your case decided by a jury of your peers in court.",
+          "user_impact": "You lose the opportunity for a jury to hear your case, which could be more favorable to you than an arbitrator chosen under Tinder's terms.",
+          "questions_to_ask": [
+            "Why is a jury trial not allowed?",
+            "What are the advantages and disadvantages of arbitration compared to a jury trial?"
+          ]
+        },
+        {
+          "term": "Pre-arbitration informal dispute resolution process",
+          "explanation": "Before you can begin arbitration, you must first try to resolve the issue informally with Tinder.",
+          "user_impact": "This adds an extra step to resolving disputes and could delay the process. Tinder may also have more control over this informal process.",
+          "questions_to_ask": [
+            "How long does the informal dispute resolution process take?",
+            "What happens if Tinder does not respond or resolve the issue informally?",
+            "Is there a time limit for moving from informal resolution to arbitration?"
+          ]
+        },
+        {
+          "term": "Small claims court election",
+          "explanation": "You may be allowed to take your case to small claims court instead of arbitration, but only if your claim qualifies under the court's rules (e.g., the claim is for a small amount of money).",
+          "user_impact": "This provides a limited alternative to arbitration, but only for smaller disputes. Larger claims must still go through arbitration.",
+          "questions_to_ask": [
+            "What is the maximum claim amount allowed in small claims court?",
+            "Can I still use small claims court if Tinder disputes my eligibility?"
+          ]
+        },
+        {
+          "term": "Additional procedures for mass arbitration filings",
+          "explanation": "If many users file similar arbitration claims, Tinder has special procedures in place to handle these cases collectively.",
+          "user_impact": "This could make it harder for users to pursue individual claims if Tinder groups them together and applies different rules.",
+          "questions_to_ask": [
+            "What are the additional procedures for mass arbitration filings?",
+            "Do these procedures affect the timeline or fairness of my individual claim?"
+          ]
+        }
+      ],
+      "practical_meaning": "In practice, these provisions significantly limit your ability to take legal action against Tinder. You must resolve disputes through arbitration, which is typically less favorable to consumers than court proceedings. You cannot join with other users to file a collective lawsuit, and you waive your right to a jury trial. While small claims court may be an option for minor disputes, larger claims are subject to arbitration. Additionally, Tinder has special rules for handling mass arbitration claims, which could further complicate the process.",
+      "user_action_needed": "Users should carefully review the arbitration rules and procedures outlined in Tinder's terms. If you disagree with these provisions, you may want to reconsider using the service. If you encounter a dispute, be prepared to follow the informal resolution process and understand the limitations of arbitration. Consider consulting a legal professional if you have concerns about your rights.",
+      "severity_justification": "This was flagged as high severity because it directly impacts users' legal rights and limits their ability to seek fair recourse in disputes with Tinder. Arbitration and class action waivers are often seen as favoring companies over consumers, and these provisions could discourage users from pursuing legitimate claims due to the complexity, cost, and reduced transparency of the arbitration process.",
+      "extended_context": "... [**Cookie Policy**](https://policies.tinder.com/cookie-policy)**,** [**Community Guidelines**](https://policies.tinder.com/community-guidelines)**, and** [**Safety Tips**](/community-resources/safety-tips)**, so it is important that you read this Agreement and these policies and procedures carefully before you create an account.**\n\n**PLEASE CAREFULLY REVIEW THE DISPUTE RESOLUTION PROVISIONS IN SECTION 15 BELOW. THESE GOVERN THE MANNER IN WHICH DISPUTES WILL BE ADDRESSED BETWEEN YOU AND TINDER. THESE PROVISIONS INCLUDE A MANDATORY PRE-ARBITRATION INFORMAL DISPUTE RESOLUTION PROCESS (EXCEPT FOR INDIVIDUAL CLAIMS OF SEXUAL ASSAULT OR SEXUAL HARASSMENT OCCURRING IN CONNECTION WITH YOUR USE OF THE SERVICES), AN ARBITRATION AGREEMENT, SMALL CLAIMS COURT ELECTION, CLASS ACTION WAIVER, ADDITIONAL PROCEDURES FOR MASS ARBITRATION FILINGS, AND JURY TRIAL WAIVER THAT AFFECT YOUR RIGHTS. IN ARBITRATION, THERE IS TYPICALLY LESS DISCOVERY AND APPELLATE REVIEW THAN IN COURT.**\n\n**We may update these Terms from time to time, so check this page regularly for updates.**\n\nWelcome to Tinder.\n\nIf you live in the European Economic Area, the United Kingdom, or Switzerland, these Terms of Use are between you and:\n\nMTCH Technology Services Limited (“MTCH Technology”)  ...",
+      "online_research": {
+        "search_query": "\"Tinder\" Mandatory arbitration Class action waiver Jury trial waiver terms conditions privacy policy explanation",
+        "top_result_url": null,
+        "top_result_title": null,
+        "summary": null
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "app_name": "Waze",
+  "total_high_severity_concerns": 1,
+  "analysis_timestamp": "2025-07-05",
+  "concerns_analyzed": [
+    {
+      "original_concern": {
+        "clause": "Detailed location, travel, and route information collection",
+        "severity": "high",
+        "explanation": "Waze collects extensive location and route data, including GPS signals, IP addresses, and travel history. This data is collected even when the app is not actively in use, which could be seen as invasive and raises concerns about continuous tracking.",
+        "quote": "Depending on your selected device settings and/or your account settings we may collect information about your location and travel (or lack thereof) also while you are not using the app."
+      },
+      "extended_context": "...rmation**. Location and route information is collected for example in the form of GPS signals (combined with a time-stamp), IP address and other information from sensors and receivers on or around your device, on which the Application is installed and/or activated. This location and route information is saved to a route history of all of the journeys you have made while using the Application. The types of location data we collect depends in part on your device and account settings. For example, depending on your selected device settings and/or your account settings we may collect information about your location and travel (or lack thereof) also while you are not using the app, in order to be able to tell you when to leave for planned or predicted drives, notify you about bad traffic in your area, provide you parking assistance, analyze how effective our ads are and more; \n    *   Terms or venues you searched;\n    *   Your views and interactions with content and ads;\n    *   Your voice and audio information when you use voice and audio features;\n    *   Communication or other content you chose to share with any third party, including Waze users through the Services;\n ...",
+      "clarity_analysis": {
+        "unclear_terms": [
+          {
+            "term": "Location and route information",
+            "explanation": "This refers to data about where you are, where you’ve been, and the routes you’ve taken, collected through GPS signals, your IP address, and other device sensors.",
+            "user_impact": "This means Waze is tracking your movements in detail, including your travel history and potentially your location even when you’re not actively using the app.",
+            "questions_to_ask": [
+              "What specific location data is being collected when I’m not using the app?",
+              "How long is my location and route data stored?",
+              "Can I opt out of location tracking when the app is not in use?"
+            ]
+          },
+          {
+            "term": "Depending on your selected device settings and/or your account settings",
+            "explanation": "This means the extent of data collection depends on how your phone and Waze account are configured. For example, if location services are always enabled, Waze may collect data even when the app is closed.",
+            "user_impact": "If your settings allow it, Waze could continuously track your location without you realizing it.",
+            "questions_to_ask": [
+              "How can I check or change my device and account settings to limit tracking?",
+              "What are the default settings for location tracking in Waze?",
+              "Does Waze notify me when it’s collecting location data in the background?"
+            ]
+          },
+          {
+            "term": "While you are not using the app",
+            "explanation": "This means Waze can collect your location and travel data even when the app is closed or not actively being used.",
+            "user_impact": "Your movements may be tracked at all times, which could feel invasive and raise privacy concerns.",
+            "questions_to_ask": [
+              "Why does Waze need to collect my location data when I’m not using the app?",
+              "Can I turn off background location tracking without losing core app functionality?",
+              "What is Waze doing to protect this data from being misused or accessed by unauthorized parties?"
+            ]
+          },
+          {
+            "term": "Analyze how effective our ads are",
+            "explanation": "This means Waze uses your location and travel data to measure how well their advertisements are performing, such as whether you visited a location after seeing an ad.",
+            "user_impact": "Your location data is being used for advertising purposes, which may feel intrusive if you were unaware of this practice.",
+            "questions_to_ask": [
+              "Can I opt out of my data being used for ad analysis?",
+              "What specific data is shared with advertisers?",
+              "How does Waze ensure my data is anonymized before being used for advertising?"
+            ]
+          }
+        ],
+        "practical_meaning": "Waze collects and stores detailed information about your location, travel habits, and routes, even when the app is not actively in use. This data is used for features like traffic notifications, parking assistance, and ad targeting. However, it also means Waze could be continuously tracking your movements, which raises significant privacy concerns.",
+        "user_action_needed": "Users should review their device and account settings to understand and limit location tracking. Disable background location tracking if you’re uncomfortable with continuous monitoring. Check Waze’s privacy settings to opt out of data collection for advertising purposes, if possible.",
+        "severity_justification": "This was flagged as high severity because continuous location tracking, especially when the app is not in use, can feel invasive and may expose users to privacy risks. The use of this data for advertising purposes without clear, upfront consent further compounds the concern."
+      },
+      "online_research": {
+        "search_query": "\"Waze\" Location and route information Depending on your selected device settings and/or your account settings While you are not using the app terms conditions privacy policy explanation",
+        "top_result_url": "https://repository.law.umich.edu/cgi/viewcontent.cgi?article=2523&context=mjlr",
+        "top_result_title": "[PDF] Publish, Share, Re-Tweet, and Repeat",
+        "summary": "See Terms of Service 3.1, FACEBOOK, https://www.facebook.com/terms.php. [https://perma.cc/PE52-AGWJ] (last visited Nov. 2, 2020) (“[U]se the same name that you.",
+        "detailed_content_available": true,
+        "additional_context": "Published Time: Thu, 08 Apr 2021 14:46:38 GMT\n\nUniversity of Michigan Journal of Law Reform University of Michigan Journal of Law Reform \n\nVolume 54 \n\n2021 \n\n# Publish, Share, Re-Tweet, and Repeat Publish, Share, Re-Tweet, and Repeat \n\nMichal Lavi Hadar Jabotinsky Center for Interdisciplinary Research of Financial Markets \n\nFollow this and additional works at:  https://repository.law.umich.edu/mjlr \n\nPart of the  Communications Law Commons , Internet Law Commons , and the  Law and Society \n\nCommons \n\nRecommended Citation Recommended Citation \n\nMichal Lavi, \n\nPublish, Share, Re-Tweet, and Repeat , 54 U. M ICH . J. L. R EFORM  441 (2021). \n\nAvailable at:  https://repository.law.umich.edu/mjlr/vol54/iss2/5 \n\nhttps://doi.org/10.36646/mjlr.54.2.publish \n\nThis Article is brought to you for free and open access by the University of Michigan Journal of Law Reform at \n\nUniversity of Michigan Law School Scholarship Repository. It has been accepted for inclusion in University of \n\nMichigan Journa"
+      }
+    }
+  ]
+}

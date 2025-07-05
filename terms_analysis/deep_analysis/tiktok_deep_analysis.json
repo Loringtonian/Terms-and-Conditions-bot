@@ -1,0 +1,61 @@
+{
+  "app_name": "TikTok",
+  "total_high_severity_concerns": 1,
+  "analysis_timestamp": "2025-07-05",
+  "concerns_analyzed": [
+    {
+      "original_concern": {
+        "clause": "Content Ownership and Monetization",
+        "severity": "high",
+        "explanation": "TikTok retains broad rights to monetize user-generated content without sharing revenue with users, which could be seen as unfair to content creators.",
+        "quote": "You acknowledge and agree that we may generate revenues, increase goodwill or otherwise increase our value from your use of the Services...you will have no right to share in any such revenue, goodwill or value whatsoever."
+      },
+      "extended_context": "...ad or transmit through the Services. Use of the TikTok Content or materials on the Services for any purpose not expressly permitted by these Terms is strictly prohibited. Such content may not be downloaded, copied, reproduced, distributed, transmitted, broadcast, displayed, sold, licensed or otherwise exploited for any purpose whatsoever without our or, where applicable, our licensors’ prior written consent. We and our licensors reserve all rights not expressly granted in and to their content.\n\nYou acknowledge and agree that we may generate revenues, increase goodwill or otherwise increase our value from your use of the Services, including, by way of example and not limitation, through the sale of advertising, sponsorships, promotions, usage data and Gifts (defined below), and except as specifically permitted by us in these Terms or in another agreement you enter into with us, you will have no right to share in any such revenue, goodwill or value whatsoever. You further acknowledge that, except as specifically permitted by us in these Terms or in another agreement you enter into with us, you (i) have no right to receive any income or other consideration from any User Content (defined below) or your use...",
+      "clarity_analysis": {
+        "unclear_terms": [
+          {
+            "term": "generate revenues, increase goodwill or otherwise increase our value",
+            "explanation": "This means TikTok can make money or enhance its brand reputation using your content or your activity on the platform, such as through ads, sponsorships, or selling data.",
+            "user_impact": "TikTok can profit from your content or data without compensating you, even if your content directly contributes to their revenue or brand value.",
+            "questions_to_ask": [
+              "How exactly does TikTok use my content to generate revenue?",
+              "Does TikTok offer any revenue-sharing opportunities for creators?",
+              "What specific types of user activity or content can TikTok monetize?"
+            ]
+          },
+          {
+            "term": "you will have no right to share in any such revenue, goodwill or value whatsoever",
+            "explanation": "This means TikTok is not obligated to pay you or share any profits they make from your content, even if your content is directly responsible for generating that profit.",
+            "user_impact": "Even if your content goes viral or is used in a way that generates significant revenue for TikTok, you will not receive any compensation unless TikTok explicitly agrees to it in a separate agreement.",
+            "questions_to_ask": [
+              "Are there any circumstances where TikTok would share revenue with creators?",
+              "What agreements or programs (if any) allow creators to earn money on TikTok?",
+              "Can I opt out of TikTok monetizing my content?"
+            ]
+          },
+          {
+            "term": "User Content",
+            "explanation": "This refers to any videos, images, text, or other material that you upload or create on TikTok.",
+            "user_impact": "Anything you post on TikTok can be used by the platform to make money, and you give up any claim to the profits they generate from it.",
+            "questions_to_ask": [
+              "What rights do I retain over my content after uploading it to TikTok?",
+              "Can TikTok use my content for purposes beyond the platform, like in advertisements or partnerships?",
+              "What happens to my content if I delete my account?"
+            ]
+          }
+        ],
+        "practical_meaning": "TikTok has the right to use your content and activity on the platform to make money in various ways, such as through ads, sponsorships, or selling data. You, as the creator, will not receive any share of the revenue unless TikTok explicitly agrees to it in a separate program or agreement. This applies even if your content is highly successful or directly responsible for generating revenue.",
+        "user_action_needed": "Users should carefully consider whether they are comfortable with TikTok profiting from their content without compensation. If you are a content creator, explore whether TikTok offers any monetization programs you can join. Additionally, review TikTok's policies on content ownership and monetization to understand your rights and limitations.",
+        "severity_justification": "This is a high-severity concern because it directly impacts content creators' ability to earn money from their work. TikTok's broad rights to monetize user content without sharing revenue can be seen as exploitative, especially for creators who invest significant time and effort into producing high-quality content. It also raises fairness and transparency issues, as users may not fully understand the extent to which TikTok profits from their contributions."
+      },
+      "online_research": {
+        "search_query": "\"TikTok\" generate revenues, increase goodwill or otherwise increase our value you will have no right to share in any such revenue, goodwill or value whatsoever User Content terms conditions privacy policy explanation",
+        "top_result_url": "https://tkshop-plus.com/footer_7.html",
+        "top_result_title": "Content - Tk Shop",
+        "summary": "TikTok Shop. ... have no right to share in any such revenue, goodwill or value whatsoever. You further acknowledge that, except as specifically permitted by",
+        "detailed_content_available": false,
+        "additional_context": null
+      }
+    }
+  ]
+}

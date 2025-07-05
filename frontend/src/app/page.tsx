@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Search, FileText, Gavel, Scale, AlertTriangle, CheckCircle } from 'lucide-react';
 import PasteTermsModal from '@/components/PasteTermsModal';
 import RequestAnalysisModal from '@/components/RequestAnalysisModal';
+import TermsViewerModal from '@/components/TermsViewerModal';
 
 interface Service {
   id: string;
@@ -52,6 +53,21 @@ export default function Home() {
   const [requestInProgress, setRequestInProgress] = useState(false);
   const [requestId, setRequestId] = useState<string | null>(null);
   const [isPasteModalOpen, setIsPasteModalOpen] = useState(false);
+  const [showTermsViewer, setShowTermsViewer] = useState(false);
+  const [termsViewerData, setTermsViewerData] = useState<{
+    serviceId: string;
+    serviceName: string;
+    highlightText: string;
+    isPastedTerms: boolean;
+    pastedTermsText: string;
+  }>({
+    serviceId: '',
+    serviceName: '',
+    highlightText: '',
+    isPastedTerms: false,
+    pastedTermsText: ''
+  });
+  const [pastedTermsText, setPastedTermsText] = useState('');
 
   // Fetch services on component mount
   useEffect(() => {
@@ -181,6 +197,7 @@ export default function Home() {
 
       const analysis = await response.json();
       setAnalysisData(analysis);
+      setPastedTermsText(text); // Store the pasted terms for later viewing
       setSelectedService({
         id: 'pasted',
         name: 'Pasted Terms',
@@ -234,6 +251,22 @@ export default function Home() {
   const handleLearnMore = (concern: any) => {
     setSelectedConcern(concern);
     setShowDeepAnalysis(true);
+  };
+
+  // Handle showing terms with highlighted clause
+  const handleShowTermsWithClause = (concern: any) => {
+    if (!selectedService) return;
+    
+    const isPasted = selectedService.id === 'pasted';
+    
+    setTermsViewerData({
+      serviceId: selectedService.id,
+      serviceName: selectedService.displayName,
+      highlightText: concern.quote || concern.clause,
+      isPastedTerms: isPasted,
+      pastedTermsText: isPasted ? pastedTermsText : ''
+    });
+    setShowTermsViewer(true);
   };
 
   const handleCloseDeepAnalysis = () => {
@@ -564,6 +597,74 @@ export default function Home() {
                   <p className="text-slate-700">{analysisData.summary}</p>
                 </div>
 
+                {/* Red Flags - Show first as they are highest priority */}
+                {analysisData.red_flags && analysisData.red_flags.length > 0 && (
+                  <div className="mb-8">
+                    <h3 className="text-lg font-medium text-slate-900 mb-4">🚨 High Risk Flags</h3>
+                    <div className="space-y-4">
+                      {analysisData.red_flags.map((flag: string, index: number) => {
+                        // Try to match red flag to an existing concern for more details
+                        const matchedConcern = analysisData.concerns?.find((concern: any) => 
+                          concern.clause.toLowerCase().includes(flag.toLowerCase().split(' ').slice(0, 3).join(' ')) ||
+                          flag.toLowerCase().includes(concern.clause.toLowerCase().split(' ').slice(0, 3).join(' ')) ||
+                          (concern.explanation && concern.explanation.toLowerCase().includes(flag.toLowerCase().split(' ').slice(0, 2).join(' ')))
+                        );
+
+                        return (
+                          <div key={index} className="p-4 rounded-lg border-2 bg-red-50 border-red-200">
+                            <div className="flex items-start justify-between">
+                              <div className="flex items-start flex-1">
+                                <div className="flex-shrink-0 px-2 py-1 rounded-full text-xs font-bold border-2 bg-red-100 text-red-800 border-red-200">
+                                  <span className="mr-1">🚨🛑</span>
+                                  HIGH RISK
+                                </div>
+                                <div className="ml-4 flex-1">
+                                  <h4 className="text-sm font-medium text-slate-900">{flag}</h4>
+                                  {matchedConcern && (
+                                    <>
+                                      <p className="mt-1 text-sm text-slate-600">{matchedConcern.explanation}</p>
+                                      {matchedConcern.quote && (
+                                        <div className="mt-2 p-3 bg-white/70 border-l-4 border-slate-300 text-sm text-slate-600 italic">
+                                          "{matchedConcern.quote}"
+                                        </div>
+                                      )}
+                                    </>
+                                  )}
+                                </div>
+                              </div>
+                              
+                              <div className="ml-4 flex flex-col space-y-2">
+                                {/* View in Terms button */}
+                                <button
+                                  onClick={() => handleShowTermsWithClause({ 
+                                    clause: flag, 
+                                    quote: matchedConcern?.quote || flag 
+                                  })}
+                                  className="px-3 py-1 bg-red-600 text-white text-xs font-medium rounded-lg hover:bg-red-700 transition-colors duration-200 flex items-center"
+                                >
+                                  <FileText className="h-3 w-3 mr-1" />
+                                  View in Terms
+                                </button>
+                                
+                                {/* Learn More button if matched concern has deep analysis */}
+                                {matchedConcern && matchedConcern.clarity_analysis && (
+                                  <button
+                                    onClick={() => handleLearnMore(matchedConcern)}
+                                    className="px-3 py-1 bg-red-600 text-white text-xs font-medium rounded-lg hover:bg-red-700 transition-colors duration-200 flex items-center"
+                                  >
+                                    <span className="mr-1">🔍</span>
+                                    Learn More
+                                  </button>
+                                )}
+                              </div>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+
                 {/* Concerns */}
                 {analysisData.concerns && analysisData.concerns.length > 0 && (
                   <div className="mb-8">
@@ -596,38 +697,32 @@ export default function Home() {
                                 </div>
                               </div>
                               
-                              {/* Learn More button for high risk items with deep analysis */}
-                              {isHighRisk && concern.clarity_analysis && (
+                              <div className="ml-4 flex flex-col space-y-2">
+                                {/* View in Terms button for all concerns */}
                                 <button
-                                  onClick={() => handleLearnMore(concern)}
-                                  className="ml-4 px-4 py-2 bg-red-600 text-white text-sm font-medium rounded-lg hover:bg-red-700 transition-colors duration-200 flex items-center"
+                                  onClick={() => handleShowTermsWithClause(concern)}
+                                  className="px-3 py-1 bg-slate-600 text-white text-xs font-medium rounded-lg hover:bg-slate-700 transition-colors duration-200 flex items-center"
                                 >
-                                  <span className="mr-2">🔍</span>
-                                  Learn More
+                                  <FileText className="h-3 w-3 mr-1" />
+                                  View in Terms
                                 </button>
-                              )}
+                                
+                                {/* Learn More button for high risk items with deep analysis */}
+                                {isHighRisk && concern.clarity_analysis && (
+                                  <button
+                                    onClick={() => handleLearnMore(concern)}
+                                    className="px-3 py-1 bg-red-600 text-white text-xs font-medium rounded-lg hover:bg-red-700 transition-colors duration-200 flex items-center"
+                                  >
+                                    <span className="mr-1">🔍</span>
+                                    Learn More
+                                  </button>
+                                )}
+                              </div>
                             </div>
                           </div>
                         );
                       })}
                     </div>
-                  </div>
-                )}
-
-                {/* Red Flags */}
-                {analysisData.red_flags && analysisData.red_flags.length > 0 && (
-                  <div>
-                    <h3 className="text-lg font-medium text-slate-900 mb-4">🚨 High Risk Flags</h3>
-                    <ul className="space-y-3">
-                      {analysisData.red_flags.map((flag: string, index: number) => (
-                        <li key={index} className="flex items-start p-3 bg-red-50 border-l-4 border-red-500 rounded-r-lg">
-                          <div className="flex-shrink-0 text-red-600 text-xl mr-3">
-                            🛑
-                          </div>
-                          <span className="text-sm text-slate-700 font-medium">{flag}</span>
-                        </li>
-                      ))}
-                    </ul>
                   </div>
                 )}
                 {/* Back to Search */}
@@ -803,6 +898,17 @@ export default function Home() {
         onClose={() => setShowRequestModal(false)}
         onSubmit={handleSubmitNewRequest}
         isProcessing={requestInProgress}
+      />
+
+      {/* Terms Viewer Modal */}
+      <TermsViewerModal
+        isOpen={showTermsViewer}
+        onClose={() => setShowTermsViewer(false)}
+        serviceId={termsViewerData.serviceId}
+        serviceName={termsViewerData.serviceName}
+        highlightText={termsViewerData.highlightText}
+        isPastedTerms={termsViewerData.isPastedTerms}
+        pastedTermsText={termsViewerData.pastedTermsText}
       />
     </div>
   );

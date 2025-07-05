@@ -1,0 +1,62 @@
+{
+  "app_name": "Linkedin",
+  "total_high_severity_concerns": 1,
+  "analysis_timestamp": "2025-07-05",
+  "concerns_analyzed": [
+    {
+      "original_concern": {
+        "clause": "Data sharing with partners and affiliates",
+        "severity": "high",
+        "explanation": "LinkedIn shares user data with partners, affiliates (including Microsoft), and third-party advertisers. This broad sharing raises concerns about user privacy and the potential for data misuse.",
+        "quote": "We receive data about you when you use some of the other services provided by us or our Affiliates, including Microsoft."
+      },
+      "extended_context": "... accounts with our Services, we will also collect “email header” information that we can associate with Member profiles.\n\n   ### \n\n   Customers and partners may provide data to us.\n\n   #### Partners\n\n   We receive personal data (e.g., your job title and work email address) about you when you use the services of our customers and partners, such as employers or prospective employers and applicant tracking systems providing us job application data.\n\n   #### Related Companies and Other Services\n\n   We receive data about you when you use some of the other services provided by us or our [Affiliates](#key-terms-1), including Microsoft. For example, you may choose to send us information about your contacts in Microsoft apps and services, such as Outlook, for improved professional networking activities on our Services\n\n   ### 1.3 Service Use\n\n   ### \n\n   We log your visits and use of our Services, including mobile apps.\n\n   We log usage data when you visit or otherwise use our Services, including our sites, app and platform technology, such as when you view or click on content (e.g., learning video) or ads (on o...",
+      "clarity_analysis": {
+        "unclear_terms": [
+          {
+            "term": "Data sharing with partners and affiliates",
+            "explanation": "This means LinkedIn shares your personal information (like job title, email address, or even data from your interactions) with other companies it works with, including Microsoft and third-party advertisers. Affiliates are companies that are related to LinkedIn through ownership or partnership, while partners can include businesses like employers, job application systems, or advertisers.",
+            "user_impact": "Your personal data could be shared with a wide range of companies, potentially including those you don’t know about or interact with directly. This increases the risk of your data being used for purposes you didn’t explicitly agree to, such as targeted advertising, profiling, or other marketing activities.",
+            "questions_to_ask": [
+              "What specific data is being shared with partners and affiliates?",
+              "How are these partners and affiliates using my data?",
+              "Can I opt out of this data sharing, and if so, how?",
+              "What safeguards are in place to prevent misuse of my data by these third parties?"
+            ]
+          },
+          {
+            "term": "Affiliates (including Microsoft)",
+            "explanation": "Affiliates are companies that are connected to LinkedIn through ownership or partnership. In this case, Microsoft owns LinkedIn, so any data shared with 'affiliates' could include sharing with Microsoft and its services (e.g., Outlook).",
+            "user_impact": "Your data may be integrated across Microsoft’s ecosystem, potentially linking your LinkedIn activity with other Microsoft services you use. This could lead to more personalized experiences but also raises privacy concerns about how much data is being aggregated and for what purposes.",
+            "questions_to_ask": [
+              "What specific data is shared with Microsoft and its services?",
+              "How does Microsoft use this data, and is it combined with other data it already has about me?",
+              "Can I control or limit this data sharing?"
+            ]
+          },
+          {
+            "term": "Customers and partners providing data",
+            "explanation": "LinkedIn collects data about you not only from your own activity but also from third parties like employers, job application systems, or other partners. For example, if you apply for a job through a partner system, LinkedIn may receive details about your application.",
+            "user_impact": "Your data could be collected and shared without you directly providing it to LinkedIn. This means you might not be fully aware of what data LinkedIn has about you or how it got it.",
+            "questions_to_ask": [
+              "What data is LinkedIn receiving from third parties about me?",
+              "How can I find out what data LinkedIn has collected from these sources?",
+              "Can I request LinkedIn to delete or stop using this data?"
+            ]
+          }
+        ],
+        "practical_meaning": "In practice, LinkedIn is aggregating data about you from multiple sources, including its own services, Microsoft services, and third-party partners like employers or advertisers. This data can be used to enhance your experience on LinkedIn (e.g., better job recommendations or networking suggestions) but also for targeted advertising or other purposes that may not be transparent to you. The broad scope of data sharing increases the risk of your personal information being used in ways you didn’t anticipate or consent to.",
+        "user_action_needed": "Users should review LinkedIn’s privacy settings to see if they can limit data sharing with partners and affiliates. They should also consider contacting LinkedIn to request details about what data is being shared and with whom. If concerned, users may want to avoid linking or sharing additional data through Microsoft services or third-party platforms connected to LinkedIn.",
+        "severity_justification": "This was flagged as high severity because the broad and vague language around data sharing creates significant privacy risks. Users may not fully understand the extent of data sharing or how their information is being used, which could lead to misuse, unauthorized profiling, or exposure to targeted advertising without explicit consent. The involvement of a major company like Microsoft further amplifies the potential for large-scale data aggregation and privacy concerns."
+      },
+      "online_research": {
+        "search_query": "\"Linkedin\" Data sharing with partners and affiliates Affiliates (including Microsoft) Customers and partners providing data terms conditions privacy policy explanation",
+        "top_result_url": "https://www.linkedin.com/legal/privacy-policy",
+        "top_result_title": "Privacy Policy - LinkedIn",
+        "summary": "We log usage data when you visit or otherwise use our Services, including our sites, app and platform technology, such as when you view or click on content (e.g., learning video) or ads (on or off our sites and apps), perform a search, install or update one of our mobile apps, share articles or apply for jobs. For example, we may use your data to generate statistics about our Members, their profession or industry, to calculate ad impressions served or clicked on (e.g., for basic business reporti",
+        "detailed_content_available": true,
+        "additional_context": "LinkedIn Privacy Policy\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n \n\n\n[Skip to main content](#lithograph-app)\n\n\n![LinkedIn Logo](https://static.licdn.com/aero-v1/sc/h/6zm111mce7vohqze950ilreo4)\n![LinkedIn Logo](https://static.licdn.com/aero-v1/sc/h/5g0hjlcng3j5pgn50n2et1ca2)\n\n\n\nOpen navigation\n\nClose navigation\n\n- [User Agreement](https://linkedin.com/legal/user-agreement)\n\n\n\n\n  - [Summary of User Agreement](https://linkedin.com/legal/user-agreement-summary)\n- [Privacy Policy](https://linkedin.com/legal/privacy-policy)\n- [Professional Community Policies](https://linkedin.com/legal/professional-community-policies)\n- [Cookie Policy](https://linkedin.com/legal/cookie-policy)\n- [Copyright Policy](https://linkedin.com/legal/copyright-policy)\n- [Regional Info](https://privacy.linkedin.com/regionalinfo)\n\n\n\n\n  - [EU Notice](https://linkedin.com/legal/privacy/eu)\n  - [California Privacy Disclosure](https://linkedin.com/legal/california-privacy-disclosure)\n  - [U.S. State Privacy Laws](https://www.linkedin.com/legal/pr"
+      }
+    }
+  ]
+}

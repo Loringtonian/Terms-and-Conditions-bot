@@ -1,0 +1,143 @@
+{
+  "app_name": "Lyft",
+  "app_version": null,
+  "overall_score": 6.5,
+  "privacy_concerns": [
+    {
+      "clause": "Broad data sharing and communication consent",
+      "severity": "medium",
+      "explanation": "The terms allow Lyft to share user information with affiliates, third-party service providers, and drivers, and to send communications at any time of day, including automated messages. While users can opt out of promotional messages, opting out of all communications may impact their ability to use the platform.",
+      "quote": "By entering into this Agreement or using the Lyft Platform, you agree to receive communications from us, our affiliates, providers of Third-Party Services or Drivers... Communications may include operational communications, marketing or promotions, and news concerning Lyft and industry developments."
+    },
+    {
+      "clause": "Modification of terms without direct notification",
+      "severity": "high",
+      "explanation": "Lyft reserves the right to modify terms and conditions, including those in referenced hyperlinks, without direct notification to users. Continued use of the platform constitutes acceptance of these changes, which may disadvantage users who are unaware of updates.",
+      "quote": "Lyft reserves the right to modify the terms and conditions of this Agreement... Continued use of the Lyft Platform after modifications... shall constitute your acceptance of such modifications."
+    },
+    {
+      "clause": "Binding arbitration and class action waiver",
+      "severity": "high",
+      "explanation": "The terms require users to waive their right to a jury trial and participate in binding arbitration for disputes, with limited opt-out options for drivers. This heavily favors the company and limits consumer recourse.",
+      "quote": "THIS AGREEMENT CONTAINS PROVISIONS THAT GOVERN HOW CLAIMS BETWEEN YOU AND LYFT CAN BE BROUGHT... REQUIRE YOU TO: (1) WAIVE YOUR RIGHT TO A JURY TRIAL, AND (2) SUBMIT CLAIMS YOU HAVE AGAINST LYFT TO BINDING AND FINAL ARBITRATION..."
+    },
+    {
+      "clause": "Broad license to user-provided information",
+      "severity": "medium",
+      "explanation": "Lyft has the right to use any information users provide, publish, or post on the platform. This may include profile information and feedback, with limited clarity on how this data will be used or shared.",
+      "quote": "Your Information is any information you provide, publish, or post... You consent to us using your Information to create a User account that will allow you to use the Lyft Platform..."
+    }
+  ],
+  "summary": "Lyft's terms and conditions are moderately user-friendly but raise significant concerns regarding privacy and consumer rights. The binding arbitration clause and broad data-sharing permissions heavily favor the company, while the ability to modify terms without direct notification may disadvantage users.",
+  "red_flags": [
+    "Binding arbitration and class action waiver",
+    "Broad data-sharing permissions",
+    "Unilateral modification of terms without direct notification",
+    "Broad license to user-provided information"
+  ],
+  "user_friendliness_score": 6.0,
+  "data_collection_score": 5.5,
+  "legal_complexity_score": 5.0,
+  "terms_version": "December 13, 2024",
+  "terms_url": "https://www.lyft.com/terms/canada",
+  "analysis_date": "2025-07-05",
+  "deep_analysis": {
+    "1": {
+      "unclear_terms": [
+        {
+          "term": "Modification of terms without direct notification",
+          "explanation": "This means Lyft can change its terms and conditions, including linked documents, at any time without directly informing users (e.g., via email or app notification). Users are expected to regularly check for updates themselves.",
+          "user_impact": "Users may unknowingly agree to new terms that could negatively affect their rights, responsibilities, or costs. For example, Lyft could add fees, change dispute resolution processes, or alter privacy policies without users being aware.",
+          "questions_to_ask": [
+            "How often does Lyft update its terms and conditions?",
+            "Where can I find the most current version of the terms?",
+            "Will I receive any notification (e.g., email, app alert) when changes are made?",
+            "What kind of changes could Lyft make that might affect me negatively?",
+            "Can I reject the new terms and still use the service?"
+          ]
+        },
+        {
+          "term": "Continued use constitutes acceptance",
+          "explanation": "By continuing to use Lyft's services after changes are made, you are automatically agreeing to the new terms, even if you haven't read or reviewed them.",
+          "user_impact": "If you keep using Lyft without checking for updates, you might unknowingly agree to terms that could limit your rights, increase your costs, or affect how disputes are resolved.",
+          "questions_to_ask": [
+            "What happens if I don’t agree with the updated terms?",
+            "Is there a way to opt out of specific changes?",
+            "How can I stay informed about updates to the terms?"
+          ]
+        },
+        {
+          "term": "Referenced hyperlinks",
+          "explanation": "Lyft's terms may include links to other documents or policies (e.g., privacy policy, arbitration rules), which can also be updated without notice. These linked documents are considered part of the agreement.",
+          "user_impact": "Changes to linked documents could affect your rights or obligations without you realizing it, as you may not regularly check these additional policies.",
+          "questions_to_ask": [
+            "What documents are linked to the terms, and how often are they updated?",
+            "Do I need to review all linked documents regularly to stay informed?",
+            "Are changes to linked documents highlighted or summarized anywhere?"
+          ]
+        }
+      ],
+      "practical_meaning": "Lyft can change its terms and policies at any time without notifying users directly. If you continue using the app, you are automatically agreeing to the new terms, even if you are unaware of the changes. This could include changes to fees, dispute resolution processes, or privacy practices, which could negatively impact you.",
+      "user_action_needed": "Users should regularly review Lyft's terms and any linked policies to stay informed about changes. Consider setting a reminder to check for updates periodically. If you notice changes that you disagree with, stop using the service and contact Lyft for clarification or to express your concerns.",
+      "severity_justification": "This is a high-severity issue because it places the burden on users to monitor for changes that could significantly affect their rights, costs, or privacy. Without direct notification, users are at risk of unknowingly agreeing to terms that may disadvantage them, and they may not have a clear way to reject or negotiate these changes.",
+      "extended_context": "... market\n(“Supplemental Agreements”). Please review any applicable Supplemental Agreements carefully. IF YOU\nDO NOT AGREE TO BE BOUND BY THE TERMS AND CONDITIONS OF A SUPPLEMENTAL AGREEMENT, YOU MAY NOT RENT\nOR USE LYFT SERVICES IN SUCH MARKET. In the event of any conflict between this Agreement and the\nterms and conditions of any Supplemental Agreement, the terms of this Agreement shall control,\nunless such Supplemental Agreement specifically states otherwise.\n\n## Modification to the Agreement\n\nLyft reserves the right to modify the terms and conditions of this Agreement, including by changing\nor deleting existing terms or by adding new ones, and such modifications shall be binding on you\nupon your acceptance of the modified Agreement. Continued use of the Lyft Platform after\nmodifications to this Agreement shall constitute your acceptance of such modifications. Drivers or\ndriver applicants, however, may opt out of revisions to the Agreement’s arbitration provisions with\nrespect to certain claims as provided in Section 17 below. Lyft reserves the right to modify any\ninformation on pages referenced in the hyperlinks from this Agreement from time to time, and such\nmodifications...",
+      "online_research": {
+        "search_query": "\"Lyft\" Modification of terms without direct notification Continued use constitutes acceptance Referenced hyperlinks terms conditions privacy policy explanation",
+        "top_result_url": "https://lyft.pissedconsumer.com/review.html",
+        "top_result_title": "47.8K Lyft Reviews | lyft.com @ PissedConsumer",
+        "summary": "hyperlinks conditions"
+      }
+    },
+    "2": {
+      "unclear_terms": [
+        {
+          "term": "Binding arbitration",
+          "explanation": "Binding arbitration is a private process where a neutral third party (the arbitrator) resolves disputes instead of going to court. The arbitrator's decision is final and cannot typically be appealed.",
+          "user_impact": "This means you cannot take Lyft to court for disputes, and you must resolve issues through arbitration, which is often less favorable to consumers.",
+          "questions_to_ask": [
+            "Who selects the arbitrator, and is the process truly neutral?",
+            "What are the costs of arbitration, and who pays for them?",
+            "Are there any exceptions where I can still go to court?"
+          ]
+        },
+        {
+          "term": "Waive your right to a jury trial",
+          "explanation": "This means you give up the right to have a judge or jury decide your case in court. Instead, disputes are resolved privately through arbitration.",
+          "user_impact": "You lose the opportunity to present your case in front of a jury, which might be more sympathetic to consumers compared to an arbitrator.",
+          "questions_to_ask": [
+            "Why is Lyft requiring me to waive my right to a jury trial?",
+            "What are the differences in outcomes between arbitration and a jury trial?"
+          ]
+        },
+        {
+          "term": "Class action waiver",
+          "explanation": "A class action waiver means you cannot join with other users to file a lawsuit or arbitration claim as a group. You must pursue any claims individually.",
+          "user_impact": "You cannot combine your claim with others who may have the same issue, which can make it harder to hold Lyft accountable for widespread problems.",
+          "questions_to_ask": [
+            "What happens if many users have the same complaint against Lyft?",
+            "How does this affect my ability to recover damages if my claim is small?"
+          ]
+        },
+        {
+          "term": "Limited opt-out options for drivers",
+          "explanation": "Drivers may have a narrow window of time or specific conditions under which they can opt out of arbitration. If they miss this opportunity, they are bound by the arbitration agreement.",
+          "user_impact": "If you are a driver and do not act quickly to opt out, you will lose the ability to take Lyft to court for disputes.",
+          "questions_to_ask": [
+            "What is the deadline to opt out of arbitration?",
+            "What is the process for opting out, and is it easy to do?"
+          ]
+        }
+      ],
+      "practical_meaning": "This clause means that if you have a dispute with Lyft, you cannot sue them in court or join a class action lawsuit. Instead, you must resolve the issue through private arbitration, which is often less transparent and may favor the company. Drivers have a limited chance to opt out, but users of the platform generally do not have this option.",
+      "user_action_needed": "Users should carefully review Section 17 of the terms to understand the arbitration process and any opt-out options. Drivers should act quickly if they wish to opt out of arbitration. All users should consider whether they are comfortable giving up their right to a jury trial and class action lawsuits before continuing to use the platform.",
+      "severity_justification": "This was flagged as high severity because it significantly limits users' legal rights and recourse options. Arbitration clauses and class action waivers often favor companies, making it harder for consumers to seek fair resolutions, especially for widespread issues. The limited opt-out options for drivers exacerbate the concern, as they may not fully understand or act on their rights in time.",
+      "extended_context": "...s, subsidiaries, representatives, affiliates, officers and directors\n(collectively, “Lyft,” “we,” “us” or “our”) governing your use of the Lyft applications, websites,\ntechnology, artificial intelligence tools, facilities, and platform (collectively, the “Lyft\nPlatform”) in Canada. Lyft is entering into this Agreement for itself and for the benefit of its\naffiliates, subsidiaries, parents, successors, assigns, directors and officers (a “Lyft Affiliate”\nor “Lyft Affiliates”).\n\nPLEASE BE ADVISED: THIS AGREEMENT CONTAINS PROVISIONS THAT GOVERN HOW CLAIMS BETWEEN YOU AND LYFT\nCAN BE BROUGHT ([SEE SECTION 17 BELOW](https://www.lyft.com/terms/canada#tos-dispute-resolution-and-arbitration-agreement)).\n**THESE PROVISIONS WILL, WITH LIMITED EXCEPTION, REQUIRE YOU TO: (1) WAIVE YOUR RIGHT TO A JURY\nTRIAL, AND (2) SUBMIT CLAIMS YOU HAVE AGAINST LYFT TO BINDING AND FINAL ARBITRATION ON AN\nINDIVIDUAL BASIS, NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY CLASS, GROUP OR REPRESENTATIVE\nACTION OR PROCEEDING.**\n\nAS A DRIVER OR DRIVER APPLICANT, YOU HAVE AN OPPORTUNITY TO OPT OUT OF ARBITRATION WITH RESPECT TO\nCERTAIN CLAIMS AS PROVIDED IN SECTION 17.\n\nBy entering into this Agreement, and/or by using or accessing the Lyft Platform, y...",
+      "online_research": {
+        "search_query": "\"Lyft\" Binding arbitration Waive your right to a jury trial Class action waiver terms conditions privacy policy explanation",
+        "top_result_url": "http://www.breakinglegalnews.com/category",
+        "top_result_title": "All - Breaking Legal News",
+        "summary": "2025/05/14 Trump Seeks Supreme Court Approval to End Protections for Venezuelans 2025/04/09 Supreme Court allows Trump to deport Venezuelans under wartime law 2025/01/26 Federal Judge Blocks Trump’s Executive Order - LAW BLOG 2025/01/08 Trump asks the Supreme Court to block sentencing in his hush money case Lawyers for the states and immigrants argue that this is an odd issue for the court to use to limit judges’ authority because courts have uniformly found that Trump’s order likely violates th"
+      }
+    }
+  }
+}

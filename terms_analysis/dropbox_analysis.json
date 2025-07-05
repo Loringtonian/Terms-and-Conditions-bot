@@ -1,0 +1,36 @@
+{
+  "app_name": "Dropbox",
+  "app_version": null,
+  "overall_score": 8.5,
+  "privacy_concerns": [
+    {
+      "clause": "Metadata collection for indexing and feature support",
+      "severity": "medium",
+      "explanation": "Dropbox collects metadata such as email addresses, file names, and device names to support features like version history and sync. While this is necessary for functionality, it could raise privacy concerns for users who prefer minimal data collection.",
+      "quote": "Metadata includes basic account and user information, like email address, name and device names. Metadata also includes basic information about files, including file names and types, that helps support features like version history, recovery and sync."
+    },
+    {
+      "clause": "Third-party integrations and data sharing",
+      "severity": "medium",
+      "explanation": "Dropbox uses third-party providers for customer support and IT services. While these third parties are vetted and bound by contractual obligations, the involvement of external entities introduces potential risks to user data.",
+      "quote": "Dropbox manages the majority of activities related to the provision of our services, however, we do utilise some trusted third parties in relation to our services (for example, providers of customer support and IT services)."
+    },
+    {
+      "clause": "Government data request handling",
+      "severity": "low",
+      "explanation": "Dropbox commits to transparency and resisting overly broad government data requests. While this is positive, users may still be concerned about the potential for data disclosure under legal obligations.",
+      "quote": "We believe online services should be allowed to publish the number and types of government requests they receive, and to notify individuals when information about them has been requested."
+    }
+  ],
+  "summary": "Dropbox's terms and conditions demonstrate a strong commitment to security and privacy, with robust encryption practices and transparency in handling government data requests. However, metadata collection and reliance on third-party providers may raise moderate privacy concerns for users.",
+  "red_flags": [
+    "Metadata collection includes identifiable information like email addresses and device names.",
+    "Use of third-party providers for data handling, even with vetting processes."
+  ],
+  "user_friendliness_score": 8.0,
+  "data_collection_score": 7.5,
+  "legal_complexity_score": 8.0,
+  "terms_version": "August 2019",
+  "terms_url": "https://aem.dropbox.com/cms/content/dam/dropbox/www/en-us/security/privacy_data_protection_whitepaper_August2019_FINAL-en_GB.pdf",
+  "analysis_date": "2025-07-05"
+}

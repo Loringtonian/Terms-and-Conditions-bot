@@ -1,0 +1,83 @@
+{
+  "app_name": "Airbnb",
+  "app_version": null,
+  "overall_score": 7.5,
+  "privacy_concerns": [
+    {
+      "clause": "Broad rights to collect and share user data",
+      "severity": "medium",
+      "explanation": "Airbnb's terms reference a Privacy Policy that governs data collection but do not explicitly limit the scope of data collected or shared. This could include personal, financial, and behavioral data, which may be shared with third parties for purposes such as advertising.",
+      "quote": "Your use of the Airbnb Platform is also subject to the Privacy Policy."
+    },
+    {
+      "clause": "Arbitration clause and class action waiver",
+      "severity": "high",
+      "explanation": "The terms include a binding arbitration clause and class action waiver for users in the United States, which limits users' ability to pursue legal claims in court. While this does not apply to Quebec residents, it could still impact Canadian users traveling abroad.",
+      "quote": "Section 22 of these Terms contains an arbitration agreement and class action waiver that apply to all claims brought against Airbnb in the United States."
+    },
+    {
+      "clause": "Host access to accommodations during stay",
+      "severity": "medium",
+      "explanation": "Hosts retain the right to re-enter accommodations during a guest's stay under certain conditions. While this is subject to applicable laws, it could raise privacy concerns for guests.",
+      "quote": "The Host retains the right to re-enter the Accommodation during your stay, to the extent: (i) it is reasonably necessary, (ii) permitted by your contract with the Host, and (iii) permitted by applicable law."
+    }
+  ],
+  "summary": "Airbnb's terms are comprehensive but complex, with some clauses that may raise concerns for Canadian users. The arbitration clause and data sharing practices are notable issues, though Quebec residents are exempt from arbitration. Privacy protections could be clearer, and the terms favor Airbnb in disputes.",
+  "red_flags": [
+    "Binding arbitration clause and class action waiver (except for Quebec residents)",
+    "Broad data collection and sharing practices",
+    "Host's right to re-enter accommodations during a stay"
+  ],
+  "user_friendliness_score": 7.0,
+  "data_collection_score": 6.5,
+  "legal_complexity_score": 6.0,
+  "terms_version": "May 13, 2025",
+  "terms_url": "https://www.airbnb.ca/help/article/2908",
+  "analysis_date": "2025-07-05",
+  "deep_analysis": {
+    "1": {
+      "unclear_terms": [
+        {
+          "term": "Arbitration clause",
+          "explanation": "An arbitration clause means that instead of going to court to resolve disputes with Airbnb, users must use a private arbitration process. This is typically less formal than court and is conducted by a neutral third party.",
+          "user_impact": "Users cannot sue Airbnb in a public court or have their case heard by a judge or jury. Arbitration decisions are usually final, with very limited rights to appeal.",
+          "questions_to_ask": [
+            "What is the arbitration process like, and who selects the arbitrator?",
+            "Are there any fees associated with arbitration, and who pays them?",
+            "What rights do I lose by agreeing to arbitration?"
+          ]
+        },
+        {
+          "term": "Class action waiver",
+          "explanation": "A class action waiver means users cannot join together with others to file a lawsuit or arbitration against Airbnb. Each user must resolve their dispute individually.",
+          "user_impact": "Users lose the ability to pool resources and share legal costs with others who have similar claims. This can make it more expensive and less practical to pursue small claims against Airbnb.",
+          "questions_to_ask": [
+            "What happens if multiple users have the same issue with Airbnb?",
+            "Can I still join a group arbitration, or is that also prohibited?",
+            "Does this waiver apply to all types of claims, including those related to safety or discrimination?"
+          ]
+        },
+        {
+          "term": "Exemption for Quebec residents",
+          "explanation": "The arbitration clause and class action waiver do not apply to residents of Quebec if they bring a legal proceeding in Quebec. This is due to specific consumer protection laws in Quebec.",
+          "user_impact": "Quebec residents retain the right to sue Airbnb in court and participate in class actions if the case is filed in Quebec. However, this protection does not extend to Quebec residents traveling or using Airbnb outside of Quebec.",
+          "questions_to_ask": [
+            "Does this exemption apply if I am a Quebec resident but use Airbnb in another country?",
+            "What happens if I move out of Quebec—do I lose this protection?",
+            "Are there any other exceptions to the arbitration clause or class action waiver?"
+          ]
+        }
+      ],
+      "practical_meaning": "This clause means that most users in the United States (and potentially other countries outside of Quebec) are required to resolve disputes with Airbnb through private arbitration rather than in court. Additionally, users cannot band together to file class action lawsuits, which can limit their ability to hold Airbnb accountable for widespread issues. Quebec residents are exempt from these restrictions if they file claims in Quebec, but this exemption does not apply to them when traveling abroad.",
+      "user_action_needed": "Users should carefully read Section 22 of Airbnb's Terms of Service to understand the arbitration process and class action waiver. They should also consider whether they are comfortable giving up their right to sue in court or join class actions. If users have concerns, they may want to consult a legal professional before agreeing to these terms.",
+      "severity_justification": "This was flagged as high severity because it significantly limits users' legal rights and options for resolving disputes. Arbitration clauses and class action waivers can make it harder for users to seek justice, especially in cases involving small claims or systemic issues. The lack of transparency and potential costs associated with arbitration further exacerbate the concern.",
+      "extended_context": "... or the United Kingdom, the [Terms of Service for European Users](#EUTOS) apply to you.\n\nIf your country of residence or establishment is outside of the EEA, Switzerland, Australia, and the United Kingdom, the [Terms of Service for Users outside of the EEA, UK, and Australia](#TOS) apply to you.\n\nIf your country of residence or establishment is in Australia, the [Terms of Service for Australian Users](#AUSTOS) apply to you.\n\n## Terms of Service for Users outside of the EEA, UK, and Australia\n\n**Section 22 of these Terms contains an arbitration agreement and class action waiver that apply to all claims brought against Airbnb in the United States. Please read them carefully.**\n\n**If you are a resident of the Province of Quebec, the arbitration agreement and class action waiver in Section 22 do not apply to any legal proceeding you bring against Airbnb in the Province of Quebec.**\n\nLast Updated: May 13, 2025\n\nThank you for using Airbnb!\n\nThe documents referred to within these Terms include but are not limited to our:\n\nFor convenience, we have set out above several terms and policies that are referred to in these Terms. However, it is impo...",
+      "online_research": {
+        "search_query": "\"Airbnb\" Arbitration clause Class action waiver Exemption for Quebec residents terms conditions privacy policy explanation",
+        "top_result_url": "https://www.zzlawyers.com/index.php?categoryid=37&m13_sectionid=1&m13_fileid=2",
+        "top_result_title": "下载中心 - 漳州市律师协会",
+        "summary": "Check out my work here:  Anabella Anabella Madeo - 2025.05.15 Hey there, I came across your website, and while it looks great, your Logo doesn_t fully reflect the strength and potential of your business. Check out my work here:  Best, Yanislav Vasil P - 2025.03.23 Hey there, I came across your website, and while it looks great, your logo doesn_t fully reflect your brand_s potential. If you_ve ever wanted more free traffic for your offers, this might be what you_re looking for  Jawad M - 2025.01."
+      }
+    }
+  }
+}

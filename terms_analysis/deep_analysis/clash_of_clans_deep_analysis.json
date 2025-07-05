@@ -1,0 +1,109 @@
+{
+  "app_name": "Clash Of Clans",
+  "total_high_severity_concerns": 2,
+  "analysis_timestamp": "2025-07-05",
+  "concerns_analyzed": [
+    {
+      "original_concern": {
+        "clause": "Termination and account deletion policies",
+        "severity": "high",
+        "explanation": "Supercell reserves the right to terminate accounts for a variety of reasons, including inactivity or suspected violations, without obligation to provide refunds or compensation. This policy heavily favors the company and could result in significant losses for users.",
+        "quote": "SUPERCELL RESERVES THE RIGHT TO TERMINATE ANY ACCOUNT THAT HAS BEEN INACTIVE FOR 180 DAYS."
+      },
+      "extended_context": "...STED CONTENT, AND TAKE TECHNICAL AND LEGAL STEPS TO PREVENT USERS FROM ACCESSING THE SERVICE IF WE BELIEVE THAT THEY ARE CREATING RISK OR POSSIBLE LEGAL LIABILITIES, INFRINGING THE INTELLECTUAL PROPERTY RIGHTS OF THIRD PARTIES, OR ACTING INCONSISTENTLY WITH THE LETTER OR SPIRIT OF OUR TERMS OR Â POLICIES. ADDITIONALLY, WE MAY, IN APPROPRIATE CIRCUMSTANCES AND AT OUR SOLE DISCRETION, SUSPEND OR TERMINATE ACCOUNTS OF USERS WHO MAY BE REPEAT INFRINGERS OF THIRD-PARTY INTELLECTUAL PROPERTY RIGHTS.\n\nSUPERCELL RESERVES THE RIGHT TO TERMINATE ANY ACCOUNT THAT HAS BEEN INACTIVE FOR 180 DAYS.\n\nSupercell reserves the right to stop offering and/or supporting the Service or a particular game or part of the Service at any time, at which point your right to use the Service or a part thereof will be automatically terminated. In such event, Supercell shall not be required to provide refunds, benefits or other compensation to users in connection with such discontinued Service. Termination of your Account can include disabling your access to the Service or any part thereof including any cont...",
+      "clarity_analysis": {
+        "unclear_terms": [
+          {
+            "term": "Supercell reserves the right to terminate any account that has been inactive for 180 days.",
+            "explanation": "This means that if you do not log into your account or use the game for 180 days (approximately 6 months), Supercell can permanently delete your account without notifying you beforehand.",
+            "user_impact": "If you stop playing the game for a while, you risk losing all your progress, in-game purchases, and any virtual items you’ve accumulated. There is no guarantee that you can recover your account or receive compensation for your losses.",
+            "questions_to_ask": [
+              "Will I receive any warning or notification before my account is terminated due to inactivity?",
+              "Is there a way to reactivate my account after it has been terminated?",
+              "What happens to the money I spent on in-game purchases if my account is deleted?",
+              "Can I transfer my account or progress to another account to avoid termination?"
+            ]
+          },
+          {
+            "term": "Supercell reserves the right to stop offering and/or supporting the Service or a particular game or part of the Service at any time.",
+            "explanation": "This means that Supercell can decide to shut down the game or parts of the game permanently, and users will no longer be able to access it.",
+            "user_impact": "If Supercell decides to discontinue the game, you will lose access to the game and any progress, virtual items, or in-game purchases you’ve made. They are not obligated to refund you or compensate you in any way.",
+            "questions_to_ask": [
+              "Will I be notified in advance if the game or service is being discontinued?",
+              "What happens to my in-game purchases and progress if the game is shut down?",
+              "Is there any way to get a refund or compensation for unused in-game currency or items?"
+            ]
+          },
+          {
+            "term": "Supercell shall not be required to provide refunds, benefits or other compensation to users in connection with such discontinued Service.",
+            "explanation": "This means that if Supercell terminates your account or shuts down the game, they are not obligated to give you any money back or compensate you for any losses, even if you spent real money on the game.",
+            "user_impact": "You could lose all the money you’ve spent on in-game purchases without any recourse for refunds or compensation. This is especially concerning for users who have invested significant amounts of money or time into the game.",
+            "questions_to_ask": [
+              "What protections do I have as a paying user if the game is discontinued?",
+              "Are there any exceptions where refunds or compensation might be provided?",
+              "How can I ensure that my purchases are not wasted if the game is shut down?"
+            ]
+          }
+        ],
+        "practical_meaning": "In practice, this clause gives Supercell broad authority to delete user accounts for inactivity or suspected violations of their terms, as well as to shut down the game or service entirely without any obligation to compensate users. This means users could lose access to their accounts, progress, and in-game purchases without warning or recourse.",
+        "user_action_needed": "Users should log into their accounts regularly to avoid being flagged as inactive. They should also be cautious about spending large amounts of money on in-game purchases, as there is no guarantee that their purchases will be preserved if the game is discontinued or their account is terminated. Users may also want to contact Supercell to clarify their policies on account recovery and refunds.",
+        "severity_justification": "This was flagged as high severity because it directly impacts users’ financial investments and time spent on the game. The lack of clear protections for users, combined with the potential for significant losses, makes this a critical concern for anyone using the service."
+      },
+      "online_research": {
+        "search_query": "\"Clash Of Clans\" Supercell reserves the right to terminate any account that has been inactive for 180 days. Supercell reserves the right to stop offering and/or supporting the Service or a particular game or part of the Service at any time. Supercell shall not be required to provide refunds, benefits or other compensation to users in connection with such discontinued Service. terms conditions privacy policy explanation",
+        "no_results": true,
+        "message": "No additional context found online"
+      }
+    },
+    {
+      "original_concern": {
+        "clause": "Dispute resolution (binding arbitration)",
+        "severity": "high",
+        "explanation": "Canadian users are subject to binding arbitration for disputes, which limits their ability to pursue legal action in court. This clause heavily favors the company and may not be in the best interest of consumers.",
+        "quote": "For U.S. and Canadian residents, you also agree that disputes with Supercell must be resolved on an individual basis through final and binding arbitration."
+      },
+      "extended_context": "... using or registering for an Account or otherwise using the Service, you affirm that you are the legal age of majority in your country of residence. If you are not, your legal guardian must review and agree to these Terms of Service.\n\nBY INSTALLING, USING OR OTHERWISE ACCESSING THE SERVICE, YOU AGREE TO THESE TERMS OF SERVICE. IF YOU DO NOT AGREE TO THESE TERMS OF SERVICE, PLEASE DO NOT INSTALL, USE OR OTHERWISE ACCESS THE SERVICE. USE OF THE SERVICE IS VOID WHERE PROHIBITED.\n\nIMPORTANT NOTICE: For U.S. and Canadian residents, you also agree that disputes with Supercell must be resolved on an individual basis through final and binding arbitration as described in Section 8 (âDispute Resolutionâ).\n\nSupercell reserves the right, at its discretion, to change, modify, add or remove portions of these Terms of Service,Â itsÂ Privacy PolicyÂ and other relevant Supercell policies at any time by posting the amended terms on the Service. You will be deemed to have accepted such changes by continuing to use the Service. If at any point you do not agree to any portion of the then-current version of our Terms of Service, the SupercellÂ Privacy Pol...",
+      "clarity_analysis": {
+        "unclear_terms": [
+          {
+            "term": "binding arbitration",
+            "explanation": "Binding arbitration is a private process where disputes are resolved by an arbitrator (a neutral third party) instead of going to court. The arbitrator's decision is final and cannot be appealed in most cases.",
+            "user_impact": "This means that if you have a dispute with Supercell (the company behind Clash of Clans), you cannot take them to court. Instead, you must resolve the issue through arbitration, which is often less favorable to consumers because it limits legal options and may involve costs.",
+            "questions_to_ask": [
+              "What are the rules and procedures for the arbitration process?",
+              "Who pays for the arbitration costs, and are there any hidden fees?",
+              "Can I opt out of arbitration, and if so, how?",
+              "What happens if I disagree with the arbitrator's decision?"
+            ]
+          },
+          {
+            "term": "individual basis",
+            "explanation": "This means that disputes must be resolved one-on-one, and you cannot join with other users in a group or class action lawsuit.",
+            "user_impact": "You cannot band together with other users to collectively sue Supercell, even if many people are affected by the same issue. This limits your ability to share legal costs or create a stronger case.",
+            "questions_to_ask": [
+              "Why am I not allowed to participate in a class action lawsuit?",
+              "What happens if multiple users have the same issue—can we still share evidence or resources?"
+            ]
+          },
+          {
+            "term": "final and binding",
+            "explanation": "This means that the arbitrator's decision is the last word on the matter, and you cannot appeal or challenge it in court.",
+            "user_impact": "If the arbitrator rules against you, you have no further legal recourse, even if you believe the decision was unfair.",
+            "questions_to_ask": [
+              "What are my rights if I believe the arbitrator made an error?",
+              "Can I appeal the decision in any circumstances?"
+            ]
+          }
+        ],
+        "practical_meaning": "This clause means that if you have a dispute with Supercell (e.g., about in-game purchases, account bans, or privacy violations), you cannot take them to court or join a class action lawsuit. Instead, you must resolve the issue through arbitration, which is a private process that often favors companies over consumers. The decision made by the arbitrator is final, and you cannot appeal it.",
+        "user_action_needed": "Users should carefully review the arbitration clause and consider whether they are comfortable giving up their right to sue in court or join a class action lawsuit. If the terms allow, users should explore whether they can opt out of arbitration (this is sometimes possible within a specific time frame after agreeing to the terms). Additionally, users should understand the arbitration process, including costs and procedures, before agreeing.",
+        "severity_justification": "This was flagged as high severity because binding arbitration clauses significantly limit consumer rights. By agreeing to this clause, users waive their right to take legal action in court, which is a fundamental legal protection. Additionally, the prohibition on class actions makes it harder for users to hold the company accountable for widespread issues, as individuals must pursue claims alone, which can be costly and intimidating."
+      },
+      "online_research": {
+        "search_query": "\"Clash Of Clans\" binding arbitration individual basis final and binding terms conditions privacy policy explanation",
+        "no_results": true,
+        "message": "No additional context found online"
+      }
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "app_name": "Hinge",
+  "total_high_severity_concerns": 1,
+  "analysis_timestamp": "2025-07-05",
+  "concerns_analyzed": [
+    {
+      "original_concern": {
+        "clause": "Broad data collection and sharing with third parties",
+        "severity": "high",
+        "explanation": "The terms appear to allow for extensive data collection, including sensitive personal information, and sharing with third parties for purposes such as advertising and analytics. This raises significant privacy concerns for users.",
+        "quote": "Hinge may collect and share your personal data with third parties for advertising, analytics, and other purposes."
+      },
+      "extended_context": "Could not locate quote in document: Hinge may collect and share your personal data with third parties for advertising, analytics, and ot...",
+      "clarity_analysis": {
+        "unclear_terms": [
+          {
+            "term": "Broad data collection",
+            "explanation": "This means Hinge may gather a wide range of information about you, including personal details (like your name, email, and location), your activity on the app (such as swipes, matches, and messages), and potentially sensitive data (like sexual orientation or preferences).",
+            "user_impact": "Hinge could collect more information than you might expect, including data you consider private or sensitive. This data could be used in ways you are not fully aware of.",
+            "questions_to_ask": [
+              "What specific types of data are being collected?",
+              "Does this include sensitive information like sexual orientation or health data?",
+              "How long is this data stored, and can I request its deletion?"
+            ]
+          },
+          {
+            "term": "Sharing with third parties",
+            "explanation": "This means Hinge may provide your data to other companies, such as advertisers, analytics firms, or business partners, for purposes like targeted advertising or improving their services.",
+            "user_impact": "Your personal data could be shared with companies you don’t know or interact with directly, potentially exposing you to targeted ads or other uses of your data that you didn’t explicitly agree to.",
+            "questions_to_ask": [
+              "Who are the third parties Hinge shares data with?",
+              "What safeguards are in place to protect my data when shared?",
+              "Can I opt out of data sharing with third parties?"
+            ]
+          },
+          {
+            "term": "Advertising and analytics purposes",
+            "explanation": "This refers to using your data to create targeted ads or analyze user behavior to improve the app or generate revenue.",
+            "user_impact": "Your data could be used to profile you for advertising or to study your behavior, which might feel invasive or lead to ads that are overly personalized.",
+            "questions_to_ask": [
+              "How is my data used for advertising and analytics?",
+              "Can I opt out of targeted advertising?",
+              "What happens to my data after it is used for analytics?"
+            ]
+          }
+        ],
+        "practical_meaning": "In practice, this clause means Hinge collects a lot of information about you, including potentially sensitive data, and shares it with other companies for purposes like advertising and improving their services. This could result in targeted ads, data profiling, or your information being stored and used by third parties you don’t know.",
+        "user_action_needed": "Users should carefully review Hinge’s privacy policy to understand what data is collected and how it is shared. Look for options to limit data collection or sharing, such as opting out of targeted advertising or requesting data deletion. Consider whether you are comfortable with the level of data collection and sharing before continuing to use the app.",
+        "severity_justification": "This was flagged as high severity because it involves the collection and sharing of potentially sensitive personal data, which could lead to privacy risks such as data misuse, profiling, or exposure to unwanted targeted advertising. Users may not be fully aware of the extent of data collection or have control over how their data is shared."
+      },
+      "online_research": {
+        "search_query": "\"Hinge\" Broad data collection Sharing with third parties Advertising and analytics purposes terms conditions privacy policy explanation",
+        "top_result_url": "https://www.tandfonline.com/doi/full/10.1080/09544828.2025.2504309?src=",
+        "top_result_title": "Full article: Human-AI co-ideation via combinational generative model",
+        "summary": "... data collection technique to acquire and filter suitable data ... Copyright © 2025Informa UK Limited Privacy policy Cookies Terms & conditions Accessibility.",
+        "detailed_content_available": true,
+        "additional_context": "Full article: Human-AI co-ideation via combinational generative model\n\n===============\n\n[Skip to Main Content](https://www.tandfonline.com/doi/full/10.1080/09544828.2025.2504309?src=#top-content-scroll \"Skip to Main Content\")\n\n[![Image 1: Taylor and Francis Online homepage](https://www.tandfonline.com/pb-assets/Global/TFO-logo-new-1716484961953.svg)](https://www.tandfonline.com/ \"Taylor and Francis Online homepage\")\n\n*   Journals\n\nClose Journals Menu\n\nBrowse all journals\n\n    *   [Browse all journals A-Z](https://www.tandfonline.com/action/showPublications?pubType=journal&ejf=on)\n    *   [Open access journals](https://www.tandfonline.com/openaccess/openjournals)\n    *   [Open Select (hybrid) journals](https://www.tandfonline.com/openaccess/openselect)\n\nBrowse all books\n\n    *   [Explore Taylor & Francis eBooks](https://www.taylorfrancis.com/)\n\nPublish\n\n    *   [Find a journal](https://www.tandfonline.com/action/showPublications?pubType=journal&ejf=on)\n    *   [Search calls for papers]("
+      }
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "app_name": "Android System WebView",
+  "app_version": null,
+  "overall_score": 6.5,
+  "privacy_concerns": [
+    {
+      "clause": "Broad data collection by Google services",
+      "severity": "medium",
+      "explanation": "The terms reference Google's overarching privacy policy, which allows for significant data collection across its services. While this is standard for Google products, it may exceed what is necessary for the functionality of Android System WebView.",
+      "quote": "Google may collect and use information as described in the Google Privacy Policy."
+    },
+    {
+      "clause": "Third-party data sharing",
+      "severity": "medium",
+      "explanation": "The terms allow for sharing data with third parties, including advertisers, which could raise concerns about user privacy.",
+      "quote": "We share information with third parties as described in the Google Privacy Policy."
+    },
+    {
+      "clause": "Changes to terms notification",
+      "severity": "low",
+      "explanation": "The terms indicate that changes can be made without direct user notification, which may lead to users being unaware of updates that could affect their rights.",
+      "quote": "We may modify these terms at any time, and you agree to be bound by such modifications."
+    }
+  ],
+  "summary": "The terms for Android System WebView are moderately user-friendly but rely heavily on Google's general privacy policy, which allows for extensive data collection and sharing. While the terms are relatively clear, they may not provide sufficient transparency or control for users over their data.",
+  "red_flags": [
+    "Broad data collection permissions tied to Google's privacy policy",
+    "Extensive third-party data sharing",
+    "Lack of direct notification for changes to terms"
+  ],
+  "user_friendliness_score": 7.0,
+  "data_collection_score": 6.0,
+  "legal_complexity_score": 6.5,
+  "terms_version": null,
+  "terms_url": "https://www.google.com/accounts/TOS",
+  "analysis_date": "2025-07-05"
+}

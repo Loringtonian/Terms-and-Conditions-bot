@@ -1,0 +1,36 @@
+{
+  "app_name": "Canva",
+  "app_version": null,
+  "overall_score": 7.5,
+  "privacy_concerns": [
+    {
+      "clause": "Collection and use of user information as per Privacy Policy",
+      "severity": "medium",
+      "explanation": "The terms require users to agree to the collection and use of their information as outlined in Canva's Privacy Policy, which is not fully detailed in the Terms of Use. This could lead to uncertainty about the extent of data collection and sharing.",
+      "quote": "By accessing or using the Service, you agree to be bound by this Terms of Use Agreement and to the collection and use of your information as set forth in the Canva Privacy Policy."
+    },
+    {
+      "clause": "Broad rights to terminate user accounts",
+      "severity": "medium",
+      "explanation": "Canva reserves the right to terminate user accounts at any time for any reason or no reason, which could be seen as unfair or lacking transparency.",
+      "quote": "Canva may terminate this license at any time for any reason or no reason."
+    },
+    {
+      "clause": "Children's use of the service",
+      "severity": "low",
+      "explanation": "Children under 13 (or the legal age in their country) require parental consent and supervision to use the service. While this is a standard clause, it places the burden of compliance on parents or guardians.",
+      "quote": "Children are not permitted to use or access the Service, unless their use of the Service is directly authorized by their parent or guardian or another authorized adult."
+    }
+  ],
+  "summary": "Canva's Terms of Use are generally user-friendly, with clear language and summaries provided alongside the full terms. However, there are concerns about the broad data collection practices and the company's ability to terminate accounts without clear justification.",
+  "red_flags": [
+    "Broad rights to terminate user accounts without justification",
+    "Unclear extent of data collection and sharing outlined in the Privacy Policy"
+  ],
+  "user_friendliness_score": 8.0,
+  "data_collection_score": 6.5,
+  "legal_complexity_score": 7.0,
+  "terms_version": "2021-11-03",
+  "terms_url": "https://www.canva.com/policies/terms-of-use-2021-11-03/",
+  "analysis_date": "2025-07-05"
+}

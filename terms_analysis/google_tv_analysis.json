@@ -1,0 +1,37 @@
+{
+  "app_name": "Google TV",
+  "app_version": null,
+  "overall_score": 7.5,
+  "privacy_concerns": [
+    {
+      "clause": "Google always collects certain device information, even when users opt out of sharing device stats and crash reports.",
+      "severity": "medium",
+      "explanation": "The collection of device attributes, activation date, connection status, and security information is mandatory, which limits user control over their data. This could be seen as invasive by privacy-conscious users.",
+      "quote": "Certain device information is necessary to enable performance and reliability of our connected home devices and services and we always collect it, even when you choose not to share device stats and crash reports."
+    },
+    {
+      "clause": "Federated Learning and on-device data processing for Assistant.",
+      "severity": "low",
+      "explanation": "While Federated Learning is a privacy-conscious approach, it still involves sending aggregated summaries of model changes to Google servers. Users may not fully understand the implications of this process.",
+      "quote": "Federated Learning allows Assistant to update our machine learning models without sending the text you speak, images from your camera (if you enable camera sensing), or other data from your devices back to Google servers for such learning."
+    },
+    {
+      "clause": "Web & App Activity setting and personalized experiences.",
+      "severity": "medium",
+      "explanation": "The Web & App Activity setting enables extensive tracking across Google services, which may not align with user expectations of privacy. While it can be turned off, the default opt-in may not be clear to all users.",
+      "quote": "If your Web & App Activity is turned on, we save your activity on Google sites and apps (including the Google Home app), to give you more personalized experiences across Google services."
+    }
+  ],
+  "summary": "The terms for Google TV emphasize transparency and provide links to detailed privacy policies. However, mandatory data collection and the default opt-in for Web & App Activity raise privacy concerns. Federated Learning is a positive step for privacy, but users may not fully grasp its implications.",
+  "red_flags": [
+    "Mandatory data collection even when opting out of sharing device stats.",
+    "Default opt-in for Web & App Activity tracking.",
+    "Broad data collection for personalized experiences."
+  ],
+  "user_friendliness_score": 7.0,
+  "data_collection_score": 6.0,
+  "legal_complexity_score": 8.0,
+  "terms_version": null,
+  "terms_url": "https://support.google.com/chromecast/answer/9001232?hl=en&co=GENIE.Platform%3DAndroid",
+  "analysis_date": "2025-07-05"
+}

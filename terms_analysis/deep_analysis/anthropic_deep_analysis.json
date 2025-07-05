@@ -1,0 +1,52 @@
+{
+  "app_name": "Anthropic",
+  "total_high_severity_concerns": 1,
+  "analysis_timestamp": "2025-07-05",
+  "concerns_analyzed": [
+    {
+      "original_concern": {
+        "clause": "Changes to terms notification",
+        "severity": "high",
+        "explanation": "The company reserves the right to modify terms unilaterally and makes them effective upon posting or notification. This may not provide users sufficient time to review and respond to changes.",
+        "quote": "We may modify these Terms... All such changes shall become effective upon the posting of the revised Terms of Service on the Website or upon notice to you, as applicable."
+      },
+      "extended_context": "Could not locate quote in document: We may modify these Terms... All such changes shall become effective upon the posting of the revised...",
+      "clarity_analysis": {
+        "unclear_terms": [
+          {
+            "term": "modify these Terms... effective upon posting or notification",
+            "explanation": "This means the company can change the rules or conditions of the agreement at any time without needing your explicit consent. The changes become binding as soon as they are posted on the website or you are notified, whichever happens first.",
+            "user_impact": "You might not have enough time to understand or respond to the changes before they take effect. This could lead to you unknowingly agreeing to terms that are less favorable or that significantly impact your rights.",
+            "questions_to_ask": [
+              "How will I be notified of changes to the terms?",
+              "Will I have a chance to review and reject the changes before they take effect?",
+              "What happens if I disagree with the new terms?",
+              "Is there a way to track or be alerted to changes in the terms?"
+            ]
+          },
+          {
+            "term": "effective upon posting",
+            "explanation": "This means the updated terms automatically apply to you as soon as they are made available on the company's website, even if you haven't seen or read them yet.",
+            "user_impact": "You could be bound by new terms without being aware of them, especially if the company does not actively notify you or if you miss the notification.",
+            "questions_to_ask": [
+              "Does the company provide clear and timely notifications of changes?",
+              "How can I ensure I stay informed about updates to the terms?",
+              "What are my options if I don't agree with the changes?"
+            ]
+          }
+        ],
+        "practical_meaning": "In practice, this clause allows the company to change the terms of service at any time, and you are automatically bound by those changes once they are posted or you are notified. This could include changes to how your data is used, your rights to use the service, or even your ability to take legal action against the company.",
+        "user_action_needed": "Users should regularly check the terms of service for updates and ensure they understand any changes. If the company provides notifications, make sure to read them promptly. Consider reaching out to the company to ask for clarification or to express concerns if the changes seem unfair or unclear.",
+        "severity_justification": "This was flagged as high severity because it directly impacts users' ability to make informed decisions about their relationship with the company. Unilateral changes to terms without sufficient notice or consent can lead to users unknowingly agreeing to unfavorable or harmful conditions, which undermines trust and transparency."
+      },
+      "online_research": {
+        "search_query": "\"Anthropic\" modify these Terms... effective upon posting or notification effective upon posting terms conditions privacy policy explanation",
+        "top_result_url": "https://www.mdpi.com/2504-2289/9/5/132",
+        "top_result_title": "Comparative Evaluation of Multimodal Large Language Models for ...",
+        "summary": "AI Governance and Accountability: An Analysis of Anthropic's Claude. arXiv ... Terms and Conditions Privacy Policy. We use cookies on our website to",
+        "detailed_content_available": false,
+        "additional_context": null
+      }
+    }
+  ]
+}

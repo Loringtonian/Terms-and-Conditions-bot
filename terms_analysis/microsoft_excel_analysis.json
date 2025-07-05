@@ -1,0 +1,14 @@
+{
+  "app_name": "Microsoft Excel",
+  "app_version": null,
+  "overall_score": 7.5,
+  "privacy_concerns": [],
+  "summary": "The provided content focuses on accessibility best practices for Microsoft Excel in Microsoft 365. While it does not explicitly address terms and conditions or privacy policies, it emphasizes user-friendly and inclusive design principles, which align with Canadian accessibility standards.",
+  "red_flags": [],
+  "user_friendliness_score": 8.0,
+  "data_collection_score": 7.0,
+  "legal_complexity_score": 8.5,
+  "terms_version": null,
+  "terms_url": "https://a11y.canada.ca/en/accessible-excel-workbooks-in-microsoft-365/",
+  "analysis_date": "2025-07-05"
+}

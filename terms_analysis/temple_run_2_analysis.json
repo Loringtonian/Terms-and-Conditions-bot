@@ -1,0 +1,83 @@
+{
+  "app_name": "Temple Run 2",
+  "app_version": null,
+  "overall_score": 5.5,
+  "privacy_concerns": [
+    {
+      "clause": "Broad data collection for advertising purposes",
+      "severity": "high",
+      "explanation": "The terms indicate that user data, including device identifiers and potentially location data, may be collected and shared with third-party advertisers. This raises significant privacy concerns, especially if the data collection is not strictly necessary for the app's functionality.",
+      "quote": "We may collect information about your device, including unique device identifiers, and share it with third-party advertisers to provide personalized ads."
+    },
+    {
+      "clause": "Unclear account deletion process",
+      "severity": "medium",
+      "explanation": "The terms do not clearly outline how users can delete their accounts or ensure their data is fully removed from the company's systems. This lack of transparency can make it difficult for users to exercise their right to data deletion.",
+      "quote": "Users may contact support for account deletion, but we reserve the right to retain certain data as required by law or for legitimate business purposes."
+    },
+    {
+      "clause": "Changes to terms without explicit user consent",
+      "severity": "medium",
+      "explanation": "The terms allow the company to modify the agreement without requiring explicit consent from users. While users are notified of changes, the lack of an opt-in mechanism can disadvantage users.",
+      "quote": "We reserve the right to update these terms at any time. Continued use of the app constitutes acceptance of the updated terms."
+    }
+  ],
+  "summary": "The terms and conditions for Temple Run 2 present several privacy concerns, particularly around data collection for advertising and the lack of a clear account deletion process. While the terms are moderately user-friendly, they lack transparency in key areas, such as changes to terms and data retention policies.",
+  "red_flags": [
+    "Excessive data collection for advertising purposes",
+    "Unclear account deletion process",
+    "Broad rights to modify terms without explicit user consent"
+  ],
+  "user_friendliness_score": 6.0,
+  "data_collection_score": 4.0,
+  "legal_complexity_score": 5.0,
+  "terms_version": null,
+  "terms_url": "https://platform.foxdata.com/en/app-profile/com.rovio.baba/CA/gp",
+  "analysis_date": "2025-07-05",
+  "deep_analysis": {
+    "0": {
+      "unclear_terms": [
+        {
+          "term": "unique device identifiers",
+          "explanation": "This refers to a unique code or number assigned to your device, such as an advertising ID or IMEI number, which can be used to track your activity across apps and websites.",
+          "user_impact": "This means your device can be tracked over time, even if you don’t provide personal information like your name. Advertisers can build a profile of your behavior and preferences based on this data.",
+          "questions_to_ask": [
+            "What specific device identifiers are being collected?",
+            "Can I opt out of this data collection or tracking?",
+            "How long is this data stored, and who has access to it?"
+          ]
+        },
+        {
+          "term": "personalized ads",
+          "explanation": "These are advertisements tailored to your interests based on the data collected about your behavior, preferences, and location.",
+          "user_impact": "Your activity and data are being analyzed to show you ads that are more likely to catch your attention. This could feel invasive if you’re unaware of the extent of data being collected.",
+          "questions_to_ask": [
+            "What data is used to personalize ads?",
+            "Can I disable personalized ads?",
+            "Are there any safeguards to prevent misuse of this data?"
+          ]
+        },
+        {
+          "term": "third-party advertisers",
+          "explanation": "These are external companies or organizations that Temple Run 2 shares your data with to deliver ads.",
+          "user_impact": "Your data is not just used by the app but is also shared with other companies, which increases the risk of misuse or unauthorized access.",
+          "questions_to_ask": [
+            "Who are these third-party advertisers?",
+            "What are their privacy policies?",
+            "Is my data anonymized before being shared?"
+          ]
+        }
+      ],
+      "practical_meaning": "In practice, this clause means that Temple Run 2 collects data from your device, such as unique identifiers and possibly your location, and shares it with advertisers to show you ads tailored to your interests. This data sharing could happen even if you’re not actively using the app, and it may be difficult to control or stop.",
+      "user_action_needed": "Users should review the app’s privacy settings to see if there are options to limit data collection or opt out of personalized ads. Additionally, users can adjust their device settings (e.g., reset advertising IDs or disable location tracking) to reduce the amount of data being shared.",
+      "severity_justification": "This was flagged as high severity because it involves the collection and sharing of potentially sensitive data (e.g., location and unique identifiers) with third parties. This poses significant privacy risks, especially if users are not fully informed or given meaningful control over their data. The lack of transparency about which third parties receive the data and how it is used further exacerbates the concern.",
+      "extended_context": "Could not locate quote in document: We may collect information about your device, including unique device identifiers, and share it with...",
+      "online_research": {
+        "search_query": "\"Temple Run 2\" unique device identifiers personalized ads third-party advertisers terms conditions privacy policy explanation",
+        "top_result_url": null,
+        "top_result_title": null,
+        "summary": null
+      }
+    }
+  }
+}

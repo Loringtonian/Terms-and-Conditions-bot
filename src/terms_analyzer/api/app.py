@@ -4,24 +4,46 @@ from pathlib import Path
 import asyncio
 import os
 import json
+import threading
+import time
 from dotenv import load_dotenv
 
-# from ..services.openai_service import OpenAIService, TCAnalysis
-# from ..services.tavily_service import TavilyService
+try:
+    from ..services.openai_service import OpenAIService
+    from ..services.tavily_service import TavilyService
+    from ..services.analysis_service import AnalysisService
+except ImportError:
+    # Fallback if relative import fails
+    import sys
+    from pathlib import Path
+    sys.path.append(str(Path(__file__).parent.parent))
+    from services.openai_service import OpenAIService
+    from services.tavily_service import TavilyService
+    from services.analysis_service import AnalysisService
 
 # Load environment variables
 load_dotenv()
 
 app = Flask(__name__)
 CORS(app, 
-     origins=["http://localhost:3000", "http://localhost:3001"], 
-     methods=['GET', 'POST', 'OPTIONS'],
-     allow_headers=['Content-Type', 'Authorization'],
+     origins=["http://localhost:3000", "http://localhost:3001", "http://localhost:3002"], 
+     methods=['GET', 'POST', 'OPTIONS', 'PUT', 'DELETE'],
+     allow_headers=['Content-Type', 'Authorization', 'Accept'],
      supports_credentials=True)
 
 # Initialize services
-# openai_service = OpenAIService()
-# tavily_service = TavilyService()
+try:
+    openai_service = OpenAIService()
+    tavily_service = TavilyService()
+    analysis_service = AnalysisService()
+except Exception as e:
+    print(f"Warning: Could not initialize services: {e}")
+    openai_service = None
+    tavily_service = None
+    analysis_service = None
+
+# Request tracking for on-demand scraping
+scraping_requests = {}  # {request_id: {status, progress, result, error}}
 
 @app.route('/health', methods=['GET'])
 def health_check():
@@ -30,6 +52,7 @@ def health_check():
 @app.route('/test-cors', methods=['GET'])
 def test_cors():
     return jsonify({"message": "CORS is working!", "timestamp": "2025-07-05"}), 200
+
 
 # Commented out for now - focus on serving existing analysis data
 # @app.route('/analyze', methods=['POST'])
@@ -46,37 +69,231 @@ def test_cors():
 #     """
 #     return jsonify({"error": "Search endpoint not implemented yet"}), 501
 
-# @app.route('/api/analyze/text', methods=['POST'])
-# async def analyze_text():
-#     """
-#     Analyze pasted terms and conditions text.
-#     
-#     Request body should be JSON with the following fields:
-#     - text: The terms and conditions text to analyze
-#     - app_name: Optional name of the app/service
-#     
-#     Returns:
-#         JSON with analysis results in the same format as the service analysis
-#     """
-#     try:
-#         data = request.get_json()
-#         if not data or 'text' not in data:
-#             return jsonify({"error": "Missing required field: text"}), 400
-#             
-#         text = data['text']
-#         app_name = data.get('app_name', 'Pasted Terms')
-#         
-#         # Analyze the text using OpenAIService
-#         analysis = openai_service.analyze_terms(
-#             app_name=app_name,
-#             terms_text=text
-#         )
-#         
-#         # Convert the Pydantic model to dict for JSON serialization
-#         return jsonify(analysis.dict())
-#         
-#     except Exception as e:
-#         return jsonify({"error": f"Error analyzing text: {str(e)}"}), 500
+@app.route('/api/analyze/text', methods=['POST'])
+def analyze_text():
+    """
+    Analyze pasted terms and conditions text.
+    
+    Request body should be JSON with the following fields:
+    - text: The terms and conditions text to analyze
+    - app_name: Optional name of the app/service
+    
+    Returns:
+        JSON with analysis results in the same format as the service analysis
+    """
+    try:
+        if not openai_service:
+            return jsonify({"error": "Analysis service not available"}), 503
+            
+        data = request.get_json()
+        if not data or 'text' not in data:
+            return jsonify({"error": "Missing required field: text"}), 400
+            
+        text = data['text']
+        app_name = data.get('app_name', 'Pasted Terms')
+        
+        # Analyze the text using OpenAIService
+        analysis = openai_service.analyze_terms(
+            app_name=app_name,
+            terms_text=text
+        )
+        
+        # Convert the Pydantic model to dict for JSON serialization
+        raw_data = analysis.dict()
+        
+        # Transform to match frontend format
+        transformed_data = transform_analysis_data(raw_data)
+        
+        return jsonify(transformed_data)
+        
+    except Exception as e:
+        return jsonify({"error": f"Error analyzing text: {str(e)}"}), 500
+
+@app.route('/api/request-analysis', methods=['POST'])
+def request_new_analysis():
+    """
+    Request analysis for a new service not in our database.
+    
+    Request body: {"service_name": "ServiceName", "known_url": "optional_url"}
+    Returns: {"request_id": str, "status": "queued", "estimated_time": int}
+    """
+    try:
+        if not tavily_service or not analysis_service:
+            return jsonify({"error": "Scraping services not available"}), 503
+            
+        data = request.get_json()
+        if not data or 'service_name' not in data:
+            return jsonify({"error": "Missing required field: service_name"}), 400
+            
+        service_name = data['service_name'].strip()
+        known_url = data.get('known_url', '').strip()
+        
+        if not service_name:
+            return jsonify({"error": "Service name cannot be empty"}), 400
+        
+        # Generate unique request ID
+        import uuid
+        request_id = str(uuid.uuid4())
+        
+        # Initialize request tracking
+        scraping_requests[request_id] = {
+            'status': 'queued',
+            'progress': 0,
+            'service_name': service_name,
+            'known_url': known_url,
+            'created_at': time.time(),
+            'result': None,
+            'error': None
+        }
+        
+        # Start scraping in background thread
+        thread = threading.Thread(
+            target=scrape_and_analyze_service,
+            args=(request_id, service_name, known_url)
+        )
+        thread.daemon = True
+        thread.start()
+        
+        return jsonify({
+            "request_id": request_id,
+            "status": "queued",
+            "estimated_time": 60,  # 1 minute estimate with Tavily
+            "message": f"Analysis request for '{service_name}' has been queued"
+        })
+        
+    except Exception as e:
+        return jsonify({"error": f"Error creating analysis request: {str(e)}"}), 500
+
+@app.route('/api/request-status/<request_id>', methods=['GET'])
+def get_request_status(request_id):
+    """
+    Get the status of a scraping request.
+    
+    Returns: {"status": str, "progress": int, "result": dict, "error": str}
+    """
+    try:
+        if request_id not in scraping_requests:
+            return jsonify({"error": "Request not found"}), 404
+            
+        request_info = scraping_requests[request_id]
+        
+        # Clean up old completed requests (older than 10 minutes)
+        if request_info['status'] in ['completed', 'failed']:
+            if time.time() - request_info.get('completed_at', 0) > 600:
+                del scraping_requests[request_id]
+                return jsonify({"error": "Request expired"}), 410
+        
+        response = {
+            "request_id": request_id,
+            "status": request_info['status'],
+            "progress": request_info['progress'],
+            "service_name": request_info['service_name']
+        }
+        
+        if request_info['status'] == 'completed':
+            response['result'] = request_info['result']
+        elif request_info['status'] == 'failed':
+            response['error'] = request_info['error']
+            
+        return jsonify(response)
+        
+    except Exception as e:
+        return jsonify({"error": f"Error getting request status: {str(e)}"}), 500
+
+def scrape_and_analyze_service(request_id, service_name, known_url=None):
+    """
+    Background function to scrape and analyze a service using Tavily.
+    Updates the request status throughout the process.
+    """
+    try:
+        # Update status to processing
+        scraping_requests[request_id]['status'] = 'processing'
+        scraping_requests[request_id]['progress'] = 10
+        
+        # Step 1: Scrape terms using Tavily
+        scraping_requests[request_id]['progress'] = 20
+        print(f"Starting Tavily scrape for {service_name}")
+        
+        # Use Tavily for faster scraping
+        result = None
+        try:
+            if known_url:
+                # If URL is provided, try to extract directly
+                import asyncio
+                content = asyncio.run(tavily_service.extract_terms_text(known_url))
+                if content and len(content) > 500:
+                    # Save to storage manually
+                    saved_path = tavily_service.storage.save_terms(
+                        app_name=service_name,
+                        content=content,
+                        source_url=known_url
+                    )
+                    result = {
+                        'success': True,
+                        'app_name': service_name,
+                        'terms_url': known_url,
+                        'terms_text': content,
+                        'saved_path': str(saved_path)
+                    }
+                else:
+                    result = {'success': False}
+            else:
+                # Use Tavily's search and extract functionality
+                import asyncio
+                terms_data = asyncio.run(tavily_service.find_terms_for_app(service_name, save_to_storage=True))
+                if terms_data:
+                    result = {
+                        'success': True,
+                        **terms_data
+                    }
+                else:
+                    result = {'success': False}
+        except Exception as tavily_error:
+            print(f"Tavily error: {tavily_error}")
+            result = {'success': False}
+        
+        if not result or not result.get('success'):
+            scraping_requests[request_id]['status'] = 'failed'
+            scraping_requests[request_id]['error'] = 'Failed to scrape terms and conditions. The service may not have accessible terms or the URL may be incorrect.'
+            scraping_requests[request_id]['completed_at'] = time.time()
+            return
+        
+        scraping_requests[request_id]['progress'] = 70
+        
+        # Step 2: Analyze the scraped terms
+        print(f"Starting analysis for {service_name}")
+        try:
+            analysis_result = analysis_service.analyze_service(service_name)
+            
+            if not analysis_result:
+                scraping_requests[request_id]['status'] = 'failed'
+                scraping_requests[request_id]['error'] = 'Failed to analyze terms'
+                scraping_requests[request_id]['completed_at'] = time.time()
+                return
+            
+            scraping_requests[request_id]['progress'] = 95
+            
+            # Step 3: Transform for frontend
+            transformed_result = transform_analysis_data(analysis_result)
+            
+            scraping_requests[request_id]['status'] = 'completed'
+            scraping_requests[request_id]['progress'] = 100
+            scraping_requests[request_id]['result'] = transformed_result
+            scraping_requests[request_id]['completed_at'] = time.time()
+            
+            print(f"Completed analysis for {service_name}")
+            
+        except Exception as e:
+            print(f"Analysis error for {service_name}: {e}")
+            scraping_requests[request_id]['status'] = 'failed'
+            scraping_requests[request_id]['error'] = f'Analysis failed: {str(e)}'
+            scraping_requests[request_id]['completed_at'] = time.time()
+            
+    except Exception as e:
+        print(f"Scraping error for {service_name}: {e}")
+        scraping_requests[request_id]['status'] = 'failed'
+        scraping_requests[request_id]['error'] = f'Scraping failed: {str(e)}'
+        scraping_requests[request_id]['completed_at'] = time.time()
 
 @app.route('/services', methods=['GET'])
 def get_services():

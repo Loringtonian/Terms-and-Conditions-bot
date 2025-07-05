@@ -22,7 +22,8 @@ def run_backend(base_dir):
     
     try:
         os.chdir(base_dir)
-        subprocess.run(['python', str(backend_script)], check=True)
+        # Run as module to fix import issues
+        subprocess.run(['python', '-m', 'src.terms_analyzer.api.app'], check=True)
     except KeyboardInterrupt:
         print("\n👋 Backend server stopped.")
     except subprocess.CalledProcessError as e:

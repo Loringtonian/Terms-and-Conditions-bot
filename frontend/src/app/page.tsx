@@ -3,6 +3,8 @@
 import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { Search, FileText, Gavel, Scale, AlertTriangle, CheckCircle } from 'lucide-react';
+import PasteTermsModal from '@/components/PasteTermsModal';
+import RequestAnalysisModal from '@/components/RequestAnalysisModal';
 
 interface Service {
   id: string;
@@ -30,6 +32,7 @@ interface Analysis {
     severity: string;
     explanation: string;
     quote: string;
+    clarity_analysis?: any;
   }>;
   recommendations: string[];
   red_flags: string[];
@@ -43,13 +46,22 @@ export default function Home() {
   const [selectedService, setSelectedService] = useState<Service | null>(null);
   const [analysisData, setAnalysisData] = useState<Analysis | null>(null);
   const [showResults, setShowResults] = useState(false);
+  const [showDeepAnalysis, setShowDeepAnalysis] = useState(false);
+  const [selectedConcern, setSelectedConcern] = useState<any>(null);
+  const [showRequestModal, setShowRequestModal] = useState(false);
+  const [requestInProgress, setRequestInProgress] = useState(false);
+  const [requestId, setRequestId] = useState<string | null>(null);
+  const [isPasteModalOpen, setIsPasteModalOpen] = useState(false);
 
   // Fetch services on component mount
   useEffect(() => {
     const fetchServices = async () => {
       try {
         console.log('Attempting to fetch services from backend...');
-        const response = await fetch('http://localhost:5001/services');
+        const response = await fetch('http://localhost:5001/services', {
+          mode: 'cors',
+          credentials: 'include'
+        });
         console.log('Response status:', response.status);
         
         if (!response.ok) {
@@ -88,14 +100,37 @@ export default function Home() {
 
   // Handle service selection
   const handleServiceClick = async (service: Service) => {
+    console.log('Service clicked:', service);
     setSelectedService(service);
     setIsLoading(true);
     setAnalysisData(null);
+    setShowResults(false); // Hide search results
+    setSearchQuery(''); // Clear search
 
     try {
-      const response = await fetch(`http://localhost:5001/analysis/${service.id}`);
+      console.log(`Fetching analysis for: ${service.id}`);
+      const response = await fetch(`http://localhost:5001/analysis/${service.id}`, {
+        mode: 'cors',
+        credentials: 'include'
+      });
+      console.log('Analysis response status:', response.status);
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
       const data = await response.json();
+      console.log('Analysis data received:', data);
       setAnalysisData(data);
+      
+      // Scroll to results after a brief delay to ensure rendering
+      setTimeout(() => {
+        const analysisSection = document.querySelector('[data-analysis-results]');
+        if (analysisSection) {
+          analysisSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+      
     } catch (error) {
       console.error('Error fetching analysis:', error);
     } finally {
@@ -117,12 +152,52 @@ export default function Home() {
     setShowResults(false);
   };
 
-  // State for paste terms modal
-  const [isPasteModalOpen, setIsPasteModalOpen] = useState(false);
 
   // Handle paste terms button click
   const handlePasteTermsClick = () => {
     setIsPasteModalOpen(true);
+  };
+
+  // Handle analyze pasted text
+  const handleAnalyzePastedText = async (text: string) => {
+    try {
+      setIsLoading(true);
+      const response = await fetch('http://localhost:5001/api/analyze/text', {
+        method: 'POST',
+        mode: 'cors',
+        credentials: 'include',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          text: text,
+          app_name: 'Pasted Terms'
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const analysis = await response.json();
+      setAnalysisData(analysis);
+      setSelectedService({
+        id: 'pasted',
+        name: 'Pasted Terms',
+        displayName: 'Pasted Terms',
+        category: 'Custom',
+        icon: '📄',
+        riskLevel: 'unknown',
+        lastAnalyzed: new Date().toISOString(),
+        hasAnalysis: true,
+        hasTerms: true
+      });
+    } catch (error) {
+      console.error('Error analyzing pasted text:', error);
+      throw error;
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   // Get severity color based on score (1-10 scale, 1 is worst, 10 is best)
@@ -130,6 +205,127 @@ export default function Home() {
     if (score >= 8) return 'text-green-600';
     if (score >= 5) return 'text-yellow-600';
     return 'text-red-600';
+  };
+
+  // Get severity emoji and text for high risk items
+  const getSeverityDisplay = (severity: string, isHighRisk: boolean = false) => {
+    if (severity === 'high' || isHighRisk) {
+      return {
+        emoji: '🚨🛑',
+        text: 'HIGH RISK',
+        className: 'bg-red-100 text-red-800 border-red-200'
+      };
+    }
+    if (severity === 'medium') {
+      return {
+        emoji: '⚠️',
+        text: 'MEDIUM RISK',
+        className: 'bg-yellow-100 text-yellow-800 border-yellow-200'
+      };
+    }
+    return {
+      emoji: 'ℹ️',
+      text: 'LOW RISK',
+      className: 'bg-blue-100 text-blue-800 border-blue-200'
+    };
+  };
+
+  // Handle deep analysis modal
+  const handleLearnMore = (concern: any) => {
+    setSelectedConcern(concern);
+    setShowDeepAnalysis(true);
+  };
+
+  const handleCloseDeepAnalysis = () => {
+    setShowDeepAnalysis(false);
+    setSelectedConcern(null);
+  };
+
+  // Handle request analysis button
+  const handleRequestAnalysisClick = () => {
+    setShowRequestModal(true);
+  };
+
+  // Handle new service analysis request
+  const handleSubmitNewRequest = async (serviceName: string, knownUrl?: string) => {
+    try {
+      setRequestInProgress(true);
+      
+      const response = await fetch('http://localhost:5001/api/request-analysis', {
+        method: 'POST',
+        mode: 'cors',
+        credentials: 'include',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          service_name: serviceName,
+          known_url: knownUrl || undefined
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      setRequestId(data.request_id);
+      
+      // Start polling for status
+      pollRequestStatus(data.request_id);
+      
+    } catch (error) {
+      console.error('Error submitting request:', error);
+      setRequestInProgress(false);
+      throw error;
+    }
+  };
+
+  // Poll for request status
+  const pollRequestStatus = async (reqId: string) => {
+    try {
+      const response = await fetch(`http://localhost:5001/api/request-status/${reqId}`, {
+        mode: 'cors',
+        credentials: 'include'
+      });
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      
+      if (data.status === 'completed') {
+        // Analysis complete, show results
+        setAnalysisData(data.result);
+        setSelectedService({
+          id: 'new-request',
+          name: data.service_name,
+          displayName: data.service_name,
+          category: 'Requested',
+          icon: '🆕',
+          riskLevel: 'unknown',
+          lastAnalyzed: new Date().toISOString(),
+          hasAnalysis: true,
+          hasTerms: true
+        });
+        setRequestInProgress(false);
+        setShowRequestModal(false);
+        setRequestId(null);
+      } else if (data.status === 'failed') {
+        setRequestInProgress(false);
+        setRequestId(null);
+        throw new Error(data.error || 'Analysis failed');
+      } else {
+        // Still processing, poll again in 5 seconds
+        setTimeout(() => pollRequestStatus(reqId), 5000);
+      }
+      
+    } catch (error) {
+      console.error('Error polling status:', error);
+      setRequestInProgress(false);
+      setRequestId(null);
+    }
   };
 
   return (
@@ -237,6 +433,7 @@ export default function Home() {
         <div className="w-full max-w-lg mb-12">
           <div className="flex items-center justify-center space-x-6">
             <button 
+              onClick={handlePasteTermsClick}
               className="group relative inline-flex items-center px-8 py-4 bg-white/80 border-2 border-slate-200/60 rounded-2xl text-slate-700 font-medium hover:bg-white hover:border-slate-300 focus:outline-none focus:ring-4 focus:ring-slate-200/40 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 backdrop-blur-xl"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-slate-100/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -245,11 +442,22 @@ export default function Home() {
             </button>
             
             <button 
-              disabled={true}
-              className="group relative inline-flex items-center px-8 py-4 bg-slate-900/10 border-2 border-slate-200/30 rounded-2xl text-slate-400 font-medium focus:outline-none transition-all duration-300 cursor-not-allowed"
+              onClick={handleRequestAnalysisClick}
+              disabled={requestInProgress}
+              className="group relative inline-flex items-center px-8 py-4 bg-blue-600/90 border-2 border-blue-500/60 rounded-2xl text-white font-medium hover:bg-blue-700 hover:border-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-200/40 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 backdrop-blur-xl disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              <Scale className="h-5 w-5 mr-3" />
-              <span className="relative">Request Analysis (Coming Soon)</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              {requestInProgress ? (
+                <>
+                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-3"></div>
+                  <span className="relative">Processing...</span>
+                </>
+              ) : (
+                <>
+                  <Scale className="h-5 w-5 mr-3 group-hover:scale-110 transition-transform duration-200" />
+                  <span className="relative">Request Analysis</span>
+                </>
+              )}
             </button>
           </div>
         </div>
@@ -273,9 +481,6 @@ export default function Home() {
               <p className="mt-1 text-sm text-slate-500">
                 Found {filteredServices.length} services matching "{searchQuery}"
               </p>
-                <p className="mt-1 text-sm text-slate-500">
-                  Found {filteredServices.length} services matching "{searchQuery}"
-                </p>
               </div>
               <div className="p-8">
                 {filteredServices.length === 0 ? (
@@ -318,7 +523,7 @@ export default function Home() {
 
         {/* Analysis Results */}
         {analysisData && selectedService && !isLoading && (
-          <div className="w-full max-w-4xl">
+          <div className="w-full max-w-4xl" data-analysis-results>
             <div className="bg-white/70 backdrop-blur-xl rounded-2xl border border-slate-200/50 shadow-xl overflow-hidden">
               <div className="p-8">
                 <div className="flex items-center justify-between mb-6">
@@ -364,34 +569,47 @@ export default function Home() {
                   <div className="mb-8">
                     <h3 className="text-lg font-medium text-slate-900 mb-4">Key Concerns</h3>
                     <div className="space-y-4">
-                      {analysisData.concerns.map((concern: any, index: number) => (
-                        <div key={index} className="p-4 bg-slate-50 rounded-lg border border-slate-100">
-                          <div className="flex items-start">
-                            <div className={`flex-shrink-0 h-5 w-5 rounded-full flex items-center justify-center ${
-                              concern.severity === 'high' ? 'bg-red-100 text-red-600' : 
-                              concern.severity === 'medium' ? 'bg-yellow-100 text-yellow-600' : 
-                              'bg-blue-100 text-blue-600'
-                            }`}>
-                              {concern.severity === 'high' ? (
-                                <AlertTriangle className="h-3.5 w-3.5" />
-                              ) : concern.severity === 'medium' ? (
-                                <AlertTriangle className="h-3 w-3" />
-                              ) : (
-                                <span className="text-xs font-medium">i</span>
-                              )}
-                            </div>
-                            <div className="ml-3">
-                              <h4 className="text-sm font-medium text-slate-900">{concern.clause}</h4>
-                              <p className="mt-1 text-sm text-slate-600">{concern.explanation}</p>
-                              {concern.quote && (
-                                <div className="mt-2 p-3 bg-slate-50 border-l-2 border-slate-200 text-sm text-slate-600 italic">
-                                  "{concern.quote}"
+                      {analysisData.concerns.map((concern: any, index: number) => {
+                        const severityDisplay = getSeverityDisplay(concern.severity);
+                        const isHighRisk = concern.severity === 'high';
+                        
+                        return (
+                          <div key={index} className={`p-4 rounded-lg border-2 ${
+                            isHighRisk ? 'bg-red-50 border-red-200' : 
+                            concern.severity === 'medium' ? 'bg-yellow-50 border-yellow-200' : 
+                            'bg-blue-50 border-blue-200'
+                          }`}>
+                            <div className="flex items-start justify-between">
+                              <div className="flex items-start flex-1">
+                                <div className={`flex-shrink-0 px-2 py-1 rounded-full text-xs font-bold border-2 ${severityDisplay.className}`}>
+                                  <span className="mr-1">{severityDisplay.emoji}</span>
+                                  {severityDisplay.text}
                                 </div>
+                                <div className="ml-4 flex-1">
+                                  <h4 className="text-sm font-medium text-slate-900">{concern.clause}</h4>
+                                  <p className="mt-1 text-sm text-slate-600">{concern.explanation}</p>
+                                  {concern.quote && (
+                                    <div className="mt-2 p-3 bg-white/70 border-l-4 border-slate-300 text-sm text-slate-600 italic">
+                                      "{concern.quote}"
+                                    </div>
+                                  )}
+                                </div>
+                              </div>
+                              
+                              {/* Learn More button for high risk items with deep analysis */}
+                              {isHighRisk && concern.clarity_analysis && (
+                                <button
+                                  onClick={() => handleLearnMore(concern)}
+                                  className="ml-4 px-4 py-2 bg-red-600 text-white text-sm font-medium rounded-lg hover:bg-red-700 transition-colors duration-200 flex items-center"
+                                >
+                                  <span className="mr-2">🔍</span>
+                                  Learn More
+                                </button>
                               )}
                             </div>
                           </div>
-                        </div>
-                      ))}
+                        );
+                      })}
                     </div>
                   </div>
                 )}
@@ -399,14 +617,14 @@ export default function Home() {
                 {/* Red Flags */}
                 {analysisData.red_flags && analysisData.red_flags.length > 0 && (
                   <div>
-                    <h3 className="text-lg font-medium text-slate-900 mb-4">Red Flags</h3>
-                    <ul className="space-y-2">
+                    <h3 className="text-lg font-medium text-slate-900 mb-4">🚨 High Risk Flags</h3>
+                    <ul className="space-y-3">
                       {analysisData.red_flags.map((flag: string, index: number) => (
-                        <li key={index} className="flex items-start">
-                          <div className="flex-shrink-0 h-5 w-5 rounded-full bg-red-100 flex items-center justify-center text-red-600">
-                            <AlertTriangle className="h-3 w-3" />
+                        <li key={index} className="flex items-start p-3 bg-red-50 border-l-4 border-red-500 rounded-r-lg">
+                          <div className="flex-shrink-0 text-red-600 text-xl mr-3">
+                            🛑
                           </div>
-                          <span className="ml-2 text-sm text-slate-700">{flag}</span>
+                          <span className="text-sm text-slate-700 font-medium">{flag}</span>
                         </li>
                       ))}
                     </ul>
@@ -452,6 +670,140 @@ export default function Home() {
           </div>
         )}
       </main>
+
+      {/* Deep Analysis Modal */}
+      {showDeepAnalysis && selectedConcern && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div className="p-6 border-b border-slate-200 bg-red-50">
+              <div className="flex items-center justify-between">
+                <h2 className="text-2xl font-bold text-red-800 flex items-center">
+                  <span className="mr-3">🚨🛑</span>
+                  HIGH RISK - Deep Analysis
+                </h2>
+                <button
+                  onClick={handleCloseDeepAnalysis}
+                  className="text-slate-400 hover:text-slate-600 text-2xl"
+                >
+                  ×
+                </button>
+              </div>
+              <h3 className="text-lg font-medium text-slate-900 mt-2">
+                {selectedConcern.clause}
+              </h3>
+            </div>
+            
+            <div className="p-6 space-y-6">
+              {/* Practical Meaning */}
+              {selectedConcern.clarity_analysis?.practical_meaning && (
+                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                  <h4 className="font-semibold text-blue-900 mb-2 flex items-center">
+                    <span className="mr-2">💡</span>
+                    What This Really Means
+                  </h4>
+                  <p className="text-blue-800 text-sm leading-relaxed">
+                    {selectedConcern.clarity_analysis.practical_meaning}
+                  </p>
+                </div>
+              )}
+
+              {/* Unclear Terms */}
+              {selectedConcern.clarity_analysis?.unclear_terms && (
+                <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                  <h4 className="font-semibold text-yellow-900 mb-3 flex items-center">
+                    <span className="mr-2">❓</span>
+                    Confusing Terms Explained
+                  </h4>
+                  <div className="space-y-4">
+                    {selectedConcern.clarity_analysis.unclear_terms.map((term: any, index: number) => (
+                      <div key={index} className="bg-white p-3 rounded border">
+                        <h5 className="font-medium text-slate-900 mb-1">"{term.term}"</h5>
+                        <p className="text-sm text-slate-600 mb-2">{term.explanation}</p>
+                        
+                        {term.user_impact && (
+                          <div className="bg-orange-50 border-l-4 border-orange-400 p-2 mb-2">
+                            <p className="text-sm text-orange-800">
+                              <strong>Impact on You:</strong> {term.user_impact}
+                            </p>
+                          </div>
+                        )}
+                        
+                        {term.questions_to_ask && term.questions_to_ask.length > 0 && (
+                          <div className="bg-slate-50 p-2 rounded">
+                            <p className="text-xs font-medium text-slate-700 mb-1">Questions to Ask:</p>
+                            <ul className="text-xs text-slate-600 space-y-1">
+                              {term.questions_to_ask.map((question: string, qIndex: number) => (
+                                <li key={qIndex} className="flex items-start">
+                                  <span className="mr-1">•</span>
+                                  {question}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Action Needed */}
+              {selectedConcern.clarity_analysis?.user_action_needed && (
+                <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                  <h4 className="font-semibold text-green-900 mb-2 flex items-center">
+                    <span className="mr-2">✅</span>
+                    What You Should Do
+                  </h4>
+                  <p className="text-green-800 text-sm leading-relaxed">
+                    {selectedConcern.clarity_analysis.user_action_needed}
+                  </p>
+                </div>
+              )}
+
+              {/* Severity Justification */}
+              {selectedConcern.clarity_analysis?.severity_justification && (
+                <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                  <h4 className="font-semibold text-red-900 mb-2 flex items-center">
+                    <span className="mr-2">⚠️</span>
+                    Why This is High Risk
+                  </h4>
+                  <p className="text-red-800 text-sm leading-relaxed">
+                    {selectedConcern.clarity_analysis.severity_justification}
+                  </p>
+                </div>
+              )}
+
+              {/* Original Quote */}
+              {selectedConcern.quote && (
+                <div className="bg-slate-50 border border-slate-200 rounded-lg p-4">
+                  <h4 className="font-semibold text-slate-900 mb-2 flex items-center">
+                    <span className="mr-2">📄</span>
+                    Original Terms Text
+                  </h4>
+                  <blockquote className="text-sm text-slate-700 italic border-l-4 border-slate-400 pl-4">
+                    "{selectedConcern.quote}"
+                  </blockquote>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Paste Terms Modal */}
+      <PasteTermsModal
+        isOpen={isPasteModalOpen}
+        onClose={() => setIsPasteModalOpen(false)}
+        onAnalyze={handleAnalyzePastedText}
+      />
+
+      {/* Request Analysis Modal */}
+      <RequestAnalysisModal
+        isOpen={showRequestModal}
+        onClose={() => setShowRequestModal(false)}
+        onSubmit={handleSubmitNewRequest}
+        isProcessing={requestInProgress}
+      />
     </div>
   );
 }
